@@ -94,12 +94,34 @@
       sizes="1024x1024"
       href="../img/favicons/apple-touch-icon-1024x1024.png"
     />
-    <link rel="stylesheet" href="../styles/main.min.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__inner">
         <div class="logo"><img src="./img/logo.svg" /></div>
+        <nav class="navbar">
+          <ul class="menu" id="menu">
+            <li><a class="active" href="/">The network</a></li>
+            <!-- <li><a href="#">Tutorials</a></li> -->
+            <li><a href="#">API</a></li>
+            <!-- <li><a href="#">Pricing</a></li> -->
+            <li>
+              <a href="https://explorer.videocoin.network" target="_blank"
+                >Block Explorer</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          class="login link link_white"
+          href="https://studio.videocoin.network"
+          target="_blank"
+          >Login</a
+        >
+        <button class="menu-btn" id="menuBtn" type="button">
+          <span></span>
+        </button>
       </div>
     </header>
     <div class="hero">
@@ -385,21 +407,32 @@
             © 2019 VideoCoin Development Association Ltd. All Rights Reserved.
           </div>
           <div class="footer__menu">
-            <a href="/privacypolicy" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://www.videocoin.io/privacypolicy"
+              target="_blank"
+              rel="noopener noreferrer"
               >VideoCoin Privacy Policy</a
-            ><a href="/terms" target="_blank" rel="noopener noreferrer"
+            ><a
+              href="https://www.videocoin.io/terms"
+              target="_blank"
+              rel="noopener noreferrer"
               >VideoCoin Terms and Condition</a
             ><a
-              href="/airdrop_privacypolicy"
+              href="https://www.videocoin.io/airdrop_privacypolicy"
               target="_blank"
               rel="noopener noreferrer"
               >AirDrop Privacy Policy</a
-            ><a href="/airdrop_terms" target="_blank" rel="noopener noreferrer"
+            ><a
+              href="https://www.videocoin.io/airdrop_terms"
+              target="_blank"
+              rel="noopener noreferrer"
               >AirDrop Terms and Conditions</a
             >
           </div>
         </div>
       </div>
     </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/vendor.js"></script>
   </body>
 </html>

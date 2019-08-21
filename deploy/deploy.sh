@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly CHART_NAME=videocoin-network
+readonly CHART_NAME=videocoin-network-ui
 readonly CHART_DIR=./deploy/helm
 
 CONSUL_ADDR=${CONSUL_ADDR:=127.0.0.1:8500}
