@@ -1,0 +1,54 @@
+import React from 'react';
+import { Link } from 'gatsby';
+import { NavLink, NavList, NavRoot } from './styles';
+
+interface LinkProps {
+  name: string;
+  path: string;
+}
+
+const links: LinkProps[] = [
+  {
+    name: 'The Network',
+    path: '/',
+  },
+  {
+    name: 'Pricing',
+    path: '/pricing',
+  },
+  {
+    name: 'Developers',
+    path: '/developers',
+  },
+  {
+    name: 'Workers',
+    path: '/workers',
+  },
+  {
+    name: 'Stakers',
+    path: '/stakers',
+  },
+  {
+    name: 'Rewards',
+    path: '/rewards',
+  },
+  {
+    name: 'Blog',
+    path: '/blog',
+  },
+];
+
+const Navbar = () => {
+  const renderLink = ({ name, path }: LinkProps) => (
+    <NavLink key={name} to={path} activeClassName="active">
+      {name}
+    </NavLink>
+  );
+  return (
+    <NavRoot>
+      <NavList>{links.map(renderLink)}</NavList>
+    </NavRoot>
+  );
+};
+
+export default Navbar;

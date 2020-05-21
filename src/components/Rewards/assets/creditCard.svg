@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="20px" viewBox="0 0 30 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Credit Card</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="20" rx="5"></rect>
+        <linearGradient x1="15.6166064%" y1="49.5011693%" x2="97.0559435%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#1B0D2F" offset="0%"></stop>
+            <stop stop-color="#0C0417" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Rewards" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Screens/Rewards-Desktop" transform="translate(-180.000000, -672.000000)">
+            <g id="Credit-Card" transform="translate(180.000000, 672.000000)">
+                <g id="Group-4">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Rectangle" fill="#7234C8" xlink:href="#path-1"></use>
+                    <rect id="Rectangle" fill="url(#linearGradient-3)" mask="url(#mask-2)" x="0" y="3.07692308" width="30" height="4.61538462"></rect>
+                    <rect id="Rectangle-Copy" fill="#EEE3FF" mask="url(#mask-2)" x="2.30769231" y="15.3846154" width="9.23076923" height="1.53846154" rx="0.769230769"></rect>
+                    <rect id="Rectangle-Copy-2" fill="#EEE3FF" mask="url(#mask-2)" x="20.7692308" y="10.7692308" width="6.15384615" height="6.15384615" rx="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
