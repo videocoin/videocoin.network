@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../queries';
 
 export const Root = styled.div`
   text-align: center;
@@ -12,4 +13,11 @@ export const Btns = styled.div`
   margin-top: 55px;
   display: flex;
   justify-content: space-between;
+  @media ${device.mobile} {
+    flex-direction: column;
+    align-items: center;
+    & > div:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
 `;

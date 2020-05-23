@@ -1,18 +1,20 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Headroom from 'react-headroom';
 import Logo from 'components/Logo';
 import SignBlock from 'components/Header/SignBlock';
 import Navbar from './Navbar';
-import { Root } from './styles';
+import { Root, Logo as LogoLink } from './styles';
+import { useBreakpoint } from 'components/BrealpointProvider';
+import IconLogo from 'components/Logo/IconLogo';
 
 const Header = () => {
+  const { laptop, tablet } = useBreakpoint();
   return (
     <Headroom wrapperStyle={{ marginBottom: -92 }}>
       <Root>
-        <Link to="/">
-          <Logo />
-        </Link>
+        <LogoLink to="/">
+          {laptop && !tablet ? <IconLogo width={36} /> : <Logo />}
+        </LogoLink>
         <Navbar />
         <SignBlock />
       </Root>

@@ -41,13 +41,11 @@ const RewardsHero = () => {
           <picture>
             <source
               media="(max-width: 767px)"
-              src={heroSm}
-              srcSet={`${heroSm2x} 2x`}
+              srcSet={`${heroSm}, ${heroSm2x} 2x`}
             />
             <source
               media="(max-width: 1024px)"
-              src={heroMd}
-              srcSet={`${heroMd2x} 2x`}
+              srcSet={`${heroMd}, ${heroMd2x} 2x`}
             />
             <img src={hero} srcSet={`${hero2x} 2x`} alt="" />
           </picture>

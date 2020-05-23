@@ -45,7 +45,7 @@ const Social = () => {
   const renderLink = ({ name, link }: SocialLinkProps) => (
     <SocialLink key={name} href={link}>
       <span className={`icon-${name}`} />
-      {name}
+      <span>{name}</span>
     </SocialLink>
   );
   return <SocialList>{socialList.map(renderLink)}</SocialList>;

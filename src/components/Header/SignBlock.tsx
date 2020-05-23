@@ -2,24 +2,27 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Button, Typography } from 'ui-kit';
 import { SignWrapper } from './styles';
-import { withPrefix } from 'gatsby';
 import { globalHistory as history } from '@reach/router';
+import { useBreakpoint } from 'components/BrealpointProvider';
 
 const SignBlock = () => {
   const { location } = history;
-  const isSignupPage = location.pathname === withPrefix('/signup');
+  const isSignupPage = location.pathname.includes('/signup');
+  const { laptop } = useBreakpoint();
   return (
     <SignWrapper>
-      <a
-        href="https://studio.videocoin.network/sign-in"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Typography type="smallBodyThin">Login</Typography>
-      </a>
+      {!laptop && (
+        <a
+          href="https://studio.videocoin.network/sign-in"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Typography type="smallBodyThin">Login</Typography>
+        </a>
+      )}
       {!isSignupPage && (
         <Link to="/signup?role=miner">
-          <Button>Create Account</Button>
+          <Button size={laptop ? 'sm' : 'md'}>Create Account</Button>
         </Link>
       )}
     </SignWrapper>

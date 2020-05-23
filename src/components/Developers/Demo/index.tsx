@@ -10,8 +10,8 @@ const DemoApplication = () => {
     query {
       orbital: file(relativePath: { eq: "orbital.png" }) {
         childImageSharp {
-          fixed(width: 379, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 379, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -32,9 +32,7 @@ const DemoApplication = () => {
           Demo Application
         </Typography>
         <Inner>
-          <div>
-            <Img fixed={data.orbital.childImageSharp.fixed} />
-          </div>
+          <Img fluid={data.orbital.childImageSharp.fluid} />
           <Typography type="subtitleThin" opacity="drift">
             <a href="#">
               <Img fixed={data.github.childImageSharp.fixed} />

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Typography } from 'ui-kit';
+import { device } from '../../queries';
 
 export const Bg = styled.div`
   text-align: center;
@@ -8,7 +9,17 @@ export const Bg = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
-  img {
+  @media ${device.tablet} {
+    margin-bottom: 0;
+    padding-right: 0;
+    img {
+      margin-right: -30px;
+    }
+  }
+  @media ${device.tablet} {
+    img {
+      margin-right: 0;
+    }
   }
 `;
 
@@ -17,6 +28,12 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   padding-bottom: 50px;
+`;
+
+export const SLogo = styled.div`
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const Title = styled(Typography)`
@@ -30,6 +47,12 @@ export const Btns = styled.div`
   justify-content: center;
   margin-top: 48px;
   margin-bottom: 32px;
+  @media ${device.mobile} {
+    flex-direction: column;
+    & > *:first-child {
+      margin-bottom: 36px;
+    }
+  }
 `;
 
 export const Footer = styled(Typography)`
@@ -57,6 +80,9 @@ export const ApiDesc = styled.div`
 
 export const ApiCards = styled.div`
   display: flex;
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 export const ApiCard = styled.div`
   background-color: #290f4d;
@@ -64,19 +90,53 @@ export const ApiCard = styled.div`
   border: 2px solid #4e238e;
   padding: 36px;
   flex: 1;
+  position: relative;
+  @media ${device.tablet} {
+    flex: none;
+    max-width: 508px;
+    margin: 0 auto;
+  }
+  @media ${device.mobile} {
+    padding: 36px 24px;
+    margin: 0 -14px;
+    width: calc(100% + 28px);
+  }
   & > div:first-child {
     margin-bottom: 8px;
     padding-left: 72px;
+    @media ${device.mobile} {
+      padding-left: 0;
+    }
   }
   & > div:nth-child(2) {
     margin-bottom: 28px;
     padding-left: 72px;
+    @media ${device.mobile} {
+      padding-left: 0;
+    }
   }
-  & > div:last-child {
+  & > div:nth-child(3) {
     margin-left: 38px;
+    @media ${device.mobile} {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
   &:first-child {
     margin-right: 34px;
+    @media ${device.tablet} {
+      margin-bottom: 40px;
+      margin-right: auto;
+    }
+  }
+`;
+
+export const ApiIcon = styled.div`
+  position: absolute;
+  left: 36px;
+  top: 36px;
+  @media ${device.mobile} {
+    display: none;
   }
 `;
 
@@ -90,14 +150,32 @@ export const GreenSolutionInner = styled.div`
   justify-content: space-between;
   margin-top: 48px;
   align-items: center;
-  & > img {
+  @media ${device.mobile} {
+    flex-direction: column;
+  }
+  & > div:first-child {
     flex: 416px;
     flex-grow: 0;
     margin-right: 30px;
+    @media ${device.tablet} {
+      flex: 1;
+    }
+    @media ${device.mobile} {
+      flex: none;
+      width: 100%;
+      margin-bottom: 32px;
+      margin-right: auto;
+    }
   }
-  & > div {
+  & > div:last-child {
     flex: 528px;
     flex-grow: 0;
+    @media ${device.tablet} {
+      flex: 1;
+    }
+    @media ${device.mobile} {
+      flex: none;
+    }
   }
 `;
 
@@ -114,16 +192,52 @@ export const SFooterCards = styled.div`
   }
 `;
 
+export const DemoSectionTitle = styled(Typography)`
+  margin-bottom: 36px;
+  margin-top: 4px;
+  @media ${device.tablet} {
+    margin-bottom: 0;
+  }
+  @media ${device.mobile} {
+    display: none;
+  }
+`;
+
 export const DemoSection = styled.div<{ $disabled?: boolean }>`
   display: flex;
   margin-bottom: 100px;
   opacity: ${({ $disabled }) => ($disabled ? 0.48 : 1)};
+  @media ${device.tablet} {
+    flex-direction: column;
+    margin-bottom: 56px;
+  }
+  &:last-child {
+    ${DemoSectionTitle} {
+      @media ${device.mobile} {
+        display: block;
+        font-size: 16px;
+        color: #ccb1f2;
+        font-weight: 500;
+      }
+    }
+  }
 `;
 
 export const DemoSectionLeft = styled.div`
   flex: 445px;
   flex-grow: 0;
   padding-right: 25px;
+  @media ${device.tablet} {
+    flex: none;
+    padding-right: 0;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media ${device.mobile} {
+    margin-bottom: 0;
+  }
 `;
 export const DemoSectionRight = styled.div`
   flex: 1;
@@ -135,13 +249,20 @@ export const CodeSection = styled.div`
   border-radius: 16px;
   padding: 28px 42px;
   margin-top: 18px;
+  @media ${device.mobile} {
+    padding: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 export const DemoRoot = styled.div`
   padding-top: 140px;
 `;
-export const DemoSectionTitle = styled(Typography)`
-  margin-bottom: 36px;
-  margin-top: 4px;
+
+export const DemoSectionParams = styled.div`
+  @media ${device.mobile} {
+    display: none;
+  }
 `;
 
 export const DemoStreamStatus = styled.div<{ $ready: boolean }>`
@@ -160,6 +281,9 @@ export const DemoStreamStatus = styled.div<{ $ready: boolean }>`
     background-color: ${({ $ready }) => ($ready ? '#2CC383' : '#0c0417')};
     border: 1px solid #2d1153;
   }
+  @media ${device.mobile} {
+    margin-top: 32px;
+  }
 `;
 
 export const Player = styled.div`
@@ -168,6 +292,9 @@ export const Player = styled.div`
   margin-top: 22px;
   border-radius: 4px;
   overflow: hidden;
+  @media ${device.mobile} {
+    height: 153px;
+  }
 `;
 
 export const OfflinePlayer = styled.div`
@@ -179,4 +306,7 @@ export const OfflinePlayer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media ${device.mobile} {
+    height: 153px;
+  }
 `;

@@ -1,19 +1,27 @@
 import React from 'react';
 import bg from './assets/bg.svg';
+import bgMd from './assets/bg_md.svg';
+import bgSm from './assets/bg_sm.svg';
 import IconLogo from 'components/Logo/IconLogo';
-import { Button, Typography } from 'ui-kit';
+import { Button, MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
-import { Title, Bg, Wrapper, Btns, Footer } from './styles';
+import { Title, Bg, Wrapper, Btns, Footer, SLogo } from './styles';
 
 const Hero = () => {
   return (
     <>
       <Bg>
-        <img src={bg} alt="" />
+        <picture>
+          <source media="(max-width: 767px)" srcSet={bgSm} />
+          <source media="(max-width: 1024px)" srcSet={bgMd} />
+          <img src={bg} alt="" />
+        </picture>
       </Bg>
       <Container>
         <Wrapper>
-          <IconLogo />
+          <SLogo>
+            <IconLogo />
+          </SLogo>
           <Title type="display2" theme="white" align="center">
             Innovative <br />
             Video Infrastructure
@@ -25,7 +33,7 @@ const Hero = () => {
           </Typography>
           <Btns>
             <Button>Create Account</Button>
-            <Button theme="minimal">Learn more</Button>
+            <MarketingButton theme="link-secondary">Learn more</MarketingButton>
           </Btns>
           <Footer type="caption">
             Sign up now and <strong>get $10 in free credit</strong> to try

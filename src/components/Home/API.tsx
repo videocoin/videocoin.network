@@ -1,6 +1,6 @@
 import React from 'react';
-import { Typography, MarketingButton } from 'ui-kit';
-import { ApiRoot, ApiDesc, ApiCards, ApiCard } from './styles';
+import { Typography, MarketingButton, Icon } from 'ui-kit';
+import { ApiRoot, ApiDesc, ApiCards, ApiCard, ApiIcon } from './styles';
 import Container from 'styles/Container';
 const Api = () => {
   return (
@@ -20,6 +20,9 @@ const Api = () => {
               Ingest and encode your video files and output an HLS stream
             </Typography>
             <MarketingButton theme="link">Encoding features</MarketingButton>
+            <ApiIcon>
+              <Icon name="videoPlay" width={36} height={36} />
+            </ApiIcon>
           </ApiCard>
           <ApiCard>
             <Typography type="display4">Livestream With Ease</Typography>
@@ -30,6 +33,9 @@ const Api = () => {
             <MarketingButton theme="link">
               Livestreaming features
             </MarketingButton>
+            <ApiIcon>
+              <Icon name="livestream" width={36} height={36} />
+            </ApiIcon>
           </ApiCard>
         </ApiCards>
       </Container>

@@ -1,9 +1,18 @@
 import styled from 'styled-components';
+import { device } from '../../../queries';
 
 export const Root = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding: 133px 80px 120px;
+  @media ${device.tablet} {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media ${device.mobile} {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 `;
 
 export const List = styled.div`
@@ -13,12 +22,8 @@ export const List = styled.div`
   grid-row-gap: 72px;
   grid-auto-rows: 406px;
   margin-top: 72px;
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;

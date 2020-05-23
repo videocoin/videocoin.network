@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { device } from '../../queries';
 
 export const Root = styled.header`
   padding: 22px 64px;
@@ -7,6 +8,9 @@ export const Root = styled.header`
   align-items: center;
   position: relative;
   z-index: 1;
+  @media ${device.tablet} {
+    padding: 15px 24px;
+  }
   &::before {
     content: '';
     display: block;
@@ -22,13 +26,30 @@ export const Root = styled.header`
 `;
 
 export const NavRoot = styled.nav`
-  padding: 0 50px;
-  margin-left: 30px;
-  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  @media ${device.laptop} {
+    position: static;
+    margin-left: 36px;
+    transform: none;
+  }
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 export const NavList = styled.ul`
   display: flex;
+  white-space: nowrap;
+`;
+
+export const Logo = styled(Link)`
+  img {
+    @media ${device.tablet} {
+      width: 172px;
+    }
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -63,8 +84,14 @@ export const NavLink = styled(Link)`
 export const SignWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-left: auto;
   a {
-    margin-right: 32px;
     text-decoration: none;
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+  @media ${device.tablet} {
+    display: none;
   }
 `;

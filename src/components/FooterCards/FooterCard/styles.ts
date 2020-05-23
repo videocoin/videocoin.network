@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { Typography } from 'ui-kit/*';
+import { device } from '../../../queries';
 
 export const Root = styled.div`
   background: linear-gradient(225deg, #7234c8 0%, #4e238e 100%);
@@ -11,6 +12,10 @@ export const Root = styled.div`
   align-items: center;
   text-align: center;
   max-width: 487px;
+  @media ${device.mobile} {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 `;
 export const Img = styled.div`
   height: 280px;

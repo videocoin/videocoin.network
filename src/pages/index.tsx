@@ -19,22 +19,22 @@ const IndexPage = () => {
     query {
       cheap: file(relativePath: { eq: "cheap.png" }) {
         childImageSharp {
-          fixed(width: 416, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 416, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       time: file(relativePath: { eq: "time.png" }) {
         childImageSharp {
-          fixed(width: 416, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 416, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       scalable: file(relativePath: { eq: "scalable.png" }) {
         childImageSharp {
-          fixed(width: 416, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 416, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -45,9 +45,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Hero />
       <Section light>
-        <div>
-          <Img fixed={data.cheap.childImageSharp.fixed} />
-        </div>
+        <Img fluid={data.cheap.childImageSharp.fluid} />
         <div>
           <Typography type="display4">Lower Cost</Typography>
           <Typography type="subtitleThin" opacity="drift">
@@ -57,9 +55,7 @@ const IndexPage = () => {
         </div>
       </Section>
       <Section reverse>
-        <div>
-          <Img fixed={data.time.childImageSharp.fixed} />
-        </div>
+        <Img fluid={data.time.childImageSharp.fluid} />
         <div>
           <Typography type="display4">Start Now</Typography>
           <Typography type="subtitleThin" opacity="drift">
@@ -69,9 +65,7 @@ const IndexPage = () => {
         </div>
       </Section>
       <Section light>
-        <div>
-          <Img fixed={data.scalable.childImageSharp.fixed} />
-        </div>
+        <Img fluid={data.scalable.childImageSharp.fluid} />
         <div>
           <Typography type="display4">Infinitely Scalable</Typography>
           <Typography type="subtitleThin" opacity="drift">

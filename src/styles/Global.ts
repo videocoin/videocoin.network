@@ -4,7 +4,7 @@ import 'typeface-rubik';
 const GlobalStyle = createGlobalStyle`
   @font-face {
   font-family: 'icomoon';
-  src: url('./fonts/icomoon.woff') format('woff');
+  src: url('/fonts/icomoon.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;

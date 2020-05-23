@@ -9,8 +9,8 @@ const DevelopersHero = () => {
     query {
       file(relativePath: { eq: "developersHero.png" }) {
         childImageSharp {
-          fixed(width: 583, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 583, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -18,7 +18,7 @@ const DevelopersHero = () => {
   `);
   return (
     <Root>
-      <Img fixed={data.file.childImageSharp.fixed} />
+      <Img fluid={data.file.childImageSharp.fluid} />
       <div>
         <Subtitle type="subtitleCaps">
           <span>Develop</span> on VideoCoin Network

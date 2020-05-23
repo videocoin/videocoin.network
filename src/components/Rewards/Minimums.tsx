@@ -23,7 +23,9 @@ const Minimums = () => {
   return (
     <Section light reverse>
       <div>
-        <Card />
+        <div>
+          <Card />
+        </div>
       </div>
       <div>
         <Title>Secure but Attainable Minimums</Title>

@@ -1,11 +1,14 @@
 import styled from 'styled-components';
-import BaseLogo from 'components/Logo';
+import { device } from '../../queries';
 
 export const Root = styled.footer`
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.24);
   margin-top: 56px;
   padding-bottom: 87px;
+  @media ${device.mobile} {
+    padding-bottom: 36px;
+  }
 `;
 
 export const Copyright = styled.div`
@@ -17,6 +20,10 @@ export const Copyright = styled.div`
 
 export const FooterLogo = styled.div`
   margin-top: 150px;
+
+  @media ${device.mobile} {
+    margin-top: 46px;
+  }
 `;
 
 export const Links = styled.div`

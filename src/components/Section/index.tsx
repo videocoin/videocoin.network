@@ -6,15 +6,19 @@ const Section = ({
   light = false,
   reverse = false,
   children,
+  mobileReverse = false,
 }: {
   light?: boolean;
   reverse?: boolean;
   children: ReactNode;
+  mobileReverse?: boolean;
 }) => {
   return (
     <Wrapper $light={light}>
       <Container>
-        <Inner $reverse={reverse}>{children}</Inner>
+        <Inner $reverse={reverse} $mobileReverse={mobileReverse}>
+          {children}
+        </Inner>
       </Container>
     </Wrapper>
   );

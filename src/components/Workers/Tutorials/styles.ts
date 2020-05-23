@@ -9,7 +9,7 @@ export const List = styled.div`
   max-width: 1440px;
   margin: 72px auto 0;
   display: grid;
-  grid-template-columns: repeat(12, auto);
+  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 32px;
   grid-row-gap: 72px;
   grid-auto-rows: 406px;

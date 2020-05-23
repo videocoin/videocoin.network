@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { NavLink, NavList, NavRoot } from './styles';
 
 interface LinkProps {
@@ -14,27 +13,27 @@ const links: LinkProps[] = [
   },
   {
     name: 'Pricing',
-    path: '/pricing',
+    path: '/pricing/',
   },
   {
     name: 'Developers',
-    path: '/developers',
+    path: '/developers/',
   },
   {
     name: 'Workers',
-    path: '/workers',
+    path: '/workers/',
   },
   {
     name: 'Stakers',
-    path: '/stakers',
+    path: '/stakers/',
   },
   {
     name: 'Rewards',
-    path: '/rewards',
+    path: '/rewards/',
   },
   {
     name: 'Blog',
-    path: '/blog',
+    path: '/blog/',
   },
 ];
 

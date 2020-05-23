@@ -36,9 +36,10 @@ export const List = styled.ul`
 export const MinimumsCard = styled.div`
   background-image: linear-gradient(225deg, #7234c8 0%, #4e238e 100%);
   border-radius: 12px;
-  padding: 48px;
+  padding: 47px;
   margin: 68px 0 108px;
   max-width: 325px;
+  text-align: left;
   li {
     &:not(:last-child) {
       margin-bottom: 24px;
@@ -50,6 +51,7 @@ export const MinimumsCard = styled.div`
         letter-spacing: 0.28px;
         font-weight: bold;
         margin-bottom: 4px;
+        line-height: 24px;
       }
       &:nth-child(2) {
         font-weight: 500;
@@ -62,6 +64,7 @@ export const MinimumsCard = styled.div`
         letter-spacing: 0.25px;
         line-height: 12px;
         color: rgba(255, 255, 255, 0.87);
+        margin-top: 10px;
       }
     }
   }

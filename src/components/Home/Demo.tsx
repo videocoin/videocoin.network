@@ -10,6 +10,7 @@ import {
   DemoRoot,
   Player,
   OfflinePlayer,
+  DemoSectionParams,
 } from './styles';
 import Container from 'styles/Container';
 
@@ -24,6 +25,7 @@ const Demo = () => {
     if (step > 3 && container.current && !player.current) {
       // @ts-expect-error
       player.current = window.IndigoPlayer.init(container.current, {
+        autoplay: true,
         sources: [
           {
             type: 'hls',
@@ -53,10 +55,12 @@ const Demo = () => {
       <Container>
         <DemoSection>
           <DemoSectionLeft>
-            <Typography type="subtitleCaps">Step 1</Typography>
-            <DemoSectionTitle type="title" theme="white">
-              Create Stream
-            </DemoSectionTitle>
+            <div>
+              <Typography type="subtitleCaps">Step 1</Typography>
+              <DemoSectionTitle type="title" theme="white">
+                Create Stream
+              </DemoSectionTitle>
+            </div>
             <Button
               type="button"
               onClick={handleStep(2)}
@@ -67,8 +71,10 @@ const Demo = () => {
             </Button>
           </DemoSectionLeft>
           <DemoSectionRight>
-            <Typography type="subtitleCaps">POST</Typography>
-            <Typography type="body">/stream</Typography>
+            <DemoSectionParams>
+              <Typography type="subtitleCaps">POST</Typography>
+              <Typography type="body">/stream</Typography>
+            </DemoSectionParams>
             <CodeSection>
               <Typography type="body" opacity="drift">
                 {`{
@@ -83,19 +89,21 @@ const Demo = () => {
         </DemoSection>
         <DemoSection>
           <DemoSectionLeft>
-            <Typography
-              opacity={step > 1 ? 'full' : 'medium'}
-              type="subtitleCaps"
-            >
-              Step 2
-            </Typography>
-            <DemoSectionTitle
-              type="title"
-              theme="white"
-              opacity={step > 1 ? 'full' : 'medium'}
-            >
-              Run Stream
-            </DemoSectionTitle>
+            <div>
+              <Typography
+                opacity={step > 1 ? 'full' : 'medium'}
+                type="subtitleCaps"
+              >
+                Step 2
+              </Typography>
+              <DemoSectionTitle
+                type="title"
+                theme="white"
+                opacity={step > 1 ? 'full' : 'medium'}
+              >
+                Run Stream
+              </DemoSectionTitle>
+            </div>
             <Button
               disabled={step !== 2}
               type="button"
@@ -106,17 +114,19 @@ const Demo = () => {
             </Button>
           </DemoSectionLeft>
           <DemoSectionRight>
-            <Typography
-              type="subtitleCaps"
-              opacity={step > 1 ? 'full' : 'medium'}
-            >
-              POST
-            </Typography>
-            <Typography type="body" opacity={step > 1 ? 'full' : 'medium'}>
-              {step > 1
-                ? '/streams/3f18785d-b757-4f18-77e2-36680043fff6/run'
-                : '/stream/ID/run'}
-            </Typography>
+            <DemoSectionParams>
+              <Typography
+                type="subtitleCaps"
+                opacity={step > 1 ? 'full' : 'medium'}
+              >
+                POST
+              </Typography>
+              <Typography type="body" opacity={step > 1 ? 'full' : 'medium'}>
+                {step > 1
+                  ? '/streams/3f18785d-b757-4f18-77e2-36680043fff6/run'
+                  : '/stream/ID/run'}
+              </Typography>
+            </DemoSectionParams>
             <DemoStreamStatus $ready={step > 2}>
               {step > 2 ? 'Stream Ready For Ingest' : 'No Stream Created'}
             </DemoStreamStatus>
@@ -124,19 +134,21 @@ const Demo = () => {
         </DemoSection>
         <DemoSection>
           <DemoSectionLeft>
-            <Typography
-              opacity={step > 2 ? 'full' : 'medium'}
-              type="subtitleCaps"
-            >
-              Step 3
-            </Typography>
-            <DemoSectionTitle
-              type="title"
-              theme="white"
-              opacity={step > 2 ? 'full' : 'medium'}
-            >
-              Upload Your Video
-            </DemoSectionTitle>
+            <div>
+              <Typography
+                opacity={step > 2 ? 'full' : 'medium'}
+                type="subtitleCaps"
+              >
+                Step 3
+              </Typography>
+              <DemoSectionTitle
+                type="title"
+                theme="white"
+                opacity={step > 2 ? 'full' : 'medium'}
+              >
+                Upload Your Video
+              </DemoSectionTitle>
+            </div>
             <Button
               disabled={step !== 3}
               type="button"
@@ -147,17 +159,19 @@ const Demo = () => {
             </Button>
           </DemoSectionLeft>
           <DemoSectionRight>
-            <Typography
-              type="subtitleCaps"
-              opacity={step > 2 ? 'full' : 'medium'}
-            >
-              POST
-            </Typography>
-            <Typography type="body" opacity={step > 2 ? 'full' : 'medium'}>
-              {step > 2
-                ? '/upload/url/3f18785d-b757-4f18-77e2-36680043fff6'
-                : '/upload/url/<ID>'}
-            </Typography>
+            <DemoSectionParams>
+              <Typography
+                type="subtitleCaps"
+                opacity={step > 2 ? 'full' : 'medium'}
+              >
+                POST
+              </Typography>
+              <Typography type="body" opacity={step > 2 ? 'full' : 'medium'}>
+                {step > 2
+                  ? '/upload/url/3f18785d-b757-4f18-77e2-36680043fff6'
+                  : '/upload/url/<ID>'}
+              </Typography>
+            </DemoSectionParams>
             <CodeSection>
               <Typography type="body" opacity="drift">
                 {`{
@@ -178,9 +192,11 @@ const Demo = () => {
             </DemoSectionTitle>
           </DemoSectionLeft>
           <DemoSectionRight>
-            <Typography type="body" opacity={step > 3 ? 'full' : 'medium'}>
-              {'/<ID>/index.m3u8'}
-            </Typography>
+            <DemoSectionParams>
+              <Typography type="body" opacity={step > 3 ? 'full' : 'medium'}>
+                {'/<ID>/index.m3u8'}
+              </Typography>
+            </DemoSectionParams>
             {step > 3 ? (
               <Player ref={container} />
             ) : (

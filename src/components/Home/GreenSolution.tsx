@@ -10,8 +10,8 @@ const GreenSolution = () => {
     query {
       file: file(relativePath: { eq: "green.png" }) {
         childImageSharp {
-          fixed(width: 416, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 416, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -24,9 +24,7 @@ const GreenSolution = () => {
           The Green Solution for Video
         </Typography>
         <GreenSolutionInner>
-          <div>
-            <Img fixed={data.file.childImageSharp.fixed} />
-          </div>
+          <Img fluid={data.file.childImageSharp.fluid} />
           <Typography type="subtitleThin" opacity="drift">
             Billions of dollars of data centers lay dormant. We’ve developed an
             innovative solution that networks these resources and creates a new,

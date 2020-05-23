@@ -44,7 +44,7 @@ const PricingHero = () => {
               </Typography>
             </Text>
             <div>
-              <MarketingButton>Sign up Free</MarketingButton>
+              <MarketingButton>Sign up for Free</MarketingButton>
               <MarketingButton theme="link-secondary">
                 Have Custom Requirements?
               </MarketingButton>
