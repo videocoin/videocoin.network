@@ -1,3 +1,6 @@
 deploy
 build
 node_modules
+.cache
+yarn.lock
+ui-kit/node_modules

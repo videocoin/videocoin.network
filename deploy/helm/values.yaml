@@ -2,7 +2,7 @@ replicasCount: 1
 maxUnavailableCount: 0
 
 image:
-  repository: gcr.io/videocoin-kili/videocoin-network-ui
+  repository: gcr.io/videocoin-network/videocoin-network-ui
   tag: latest
   pullPolicy: Always
 

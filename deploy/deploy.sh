@@ -4,7 +4,7 @@ readonly CHART_NAME=videocoin-network-ui
 readonly CHART_DIR=./deploy/helm
 
 CONSUL_ADDR=${CONSUL_ADDR:=127.0.0.1:8500}
-ENV=${ENV:=kili}
+ENV=${ENV:=dev}
 VERSION=${VERSION:=`git describe --abbrev=0`-`git rev-parse --abbrev-ref HEAD`-`git rev-parse --short HEAD`}
 GCP_PROJECT=${GCP_PROJECT:=videocoin-network}
 
