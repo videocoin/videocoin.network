@@ -34,7 +34,7 @@ const DemoApplication = () => {
         <Inner>
           <Img fluid={data.orbital.childImageSharp.fluid} />
           <Typography type="subtitleThin" opacity="drift">
-            <a href="#">
+            <a href="https://github.com/videocoin/orbital-android" target="_blank" rel="noopener noreferrer">
               <Img fixed={data.github.childImageSharp.fixed} />
             </a>
             <br />

@@ -4,38 +4,38 @@ import { List } from './styles';
 
 const cards: ICard[] = [
   {
-    title: 'Setup a Livestream From the VideoCoin Studio',
-    link: '#',
+    title: 'Setup a Livestream From the VideoCoin Console',
+    link: 'https://docs.videocoin.network/getting-started-1',
     color: '#7234C8',
     light: true,
   },
   {
-    title: 'File Transcoding via VideoCoin Studio',
-    link: '#',
+    title: 'File Transcoding via VideoCoin Console',
+    link: 'https://docs.videocoin.network/file-transcoding-with-videocoin',
     color: '#290F4D',
     light: true,
   },
   {
     title: 'File Transcoding via API',
-    link: '#',
+    link: 'https://docs.videocoin.network/developers/vod-stream',
     color: '#EEE3FF',
     light: false,
   },
   {
     title: 'How to Livestream with a GoPro Hero 7',
-    link: '#',
+    link: 'https://medium.com/videocoin/how-to-livestream-with-a-gopro-hero7-on-the-videocoin-network-ab4c3631ad76',
     color: '#EEE3FF',
     light: false,
   },
   {
     title: 'Livestream using OBS',
-    link: '#',
+    link: 'https://docs.videocoin.network/vid-obs',
     color: '#7234C8',
     light: true,
   },
   {
     title: 'Streaming with the Wyze2 Camera',
-    link: '#',
+    link: 'https://docs.videocoin.network/vid-wyze2',
     color: '#281741',
     light: true,
   },

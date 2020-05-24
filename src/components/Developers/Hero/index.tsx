@@ -30,9 +30,11 @@ const DevelopersHero = () => {
           <Link to="/signup?role=miner">
             <MarketingButton>Join for Free</MarketingButton>
           </Link>
-          <MarketingButton theme="link-secondary">
-            Developers Docs
+          <a href="https://docs.videocoin.network" target="_blank" rel="noopener noreferrer">
+            <MarketingButton theme="link-secondary">
+              Developers Docs
           </MarketingButton>
+          </a>
         </Btns>
       </div>
     </Root>
