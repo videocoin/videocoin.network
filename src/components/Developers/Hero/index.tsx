@@ -1,7 +1,7 @@
 import React from 'react';
 import { MarketingButton, Typography } from 'ui-kit';
 import { Root, Btns, Subtitle } from './styles';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 const DevelopersHero = () => {
@@ -27,7 +27,9 @@ const DevelopersHero = () => {
           Robust video infrastructure with just a few lines of code.
         </Typography>
         <Btns>
-          <MarketingButton>Join for Free</MarketingButton>
+          <Link to="/signup?role=miner">
+            <MarketingButton>Join for Free</MarketingButton>
+          </Link>
           <MarketingButton theme="link-secondary">
             Developers Docs
           </MarketingButton>

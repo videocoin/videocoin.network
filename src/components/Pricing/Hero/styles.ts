@@ -18,7 +18,7 @@ export const Inner = styled.div`
 `;
 
 export const Right = styled.div`
-  padding-left: 143px;
+  padding-left: 120px;
   padding-top: 30px;
   @media ${device.tablet} {
     padding-left: 32px;
@@ -28,8 +28,8 @@ export const Right = styled.div`
     padding-left: 0;
   }
   & > div:last-child {
+    display: flex;
     @media ${device.tablet} {
-      display: flex;
       flex-direction: column;
       div:last-child {
         margin-top: 25px;

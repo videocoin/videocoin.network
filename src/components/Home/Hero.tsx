@@ -6,6 +6,7 @@ import IconLogo from 'components/Logo/IconLogo';
 import { Button, MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
 import { Title, Bg, Wrapper, Btns, Footer, SLogo } from './styles';
+import { Link } from 'gatsby';
 
 const Hero = () => {
   return (
@@ -32,7 +33,9 @@ const Hero = () => {
             money.
           </Typography>
           <Btns>
-            <Button>Create Account</Button>
+            <Link to="/signup?role=miner">
+              <Button>Create Account</Button>
+            </Link>
             <MarketingButton theme="link-secondary">Learn more</MarketingButton>
           </Btns>
           <Footer type="caption">

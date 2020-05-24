@@ -1,6 +1,7 @@
 import React from 'react';
 import { Root, Btns } from './styles';
 import { MarketingButton, Typography } from 'ui-kit';
+import { Link } from 'gatsby';
 
 const GetStarted = () => {
   return (
@@ -11,7 +12,9 @@ const GetStarted = () => {
         started.
       </Typography>
       <Btns>
-        <MarketingButton>Sign up for free</MarketingButton>
+        <Link to="/signup?role=publisher">
+          <MarketingButton>Sign up for free</MarketingButton>
+        </Link>
         <MarketingButton theme="secondary">Talk to us</MarketingButton>
       </Btns>
     </Root>

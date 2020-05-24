@@ -10,6 +10,7 @@ import {
 } from './styles';
 import { MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
+import { Link } from 'gatsby';
 const PricingHero = () => {
   return (
     <Root>
@@ -44,7 +45,9 @@ const PricingHero = () => {
               </Typography>
             </Text>
             <div>
-              <MarketingButton>Sign up for Free</MarketingButton>
+              <Link to="/signup?role=publisher">
+                <MarketingButton>Sign up for free</MarketingButton>
+              </Link>
               <MarketingButton theme="link-secondary">
                 Have Custom Requirements?
               </MarketingButton>

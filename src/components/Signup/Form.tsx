@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from 'react';
-import { Formik } from 'formik';
+import { Formik, FormikHelpers } from 'formik';
 import { Button, Typography } from 'ui-kit';
 import { Link } from 'gatsby';
 import { FormWrapper, SForm, Right } from './styles';
@@ -8,21 +8,37 @@ import Checkbox from './Checkbox';
 import Input from './Input';
 import Select from './Select';
 import countries from './countries';
-import { validateUser } from 'components/Signup/api';
+import { createUser, validateUser } from 'components/Signup/api';
+import { globalHistory as history } from '@reach/router';
 
-const EmailForm = ({ onSubmit }: { onSubmit: () => void }) => {
-  const initialValues = {
-    email: '',
-    password: '',
-    confirm_password: '',
-    agree: false,
-  };
-  const handleSubmit = async (values: any) => {
+const initialValues = {
+  email: '',
+  password: '',
+  confirm_password: '',
+  agree: false,
+};
+
+const EmailForm = ({
+  onSubmit,
+}: {
+  onSubmit: (values: typeof initialValues) => void;
+}) => {
+  const handleSubmit = async (
+    values: typeof initialValues,
+    helpers: FormikHelpers<typeof initialValues>
+  ) => {
     const { agree, ...data } = values;
-    const res = await validateUser(data);
-    console.log(res);
-    onSubmit();
-    console.log('submit');
+    const { setFieldError } = helpers;
+    try {
+      await validateUser(data);
+      onSubmit(values);
+    } catch (e) {
+      if (e.fields) {
+        Object.keys(e.fields).forEach((field: string) => {
+          setFieldError(field, e.fields[field]);
+        });
+      }
+    }
   };
   return (
     <>
@@ -94,7 +110,7 @@ const CountryForm = ({ onSubmit }: { onSubmit: (values: any) => void }) => {
     </>
   );
 };
-const AddressForm = ({ onSubmit }: { onSubmit: (values: any) => void }) => {
+const AddressForm = ({ onSubmit }: { onSubmit: any }) => {
   const initialValues = {
     address_1: '',
     address_2: '',
@@ -132,15 +148,44 @@ const AddressForm = ({ onSubmit }: { onSubmit: (values: any) => void }) => {
   );
 };
 
-const AdditionalInfoForm = () => {
-  const [formData, setFormData] = useState({});
+const AdditionalInfoForm = ({
+  emailForm,
+}: {
+  emailForm: typeof initialValues;
+}) => {
+  const [formData, setFormData] = useState<any>({});
   const [step, setStep] = useState(1);
 
   const handleSubmitCountryForm = (values: any) => {
     setFormData({ ...formData, ...values });
     setStep(2);
   };
-  const handleSubmitAddressForm = (values: any) => {};
+  const handleSubmitAddressForm = async (
+    values: any,
+    helpers: FormikHelpers<any>
+  ) => {
+    const { location } = history;
+    const urlParams = new URLSearchParams(location.search);
+    const role = urlParams.get('role');
+    const isMiner = role === 'miner';
+    console.log(formData);
+    const data = {
+      ...emailForm,
+      ...formData,
+      country: formData.country.value,
+      ...values,
+      ui_role: isMiner ? 'USER_ROLE_UI_MINER' : 'USER_ROLE_UI_PUBLISHED',
+    };
+    try {
+      await createUser(data);
+    } catch (e) {
+      if (e.fields) {
+        Object.keys(e.fields).forEach((field: string) => {
+          helpers.setFieldError(field, e.fields[field]);
+        });
+      }
+    }
+  };
 
   const forms: Record<number, ReactNode> = {
     1: <CountryForm onSubmit={handleSubmitCountryForm} />,
@@ -151,15 +196,21 @@ const AdditionalInfoForm = () => {
 
 const SignupForm = () => {
   const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState<typeof initialValues>({});
+  const handleValidate = (values: any) => {
+    setFormData(values);
+    setStep(2);
+  };
   const forms: Record<number, ReactNode> = {
-    1: <EmailForm onSubmit={() => setStep(2)} />,
-    2: <AdditionalInfoForm />,
+    1: <EmailForm onSubmit={handleValidate} />,
+    2: <AdditionalInfoForm emailForm={formData} />,
   };
   return (
     <Right>
       {forms[step]}
       <Typography align="center" type="bodyThin">
-        Already have an account? <a href="#">Login</a>
+        Already have an account?{' '}
+        <a href="https://studio.videocoin.network/sign-in">Login</a>
       </Typography>
     </Right>
   );

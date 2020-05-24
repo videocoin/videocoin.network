@@ -2,7 +2,7 @@ import React from 'react';
 import { Root, Inner, Left, Right, Subtitle, Title } from './styles';
 import { MarketingButton } from 'ui-kit';
 import Container from 'styles/Container';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 const WorkersHero = () => {
@@ -31,7 +31,9 @@ const WorkersHero = () => {
             <Title type="display3" theme="white">
               Stake your VideoCoin tokens to earn cash rewards.
             </Title>
-            <MarketingButton>Get Started</MarketingButton>
+            <Link to="/signup?role=miner">
+              <MarketingButton>Get Started</MarketingButton>
+            </Link>
           </Right>
         </Inner>
       </Container>

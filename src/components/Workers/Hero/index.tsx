@@ -3,6 +3,7 @@ import { Root, Inner, Left, Right, Subtitle, Title, Bg } from './styles';
 import { MarketingButton } from 'ui-kit';
 import Container from 'styles/Container';
 import bgImg from './bg.svg';
+import { Link } from 'gatsby';
 
 const WorkersHero = () => {
   return (
@@ -20,7 +21,9 @@ const WorkersHero = () => {
             <Title type="display3" theme="white">
               Dedicate your unused compute power and <span>earn cash</span>
             </Title>
-            <MarketingButton>Get Started</MarketingButton>
+            <Link to="/signup?role=miner">
+              <MarketingButton>Get Started</MarketingButton>
+            </Link>
           </Right>
         </Inner>
       </Container>

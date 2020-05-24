@@ -23,8 +23,8 @@ export const countrySchema = Yup.object().shape({
 });
 export const addressSchema = Yup.object().shape({
   address_1: Yup.string().required(),
-  address_2: Yup.string(),
-  region: Yup.string(),
+  address_2: Yup.string().required(),
+  region: Yup.string().required(),
   city: Yup.string().required(),
   zip: Yup.string().required(),
 });

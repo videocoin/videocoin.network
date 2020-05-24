@@ -11,11 +11,16 @@ export const Root = styled.div`
   & > div {
     &:first-child {
       width: 100%;
+      max-width: 583px;
     }
-    margin-left: 50px;
-    max-width: 752px;
-    @media ${device.mobile} {
-      margin-left: 0;
+    &:last-child {
+      margin-left: 50px;
+      max-width: 752px;
+      padding-right: 25px;
+      @media ${device.mobile} {
+        margin-left: 0;
+        padding-right: 0;
+      }
     }
   }
   @media ${device.tablet} {
@@ -30,7 +35,14 @@ export const Root = styled.div`
 
 export const Btns = styled.div`
   margin-top: 64px;
+  display: flex;
+  @media ${device.tablet} {
+    justify-content: center;
+  }
   @media ${device.mobile} {
+    margin-top: 32px;
+    flex-direction: column;
+    align-items: center;
     & > div:not(:last-child) {
       margin-bottom: 35px;
     }
