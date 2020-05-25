@@ -2,9 +2,9 @@ import React from 'react';
 import { Root, Inner, Left, Right, Subtitle, Title, Bg } from './styles';
 import { MarketingButton } from 'ui-kit';
 import Container from 'styles/Container';
-import bgImg from './bg.svg';
-import bgMd from './bg_md.svg';
-import bgSm from './bg_md.svg';
+import bgImg from './assets/bg.svg';
+import bgMd from './assets/bg_md.svg';
+import bgSm from './assets/bg_md.svg';
 
 const WorkersHero = () => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { Root, Inner, Left, Right, Subtitle, Title } from './styles';
 import { MarketingButton } from 'ui-kit';
 import Container from 'styles/Container';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 const StakersHero = () => {
@@ -10,8 +10,8 @@ const StakersHero = () => {
     query {
       file: file(relativePath: { eq: "stakersHero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 680, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 680, quality: 100) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -22,7 +22,7 @@ const StakersHero = () => {
       <Container>
         <Inner>
           <Left>
-            <Img fluid={data.file.childImageSharp.fluid} />
+            <Img fixed={data.file.childImageSharp.fixed} />
           </Left>
           <Right>
             <Subtitle type="subtitleCaps">

@@ -21,6 +21,7 @@ export const Inner = styled.div`
 `;
 export const Left = styled.div`
   margin-top: -250px;
+  width: 100%;
   @media ${device.tablet} {
     width: 690px;
     margin: -90px auto 0;
@@ -32,7 +33,7 @@ export const Left = styled.div`
     transform: translateX(-50%);
     left: 50%;
     position: relative;
-    margin-left: -150px;
+    margin-left: -250px;
   }
 `;
 export const Right = styled.div`
