@@ -18,6 +18,7 @@ export const Inner = styled.div<{
   justify-content: space-between;
   flex-direction: ${({ $reverse }) => ($reverse ? 'row-reverse' : 'row')};
   @media ${device.mobile} {
+    text-align: center;
     flex-direction: ${({ $mobileReverse }) =>
       $mobileReverse ? 'column-reverse' : 'column'};
   }
@@ -37,7 +38,6 @@ export const Inner = styled.div<{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
     width: 100%;
     height: 100%;
     img {

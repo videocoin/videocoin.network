@@ -18,15 +18,15 @@ const StakersPage = () => {
     query {
       cash: file(relativePath: { eq: "stakersCashRewards.png" }) {
         childImageSharp {
-          fixed(width: 416, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 416, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       real: file(relativePath: { eq: "realRewards.png" }) {
         childImageSharp {
-          fixed(width: 416, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 416, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -37,9 +37,7 @@ const StakersPage = () => {
       <SEO title="Stakers" />
       <StakersHero />
       <Section light reverse>
-        <div>
-          <Img fixed={data.cash.childImageSharp.fixed} />
-        </div>
+        <Img fluid={data.cash.childImageSharp.fluid} />
         <div>
           <Typography type="display4" theme="white">
             20% In Cash Rewards
@@ -54,9 +52,7 @@ const StakersPage = () => {
         </div>
       </Section>
       <Section>
-        <div>
-          <Img fixed={data.real.childImageSharp.fixed} />
-        </div>
+        <Img fluid={data.real.childImageSharp.fluid} />
         <div>
           <Typography type="display4" theme="white">
             No Inflation Means Real Rewards

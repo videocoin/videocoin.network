@@ -1,7 +1,6 @@
 import React from 'react';
 import { Root, Btns } from './styles';
 import { MarketingButton, Typography } from 'ui-kit';
-import { Link } from 'gatsby';
 
 const GetStarted = () => {
   return (
@@ -12,9 +11,13 @@ const GetStarted = () => {
         started.
       </Typography>
       <Btns>
-        <Link to="/signup?role=publisher">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://studio.videocoin.network/sign-up?role=publisher"
+        >
           <MarketingButton>Sign up for free</MarketingButton>
-        </Link>
+        </a>
         <MarketingButton theme="secondary">Talk to us</MarketingButton>
       </Btns>
     </Root>

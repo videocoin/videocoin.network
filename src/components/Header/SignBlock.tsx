@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { Button, Typography } from 'ui-kit';
 import { SignWrapper } from './styles';
 import { globalHistory as history } from '@reach/router';
@@ -21,9 +20,13 @@ const SignBlock = () => {
         </a>
       )}
       {!isSignupPage && (
-        <Link to="/signup?role=miner">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://studio.videocoin.network/sign-up?role=miner"
+        >
           <Button size={laptop ? 'sm' : 'md'}>Create Account</Button>
-        </Link>
+        </a>
       )}
     </SignWrapper>
   );

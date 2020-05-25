@@ -17,12 +17,12 @@ export const Root = styled.div`
 
 export const List = styled.div`
   display: grid;
-  grid-template-columns: repeat(12, auto);
+  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 32px;
   grid-row-gap: 72px;
   grid-auto-rows: 406px;
   margin-top: 72px;
-  @media (max-width: 767px) {
+  @media ${device.mobile} {
     display: flex;
     flex-direction: column;
   }

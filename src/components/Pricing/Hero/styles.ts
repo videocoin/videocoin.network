@@ -31,7 +31,7 @@ export const Right = styled.div`
     display: flex;
     @media ${device.tablet} {
       flex-direction: column;
-      div:last-child {
+      & > *:last-child {
         margin-top: 25px;
         button {
           padding-left: 0;

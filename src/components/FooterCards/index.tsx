@@ -12,7 +12,7 @@ const FooterCards = styled.div`
   }
   @media ${device.mobile} {
     background-color: transparent;
-    padding: 170px 0 100px;
+    padding: 170px 12px 100px;
   }
   & > div {
     flex: 1;

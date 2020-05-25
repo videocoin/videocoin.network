@@ -5,13 +5,13 @@ import Container from 'styles/Container';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
-const WorkersHero = () => {
+const StakersHero = () => {
   const data = useStaticQuery(graphql`
     query {
       file: file(relativePath: { eq: "stakersHero.png" }) {
         childImageSharp {
-          fixed(width: 600, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 680, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -22,7 +22,7 @@ const WorkersHero = () => {
       <Container>
         <Inner>
           <Left>
-            <Img fixed={data.file.childImageSharp.fixed} />
+            <Img fluid={data.file.childImageSharp.fluid} />
           </Left>
           <Right>
             <Subtitle type="subtitleCaps">
@@ -31,9 +31,13 @@ const WorkersHero = () => {
             <Title type="display3" theme="white">
               Stake your VideoCoin tokens to earn cash rewards.
             </Title>
-            <Link to="/signup?role=miner">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://studio.videocoin.network/sign-up?role=miner"
+            >
               <MarketingButton>Get Started</MarketingButton>
-            </Link>
+            </a>
           </Right>
         </Inner>
       </Container>
@@ -41,4 +45,4 @@ const WorkersHero = () => {
   );
 };
 
-export default WorkersHero;
+export default StakersHero;

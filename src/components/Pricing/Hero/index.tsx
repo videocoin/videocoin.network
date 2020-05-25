@@ -10,7 +10,7 @@ import {
 } from './styles';
 import { MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
-import { Link } from 'gatsby';
+
 const PricingHero = () => {
   return (
     <Root>
@@ -45,9 +45,13 @@ const PricingHero = () => {
               </Typography>
             </Text>
             <div>
-              <Link to="/signup?role=publisher">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://studio.videocoin.network/sign-up?role=publisher"
+              >
                 <MarketingButton>Sign up for free</MarketingButton>
-              </Link>
+              </a>
               <MarketingButton theme="link-secondary">
                 Have Custom Requirements?
               </MarketingButton>

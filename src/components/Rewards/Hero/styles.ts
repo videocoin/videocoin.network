@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import { Typography } from 'ui-kit';
+import { device } from '../../../queries';
 
 export const Root = styled.div`
   padding-top: 164px;
   padding-bottom: 105px;
+  overflow: hidden;
 `;
 
 export const Subtitle = styled(Typography).attrs(() => ({
@@ -26,14 +28,30 @@ export const Title = styled(Typography).attrs(() => ({
 export const Img = styled.div`
   position: relative;
   width: 1080px;
-  margin: 93px auto 0;
   text-align: center;
+  @media ${device.tablet} {
+    width: 385px;
+    flex-shrink: 0;
+    margin-left: -20px;
+  }
+  @media ${device.mobile} {
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    pointer-events: none;
+  }
 `;
 
 const Payment = styled.div`
   position: absolute;
   font-weight: 500;
   color: #fff;
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 export const Payment1 = styled(Payment)`
   left: 22%;
@@ -50,11 +68,53 @@ export const Features = styled.ul`
   display: flex;
   margin-top: 93px;
   padding-left: 20px;
+  @media ${device.tablet} {
+    padding-left: 0;
+    width: 100%;
+    margin-left: -20px;
+    margin-top: 22px;
+    flex-direction: column;
+  }
+  @media ${device.mobile} {
+    justify-content: center;
+    margin: 215px auto auto;
+    max-width: 320px;
+  }
   li {
     max-width: 260px;
     margin-right: 21px;
+    @media ${device.tablet} {
+      max-width: 320px;
+      margin-right: 0;
+    }
     &:first-child {
       margin-right: auto;
+      @media ${device.tablet} {
+        margin-right: 0;
+        margin-bottom: 116px;
+      }
+      @media ${device.mobile} {
+        margin-bottom: 340px;
+        margin-left: 20px;
+      }
+    }
+    &:nth-child(2) {
+      display: none;
+      margin-bottom: 120px;
+      @media ${device.tablet} {
+        display: block;
+      }
+      @media ${device.mobile} {
+        margin-bottom: 260px;
+      }
+    }
+    &:nth-child(3) {
+      @media ${device.tablet} {
+        margin-bottom: 150px;
+      }
+      @media ${device.mobile} {
+        margin-bottom: 330px;
+      }
     }
   }
   p {
@@ -91,6 +151,30 @@ export const FeatureTitle = styled.div`
     font-size: 14px;
     line-height: 24px;
   }
+  @media ${device.tablet} {
+    min-height: 0;
+    color: #ccb1f2;
+  }
+  @media ${device.mobile} {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+`;
+
+export const FeatureTop = styled.div`
+  font-weight: 500;
+  letter-spacing: 0.12px;
+  color: rgba(255, 255, 255, 0.94);
+  margin-bottom: 12px;
+  display: none;
+  align-items: center;
+  img {
+    margin-right: 8px;
+  }
+  @media ${device.tablet} {
+    display: flex;
+  }
 `;
 
 export const FeaturePayment = styled.div`
@@ -117,5 +201,20 @@ export const FeaturePayment = styled.div`
     font-weight: 500;
     line-height: 24px;
     width: 100%;
+  }
+`;
+
+export const Inner = styled.div`
+  margin: 93px auto 0;
+  @media ${device.tablet} {
+    max-width: 768px;
+    padding: 0 40px;
+    display: flex;
+    align-items: flex-start;
+  }
+  @media ${device.mobile} {
+    padding: 0;
+    margin-left: -6px;
+    margin-right: -6px;
   }
 `;

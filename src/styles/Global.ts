@@ -253,6 +253,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.headroom--unfixed {
+position:fixed!important;
+}
+.headroom-disable-animation {
+//transform: none!important;
+}
 `;
 
 export default GlobalStyle;

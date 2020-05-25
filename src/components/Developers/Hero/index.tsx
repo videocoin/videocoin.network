@@ -1,7 +1,7 @@
 import React from 'react';
 import { MarketingButton, Typography } from 'ui-kit';
 import { Root, Btns, Subtitle } from './styles';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 const DevelopersHero = () => {
@@ -27,13 +27,21 @@ const DevelopersHero = () => {
           Robust video infrastructure with just a few lines of code.
         </Typography>
         <Btns>
-          <Link to="/signup?role=miner">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://studio.videocoin.network/sign-up?role=publisher"
+          >
             <MarketingButton>Join for Free</MarketingButton>
-          </Link>
-          <a href="https://docs.videocoin.network" target="_blank" rel="noopener noreferrer">
+          </a>
+          <a
+            href="https://docs.videocoin.network"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <MarketingButton theme="link-secondary">
               Developers Docs
-          </MarketingButton>
+            </MarketingButton>
           </a>
         </Btns>
       </div>

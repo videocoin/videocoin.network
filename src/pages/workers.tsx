@@ -11,28 +11,29 @@ import StakersCard from 'components/FooterCards/StakersCard';
 import DevelopersCard from 'components/FooterCards/DevelopersCard';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import HowItWorks from 'components/Workers/HowItWorks';
 
 const WorkersPage = () => {
   const data = useStaticQuery(graphql`
     query {
       setup: file(relativePath: { eq: "setup.png" }) {
         childImageSharp {
-          fixed(width: 475, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 475, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       feature: file(relativePath: { eq: "feature.png" }) {
         childImageSharp {
-          fixed(width: 475, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 475, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       getPaid: file(relativePath: { eq: "getPaid.png" }) {
         childImageSharp {
-          fixed(width: 416, quality: 100) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 416, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -43,9 +44,7 @@ const WorkersPage = () => {
       <SEO title="Workers" />
       <WorkersHero />
       <Section light reverse>
-        <div>
-          <Img fixed={data.setup.childImageSharp.fixed} />
-        </div>
+        <Img fluid={data.setup.childImageSharp.fluid} />
         <div>
           <Typography type="display4" theme="white">
             Simple Setup
@@ -60,9 +59,7 @@ const WorkersPage = () => {
         </div>
       </Section>
       <Section>
-        <div>
-          <Img fixed={data.getPaid.childImageSharp.fixed} />
-        </div>
+        <Img fluid={data.getPaid.childImageSharp.fluid} />
         <div>
           <Typography type="display4" theme="white">
             Get Paid in Cash
@@ -77,9 +74,7 @@ const WorkersPage = () => {
         </div>
       </Section>
       <Section light reverse>
-        <div>
-          <Img fixed={data.feature.childImageSharp.fixed} />
-        </div>
+        <Img fluid={data.feature.childImageSharp.fluid} />
         <div>
           <Typography type="display4" theme="white">
             The Future of Video
@@ -90,6 +85,7 @@ const WorkersPage = () => {
           </Typography>
         </div>
       </Section>
+      <HowItWorks />
       <TutorialsList />
       <Community />
       <FooterCards>

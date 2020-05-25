@@ -168,7 +168,6 @@ const AdditionalInfoForm = ({
     const urlParams = new URLSearchParams(location.search);
     const role = urlParams.get('role');
     const isMiner = role === 'miner';
-    console.log(formData);
     const data = {
       ...emailForm,
       ...formData,

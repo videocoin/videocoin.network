@@ -3,13 +3,18 @@ import { Root, Inner, Left, Right, Subtitle, Title, Bg } from './styles';
 import { MarketingButton } from 'ui-kit';
 import Container from 'styles/Container';
 import bgImg from './bg.svg';
-import { Link } from 'gatsby';
+import bgMd from './bg_md.svg';
+import bgSm from './bg_md.svg';
 
 const WorkersHero = () => {
   return (
     <Root>
       <Bg>
-        <img src={bgImg} alt="" />
+        <picture>
+          <source media="(max-width: 767px)" srcSet={bgSm} />
+          <source media="(max-width: 1024px)" srcSet={bgMd} />
+          <img src={bgImg} alt="" />
+        </picture>
       </Bg>
       <Container>
         <Inner>
@@ -21,9 +26,13 @@ const WorkersHero = () => {
             <Title type="display3" theme="white">
               Dedicate your unused compute power and <span>earn cash</span>
             </Title>
-            <Link to="/signup?role=miner">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://studio.videocoin.network/sign-up?role=miner"
+            >
               <MarketingButton>Get Started</MarketingButton>
-            </Link>
+            </a>
           </Right>
         </Inner>
       </Container>

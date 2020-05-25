@@ -7,7 +7,7 @@ export const Root = styled.header`
   display: flex;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   @media ${device.tablet} {
     padding: 15px 24px;
   }
@@ -25,7 +25,7 @@ export const Root = styled.header`
   }
 `;
 
-export const NavRoot = styled.nav`
+export const NavRoot = styled.nav<{ $open: boolean }>`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -35,16 +35,40 @@ export const NavRoot = styled.nav`
     transform: none;
   }
   @media ${device.tablet} {
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    background-image: radial-gradient(circle at 100% 100%, #572577, #4b3aa6);
+    padding-top: 85px;
+    padding-left: 29px;
+    margin-left: 0;
+    z-index: 1001;
+    ${({ $open }) => $open && `visibility: visible; opacity: 1`};
   }
 `;
 
 export const NavList = styled.ul`
   display: flex;
   white-space: nowrap;
+  @media ${device.tablet} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const Logo = styled(Link)`
+  position: relative;
+  z-index: 1002;
   img {
     @media ${device.tablet} {
       width: 172px;
@@ -78,6 +102,15 @@ export const NavLink = styled(Link)`
     border-radius: 2px;
     top: -24px;
     left: 0;
+    @media ${device.tablet} {
+      display: none !important;
+    }
+  }
+  @media ${device.tablet} {
+    font-size: 34px;
+    letter-spacing: 0.8px;
+    line-height: 2;
+    font-weight: 300;
   }
 `;
 
@@ -93,5 +126,33 @@ export const SignWrapper = styled.div`
   }
   @media ${device.tablet} {
     display: none;
+  }
+`;
+
+export const MenuBtn = styled.button<{ $active: boolean }>`
+  width: 51px;
+  height: 41px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  position: relative;
+  z-index: 1001;
+  margin-left: auto;
+  display: none;
+  &:before {
+    content: '';
+    width: 23px;
+    height: 23px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.15s ease-in-out;
+    background: ${({ $active }) => $active && '#fff'};
+  }
+  @media ${device.tablet} {
+    display: block;
   }
 `;

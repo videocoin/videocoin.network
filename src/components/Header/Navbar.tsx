@@ -37,14 +37,14 @@ const links: LinkProps[] = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ open }: { open: boolean }) => {
   const renderLink = ({ name, path }: LinkProps) => (
     <NavLink key={name} to={path} activeClassName="active">
       {name}
     </NavLink>
   );
   return (
-    <NavRoot>
+    <NavRoot $open={open}>
       <NavList>{links.map(renderLink)}</NavList>
     </NavRoot>
   );

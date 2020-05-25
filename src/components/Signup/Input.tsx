@@ -5,7 +5,7 @@ import { useField } from 'formik';
 const Input = ({ name, ...rest }: any) => {
   const [field, meta] = useField(name);
   const hasError = meta.touched ? Boolean(meta.error) : false;
-  console.log(meta);
+
   return (
     <BaseInput
       {...field}
