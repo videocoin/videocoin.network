@@ -19,7 +19,9 @@ const Api = () => {
             <Typography opacity="drift" type="subtitleThin">
               Ingest and encode your video files and output an HLS stream
             </Typography>
-            <MarketingButton theme="link">Encoding features</MarketingButton>
+            <a href="https://docs.videocoin.network/developers/vod-stream" target="_blank" rel="noopener noreferrer">
+              <MarketingButton theme="link">Encoding features</MarketingButton>
+            </a>
             <ApiIcon>
               <Icon name="videoPlay" width={36} height={36} />
             </ApiIcon>
@@ -30,16 +32,18 @@ const Api = () => {
               Stream live from any RTMP or WebRTC source and output an HLS
               stream
             </Typography>
-            <MarketingButton theme="link">
-              Livestreaming features
-            </MarketingButton>
+            <a href="https://docs.videocoin.network/developers/live-stream-over-rtmp" target="_blank" rel="noopener noreferrer">
+              <MarketingButton theme="link">
+                Livestreaming features
+              </MarketingButton>
+            </a>
             <ApiIcon>
               <Icon name="livestream" width={36} height={36} />
             </ApiIcon>
           </ApiCard>
         </ApiCards>
       </Container>
-    </ApiRoot>
+    </ApiRoot >
   );
 };
 

@@ -6,6 +6,7 @@ import IconLogo from 'components/Logo/IconLogo';
 import { Button, MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
 import { Title, Bg, Wrapper, Btns, Footer, SLogo } from './styles';
+import { Link } from 'gatsby';
 
 const Hero = () => {
   return (
@@ -35,11 +36,13 @@ const Hero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://studio.videocoin.network/sign-up?role=miner"
+              href="https://console.videocoin.network/sign-up?role=publisher"
             >
               <Button>Create Account</Button>
             </a>
-            <MarketingButton theme="link-secondary">Learn more</MarketingButton>
+            <Link to="/developers">
+              <MarketingButton theme="link-secondary">Learn more</MarketingButton>
+            </Link>
           </Btns>
           <Footer type="caption">
             Sign up now and <strong>get $10 in free credit</strong> to try

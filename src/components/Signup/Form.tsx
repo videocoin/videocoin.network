@@ -209,7 +209,7 @@ const SignupForm = () => {
       {forms[step]}
       <Typography align="center" type="bodyThin">
         Already have an account?{' '}
-        <a href="https://studio.videocoin.network/sign-in">Login</a>
+        <a href="https://console.videocoin.network/sign-in">Login</a>
       </Typography>
     </Right>
   );

@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Typography } from 'ui-kit';
 import { Root, StepItem, StepN, List } from './styles';
-import Container from 'styles/Container';
 
 interface Step {
   id: number;
@@ -38,7 +37,7 @@ const steps: Step[] = [
         VideoCoin Network currently does NOT manage payment to delegated
         stakers. It is up to worker nodes to setup staking pools with our open
         source smart contract to distribute payment via{' '}
-        <a href="#">Public Mint</a>.
+        <a href="https://publicmint.com/" target="_blank" rel="noopener noreferrer">Public Mint</a>.
       </Typography>
     ),
   },

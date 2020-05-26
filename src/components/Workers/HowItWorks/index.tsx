@@ -14,7 +14,7 @@ const steps: Step[] = [
     title: 'Get Started',
     desc: (
       <Typography type="smallBodyThin">
-        Our <a href="#">quickstart guide</a> will get you setup and running our
+        Our <a href="https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-console" target="_blank" rel="noopener noreferrer">quickstart guide</a> will get you setup and running our
         latest worker software in minutes.
       </Typography>
     ),
@@ -36,7 +36,7 @@ const steps: Step[] = [
       <Typography type="smallBodyThin">
         Upon completion of work validation, you will be paid for the work
         completed in cash. Cash payments will be handled via{' '}
-        <a href="#">Public Mint</a>.
+        <a href="https://publicmint.com/" target="_blank" rel="noopener noreferrer">Public Mint</a>.
       </Typography>
     ),
   },

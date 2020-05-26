@@ -34,7 +34,7 @@ const StakersHero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://studio.videocoin.network/sign-up?role=miner"
+              href="https://console.videocoin.network/sign-up?role=publisher"
             >
               <MarketingButton>Get Started</MarketingButton>
             </a>
