@@ -4,6 +4,7 @@ import { device } from '../../queries';
 export const Wrapper = styled.div<{ $light?: boolean }>`
   background-color: ${({ $light = false }) => $light && '#2817417a'};
   padding: 64px 0;
+  position: relative;
   @media ${device.mobile} {
     padding-top: 30px;
   }
@@ -52,7 +53,7 @@ export const Inner = styled.div<{
       margin: 0 auto;
     }
   }
-  & > div:last-child {
+  & > div:nth-child(2) {
     flex: 528px;
     flex-grow: 0;
     margin-right: ${({ $reverse }) => ($reverse ? 30 : 0)}px;

@@ -4,6 +4,7 @@ import { Typography } from 'ui-kit';
 import { Title } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import Disclaimer from 'components/Rewards/Disclaimer';
 
 const CashRewards = () => {
   const data = useStaticQuery(graphql`
@@ -29,6 +30,7 @@ const CashRewards = () => {
           delegators with flexible options of cash rewards and VID*.
         </Typography>
       </div>
+      <Disclaimer />
     </Section>
   );
 };

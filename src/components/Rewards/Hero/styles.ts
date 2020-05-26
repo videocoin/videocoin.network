@@ -4,8 +4,9 @@ import { device } from '../../../queries';
 
 export const Root = styled.div`
   padding-top: 164px;
-  padding-bottom: 105px;
   overflow: hidden;
+  position: relative;
+  padding-bottom: 105px;
 `;
 
 export const Subtitle = styled(Typography).attrs(() => ({

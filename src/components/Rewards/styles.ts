@@ -73,3 +73,17 @@ export const MinimumsCard = styled.div`
     }
   }
 `;
+
+export const DisclaimerText = styled.div`
+  position: absolute;
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+  letter-spacing: 0.06px;
+  color: #b099d2;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  white-space: nowrap;
+`;

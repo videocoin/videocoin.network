@@ -4,6 +4,7 @@ import { Typography } from 'ui-kit';
 import { Title, List } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import Disclaimer from 'components/Rewards/Disclaimer';
 
 const WorkersRewards = () => {
   const data = useStaticQuery(graphql`
@@ -32,10 +33,11 @@ const WorkersRewards = () => {
           <li>
             Industry First:
             <br />
-            Choose how you get rewarded: Cash or VID.
+            Choose how you get rewarded: Cash or VID*.
           </li>
         </List>
       </div>
+      <Disclaimer />
     </Section>
   );
 };

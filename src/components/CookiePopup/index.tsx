@@ -25,7 +25,13 @@ const CookiePopup = () => {
         <button type="submit" onClick={onOk}>
           Okay
         </button>
-        <a href="/privacy">Learn More</a>
+        <a
+          href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkWebsiteTermsofUse.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn More
+        </a>
       </Btns>
     </Root>
   ) : null;

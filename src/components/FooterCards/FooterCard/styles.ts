@@ -22,6 +22,7 @@ export const Img = styled.div`
   margin-bottom: auto;
   img {
     object-fit: contain;
+    max-width: 100%;
   }
 `;
 

@@ -23,6 +23,8 @@ import heroSm2x from '../assets/hero_sm@2x.png';
 import creditCard from '../assets/creditCard.svg';
 import dollar from '../assets/dollar.svg';
 import Container from 'styles/Container';
+import Disclaimer from 'components/Rewards/Disclaimer';
+import Section from 'components/Section';
 
 const RewardsHero = () => {
   const [value, setValue] = useState(1000);
@@ -105,6 +107,7 @@ const RewardsHero = () => {
           </Features>
         </Inner>
       </Container>
+      <Disclaimer />
     </Root>
   );
 };
