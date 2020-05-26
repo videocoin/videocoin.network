@@ -3,6 +3,7 @@ GOARCH?=amd64
 GCP_PROJECT?=videocoin-network
 NAME=videocoin-network-ui
 VERSION=$$(git describe --abbrev=0)-$$(git rev-parse --abbrev-ref HEAD)-$$(git rev-parse --short HEAD)
+ENV?=dev
 
 .PHONY: deploy build
 
