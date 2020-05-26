@@ -14,11 +14,13 @@ const GetStarted = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://studio.videocoin.network/sign-up?role=publisher"
+          href="https://console.videocoin.network/sign-up?role=publisher"
         >
           <MarketingButton>Sign up for free</MarketingButton>
         </a>
-        <MarketingButton theme="secondary">Talk to us</MarketingButton>
+        <a href="mailto:support@videocoin.network">
+          <MarketingButton theme="secondary">Talk to us</MarketingButton>
+        </a>
       </Btns>
     </Root>
   );

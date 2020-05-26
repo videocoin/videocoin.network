@@ -8,7 +8,7 @@ const Card = () => (
     <ul>
       <li>
         <div>Worker Node</div>
-        <div>333,333 VID minimum stake</div>
+        <div>50,000 VID minimum stake</div>
         <div>*minimum will be re-evaluated every month</div>
       </li>
       <li>

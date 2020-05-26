@@ -6,19 +6,19 @@ import { Typography } from 'ui-kit';
 const cards: ICard[] = [
   {
     title: 'Worker Quickstart Guide',
-    link: '#',
+    link: 'https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-console',
     color: '#7234C8',
     light: true,
   },
   {
     title: 'Setting up a Worker on RaspberryPi',
-    link: '#',
+    link: 'https://forum.videocoin.network/t/setting-up-a-videocoin-worker-on-raspberrypi',
     color: '#351661',
     light: true,
   },
   {
     title: 'Setting up a Worker on Jetson Nano',
-    link: '#',
+    link: 'https://forum.videocoin.network/t/setting-up-a-videocoin-worker-on-jetson-nano',
     color: '#EEE3FF',
     light: false,
   },

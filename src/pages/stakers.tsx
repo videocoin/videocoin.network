@@ -10,7 +10,7 @@ import FooterCards from 'components/FooterCards';
 import DevelopersCard from 'components/FooterCards/DevelopersCard';
 import WorkersCard from 'components/FooterCards/WorkersCard';
 import HowItWorks from 'components/Stakers/HowItWorks';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 const StakersPage = () => {
@@ -46,9 +46,11 @@ const StakersPage = () => {
             Delegates receive a minimum 20% of worker's cash earned for a job
             completed.
           </Typography>
-          <MarketingButton theme="link" size="xs">
-            See Reward Breakdown
-          </MarketingButton>
+          <Link to="/rewards">
+            <MarketingButton theme="link" size="xs">
+              See Reward Breakdown
+            </MarketingButton>
+          </Link>
         </div>
       </Section>
       <Section>

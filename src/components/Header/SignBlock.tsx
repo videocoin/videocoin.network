@@ -12,7 +12,7 @@ const SignBlock = () => {
     <SignWrapper>
       {!laptop && (
         <a
-          href="https://studio.videocoin.network/sign-in"
+          href="https://console.videocoin.network/sign-in"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -23,7 +23,7 @@ const SignBlock = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://studio.videocoin.network/sign-up?role=miner"
+          href="https://console.videocoin.network/sign-up?role=publisher"
         >
           <Button size={laptop ? 'sm' : 'md'}>Create Account</Button>
         </a>

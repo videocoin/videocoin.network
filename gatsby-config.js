@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Videocoin`,
+    title: `VideoCoin Network`,
     description: ``,
   },
   plugins: [

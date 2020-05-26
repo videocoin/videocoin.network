@@ -1,7 +1,7 @@
 {
   "name": "videocoin.network",
   "private": true,
-  "description": "Videocoin Network",
+  "description": "VideoCoin Network",
   "version": "0.1.0",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",

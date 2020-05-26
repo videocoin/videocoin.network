@@ -9,7 +9,7 @@ import Community from 'components/Community';
 import FooterCards from 'components/FooterCards';
 import StakersCard from 'components/FooterCards/StakersCard';
 import DevelopersCard from 'components/FooterCards/DevelopersCard';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import HowItWorks from 'components/Workers/HowItWorks';
 
@@ -46,9 +46,15 @@ const WorkersPage = () => {
       <Section light reverse>
         <Img fluid={data.setup.childImageSharp.fluid} />
         <div>
-          <Typography type="display4" theme="white">
-            Simple Setup
-          </Typography>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-console"
+          >
+            <Typography type="display4" theme="white">
+              Simple Setup
+            </Typography>
+          </a>
           <Typography type="subtitleThin" opacity="drift">
             Our software is so powerful, use any hardware that works with Docker
             to begin working in minutes.
@@ -68,9 +74,11 @@ const WorkersPage = () => {
             Unlike other projects which deliver inflating tokens as reward, we
             pay our workers in cash.
           </Typography>
-          <MarketingButton theme="link" size="xs">
-            See Reward Breakdown
-          </MarketingButton>
+          <Link to="/rewards">
+            <MarketingButton theme="link" size="xs">
+              See Reward Breakdown
+            </MarketingButton>
+          </Link>
         </div>
       </Section>
       <Section light reverse>

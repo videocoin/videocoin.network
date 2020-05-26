@@ -20,7 +20,13 @@ const Community = () => {
             Check out our community forum to chat with others
           </Typography>
           <Btns>
-            <MarketingButton>Join Community</MarketingButton>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://forum.videocoin.network"
+            >
+              <MarketingButton>Join Community</MarketingButton>
+            </a>
           </Btns>
         </div>
       </Root>
