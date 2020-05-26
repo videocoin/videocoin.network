@@ -6,8 +6,7 @@ import { Typography } from 'ui-kit';
 const cards: ICard[] = [
   {
     title: 'Stakers Quickstart Guide',
-    link:
-      'https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-console',
+    link: 'https://forum.videocoin.network/t/videocoin-network-staking-guide/72',
     color: '#7234C8',
     light: true,
   },

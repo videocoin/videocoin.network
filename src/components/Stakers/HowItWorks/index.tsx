@@ -24,7 +24,7 @@ const steps: Step[] = [
     title: 'Basic Setup',
     desc: (
       <Typography type="smallBodyThin">
-        Follow our <a href="#">Staking Quickstart Guide</a> to learn how to use
+        Follow our <a href="https://forum.videocoin.network/t/videocoin-network-staking-guide/72" target="_blank" rel="noopener noreferrer">Staking Quickstart Guide</a> to learn how to use
         our CLI tooling to begin staking your VideoCoin tokens.
       </Typography>
     ),

@@ -7,7 +7,7 @@ const cards: ICard[] = [
   {
     title: 'Worker Quickstart Guide',
     link:
-      'https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-console',
+      'https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-videocoin-network-console/38',
     color: '#7234C8',
     light: true,
   },

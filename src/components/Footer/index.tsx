@@ -40,10 +40,10 @@ const Footer = () => {
               VideoCoin Network Privacy Policy
             </Link>
             <Link href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkTermsofService.html">
-              VideoCoin Network Terms of Use
+              VideoCoin Network Terms of Service
             </Link>
             <Link href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkWebsiteTermsofUse.html">
-              VideoCoin Network Website Terms of use
+              VideoCoin Network Website Terms of Use
             </Link>
             <Link href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkWorkerTermsofService.html">
               VideoCoin Network Worker Terms of Service
