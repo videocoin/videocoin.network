@@ -34,10 +34,13 @@ const DemoApplication = () => {
         <Inner>
           <Img fluid={data.orbital.childImageSharp.fluid} />
           <Typography type="subtitleThin" opacity="drift">
-            <a href="https://github.com/videocoin/orbital-android" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/videocoin/orbital-android"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Img fixed={data.github.childImageSharp.fixed} />
             </a>
-            <br />
             With Orbital, see how easy it is to get an application started on
             VideoCoin Network. Orbital runs seamlessly across iOS, Android, and
             Web.

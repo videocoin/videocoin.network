@@ -22,6 +22,9 @@ export const Root = styled.header`
     position: absolute;
     pointer-events: none;
     background: linear-gradient(180deg, #1a0c2d 0%, rgba(25, 12, 43, 0) 100%);
+    @media ${device.tablet} {
+      height: 120px;
+    }
   }
 `;
 

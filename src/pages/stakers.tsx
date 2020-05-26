@@ -4,7 +4,7 @@ import React from 'react';
 import StakersHero from 'components/Stakers/Hero';
 import Section from 'components/Section';
 import { MarketingButton, Typography } from 'ui-kit';
-import TutorialsList from 'components/Workers/Tutorials';
+import TutorialsList from 'components/Stakers/Tutorials';
 import Community from 'components/Community';
 import FooterCards from 'components/FooterCards';
 import DevelopersCard from 'components/FooterCards/DevelopersCard';

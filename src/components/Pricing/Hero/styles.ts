@@ -26,6 +26,7 @@ export const Right = styled.div`
   }
   @media ${device.mobile} {
     padding-left: 0;
+    text-align: center;
   }
   & > div:last-child {
     display: flex;
@@ -61,6 +62,22 @@ export const PriceCard = styled.div`
   border-radius: 25px;
   padding: 36px 36px 13px;
   width: 304px;
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(to bottom, #fff, #d6c4f1);
+  }
   @media ${device.tablet} {
     flex-shrink: 0;
   }

@@ -6,7 +6,7 @@ import { device } from '../../../queries';
 export const Root = styled.div`
   background: linear-gradient(225deg, #7234c8 0%, #4e238e 100%);
   border-radius: 36px;
-  padding: 26px 60px 56px;
+  padding: 26px 24px 56px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,12 +18,9 @@ export const Root = styled.div`
   }
 `;
 export const Img = styled.div`
-  height: 280px;
-  margin-bottom: 14px;
   margin-top: -120px;
+  margin-bottom: auto;
   img {
-    max-width: 100%;
-    max-height: 100%;
     object-fit: contain;
   }
 `;

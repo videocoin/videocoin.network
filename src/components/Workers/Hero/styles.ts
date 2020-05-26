@@ -75,6 +75,7 @@ export const Bg = styled.div`
   justify-content: center;
   @media ${device.tablet} {
     position: relative;
+    min-height: 540px;
   }
 
   img {

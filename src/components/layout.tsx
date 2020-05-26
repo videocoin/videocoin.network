@@ -7,6 +7,7 @@ import {
   BreakpointProvider,
   BreakpointType,
 } from 'components/BrealpointProvider';
+import CookiePopup from 'components/CookiePopup';
 
 export const queries: Record<BreakpointType, string> = {
   mobile: '(max-width: 768px)',
@@ -33,6 +34,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <main>{children}</main>
       </div>
       <Footer />
+      <CookiePopup />
     </BreakpointProvider>
   );
 };

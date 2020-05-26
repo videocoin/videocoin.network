@@ -16,8 +16,8 @@ export const Btns = styled.div`
   @media ${device.mobile} {
     flex-direction: column;
     align-items: center;
-    & > div:not(:last-child) {
-      margin-bottom: 35px;
+    & > a:not(:last-child) {
+      margin-bottom: 36px;
     }
   }
 `;

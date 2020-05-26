@@ -43,7 +43,7 @@ export const Btns = styled.div`
     margin-top: 32px;
     flex-direction: column;
     align-items: center;
-    & > div:not(:last-child) {
+    & > a:not(:last-child) {
       margin-bottom: 35px;
     }
   }

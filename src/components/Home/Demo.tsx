@@ -11,6 +11,8 @@ import {
   Player,
   OfflinePlayer,
   DemoSectionParams,
+  Request,
+  PlayerWrapper,
 } from './styles';
 import Container from 'styles/Container';
 
@@ -72,8 +74,8 @@ const Demo = () => {
           </DemoSectionLeft>
           <DemoSectionRight>
             <DemoSectionParams>
-              <Typography type="subtitleCaps">POST</Typography>
-              <Typography type="body">/stream</Typography>
+              <Request type="subtitleCaps">POST</Request>
+              <Request type="body">/stream</Request>
             </DemoSectionParams>
             <CodeSection>
               <Typography type="body" opacity="drift">
@@ -115,17 +117,17 @@ const Demo = () => {
           </DemoSectionLeft>
           <DemoSectionRight>
             <DemoSectionParams>
-              <Typography
+              <Request
                 type="subtitleCaps"
                 opacity={step > 1 ? 'full' : 'medium'}
               >
                 POST
-              </Typography>
-              <Typography type="body" opacity={step > 1 ? 'full' : 'medium'}>
+              </Request>
+              <Request type="body" opacity={step > 1 ? 'full' : 'medium'}>
                 {step > 1
                   ? '/streams/3f18785d-b757-4f18-77e2-36680043fff6/run'
                   : '/stream/ID/run'}
-              </Typography>
+              </Request>
             </DemoSectionParams>
             <DemoStreamStatus $ready={step > 2}>
               {step > 2 ? 'Stream Ready For Ingest' : 'No Stream Created'}
@@ -160,17 +162,17 @@ const Demo = () => {
           </DemoSectionLeft>
           <DemoSectionRight>
             <DemoSectionParams>
-              <Typography
+              <Request
                 type="subtitleCaps"
                 opacity={step > 2 ? 'full' : 'medium'}
               >
                 POST
-              </Typography>
-              <Typography type="body" opacity={step > 2 ? 'full' : 'medium'}>
+              </Request>
+              <Request type="body" opacity={step > 2 ? 'full' : 'medium'}>
                 {step > 2
                   ? '/upload/url/3f18785d-b757-4f18-77e2-36680043fff6'
                   : '/upload/url/<ID>'}
-              </Typography>
+              </Request>
             </DemoSectionParams>
             <CodeSection>
               <Typography type="body" opacity="drift">
@@ -193,16 +195,18 @@ const Demo = () => {
           </DemoSectionLeft>
           <DemoSectionRight>
             <DemoSectionParams>
-              <Typography type="body" opacity={step > 3 ? 'full' : 'medium'}>
+              <Request type="body" opacity={step > 3 ? 'full' : 'medium'}>
                 {'/<ID>/index.m3u8'}
-              </Typography>
+              </Request>
             </DemoSectionParams>
             {step > 3 ? (
               <Player ref={container} />
             ) : (
-              <OfflinePlayer>
-                <Typography type="body">Offline</Typography>
-              </OfflinePlayer>
+              <PlayerWrapper>
+                <OfflinePlayer>
+                  <Typography type="body">Offline</Typography>
+                </OfflinePlayer>
+              </PlayerWrapper>
             )}
           </DemoSectionRight>
         </DemoSection>

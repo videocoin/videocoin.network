@@ -27,7 +27,7 @@ export const Inner = styled.div`
     @media ${device.mobile} {
       flex: none;
       width: 100%;
-      margin-bottom: 35px;
+      margin-bottom: 36px;
       margin-right: 0;
     }
   }
@@ -41,6 +41,10 @@ export const Inner = styled.div`
       flex: none;
       width: 100%;
       text-align: center;
+    }
+    a {
+      display: block;
+      margin-bottom: 8px;
     }
   }
 `;

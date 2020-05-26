@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../queries';
 
 export const Title = styled.div`
   font-size: 24px;
@@ -40,6 +41,9 @@ export const MinimumsCard = styled.div`
   margin: 68px 0 108px;
   max-width: 325px;
   text-align: left;
+  @media ${device.mobile} {
+    margin-bottom: 16px;
+  }
   li {
     &:not(:last-child) {
       margin-bottom: 24px;

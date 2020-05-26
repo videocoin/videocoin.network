@@ -11,7 +11,6 @@ const FooterCards = styled.div`
     flex-direction: column;
   }
   @media ${device.mobile} {
-    background-color: transparent;
     padding: 170px 12px 100px;
   }
   & > div {
@@ -20,7 +19,7 @@ const FooterCards = styled.div`
       margin: 0 auto;
     }
     &:not(:last-child) {
-      margin-right: 75px;
+      margin-right: 32px;
       @media ${device.tablet} {
         margin-right: auto;
         margin-bottom: 170px;

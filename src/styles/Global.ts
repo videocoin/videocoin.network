@@ -259,6 +259,10 @@ position:fixed!important;
 .headroom-disable-animation {
 //transform: none!important;
 }
+a {
+text-decoration:none;
+color: inherit;
+}
 `;
 
 export default GlobalStyle;

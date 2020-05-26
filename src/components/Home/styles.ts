@@ -82,6 +82,7 @@ export const ApiCards = styled.div`
   display: flex;
   @media ${device.tablet} {
     flex-direction: column;
+    align-items: center;
   }
 `;
 export const ApiCard = styled.div`
@@ -128,6 +129,10 @@ export const ApiCard = styled.div`
       margin-bottom: 40px;
       margin-right: auto;
     }
+    @media ${device.mobile} {
+      margin: 0 -14px;
+      margin-bottom: 40px;
+    }
   }
 `;
 
@@ -152,6 +157,7 @@ export const GreenSolutionInner = styled.div`
   align-items: center;
   @media ${device.mobile} {
     flex-direction: column;
+    text-align: center;
   }
   & > div:first-child {
     flex: 416px;
@@ -250,9 +256,7 @@ export const CodeSection = styled.div`
   padding: 28px 42px;
   margin-top: 18px;
   @media ${device.mobile} {
-    padding: 24px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
   }
 `;
 export const DemoRoot = styled.div`
@@ -285,28 +289,36 @@ export const DemoStreamStatus = styled.div<{ $ready: boolean }>`
     margin-top: 32px;
   }
 `;
-
+export const PlayerWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin-top: 22px;
+  & > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+`;
 export const Player = styled.div`
   width: 100%;
-  height: 360px;
   margin-top: 22px;
   border-radius: 4px;
   overflow: hidden;
-  @media ${device.mobile} {
-    height: 153px;
-  }
 `;
 
 export const OfflinePlayer = styled.div`
-  width: 100%;
-  height: 360px;
-  margin-top: 22px;
   background-color: #0c0417;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  @media ${device.mobile} {
-    height: 153px;
+`;
+
+export const Request = styled(Typography)`
+  @media ${device.tablet} {
+    display: none;
   }
 `;
