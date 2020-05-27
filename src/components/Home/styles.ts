@@ -116,10 +116,10 @@ export const ApiCard = styled.div`
       padding-left: 0;
     }
   }
-  & > div:nth-child(3) {
+  & > a:nth-child(3) {
     margin-left: 38px;
     @media ${device.mobile} {
-      margin-left: -20px;
+      margin-left: -30px;
       margin-right: -20px;
     }
   }
@@ -181,19 +181,6 @@ export const GreenSolutionInner = styled.div`
     }
     @media ${device.mobile} {
       flex: none;
-    }
-  }
-`;
-
-export const SFooterCards = styled.div`
-  display: flex;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 170px 64px 101px;
-  & > div {
-    flex: 1;
-    &:not(:last-child) {
-      margin-right: 32px;
     }
   }
 `;

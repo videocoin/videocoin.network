@@ -31,10 +31,6 @@ const links: LinkProps[] = [
     name: 'Rewards',
     path: '/rewards',
   },
-  {
-    name: 'Blog',
-    path: '/blog',
-  },
 ];
 
 const Navbar = ({ open }: { open: boolean }) => {
@@ -45,7 +41,17 @@ const Navbar = ({ open }: { open: boolean }) => {
   );
   return (
     <NavRoot $open={open}>
-      <NavList>{links.map(renderLink)}</NavList>
+      <NavList>
+        {links.map(renderLink)}
+        <NavLink
+          as="a"
+          href="https://medium.com/videocoin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Blog
+        </NavLink>
+      </NavList>
     </NavRoot>
   );
 };
