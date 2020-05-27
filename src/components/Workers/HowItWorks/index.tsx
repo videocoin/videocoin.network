@@ -14,7 +14,7 @@ const steps: Step[] = [
     title: 'Get Started',
     desc: (
       <Typography type="smallBodyThin">
-        Our <a href="https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-console" target="_blank" rel="noopener noreferrer">quickstart guide</a> will get you setup and running our
+        Our <a href="https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-videocoin-network-console" target="_blank" rel="noopener noreferrer">quickstart guide</a> will get you setup and running our
         latest worker software in minutes.
       </Typography>
     ),
