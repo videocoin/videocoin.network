@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `VideoCoin Network`,
-    description: ``,
+    description: `The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money.`,
+    url: 'https://videocoin.network',
+    image: './images/vc.jpg',
+    twitterUsername: '@VideoCoinHQ',
   },
   plugins: [
     `gatsby-plugin-styled-components`,

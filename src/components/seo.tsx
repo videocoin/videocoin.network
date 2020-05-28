@@ -18,6 +18,9 @@ function SEO({ description, lang, meta, title }: any) {
           siteMetadata {
             title
             description
+            image
+            url
+            twitterUsername
           }
         }
       }
@@ -25,6 +28,7 @@ function SEO({ description, lang, meta, title }: any) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const { image, url, twitterUsername } = site.siteMetadata;
 
   return (
     <Helmet
@@ -51,6 +55,10 @@ function SEO({ description, lang, meta, title }: any) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `${url}${image}`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -61,6 +69,14 @@ function SEO({ description, lang, meta, title }: any) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:creator`,
+          content: twitterUsername,
+        },
+        {
+          name: `twitter:site`,
+          content: url,
         },
       ].concat(meta)}
     ></Helmet>
