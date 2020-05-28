@@ -47,6 +47,10 @@ function SEO({ description, lang, meta, title }: any) {
           content: title,
         },
         {
+          property: `og:url`,
+          content: url,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
@@ -57,6 +61,18 @@ function SEO({ description, lang, meta, title }: any) {
         {
           property: `og:image`,
           content: `${url}${image}`,
+        },
+        {
+          property: `og:image:width`,
+          content: `1200`,
+        },
+        {
+          property: `og:image:height`,
+          content: `1200`,
+        },
+        {
+          property: `og:image:type`,
+          content: `image/jpeg`,
         },
         {
           name: `twitter:card`,

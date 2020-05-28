@@ -3,7 +3,7 @@ module.exports = {
     title: `VideoCoin Network`,
     description: `The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money.`,
     url: 'https://videocoin.network',
-    image: './images/vc.jpg',
+    image: '/images/vc.jpg',
     twitterUsername: '@VideoCoinHQ',
   },
   plugins: [
