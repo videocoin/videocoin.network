@@ -51,6 +51,14 @@ const Navbar = ({ open }: { open: boolean }) => {
         >
           Blog
         </NavLink>
+        <NavLink
+          as="a"
+          href="https://forum.videocoin.network"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Forum
+        </NavLink>
       </NavList>
     </NavRoot>
   );
