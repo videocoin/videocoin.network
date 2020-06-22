@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import GlobalStyle from '../styles/Global';
 import Header from './Header';
 import Footer from 'components/Footer';
@@ -8,6 +7,7 @@ import {
   BreakpointType,
 } from 'components/BrealpointProvider';
 import CookiePopup from 'components/CookiePopup';
+import styled from 'styled-components';
 
 export const queries: Record<BreakpointType, string> = {
   mobile: '(max-width: 768px)',
@@ -15,26 +15,34 @@ export const queries: Record<BreakpointType, string> = {
   laptop: '(max-width: 1365px)',
 };
 
-const Layout = ({ children }: { children: ReactNode }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+const Wrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
 
+const MainContent = styled.div`
+  flex: 1;
+`;
+
+const Layout = ({
+  children,
+  hideFooter = false,
+}: {
+  children: ReactNode;
+  hideFooter?: boolean;
+}) => {
   return (
     <BreakpointProvider queries={queries}>
-      <GlobalStyle />
-      <Header />
-      <div>
-        <main>{children}</main>
-      </div>
-      <Footer />
-      <CookiePopup />
+      <Wrapper>
+        <GlobalStyle />
+        <Header />
+        <MainContent>
+          <main>{children}</main>
+        </MainContent>
+        {!hideFooter && <Footer />}
+        <CookiePopup />
+      </Wrapper>
     </BreakpointProvider>
   );
 };

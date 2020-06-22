@@ -78,6 +78,30 @@ export const Logo = styled(Link)`
     }
   }
 `;
+export const SubPopup = styled.div`
+  position: absolute;
+  background-color: #eee3ff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.15s ease-in-out;
+  a {
+    color: #0c0417;
+    opacity: 0.86;
+    &::before {
+      display: none !important;
+    }
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+`;
 
 export const NavLink = styled(Link)`
   font-weight: 500;
@@ -86,6 +110,14 @@ export const NavLink = styled(Link)`
   color: #fff;
   text-decoration: none;
   position: relative;
+  transition: 0.15s ease-in-out;
+  &:hover {
+    opacity: 1;
+    ${SubPopup} {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
   &:not(:last-child) {
     margin-right: 32px;
   }

@@ -121,6 +121,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -128,6 +129,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
+  min-height: 100vh;
 }
 
 a {

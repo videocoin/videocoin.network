@@ -1,6 +1,6 @@
 import React from 'react';
 import { Root, Inner, Left, Right, Subtitle, Title } from './styles';
-import { MarketingButton } from 'ui-kit';
+import { MarketingButton } from 'ui-kit/*';
 import Container from 'styles/Container';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
@@ -8,7 +8,7 @@ import Img from 'gatsby-image';
 const StakersHero = () => {
   const data = useStaticQuery(graphql`
     query {
-      file: file(relativePath: { eq: "stakersHero.png" }) {
+      file: file(relativePath: { eq: "genesisPool.png" }) {
         childImageSharp {
           fixed(width: 680, quality: 100) {
             ...GatsbyImageSharpFixed
@@ -22,22 +22,22 @@ const StakersHero = () => {
       <Container>
         <Inner>
           <Left>
-            <Img fixed={data.file.childImageSharp.fixed} />
-          </Left>
-          <Right>
             <Subtitle type="subtitleCaps">
-              <span>Delegated staking</span> on videocoin network
+              <span>Genesis staking</span> on videocoin network
             </Subtitle>
             <Title type="display3" theme="white">
-              Stake your VideoCoin tokens to earn cash rewards.
+              Genesis staking lets you stake your VideoCoin for VID rewards.
             </Title>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://console.videocoin.network/sign-up?role=publisher"
+              href="https://staking.videocoin.network"
             >
-              <MarketingButton>Get Started</MarketingButton>
+              <MarketingButton>Connect Wallet</MarketingButton>
             </a>
+          </Left>
+          <Right>
+            <Img fixed={data.file.childImageSharp.fixed} />
           </Right>
         </Inner>
       </Container>

@@ -1,9 +1,10 @@
 import React from 'react';
-import { NavLink, NavList, NavRoot } from './styles';
+import { NavLink, NavList, NavRoot, SubPopup } from './styles';
 
 interface LinkProps {
   name: string;
   path: string;
+  subMenu?: LinkProps[];
 }
 
 const links: LinkProps[] = [
@@ -26,19 +27,34 @@ const links: LinkProps[] = [
   {
     name: 'Stakers',
     path: '/stakers',
+    subMenu: [
+      {
+        name: 'Cash Staking',
+        path: '/cash-staking',
+      },
+      {
+        name: 'Genesis Pool',
+        path: '/genesis-staking',
+      },
+    ],
   },
   {
     name: 'Rewards',
     path: '/rewards',
   },
 ];
+const SubList = ({ links }: { links: LinkProps[] }) => {
+  return <SubPopup>{links.map(renderLink)}</SubPopup>;
+};
+
+const renderLink = ({ name, path, subMenu }: LinkProps) => (
+  <NavLink key={name} to={path} activeClassName="active">
+    {name}
+    {subMenu && <SubList links={subMenu} />}
+  </NavLink>
+);
 
 const Navbar = ({ open }: { open: boolean }) => {
-  const renderLink = ({ name, path }: LinkProps) => (
-    <NavLink key={name} to={path} activeClassName="active">
-      {name}
-    </NavLink>
-  );
   return (
     <NavRoot $open={open}>
       <NavList>

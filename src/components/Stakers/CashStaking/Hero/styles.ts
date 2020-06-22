@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { Typography } from 'ui-kit';
-import { device } from '../../../queries';
+import { Typography } from 'ui-kit/*';
+import { device } from '../../../../queries';
 
 export const Root = styled.div`
   padding: 290px 0 100px;

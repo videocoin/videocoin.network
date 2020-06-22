@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from '../../../queries';
+import { device } from '../../../../queries';
 
 export const Root = styled.div`
   padding: 100px 40px;

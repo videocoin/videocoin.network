@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Typography } from 'ui-kit';
+import { Typography } from 'ui-kit/*';
 import { Root, StepItem, StepN, List } from './styles';
 
 interface Step {
