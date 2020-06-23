@@ -18,7 +18,7 @@ const CashBased = () => {
     }
   `);
   return (
-    <Link to="/cash-staking">
+    <Link to="/worker-staking">
       <ImgWrapper>
         <Img fluid={data.cash.childImageSharp.fluid} />
       </ImgWrapper>

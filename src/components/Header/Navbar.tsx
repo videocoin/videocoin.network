@@ -30,7 +30,7 @@ const links: LinkProps[] = [
     subMenu: [
       {
         name: 'Cash Staking',
-        path: '/cash-staking',
+        path: '/worker-staking',
       },
       {
         name: 'Genesis Pool',

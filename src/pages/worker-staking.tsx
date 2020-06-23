@@ -13,7 +13,7 @@ import HowItWorks from 'components/Stakers/CashStaking/HowItWorks';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-const CashStaking = () => {
+const WorkerStaking = () => {
   const data = useStaticQuery(graphql`
     query {
       cash: file(relativePath: { eq: "stakersCashRewards.png" }) {
@@ -77,4 +77,4 @@ const CashStaking = () => {
   );
 };
 
-export default CashStaking;
+export default WorkerStaking;
