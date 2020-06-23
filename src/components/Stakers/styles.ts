@@ -65,6 +65,9 @@ export const Wrapper = styled.div`
 
       ${ImgWrapper} {
         align-self: flex-end;
+        @media (min-width: 1700px) {
+          margin-right: auto;
+        }
         @media ${device.tablet} {
           width: 700px;
         }
