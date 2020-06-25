@@ -6,28 +6,46 @@ import { useBreakpoint } from 'components/BrealpointProvider';
 
 const SignBlock = () => {
   const { location } = history;
-  const isSignupPage = location.pathname.includes('/signup');
+  const isGenesisPage = location.pathname.includes('/genesis-staking');
   const { laptop } = useBreakpoint();
+  const renderLoginBtn = () => {
+    if (isGenesisPage || laptop) return null;
+    return (
+      <a
+        href="https://console.videocoin.network/sign-in"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Typography type="smallBodyThin">Login</Typography>
+      </a>
+    );
+  };
+  const renderCreateBtn = () => {
+    if (isGenesisPage) {
+      return (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://staking.videocoin.network"
+        >
+          <Button size={laptop ? 'sm' : 'md'}>Connect wallet</Button>
+        </a>
+      );
+    }
+    return (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://console.videocoin.network/sign-up?role=publisher"
+      >
+        <Button size={laptop ? 'sm' : 'md'}>Create Account</Button>
+      </a>
+    );
+  };
   return (
     <SignWrapper>
-      {!laptop && (
-        <a
-          href="https://console.videocoin.network/sign-in"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Typography type="smallBodyThin">Login</Typography>
-        </a>
-      )}
-      {!isSignupPage && (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://console.videocoin.network/sign-up?role=publisher"
-        >
-          <Button size={laptop ? 'sm' : 'md'}>Create Account</Button>
-        </a>
-      )}
+      {renderLoginBtn()}
+      {renderCreateBtn()}
     </SignWrapper>
   );
 };
