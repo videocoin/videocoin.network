@@ -5,6 +5,8 @@ NAME=videocoin-network-ui
 VERSION=$$(git describe --abbrev=0)-$$(git rev-parse --abbrev-ref HEAD)-$$(git rev-parse --short HEAD)
 ENV?=dev
 
+GA_TRACKING_ID?=
+
 .PHONY: deploy build
 
 default: release
@@ -20,7 +22,7 @@ deps:
 	cd ./ui-kit && yarn && cd -
 
 docker-build:
-	docker build -t gcr.io/${GCP_PROJECT}/${NAME}:${VERSION} -f Dockerfile .
+	docker build --build-arg GA_TRACKING_ID=${GA_TRACKING_ID} -t gcr.io/${GCP_PROJECT}/${NAME}:${VERSION} -f Dockerfile .
 
 docker-push:
 	docker push gcr.io/${GCP_PROJECT}/${NAME}:${VERSION}
