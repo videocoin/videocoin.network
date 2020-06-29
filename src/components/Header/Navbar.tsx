@@ -48,10 +48,12 @@ const SubList = ({ links }: { links: LinkProps[] }) => {
 };
 
 const renderLink = ({ name, path, subMenu }: LinkProps) => (
-  <NavLink key={name} to={path} activeClassName="active">
-    {name}
+  <li key={name}>
+    <NavLink to={path} activeClassName="active">
+      {name}
+    </NavLink>
     {subMenu && <SubList links={subMenu} />}
-  </NavLink>
+  </li>
 );
 
 const Navbar = ({ open }: { open: boolean }) => {
@@ -59,22 +61,26 @@ const Navbar = ({ open }: { open: boolean }) => {
     <NavRoot $open={open}>
       <NavList>
         {links.map(renderLink)}
-        <NavLink
-          as="a"
-          href="https://medium.com/videocoin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Blog
-        </NavLink>
-        <NavLink
-          as="a"
-          href="https://forum.videocoin.network"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Forum
-        </NavLink>
+        <li>
+          <NavLink
+            as="a"
+            href="https://medium.com/videocoin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            as="a"
+            href="https://forum.videocoin.network"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Forum
+          </NavLink>
+        </li>
       </NavList>
     </NavRoot>
   );

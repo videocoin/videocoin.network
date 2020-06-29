@@ -59,10 +59,49 @@ export const NavRoot = styled.nav<{ $open: boolean }>`
     ${({ $open }) => $open && `visibility: visible; opacity: 1`};
   }
 `;
+export const SubPopup = styled.ul`
+  position: absolute;
+  background-color: #eee3ff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.15s ease-in-out;
+  li {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  a {
+    color: #0c0417;
+    opacity: 0.86;
+    &::before {
+      display: none !important;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+`;
 
 export const NavList = styled.ul`
   display: flex;
   white-space: nowrap;
+  & > li {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+    &:hover {
+      opacity: 1;
+      ${SubPopup} {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
   @media ${device.tablet} {
     flex-direction: column;
     align-items: flex-start;
@@ -78,30 +117,6 @@ export const Logo = styled(Link)`
     }
   }
 `;
-export const SubPopup = styled.div`
-  position: absolute;
-  background-color: #eee3ff;
-  border-radius: 8px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.15s ease-in-out;
-  a {
-    color: #0c0417;
-    opacity: 0.86;
-    &::before {
-      display: none !important;
-    }
-    &:not(:last-child) {
-      margin-bottom: 12px;
-    }
-    &:hover {
-      opacity: 1;
-    }
-  }
-`;
 
 export const NavLink = styled(Link)`
   font-weight: 500;
@@ -111,16 +126,7 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   position: relative;
   transition: 0.15s ease-in-out;
-  &:hover {
-    opacity: 1;
-    ${SubPopup} {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  &:not(:last-child) {
-    margin-right: 32px;
-  }
+
   &.active {
     opacity: 1;
     &::before {

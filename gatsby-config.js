@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `VideoCoin Network`,
@@ -40,6 +44,13 @@ module.exports = {
         icon_options: {
           purpose: `maskable`,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
