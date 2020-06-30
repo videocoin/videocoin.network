@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import { Root, Logo as LogoLink, MenuBtn } from './styles';
 import { useBreakpoint } from 'components/BrealpointProvider';
 import IconLogo from 'components/Logo/IconLogo';
+import LanguageSwitch from 'components/LanguageSwitch';
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -26,6 +27,7 @@ const Header = () => {
           {laptop && !tablet ? <IconLogo width={36} /> : <Logo />}
         </LogoLink>
         <Navbar open={isOpen} />
+        <LanguageSwitch />
         <SignBlock />
         <MenuBtn $active={isOpen} onClick={toggleMenu} />
       </Root>

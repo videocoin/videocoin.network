@@ -3,8 +3,10 @@ import { MarketingButton, Typography } from 'ui-kit';
 import { Root, Btns, Subtitle } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import { useTranslation } from 'react-i18next';
 
 const DevelopersHero = () => {
+  const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "developersHero.png" }) {
@@ -21,7 +23,7 @@ const DevelopersHero = () => {
       <Img fluid={data.file.childImageSharp.fluid} />
       <div>
         <Subtitle type="subtitleCaps">
-          <span>Develop</span> on VideoCoin Network
+          <span>{t('Develop')}</span> on VideoCoin Network
         </Subtitle>
         <Typography type="display3" theme="white">
           Robust video infrastructure with just a few lines of code.

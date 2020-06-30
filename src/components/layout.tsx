@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, Suspense } from 'react';
 import GlobalStyle from '../styles/Global';
 import Header from './Header';
 import Footer from 'components/Footer';
@@ -8,6 +8,7 @@ import {
 } from 'components/BrealpointProvider';
 import CookiePopup from 'components/CookiePopup';
 import styled from 'styled-components';
+import '../i18n';
 
 export const queries: Record<BreakpointType, string> = {
   mobile: '(max-width: 768px)',
@@ -33,17 +34,19 @@ const Layout = ({
   hideFooter?: boolean;
 }) => {
   return (
-    <BreakpointProvider queries={queries}>
-      <Wrapper>
-        <GlobalStyle />
-        <Header />
-        <MainContent>
-          <main>{children}</main>
-        </MainContent>
-        {!hideFooter && <Footer />}
-        <CookiePopup />
-      </Wrapper>
-    </BreakpointProvider>
+    <Suspense fallback={<div />}>
+      <BreakpointProvider queries={queries}>
+        <Wrapper>
+          <GlobalStyle />
+          <Header />
+          <MainContent>
+            <main>{children}</main>
+          </MainContent>
+          {!hideFooter && <Footer />}
+          <CookiePopup />
+        </Wrapper>
+      </BreakpointProvider>
+    </Suspense>
   );
 };
 
