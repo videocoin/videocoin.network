@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Root = styled.div`
   position: relative;
+  margin-left: auto;
 `;
 
 export const Popup = styled.div`
@@ -33,4 +34,12 @@ export const Popup = styled.div`
   }
 `;
 
-export const Handler = styled.div``;
+export const Handler = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  svg {
+    width: 16px;
+    margin-left: 8px;
+  }
+`;
