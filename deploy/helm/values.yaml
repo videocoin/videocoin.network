@@ -29,15 +29,6 @@ resources:
     cpu: 100m
     memory: 128Mi
 
-ingress:
-  enabled: true
-  host: dev.videocoin.net
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-dns-prod
-    kubernetes.io/ingress.class: nginx
-  secret: tls-cert-cloud-videcoin-network
-
-
 config:
   nginx.conf: |
     events {
