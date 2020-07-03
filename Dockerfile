@@ -3,6 +3,7 @@ RUN apk add build-base git libc6-compat openssh-client
 RUN apk upgrade libcurl
 
 ARG GA_TRACKING_ID
+ARG AW_TRACKING_ID
 
 COPY . /ui
 WORKDIR /ui

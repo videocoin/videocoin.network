@@ -6,6 +6,7 @@ VERSION=$$(git describe --abbrev=0)-$$(git rev-parse --abbrev-ref HEAD)-$$(git r
 ENV?=dev
 
 GA_TRACKING_ID?=
+AW_TRACKING_ID?=
 
 .PHONY: deploy build
 
@@ -22,7 +23,7 @@ deps:
 	cd ./ui-kit && yarn && cd -
 
 docker-build:
-	docker build --build-arg GA_TRACKING_ID=${GA_TRACKING_ID} -t gcr.io/${GCP_PROJECT}/${NAME}:${VERSION} -f Dockerfile .
+	docker build --build-arg GA_TRACKING_ID=${GA_TRACKING_ID} --build-arg AW_TRACKING_ID=${AW_TRACKING_ID} -t gcr.io/${GCP_PROJECT}/${NAME}:${VERSION} -f Dockerfile .
 
 docker-push:
 	docker push gcr.io/${GCP_PROJECT}/${NAME}:${VERSION}
