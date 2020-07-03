@@ -3,6 +3,12 @@ import { Root, Btns } from './styles';
 import { MarketingButton, Typography } from 'ui-kit';
 
 const GetStarted = () => {
+  const handleClick = () => {
+    typeof window !== 'undefined' &&
+      window.gtag('event', 'click', {
+        send_to: 'AW-766963740/vD8-CLi05tUBEJzg2-0C',
+      });
+  };
   return (
     <Root>
       <Typography type="display3">Get Started</Typography>
@@ -15,6 +21,7 @@ const GetStarted = () => {
           target="_blank"
           rel="noopener noreferrer"
           href="https://console.videocoin.network/sign-up?role=publisher"
+          onClick={handleClick}
         >
           <MarketingButton>Sign up for free</MarketingButton>
         </a>

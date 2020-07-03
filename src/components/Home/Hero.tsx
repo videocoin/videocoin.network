@@ -9,6 +9,12 @@ import { Title, Bg, Wrapper, Btns, Footer, SLogo } from './styles';
 import { Link } from 'gatsby';
 
 const Hero = () => {
+  const handleClick = () => {
+    typeof window !== 'undefined' &&
+      window.gtag('event', 'click', {
+        send_to: 'AW-766963740/vD8-CLi05tUBEJzg2-0C',
+      });
+  };
   return (
     <>
       <Bg>
@@ -21,7 +27,7 @@ const Hero = () => {
       <Container>
         <Wrapper>
           <SLogo>
-            <IconLogo />
+            <IconLogo width={72} />
           </SLogo>
           <Title type="display2" theme="white" align="center">
             Innovative <br />
@@ -37,11 +43,14 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               href="https://console.videocoin.network/sign-up?role=publisher"
+              onClick={handleClick}
             >
               <Button>Create Account</Button>
             </a>
             <Link to="/developers">
-              <MarketingButton theme="link-secondary">Learn more</MarketingButton>
+              <MarketingButton theme="link-secondary">
+                Learn more
+              </MarketingButton>
             </Link>
           </Btns>
           <Footer type="caption">

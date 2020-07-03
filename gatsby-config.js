@@ -47,10 +47,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: process.env.GA_TRACKING_ID,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          process.env.GA_TRACKING_ID, // Google Analytics / GA
+          process.env.AW_TRACKING_ID, // Google Ads / Adwords / AW
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

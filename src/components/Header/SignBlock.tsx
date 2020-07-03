@@ -20,6 +20,12 @@ const SignBlock = () => {
       </a>
     );
   };
+  const handleClick = () => {
+    typeof window !== 'undefined' &&
+      window.gtag('event', 'click', {
+        send_to: 'AW-766963740/vD8-CLi05tUBEJzg2-0C',
+      });
+  };
   const renderCreateBtn = () => {
     if (isGenesisPage) {
       return (
@@ -37,6 +43,7 @@ const SignBlock = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="https://console.videocoin.network/sign-up?role=publisher"
+        onClick={handleClick}
       >
         <Button size={laptop ? 'sm' : 'md'}>Create Account</Button>
       </a>

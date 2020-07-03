@@ -12,6 +12,12 @@ import { MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
 
 const PricingHero = () => {
+  const handleClick = () => {
+    typeof window !== 'undefined' &&
+      window.gtag('event', 'click', {
+        send_to: 'AW-766963740/vD8-CLi05tUBEJzg2-0C',
+      });
+  };
   return (
     <Root>
       <Container>
@@ -49,6 +55,7 @@ const PricingHero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://console.videocoin.network/sign-up?role=publisher"
+                onClick={handleClick}
               >
                 <MarketingButton>Sign up for free</MarketingButton>
               </a>
@@ -61,7 +68,7 @@ const PricingHero = () => {
           </Right>
         </Inner>
       </Container>
-    </Root >
+    </Root>
   );
 };
 
