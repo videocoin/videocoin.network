@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon, Typography } from 'ui-kit';
 import { Card, Link } from './styles';
+import { useTranslation } from 'react-i18next';
 
 export interface ICard {
   title: string;
@@ -11,14 +12,15 @@ export interface ICard {
 
 const TutorialCard = ({ card }: { card: ICard }) => {
   const { title, light, link, color } = card;
+  const { t } = useTranslation('developers');
   return (
     <Card $color={color}>
       <Typography type="display4" theme={light ? 'white' : 'dark'}>
-        {title}
+        {t(title)}
       </Typography>
       <Link href={link}>
         <Typography type="subtitle" theme={light ? 'white' : 'dark'}>
-          Start Tutorial
+          {t('Start Tutorial')}
         </Typography>
         <Icon
           width={16}

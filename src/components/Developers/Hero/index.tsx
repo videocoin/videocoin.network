@@ -3,10 +3,10 @@ import { MarketingButton, Typography } from 'ui-kit';
 import { Root, Btns, Subtitle } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 const DevelopersHero = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('developers');
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "developersHero.png" }) {
@@ -23,10 +23,12 @@ const DevelopersHero = () => {
       <Img fluid={data.file.childImageSharp.fluid} />
       <div>
         <Subtitle type="subtitleCaps">
-          <span>{t('Develop')}</span> on VideoCoin Network
+          <Trans t={t} i18nKey="Develop on VideoCoin Network">
+            <span>Develop</span> on VideoCoin Network
+          </Trans>
         </Subtitle>
         <Typography type="display3" theme="white">
-          Robust video infrastructure with just a few lines of code.
+          {t('Robust video infrastructure with just a few lines of code')}
         </Typography>
         <Btns>
           <a
@@ -34,7 +36,7 @@ const DevelopersHero = () => {
             rel="noopener noreferrer"
             href="https://console.videocoin.network/sign-up?role=publisher"
           >
-            <MarketingButton>Join for Free</MarketingButton>
+            <MarketingButton>{t('Join for Free')}</MarketingButton>
           </a>
           <a
             href="https://docs.videocoin.network"
@@ -42,7 +44,7 @@ const DevelopersHero = () => {
             rel="noopener noreferrer"
           >
             <MarketingButton theme="link-secondary">
-              Developers Docs
+              {t('Developers Docs')}
             </MarketingButton>
           </a>
         </Btns>

@@ -7,8 +7,8 @@ const StakersCard = () => {
     <FooterCard
       path="/stakers"
       img={img}
-      title="Want to Stake your Tokens?"
-      desc="Learn more about our groundbreaking staking model and begin staking your tokens."
+      title="Want to Stake your Tokens"
+      desc="Learn more about our groundbreaking staking model and begin staking your tokens"
       buttonText="For Stakers"
     />
   );

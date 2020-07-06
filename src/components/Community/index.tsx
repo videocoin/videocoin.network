@@ -3,7 +3,9 @@ import { MarketingButton, Typography } from 'ui-kit/*';
 import { Root, Btns } from './styles';
 import Container from 'styles/Container';
 import img from './img.svg';
+import { useTranslation } from 'react-i18next';
 const Community = () => {
+  const { t } = useTranslation('developers');
   return (
     <Container>
       <Root>
@@ -12,12 +14,12 @@ const Community = () => {
         </div>
         <div>
           <Typography type="smallTitle">
-            Have Questions?
+            {t('Have Questions')}
             <br />
-            Need Help Setting Up?
+            {t('Need Help Setting Up')}
           </Typography>
           <Typography type="bodyThin">
-            Check out our community forum to chat with others
+            {t('Check out our community forum to chat with others')}
           </Typography>
           <Btns>
             <a
@@ -25,7 +27,7 @@ const Community = () => {
               rel="noopener noreferrer"
               href="https://forum.videocoin.network"
             >
-              <MarketingButton>Join Community</MarketingButton>
+              <MarketingButton>{t('Join Community')}</MarketingButton>
             </a>
           </Btns>
         </div>

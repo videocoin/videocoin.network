@@ -15,6 +15,7 @@ import {
   PlayerWrapper,
 } from './styles';
 import Container from 'styles/Container';
+import { useTranslation } from 'react-i18next';
 
 const getRandomTime = () => Math.floor(Math.random() * 3) + 1;
 
@@ -23,6 +24,7 @@ const Demo = () => {
   const [isLoading, setLoading] = useState(false);
   const container = useRef<HTMLDivElement>(null);
   const player = useRef<any>(null);
+  const { t } = useTranslation();
   useEffect(() => {
     if (step > 3 && container.current && !player.current) {
       // @ts-expect-error
@@ -58,9 +60,9 @@ const Demo = () => {
         <DemoSection>
           <DemoSectionLeft>
             <div>
-              <Typography type="subtitleCaps">Step 1</Typography>
+              <Typography type="subtitleCaps">{t('Step 1')}</Typography>
               <DemoSectionTitle type="title" theme="white">
-                Create Stream
+                {t('Create Stream')}
               </DemoSectionTitle>
             </div>
             <Button
@@ -69,12 +71,12 @@ const Demo = () => {
               loading={step === 1 && isLoading}
               disabled={step !== 1}
             >
-              Create Stream
+              {t('Create Stream')}
             </Button>
           </DemoSectionLeft>
           <DemoSectionRight>
             <DemoSectionParams>
-              <Request type="subtitleCaps">POST</Request>
+              <Request type="subtitleCaps">{t('POST')}</Request>
               <Request type="body">/stream</Request>
             </DemoSectionParams>
             <CodeSection>
@@ -96,14 +98,14 @@ const Demo = () => {
                 opacity={step > 1 ? 'full' : 'medium'}
                 type="subtitleCaps"
               >
-                Step 2
+                {t('Step 2')}
               </Typography>
               <DemoSectionTitle
                 type="title"
                 theme="white"
                 opacity={step > 1 ? 'full' : 'medium'}
               >
-                Run Stream
+                {t('Run Stream')}
               </DemoSectionTitle>
             </div>
             <Button
@@ -112,7 +114,7 @@ const Demo = () => {
               onClick={handleStep(3)}
               loading={step === 2 && isLoading}
             >
-              Run Stream
+              {t('Run Stream')}
             </Button>
           </DemoSectionLeft>
           <DemoSectionRight>
@@ -121,7 +123,7 @@ const Demo = () => {
                 type="subtitleCaps"
                 opacity={step > 1 ? 'full' : 'medium'}
               >
-                POST
+                {t('POST')}
               </Request>
               <Request type="body" opacity={step > 1 ? 'full' : 'medium'}>
                 {step > 1
@@ -130,7 +132,7 @@ const Demo = () => {
               </Request>
             </DemoSectionParams>
             <DemoStreamStatus $ready={step > 2}>
-              {step > 2 ? 'Stream Ready For Ingest' : 'No Stream Created'}
+              {t(step > 2 ? 'Stream Ready For Ingest' : 'No Stream Created')}
             </DemoStreamStatus>
           </DemoSectionRight>
         </DemoSection>
@@ -141,14 +143,14 @@ const Demo = () => {
                 opacity={step > 2 ? 'full' : 'medium'}
                 type="subtitleCaps"
               >
-                Step 3
+                {t('Step 3')}
               </Typography>
               <DemoSectionTitle
                 type="title"
                 theme="white"
                 opacity={step > 2 ? 'full' : 'medium'}
               >
-                Upload Your Video
+                {t('Upload Your Video')}
               </DemoSectionTitle>
             </div>
             <Button
@@ -157,7 +159,7 @@ const Demo = () => {
               onClick={handleStep(4)}
               loading={step === 3 && isLoading}
             >
-              Upload Video
+              {t('Upload Video')}
             </Button>
           </DemoSectionLeft>
           <DemoSectionRight>
@@ -166,7 +168,7 @@ const Demo = () => {
                 type="subtitleCaps"
                 opacity={step > 2 ? 'full' : 'medium'}
               >
-                POST
+                {t('POST')}
               </Request>
               <Request type="body" opacity={step > 2 ? 'full' : 'medium'}>
                 {step > 2
@@ -190,7 +192,7 @@ const Demo = () => {
               theme="white"
               opacity={step > 3 ? 'full' : 'medium'}
             >
-              Distribute Video
+              {t('Distribute Video')}
             </DemoSectionTitle>
           </DemoSectionLeft>
           <DemoSectionRight>
@@ -204,7 +206,7 @@ const Demo = () => {
             ) : (
               <PlayerWrapper>
                 <OfflinePlayer>
-                  <Typography type="body">Offline</Typography>
+                  <Typography type="body">{t('Offline')}</Typography>
                 </OfflinePlayer>
               </PlayerWrapper>
             )}
