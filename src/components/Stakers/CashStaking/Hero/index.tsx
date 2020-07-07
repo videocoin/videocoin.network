@@ -4,8 +4,10 @@ import { MarketingButton } from 'ui-kit/*';
 import Container from 'styles/Container';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import { useTranslation, Trans } from 'react-i18next';
 
 const StakersHero = () => {
+  const { t } = useTranslation('staking');
   const data = useStaticQuery(graphql`
     query {
       file: file(relativePath: { eq: "cashStaking.png" }) {
@@ -26,17 +28,19 @@ const StakersHero = () => {
           </Left>
           <Right>
             <Subtitle type="subtitleCaps">
-              <span>Delegated staking</span> on videocoin network
+              <Trans t={t} i18nKey="Delegated staking on videocoin network">
+                <span>Delegated staking</span> on videocoin network
+              </Trans>
             </Subtitle>
             <Title type="display3" theme="white">
-              Stake your VideoCoin tokens to earn cash rewards.
+              {t('Stake your VideoCoin tokens to earn cash rewards')}
             </Title>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://console.videocoin.network/sign-up?role=publisher"
             >
-              <MarketingButton>Get Started</MarketingButton>
+              <MarketingButton>{t('Get Started')}</MarketingButton>
             </a>
           </Right>
         </Inner>

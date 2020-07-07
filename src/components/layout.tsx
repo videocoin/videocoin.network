@@ -1,4 +1,4 @@
-import React, { ReactNode, Suspense } from 'react';
+import React, { ReactNode } from 'react';
 import GlobalStyle from '../styles/Global';
 import Header from './Header';
 import Footer from 'components/Footer';
@@ -34,19 +34,17 @@ const Layout = ({
   hideFooter?: boolean;
 }) => {
   return (
-    <Suspense fallback={<div />}>
-      <BreakpointProvider queries={queries}>
-        <Wrapper>
-          <GlobalStyle />
-          <Header />
-          <MainContent>
-            <main>{children}</main>
-          </MainContent>
-          {!hideFooter && <Footer />}
-          <CookiePopup />
-        </Wrapper>
-      </BreakpointProvider>
-    </Suspense>
+    <BreakpointProvider queries={queries}>
+      <Wrapper>
+        <GlobalStyle />
+        <Header />
+        <MainContent>
+          <main>{children}</main>
+        </MainContent>
+        {!hideFooter && <Footer />}
+        <CookiePopup />
+      </Wrapper>
+    </BreakpointProvider>
   );
 };
 

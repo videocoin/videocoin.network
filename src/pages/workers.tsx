@@ -12,8 +12,10 @@ import DevelopersCard from 'components/FooterCards/DevelopersCard';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import HowItWorks from 'components/Workers/HowItWorks';
+import { useTranslation } from 'react-i18next';
 
-const WorkersPage = () => {
+const Sections = () => {
+  const { t } = useTranslation('workers');
   const data = useStaticQuery(graphql`
     query {
       setup: file(relativePath: { eq: "setup.png" }) {
@@ -40,9 +42,7 @@ const WorkersPage = () => {
     }
   `);
   return (
-    <Layout>
-      <SEO title="Workers" />
-      <WorkersHero />
+    <>
       <Section light reverse>
         <Img fluid={data.setup.childImageSharp.fluid} />
         <div>
@@ -52,15 +52,16 @@ const WorkersPage = () => {
             href="https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-console"
           >
             <Typography type="display4" theme="white">
-              Simple Setup
+              {t('Simple Setup')}
             </Typography>
           </a>
           <Typography type="subtitleThin" opacity="drift">
-            Our software is so powerful, use any hardware that works with Docker
-            to begin working in minutes.
+            {t(
+              'Our software is so powerful use any hardware that works with Docker to begin working in minutes'
+            )}
           </Typography>
           <MarketingButton theme="link" size="xs">
-            Learn How
+            {t('Learn How')}
           </MarketingButton>
         </div>
       </Section>
@@ -68,15 +69,16 @@ const WorkersPage = () => {
         <Img fluid={data.getPaid.childImageSharp.fluid} />
         <div>
           <Typography type="display4" theme="white">
-            Get Paid in Cash
+            {t('Get Paid in Cash')}
           </Typography>
           <Typography type="subtitleThin" opacity="drift">
-            Unlike other projects which deliver inflating tokens as reward, we
-            pay our workers in cash.
+            {t(
+              'Unlike other projects which deliver inflating tokens as reward we pay our workers in cash'
+            )}
           </Typography>
           <Link to="/rewards">
             <MarketingButton theme="link" size="xs">
-              See Reward Breakdown
+              {t('See Reward Breakdown')}
             </MarketingButton>
           </Link>
         </div>
@@ -85,14 +87,25 @@ const WorkersPage = () => {
         <Img fluid={data.feature.childImageSharp.fluid} />
         <div>
           <Typography type="display4" theme="white">
-            The Future of Video
+            {t('The Future of Video')}
           </Typography>
           <Typography type="subtitleThin" opacity="drift">
-            Be a part of our innovative team by working with us on some of the
-            most cutting edge video projects.
+            {t(
+              'Be a part of our innovative team by working with us on some of the most cutting edge video projects'
+            )}
           </Typography>
         </div>
       </Section>
+    </>
+  );
+};
+
+const WorkersPage = () => {
+  return (
+    <Layout>
+      <SEO title="Workers" />
+      <WorkersHero />
+      <Sections />
       <HowItWorks />
       <TutorialsList />
       <Community />

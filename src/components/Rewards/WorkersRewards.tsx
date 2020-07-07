@@ -5,8 +5,11 @@ import { Title, List } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import Disclaimer from 'components/Rewards/Disclaimer';
+import { useTranslation } from 'react-i18next';
 
 const WorkersRewards = () => {
+  const { t } = useTranslation('rewards');
+
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "workersRewards.png" }) {
@@ -25,15 +28,15 @@ const WorkersRewards = () => {
         <Img fixed={data.file.childImageSharp.fixed} />
       </div>
       <div>
-        <Title>80% In Cash Rewards for Workers</Title>
+        <Title>{t('80% In Cash Rewards for Workers')}</Title>
         <Typography type="bodyThin">
-          Worker Nodes earn up to 80% of fees from a completed job.
+          {t('Worker Nodes earn up to 80% of fees from a completed job')}
         </Typography>
         <List>
           <li>
-            Industry First:
+            {t('Industry First')}:
             <br />
-            Choose how you get rewarded: Cash or VID*.
+            {t('Choose how you get rewarded')}: {t('Cash or VID')}*.
           </li>
         </List>
       </div>

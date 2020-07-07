@@ -2,24 +2,29 @@ import React from 'react';
 import Section from 'components/Section';
 import { Title, MinimumsCard } from 'components/Rewards/styles';
 import { Typography } from 'ui-kit/*';
+import { useTranslation } from 'react-i18next';
 
-const Card = () => (
-  <MinimumsCard>
-    <ul>
-      <li>
-        <div>Worker Node</div>
-        <div>50,000 VID minimum stake</div>
-        <div>*minimum will be re-evaluated every month</div>
-      </li>
-      <li>
-        <div>Delegate</div>
-        <div>1 VID token minimum to stake</div>
-      </li>
-    </ul>
-  </MinimumsCard>
-);
+const Card = () => {
+  const { t } = useTranslation('rewards');
+  return (
+    <MinimumsCard>
+      <ul>
+        <li>
+          <div>{t('Worker Node')}</div>
+          <div>{t('50000 VID minimum stake')}</div>
+          <div>*{t('minimum will be re-evaluated every month')}</div>
+        </li>
+        <li>
+          <div>{t('Delegate')}</div>
+          <div>{t('1 VID token minimum to stake')}</div>
+        </li>
+      </ul>
+    </MinimumsCard>
+  );
+};
 
 const Minimums = () => {
+  const { t } = useTranslation('rewards');
   return (
     <Section light reverse>
       <div>
@@ -28,10 +33,11 @@ const Minimums = () => {
         </div>
       </div>
       <div>
-        <Title>Secure but Attainable Minimums</Title>
+        <Title>{t('Secure but Attainable Minimums')}</Title>
         <Typography type="bodyThin">
-          Worker Node minimums are far lower than the $8.6M USD average minimum
-          stake on similar projects.
+          {t(
+            'Worker Node minimums are far lower than the $86M USD average minimum stake on similar projects'
+          )}
         </Typography>
       </div>
     </Section>

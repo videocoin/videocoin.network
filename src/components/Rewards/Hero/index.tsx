@@ -24,9 +24,10 @@ import creditCard from '../assets/creditCard.svg';
 import dollar from '../assets/dollar.svg';
 import Container from 'styles/Container';
 import Disclaimer from 'components/Rewards/Disclaimer';
-import Section from 'components/Section';
+import { useTranslation, Trans } from 'react-i18next';
 
 const RewardsHero = () => {
+  const { t } = useTranslation('rewards');
   const [value, setValue] = useState(1000);
   const onChange = (e: ChangeEvent<HTMLInputElement>) =>
     setValue(+e.target.value);
@@ -34,11 +35,15 @@ const RewardsHero = () => {
     <Root>
       <Container>
         <Subtitle>
-          VideoCoin Network <span>Rewards</span>
+          <div>
+            <Trans t={t} i18nKey="Videoсoin network rewards">
+              VideoCoin Network <span>Rewards</span>
+            </Trans>
+          </div>
         </Subtitle>
-        <Title>The Future Of Blockchain Staking</Title>
+        <Title>{t('The Future Of Blockchain Staking')}</Title>
         <Typography type="display4" theme="white" align="center">
-          Earn Rewards in Cash
+          {t('Earn Rewards in Cash')}
         </Typography>
         <Inner>
           <Img>
@@ -65,11 +70,12 @@ const RewardsHero = () => {
                   <div>$</div>
                   <input type="number" value={value} onChange={onChange} />
                 </FeaturePayment>
-                <span>cash payment calculator</span>
+                <span>{t('cash payment calculator')}</span>
               </FeatureTitle>
               <p>
-                First and only project to make customer payments easy by
-                directly taking credit card payments.
+                {t(
+                  'First and only project to make customer payments easy by directly taking credit card payments'
+                )}
               </p>
             </li>
             <li>
@@ -78,7 +84,9 @@ const RewardsHero = () => {
                 <div>$</div>
                 <span>{value}</span>
               </FeatureTop>
-              <FeatureTitle>Passes through the VideoCoin Network</FeatureTitle>
+              <FeatureTitle>
+                {t('Passes through the VideoCoin Network')}
+              </FeatureTitle>
             </li>
             <li>
               <FeatureTop>
@@ -86,10 +94,11 @@ const RewardsHero = () => {
                 <div>$</div>
                 <span>{(value * 0.16).toFixed()}</span>
               </FeatureTop>
-              <FeatureTitle>Workers Rewarded 80%</FeatureTitle>
+              <FeatureTitle>{t('Workers Rewarded 80%')}</FeatureTitle>
               <p>
-                First and only project to give workers the choice to receive
-                rewards in cash or VID.
+                {t(
+                  'First and only project to give workers the choice to receive rewards in cash or VID'
+                )}
               </p>
             </li>
             <li>
@@ -98,10 +107,11 @@ const RewardsHero = () => {
                 <div>$</div>
                 <span>{(value * 0.8).toFixed()}</span>
               </FeatureTop>
-              <FeatureTitle>Delegators Rewarded 20% min.</FeatureTitle>
+              <FeatureTitle>{t('Delegators Rewarded 20% min')}</FeatureTitle>
               <p>
-                First and only project to give delegators the choice to receive
-                rewards in cash or VID.
+                {t(
+                  'First and only project to give delegators the choice to receive rewards in cash or VID'
+                )}
               </p>
             </li>
           </Features>

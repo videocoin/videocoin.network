@@ -115,6 +115,9 @@ export const Logo = styled(Link)`
     @media ${device.tablet} {
       width: 172px;
     }
+    @media ${device.mobile} {
+      width: 36px;
+    }
   }
 `;
 
@@ -195,5 +198,6 @@ export const MenuBtn = styled.button<{ $active: boolean }>`
   }
   @media ${device.tablet} {
     display: block;
+    margin-left: 24px;
   }
 `;
