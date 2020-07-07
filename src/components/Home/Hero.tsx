@@ -5,8 +5,9 @@ import bgSm from './assets/bg_sm.svg';
 import IconLogo from 'components/Logo/IconLogo';
 import { Button, MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
-import { Title, Bg, Wrapper, Btns, Footer, SLogo } from './styles';
+import { Title, Bg, Wrapper, Btns, Footer, SLogo, HeroRoot } from './styles';
 import { Link } from 'gatsby';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Hero = () => {
   const handleClick = () => {
@@ -15,8 +16,9 @@ const Hero = () => {
         send_to: 'AW-766963740/vD8-CLi05tUBEJzg2-0C',
       });
   };
+  const { t } = useTranslation();
   return (
-    <>
+    <HeroRoot>
       <Bg>
         <picture>
           <source media="(max-width: 767px)" srcSet={bgSm} />
@@ -30,13 +32,13 @@ const Hero = () => {
             <IconLogo width={72} />
           </SLogo>
           <Title type="display2" theme="white" align="center">
-            Innovative <br />
-            Video Infrastructure
+            {t('Innovate')} <br />
+            {t('Video Infrastructure')}
           </Title>
           <Typography type="subtitleThin">
-            The VideoCoin Network is a powerful API-first, decentralized video
-            platform that utilizes untapped computing resources to save you
-            money.
+            {t(
+              'The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money'
+            )}
           </Typography>
           <Btns>
             <a
@@ -45,21 +47,26 @@ const Hero = () => {
               href="https://console.videocoin.network/sign-up?role=publisher"
               onClick={handleClick}
             >
-              <Button>Create Account</Button>
+              <Button>{t('Create Account')}</Button>
             </a>
             <Link to="/developers">
               <MarketingButton theme="link-secondary">
-                Learn more
+                {t('Learn More')}
               </MarketingButton>
             </Link>
           </Btns>
           <Footer type="caption">
-            Sign up now and <strong>get $10 in free credit</strong> to try
-            VideoCoin Network.
+            <Trans
+              t={t}
+              i18nKey="Sign up now and get $10 in free credit to try VideoCoin Network"
+            >
+              Sign up now and <strong>get $10 in free credit</strong> to try
+              VideoCoin Network.
+            </Trans>
           </Footer>
         </Wrapper>
       </Container>
-    </>
+    </HeroRoot>
   );
 };
 

@@ -3,8 +3,10 @@ import { Button, Typography } from 'ui-kit';
 import { SignWrapper } from './styles';
 import { globalHistory as history } from '@reach/router';
 import { useBreakpoint } from 'components/BrealpointProvider';
+import { useTranslation } from 'react-i18next';
 
 const SignBlock = () => {
+  const { t } = useTranslation();
   const { location } = history;
   const isGenesisPage = location.pathname.includes('/genesis-staking');
   const { laptop } = useBreakpoint();
@@ -16,7 +18,7 @@ const SignBlock = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Typography type="smallBodyThin">Login</Typography>
+        <Typography type="smallBodyThin">{t('Login')}</Typography>
       </a>
     );
   };
@@ -45,7 +47,7 @@ const SignBlock = () => {
         href="https://console.videocoin.network/sign-up?role=publisher"
         onClick={handleClick}
       >
-        <Button size={laptop ? 'sm' : 'md'}>Create Account</Button>
+        <Button size={laptop ? 'sm' : 'md'}>{t('Create Account')}</Button>
       </a>
     );
   };

@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { Typography } from 'ui-kit';
 import { device } from '../../queries';
 
+export const HeroRoot = styled.div`
+  margin-top: -92px;
+`;
+
 export const Bg = styled.div`
   text-align: center;
   margin-bottom: -250px;

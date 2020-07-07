@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, NavList, NavRoot, SubPopup } from './styles';
+import { useTranslation } from 'react-i18next';
 
 interface LinkProps {
   name: string;
@@ -47,16 +48,20 @@ const SubList = ({ links }: { links: LinkProps[] }) => {
   return <SubPopup>{links.map(renderLink)}</SubPopup>;
 };
 
-const renderLink = ({ name, path, subMenu }: LinkProps) => (
-  <li key={name}>
-    <NavLink to={path} activeClassName="active">
-      {name}
-    </NavLink>
-    {subMenu && <SubList links={subMenu} />}
-  </li>
-);
+const renderLink = ({ name, path, subMenu }: LinkProps) => {
+  const { t } = useTranslation();
+  return (
+    <li key={name}>
+      <NavLink to={path} activeClassName="active">
+        {t(name)}
+      </NavLink>
+      {subMenu && <SubList links={subMenu} />}
+    </li>
+  );
+};
 
 const Navbar = ({ open }: { open: boolean }) => {
+  const { t } = useTranslation();
   return (
     <NavRoot $open={open}>
       <NavList>
@@ -68,17 +73,7 @@ const Navbar = ({ open }: { open: boolean }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Blog
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            as="a"
-            href="https://forum.videocoin.network"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Forum
+            {t('Blog')}
           </NavLink>
         </li>
       </NavList>

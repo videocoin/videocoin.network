@@ -10,8 +10,10 @@ import {
 } from './styles';
 import { MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
+import { useTranslation } from 'react-i18next';
 
 const PricingHero = () => {
+  const { t } = useTranslation('pricing');
   const handleClick = () => {
     typeof window !== 'undefined' &&
       window.gtag('event', 'click', {
@@ -28,26 +30,27 @@ const PricingHero = () => {
                 $0.025
               </Typography>
               <Typography type="smallTitle" theme="dark" opacity="medium">
-                per minute
+                {t('per minute')}
               </Typography>
             </PriceCardValue>
             <PriceCardFeatures>
-              <li>Video Transcoding</li>
-              <li>Livestreaming</li>
-              <li>per profile</li>
+              <li>{t('Video Transcoding')}</li>
+              <li>{t('Livestreaming')}</li>
+              <li>{t('per profile')}</li>
             </PriceCardFeatures>
             <Typography type="caption" align="center">
-              * Pricing subject to change
+              * {t('Pricing subject to change')}
             </Typography>
           </PriceCard>
           <Right>
             <Text>
               <Typography type="display2" theme="white">
-                Start Today
+                {t('Start Today')}
               </Typography>
               <Typography type="subtitleThin" opacity="drift">
-                Pay one low price whether you are transcoding video or streaming
-                live video
+                {t(
+                  'Pay one low price whether you are transcoding video or streaming live video'
+                )}
               </Typography>
             </Text>
             <div>
@@ -57,11 +60,11 @@ const PricingHero = () => {
                 href="https://console.videocoin.network/sign-up?role=publisher"
                 onClick={handleClick}
               >
-                <MarketingButton>Sign up for free</MarketingButton>
+                <MarketingButton>{t('Sign up for free')}</MarketingButton>
               </a>
               <a href="mailto:support@videocoin.network">
                 <MarketingButton theme="link-secondary">
-                  Have Custom Requirements?
+                  {t('Have Custom Requirements')}
                 </MarketingButton>
               </a>
             </div>

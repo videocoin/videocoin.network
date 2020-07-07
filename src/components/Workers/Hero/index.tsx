@@ -5,8 +5,10 @@ import Container from 'styles/Container';
 import bgImg from './assets/bg.svg';
 import bgMd from './assets/bg_md.svg';
 import bgSm from './assets/bg_md.svg';
+import { useTranslation, Trans } from 'react-i18next';
 
 const WorkersHero = () => {
+  const { t } = useTranslation('workers');
   return (
     <Root>
       <Bg>
@@ -21,17 +23,24 @@ const WorkersHero = () => {
           <Left />
           <Right>
             <Subtitle type="subtitleCaps">
-              <span>Work</span> on videocoin network
+              <Trans t={t} i18nKey="Work on VideoCoin Network">
+                <span>Work</span> on VideoCoin Network
+              </Trans>
             </Subtitle>
             <Title type="display3" theme="white">
-              Dedicate your unused compute power and <span>earn cash</span>
+              <Trans
+                t={t}
+                i18nKey="Dedicate your unused compute power and earn cash"
+              >
+                Dedicate your unused compute power and <span>earn cash</span>
+              </Trans>
             </Title>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://console.videocoin.network/sign-up?role=miner"
             >
-              <MarketingButton>Get Started</MarketingButton>
+              <MarketingButton>{t('Get Started')}</MarketingButton>
             </a>
           </Right>
         </Inner>

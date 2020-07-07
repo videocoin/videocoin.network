@@ -7,8 +7,8 @@ const DevelopersCard = () => {
     <FooterCard
       path="/developers"
       img={img}
-      title="Want to Develop with Video Network?"
-      desc="Learn how to start building next generation video streaming applications."
+      title="Want to Develop with Video Network"
+      desc="Learn how to start building next generation video streaming applications"
       buttonText="For Developers"
     />
   );

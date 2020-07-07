@@ -8,6 +8,7 @@ import {
 } from 'components/BrealpointProvider';
 import CookiePopup from 'components/CookiePopup';
 import styled from 'styled-components';
+import '../i18n';
 
 export const queries: Record<BreakpointType, string> = {
   mobile: '(max-width: 768px)',

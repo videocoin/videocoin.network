@@ -4,8 +4,10 @@ import { Typography } from 'ui-kit';
 import Container from 'styles/Container';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import { useTranslation } from 'react-i18next';
 
 const DemoApplication = () => {
+  const { t } = useTranslation('developers');
   const data = useStaticQuery(graphql`
     query {
       orbital: file(relativePath: { eq: "orbital.png" }) {
@@ -29,7 +31,7 @@ const DemoApplication = () => {
     <Root>
       <Container>
         <Typography type="display3" align="center">
-          Demo Application
+          {t('Demo Application')}
         </Typography>
         <Inner>
           <Img fluid={data.orbital.childImageSharp.fluid} />
@@ -41,9 +43,9 @@ const DemoApplication = () => {
             >
               <Img fixed={data.github.childImageSharp.fixed} />
             </a>
-            With Orbital, see how easy it is to get an application started on
-            VideoCoin Network. Orbital runs seamlessly across iOS, Android, and
-            Web.
+            {t(
+              'With Orbital see how easy it is to get an application started on VideoCoin Network Orbital runs seamlessly across iOS Android and Web'
+            )}
           </Typography>
         </Inner>
       </Container>

@@ -32,7 +32,7 @@ export const NavRoot = styled.nav<{ $open: boolean }>`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  @media ${device.laptop} {
+  @media (max-width: 1510px) {
     position: static;
     margin-left: 36px;
     transform: none;
@@ -115,6 +115,9 @@ export const Logo = styled(Link)`
     @media ${device.tablet} {
       width: 172px;
     }
+    @media ${device.mobile} {
+      width: 36px;
+    }
   }
 `;
 
@@ -158,7 +161,7 @@ export const NavLink = styled(Link)`
 export const SignWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-left: 35px;
   a {
     text-decoration: none;
     &:not(:last-child) {
@@ -195,5 +198,6 @@ export const MenuBtn = styled.button<{ $active: boolean }>`
   }
   @media ${device.tablet} {
     display: block;
+    margin-left: 24px;
   }
 `;

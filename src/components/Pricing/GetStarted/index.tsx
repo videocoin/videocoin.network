@@ -1,8 +1,10 @@
 import React from 'react';
 import { Root, Btns } from './styles';
 import { MarketingButton, Typography } from 'ui-kit';
+import { useTranslation } from 'react-i18next';
 
 const GetStarted = () => {
+  const { t } = useTranslation('pricing');
   const handleClick = () => {
     typeof window !== 'undefined' &&
       window.gtag('event', 'click', {
@@ -11,10 +13,11 @@ const GetStarted = () => {
   };
   return (
     <Root>
-      <Typography type="display3">Get Started</Typography>
+      <Typography type="display3">{t('Get Started')}</Typography>
       <Typography type="subtitleThin" opacity="drift">
-        Create an account and we’ll start you off with a $10 credit to get
-        started.
+        {t(
+          'Create an account and well start you off with a $10 credit to get started'
+        )}
       </Typography>
       <Btns>
         <a
@@ -23,10 +26,10 @@ const GetStarted = () => {
           href="https://console.videocoin.network/sign-up?role=publisher"
           onClick={handleClick}
         >
-          <MarketingButton>Sign up for free</MarketingButton>
+          <MarketingButton>{t('Sign up for free')}</MarketingButton>
         </a>
         <a href="mailto:support@videocoin.network">
-          <MarketingButton theme="secondary">Talk to us</MarketingButton>
+          <MarketingButton theme="secondary">{t('Talk to us')}</MarketingButton>
         </a>
       </Btns>
     </Root>
