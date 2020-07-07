@@ -12,8 +12,6 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const { laptop, tablet, mobile } = useBreakpoint();
   const toggleMenu = () => setOpen(!isOpen);
-  console.log((laptop || mobile) && !tablet);
-  console.log(tablet);
   return (
     <Headroom
       disable={isOpen}

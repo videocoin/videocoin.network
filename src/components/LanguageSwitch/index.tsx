@@ -29,7 +29,7 @@ const languages: Record<Locale, string> = {
 
 const LanguageSwitch = () => {
   const [isOpen, setOpen] = useState(false);
-  const [locale, setLocale] = useState(i18n.language);
+  const [locale, setLocale] = useState(i18n.language || 'en');
   const hide = () => setOpen(false);
   const popup = useRef(null);
   useOnClickOutside(popup, hide);
