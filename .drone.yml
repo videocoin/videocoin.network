@@ -12,8 +12,9 @@ steps:
       - mkdir $HOME/.ssh
       - echo "$SSH_KEY" > $HOME/.ssh/id_rsa
       - chmod 600 $HOME/.ssh/id_rsa
-      - git submodule update --recursive --remote
+      - git submodule update --init --recursive
       - ls -la
+      - ls -la ui-kit
   - name: build
     image: plugins/docker
     settings:
