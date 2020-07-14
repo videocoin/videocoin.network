@@ -5,16 +5,8 @@ name: dev.videocoin.network
 steps:
   - name: submodules
     image: alpine/git
-    environment:
-      SSH_KEY:
-        from_secret: ssh_key
     commands:
-      - mkdir $HOME/.ssh
-      - echo "$SSH_KEY" > $HOME/.ssh/id_rsa
-      - chmod 600 $HOME/.ssh/id_rsa
       - git submodule update --init --recursive
-      - ls -la
-      - ls -la ui-kit
   - name: build
     image: plugins/docker
     settings:
