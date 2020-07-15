@@ -15,7 +15,6 @@ const Header = () => {
   return (
     <Headroom
       disable={isOpen}
-      // wrapperStyle={{ marginBottom: -92 }}
       style={{
         zIndex: 2,
         transform: isOpen ? 'none' : 'translate3d(0px, 0px, 0px)',

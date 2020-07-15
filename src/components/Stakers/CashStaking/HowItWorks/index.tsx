@@ -14,35 +14,23 @@ const HowItWorks = () => {
   const steps: Step[] = [
     {
       id: 1,
-      title: t('Find A Worker'),
+      title: t('Connect your wallet'),
       desc: (
         <Typography type="smallBodyThin">
           {t(
-            'First youll need to either setup your own worker node or find a worker node to stake your tokens'
+            'Connect a new or existing VideoCoin Wallet using MetaMask to our staking app'
           )}
         </Typography>
       ),
     },
     {
       id: 2,
-      title: t('Basic Setup'),
+      title: t('Stake on a Worker'),
       desc: (
         <Typography type="smallBodyThin">
-          <Trans
-            t={t}
-            i18nKey="Follow our Staking Quickstart Guide to learn how to use our CLI tooling to begin staking your VideoCoin tokens"
-          >
-            Follow our{' '}
-            <a
-              href="https://forum.videocoin.network/t/videocoin-network-staking-guide/72"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Staking Quickstart Guide
-            </a>{' '}
-            to learn how to use our CLI tooling to begin staking your VideoCoin
-            tokens
-          </Trans>
+          {t(
+            'Once your wallet is connected youll be able to choose a worker to stake your VID'
+          )}
         </Typography>
       ),
     },

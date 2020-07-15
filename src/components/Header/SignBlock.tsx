@@ -8,10 +8,14 @@ import { useTranslation } from 'react-i18next';
 const SignBlock = () => {
   const { t } = useTranslation();
   const { location } = history;
-  const isGenesisPage = location.pathname.includes('/genesis-staking');
+  const isStakingPage = [
+    '/stakers',
+    '/genesis-staking',
+    '/worker-staking',
+  ].includes(location.pathname);
   const { laptop } = useBreakpoint();
   const renderLoginBtn = () => {
-    if (isGenesisPage || laptop) return null;
+    if (isStakingPage || laptop) return null;
     return (
       <a
         href="https://console.videocoin.network/sign-in"
@@ -29,7 +33,7 @@ const SignBlock = () => {
       });
   };
   const renderCreateBtn = () => {
-    if (isGenesisPage) {
+    if (isStakingPage) {
       return (
         <a
           target="_blank"

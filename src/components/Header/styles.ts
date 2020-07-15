@@ -63,20 +63,25 @@ export const SubPopup = styled.ul`
   position: absolute;
   background-color: #eee3ff;
   border-radius: 8px;
-  padding: 20px;
+  padding: 20px 16px;
   display: flex;
   flex-direction: column;
   opacity: 0;
   visibility: hidden;
   transition: 0.15s ease-in-out;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
   li {
+    text-align: center;
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
   }
   a {
     color: #0c0417;
     opacity: 0.86;
+    font-weight: 500;
     &::before {
       display: none !important;
     }
@@ -91,14 +96,17 @@ export const NavList = styled.ul`
   white-space: nowrap;
   & > li {
     position: relative;
-    &:not(:last-child) {
-      margin-right: 32px;
-    }
+    margin: 0 16px;
     &:hover {
       opacity: 1;
       ${SubPopup} {
         opacity: 1;
         visibility: visible;
+      }
+    }
+    & > a {
+      &:hover {
+        opacity: 1;
       }
     }
   }

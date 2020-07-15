@@ -38,7 +38,7 @@ const StakersHero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://console.videocoin.network/sign-up?role=publisher"
+              href="https://staking.videocoin.network"
             >
               <MarketingButton>{t('Get Started')}</MarketingButton>
             </a>

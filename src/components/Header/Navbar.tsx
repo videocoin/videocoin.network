@@ -20,6 +20,23 @@ const links: LinkProps[] = [
   {
     name: 'Developers',
     path: '/developers',
+    subMenu: [
+      {
+        name: 'Block Explorer',
+        path: 'https://explorer.videocoin.network',
+        external: true,
+      },
+      {
+        name: 'Community Network',
+        path: 'https://forum.videocoin.network',
+        external: true,
+      },
+      {
+        name: 'Developer Docs',
+        path: 'https://docs.videocoin.network',
+        external: true,
+      },
+    ],
   },
   {
     name: 'Workers',
@@ -48,13 +65,19 @@ const SubList = ({ links }: { links: LinkProps[] }) => {
   return <SubPopup>{links.map(renderLink)}</SubPopup>;
 };
 
-const renderLink = ({ name, path, subMenu }: LinkProps) => {
+const renderLink = ({ name, path, subMenu, external }: LinkProps) => {
   const { t } = useTranslation();
   return (
     <li key={name}>
-      <NavLink to={path} activeClassName="active">
-        {t(name)}
-      </NavLink>
+      {external ? (
+        <a href={path} target="_blank" rel="noreferrer noopener">
+          {t(name)}
+        </a>
+      ) : (
+        <NavLink to={path} activeClassName="active">
+          {t(name)}
+        </NavLink>
+      )}
       {subMenu && <SubList links={subMenu} />}
     </li>
   );

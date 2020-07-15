@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Root = styled.div`
   position: relative;
   margin-left: auto;
+  padding-left: 15px;
 `;
 
 export const Popup = styled.div`

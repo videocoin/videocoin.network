@@ -48,7 +48,10 @@ const Sections = () => {
             )}
           </Typography>
           <Link to="/rewards">
-            <MarketingButton theme="link" size="xs">
+            <MarketingButton
+              theme="link"
+              style={{ paddingLeft: 0, marginTop: 40 }}
+            >
               {t('See Reward Breakdown')}
             </MarketingButton>
           </Link>
@@ -76,6 +79,7 @@ const WorkerStaking = () => {
     <Layout>
       <SEO title="Stakers" />
       <StakersHero />
+      <Sections />
       <HowItWorks />
       <TutorialsList />
       <Community />

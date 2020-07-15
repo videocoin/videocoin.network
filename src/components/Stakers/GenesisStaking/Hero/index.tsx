@@ -33,7 +33,7 @@ const StakersHero = () => {
               rel="noopener noreferrer"
               href="https://staking.videocoin.network"
             >
-              <MarketingButton>Connect Wallet</MarketingButton>
+              <MarketingButton>Get Started</MarketingButton>
             </a>
           </Left>
           <Right>
