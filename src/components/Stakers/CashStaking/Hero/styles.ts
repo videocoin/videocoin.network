@@ -6,7 +6,12 @@ export const Root = styled.div`
   padding: 290px 0 100px;
   position: relative;
   overflow: hidden;
+  margin-top: -92px;
   @media ${device.tablet} {
+    padding-top: 90px;
+  }
+  @media ${device.mobile} {
+    margin-top: 0;
     padding-top: 0;
   }
 `;

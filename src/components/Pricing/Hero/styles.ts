@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../../queries';
 
 export const Root = styled.div`
-  padding-top: 201px;
+  padding-top: 100px;
   padding-bottom: 95px;
   @media ${device.mobile} {
     padding-top: 136px;

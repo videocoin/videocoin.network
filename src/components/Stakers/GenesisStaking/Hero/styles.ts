@@ -3,7 +3,7 @@ import { Typography } from 'ui-kit/*';
 import { device } from '../../../../queries';
 
 export const Root = styled.div`
-  padding: 290px 0 100px;
+  padding: 200px 0 100px;
   position: relative;
   overflow: hidden;
   @media ${device.tablet} {

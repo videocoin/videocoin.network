@@ -6,6 +6,7 @@ export const Root = styled.div`
   padding: 250px 0 230px;
   overflow: hidden;
   position: relative;
+  margin-top: -92px;
   &::after {
     content: '';
     position: absolute;

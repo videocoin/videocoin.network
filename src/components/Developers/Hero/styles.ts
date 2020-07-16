@@ -4,7 +4,7 @@ import { device } from '../../../queries';
 
 export const Root = styled.div`
   display: flex;
-  padding-top: 240px;
+  padding-top: 150px;
   padding-bottom: 140px;
   justify-content: center;
   align-items: center;

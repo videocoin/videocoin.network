@@ -26,11 +26,13 @@ export const ImgWrapper = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   min-height: 100vh;
+  margin-top: -92px;
   justify-content: center;
   @media ${device.mobile} {
     flex-direction: column;
     padding-bottom: 50px;
     padding-top: 80px;
+    margin-top: 0;
   }
   & > a {
     min-height: 100vh;

@@ -3,7 +3,7 @@ import { Typography } from 'ui-kit';
 import { device } from '../../../queries';
 
 export const Root = styled.div`
-  margin-top: 164px;
+  margin-top: 74px;
   overflow: hidden;
   position: relative;
   padding-bottom: 105px;

@@ -6,6 +6,7 @@ interface LinkProps {
   name: string;
   path: string;
   subMenu?: LinkProps[];
+  external?: boolean;
 }
 
 const links: LinkProps[] = [
@@ -27,7 +28,7 @@ const links: LinkProps[] = [
         external: true,
       },
       {
-        name: 'Community Network',
+        name: 'Community Forum',
         path: 'https://forum.videocoin.network',
         external: true,
       },
