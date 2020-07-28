@@ -1,6 +1,5 @@
 NAME=videocoin-network
-VERSION?=$$(git describe --abbrev=0)-$$(git rev-parse --abbrev-ref HEAD)-$$(git rev-parse --short HEAD)
-ENV?=dev
+VERSION?=$$(git rev-parse HEAD)
 
 REGISTRY_SERVER?=registry.videocoin.net
 REGISTRY_PROJECT?=cloud
@@ -31,4 +30,4 @@ docker-push:
 release: docker-build docker-push
 
 deploy:
-	cd deploy && helm upgrade -i --wait --set image.tag="${VERSION}" -n console videocoin-network ./helm
+	helm upgrade -i --wait --set image.tag="${VERSION}" -n console videocoin-network ./deploy/helm

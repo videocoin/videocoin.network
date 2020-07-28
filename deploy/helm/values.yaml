@@ -4,30 +4,24 @@ maxUnavailableCount: 0
 image:
   repository: registry.videocoin.net/cloud/videocoin-network
   tag: latest
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
   pullSecrets: 
   - name: regcred
 
 service:
-  name: http
-  type: NodePort
   ports:
     http: 80
 
 serviceAccount:
   name: default
 
-autoscaler:
-  minCount: 1
-  maxCount: 3
-
 resources:
   limits:
     cpu: 100m
-    memory: 128Mi
+    memory: 64Mi
   requests:
-    cpu: 100m
-    memory: 128Mi
+    cpu: 10m
+    memory: 16Mi
 
 ingress:
   enabled: true
