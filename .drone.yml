@@ -1,3 +1,4 @@
+---
 kind: pipeline
 type: kubernetes
 name: develop
@@ -58,7 +59,7 @@ steps:
         - GA_TRACKING_ID=UA-170965280-1
         - AW_TRACKING_ID=AW-766963740
       tags:
-        - ${$DRONE_TAG}
+        - ${DRONE_TAG}
 trigger:
   event:
     - tag
