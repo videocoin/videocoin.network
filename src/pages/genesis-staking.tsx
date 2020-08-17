@@ -59,7 +59,7 @@ const GenesisStaking = () => {
           <Typography type="subtitleThin" opacity="drift">
             The Genesis Staking Program is built to allow users to easily
             delegate tokens into a VideoCoin Network pool to help enable certain
-            basic network functionalities and VID rewards in return.
+            basic network functionalities and earn VID rewards in return.
           </Typography>
         </div>
       </Section>
