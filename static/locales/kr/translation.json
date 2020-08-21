@@ -12,7 +12,7 @@
   "Create Account": "계정 만들기",
   "Innovate": "혁신적인",
   "Video Infrastructure": "비디오 인프라",
-  "The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money": "비디오코인 네트워크는 강력한 API를 우선으로 하는 분산형 비디오 플랫폼으로, 낭비되는 컴퓨팅 자원을 활용하여 비용을 절감합니다.",
+  "The VideoCoin Network is a powerful API-first decentralized video platform that utilizes untapped computing resources to save you money": "비디오코인 네트워크는 강력한 API를 우선으로 하는 분산 형 비디오 플랫폼으로, 낭비되는 컴퓨팅 리소스를 활용하여 비용을 절감합니다.",
   "Learn More": "더 알아보기",
   "Sign up now and get $10 in free credit to try VideoCoin Network": "비디오코인 네트워크를 사용하려면 지금 가입하고 10달러의 무료 크레딧을 받으세요.",
   "Lower Cost":	"비용 절감",
@@ -32,6 +32,7 @@
   "Step 1":	"1 단계",
   "Create Stream":	"스트림 만들기",
   "Step 2": "2 단계",
+  "Step 3": "3 단계",
   "Run Stream": "스트림 구동하기",
   "Distribute Video":	"비디오 배포",
   "The Green Solution for Video": "비디오를 위한 친환경 솔루션",
@@ -44,5 +45,9 @@
   "Want to Stake your Tokens":	"토큰을 스테이킹하고 싶으십니까?",
   "Learn more about our groundbreaking staking model and begin staking your tokens":	"획기적인 스테이킹 모델에 대해 자세히 알아보고 토큰 스테이킹을 시작하십시오.",
   "For Stakers": "스테이커들을 위한",
-  "For Developers":	"개발자들을 위한"
+  "For Developers":	"개발자들을 위한",
+  "No Stream Created": "생성된 스트림 없음",
+  "Upload Your Video": "비디오를 업로드 하기",
+  "Upload Video": "비디오 업로드",
+  "Offline": "오프라인"
 }

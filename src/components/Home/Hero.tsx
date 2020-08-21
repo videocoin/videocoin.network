@@ -37,7 +37,7 @@ const Hero = () => {
           </Title>
           <Typography type="subtitleThin">
             {t(
-              'The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money'
+              'The VideoCoin Network is a powerful API-first decentralized video platform that utilizes untapped computing resources to save you money'
             )}
           </Typography>
           <Btns>

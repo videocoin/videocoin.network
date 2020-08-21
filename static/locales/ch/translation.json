@@ -11,7 +11,7 @@
   "Create Account": "创建新账户",
   "Innovate": "创新的",
   "Video Infrastructure": "视频基础设施",
-  "The VideoCoin Network is a powerful API-first decentralized video platform that utilizes untapped computing resources to save you money": "VideoCoin系统是一个强大的API导向、去中心化的视频平台",
+  "The VideoCoin Network is a powerful API-first decentralized video platform that utilizes untapped computing resources to save you money": "VideoCoin系统是一个强大的API导向、去中心化的视频平台，它利用了未开发的算力，为您节省金钱",
   "Learn More": "了解更多",
   "Sign up now and get $10 in free credit to try VideoCoin Network": "现在报名和获<1>得10美金</1>消费券来尝试VideoCoin系统",
   "Lower Cost":	"更低的成本",
@@ -31,6 +31,7 @@
   "Step 1":	"第一步",
   "Create Stream":	"创造视频流",
   "Step 2": "第二步",
+  "Step 3": "第三步",
   "Run Stream": "播放视频",
   "Distribute Video":	"分发视频",
   "The Green Solution for Video":	"为视频打造的绿色解决方案",
@@ -43,5 +44,9 @@
   "Want to Stake your Tokens":	"想抵押你的令牌吗?",
   "Learn more about our groundbreaking staking model and begin staking your tokens":	"深入了解我们开创性的权益抵押模型，并开始抵押你的令牌",
   "For Stakers": "针对抵押者",
-  "For Developers":	"针对开发者"
+  "For Developers":	"针对开发者",
+  "No Stream Created": "没有新产生的流媒体文件",
+  "Upload Your Video": "上传视频",
+  "Upload Video": "上传视频",
+  "Offline": "线下"
 }

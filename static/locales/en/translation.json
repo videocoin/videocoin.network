@@ -11,7 +11,7 @@
   "Create Account": "Create Account",
   "Innovate": "Innovate",
   "Video Infrastructure": "Video Infrastructure",
-  "The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money": "The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money.",
+  "The VideoCoin Network is a powerful API-first decentralized video platform that utilizes untapped computing resources to save you money": "The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money.",
   "Learn more": "Learn more",
   "Sign up now and get $10 in free credit to try VideoCoin Network": "Sign up now and <1>get $10 in free credit</1> to try VideoCoin Network.",
   "Lower Cost":	"Lower Cost",
@@ -31,6 +31,7 @@
   "Step 1":	"Step 1",
   "Create Stream":	"Create Stream",
   "Step 2": "Step 2",
+  "Step 3": "Step 3",
   "Run Stream": "Run Stream",
   "Distribute Video": "Distribute Video",
   "The Green Solution for Video": "The Green Solution for Video",
@@ -43,5 +44,9 @@
   "Want to Stake your Tokens":	"Want to Stake your Tokens?",
   "Learn more about our groundbreaking staking model and begin staking your tokens": "Learn more about our groundbreaking staking model and begin staking your tokens.",
   "For Stakers": "For Stakers",
-  "For Developers":	"For Developers"
+  "For Developers":	"For Developers",
+  "No Stream Created": "No Stream Created",
+  "Upload Your Video": "Upload Your Video",
+  "Upload Video": "Upload Video",
+  "Offline": "Offline"
 }
