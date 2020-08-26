@@ -22,7 +22,7 @@ export const SidebarWrapper = styled.div`
   }
   a {
     cursor: pointer;
-    display: block;
+    display: flex;
     opacity: 0.48;
     &.active {
       opacity: 1;
@@ -80,5 +80,24 @@ export const DownloadLinks = styled.div`
     a {
       margin: 0 0 24px !important;
     }
+  }
+`;
+
+export const ExternalLink = styled.a.attrs(() => ({
+  target: '_blank',
+  rel: 'noopener noreferrer',
+}))`
+  display: flex;
+  align-items: center;
+  opacity: 1 !important;
+  padding: 12px 0;
+  div {
+    margin-left: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e1ccff;
+  }
+  svg {
+    fill: #eee3ff;
   }
 `;
