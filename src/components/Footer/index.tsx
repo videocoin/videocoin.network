@@ -1,5 +1,6 @@
 import React from 'react';
 import { BottomBar, Copyright, Link, Links, MiddleBar, TopBar } from './styles';
+import { Link as RouteLink } from 'gatsby';
 import Social from 'components/Social';
 import Container from 'styles/Container';
 import Logo from 'components/Logo';
@@ -16,6 +17,7 @@ const Footer = () => {
         <Logo />
         <div>
           <a href="mailto:support@videocoin.network">Contact Support</a>
+          <RouteLink to="download-hub">Downloads</RouteLink>
           <a
             target="_blank"
             rel="noopener noreferrer"
