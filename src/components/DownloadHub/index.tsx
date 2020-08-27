@@ -8,22 +8,20 @@ import View from 'components/View';
 const DownloadHub = () => {
   const renderApp = (app: any) => <App item={app} key={app.id} />;
   return (
-    <div>
+    <View paddingT={64}>
+      <Typography align="center" type="subtitleCaps">
+        VideoCoin Network
+      </Typography>
+      <View marginB={72}>
+        <Typography type="display3" align="center">
+          Download Hub
+        </Typography>
+      </View>
       <Container>
         <Sidebar />
-        <div>
-          <Typography align="center" type="subtitleCaps">
-            VideoCoin Network
-          </Typography>
-          <View marginB={72}>
-            <Typography type="display3" align="center">
-              Download Hub
-            </Typography>
-          </View>
-          {apps.map(renderApp)}
-        </div>
+        <div>{apps.map(renderApp)}</div>
       </Container>
-    </div>
+    </View>
   );
 };
 

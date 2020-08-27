@@ -7,7 +7,6 @@ export const Container = styled.div`
   display: flex;
   align-items: flex-start;
   padding: 0 24px;
-  padding-top: 64px;
 `;
 
 export const SidebarWrapper = styled.div`
@@ -15,8 +14,8 @@ export const SidebarWrapper = styled.div`
   margin-right: 55px;
   flex-shrink: 0;
   position: sticky;
-  margin-top: 165px;
-  top: 24px;
+  margin-top: 10px;
+  top: 110px;
   @media ${device.tablet} {
     display: none;
   }
