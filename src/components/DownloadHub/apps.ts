@@ -9,7 +9,7 @@ const apps = [
   //       id: 1,
   //       version: '1.0.0',
   //       description:
-  //         'VideoCoin Network Worker App initial release. All new desktop application built to simplify setting up a worker node on the VideoCoin Network.',
+  //         'The VideoCoin Network Worker Hub initial release is built to simplify worker setup on Windows, Mac and Linux platforms.',
   //       links: [
   //         {
   //           icon: 'windows',
@@ -34,7 +34,7 @@ const apps = [
     id: 'workerDockerTools',
     name: 'Worker Docker Tools',
     description:
-      'The Worker Docker Images allow you to run a VideoCoin worker in any docker supported environment. While this setup is more complex than using the Worker App, it gives far more control and flexibility for how your worker runs. See our documentation for information on how to get the worker up and running.',
+      'The Worker Docker Tools allow you to run a VideoCoin worker in any docker supported environment. This setup is more complex than the Worker App, but offers more control and flexibility for how your worker runs. See our documentation for information on how to get the worker up and running.',
     versions: [
       {
         id: 1,
@@ -54,7 +54,7 @@ const apps = [
     id: 'workerBinaries',
     name: 'Worker Binaries',
     description:
-      'Worker binaries are available for both the Raspberry Pi and Jetson Nano. See our documentation for information on how to get these binaries setup and running.',
+      'Setup a worker with a Raspberry Pi or Jetson Nano using binaries. See our documentation for information on how to get these binaries setup and running.',
     versions: [
       {
         id: 1,
@@ -117,9 +117,9 @@ const apps = [
   },
   {
     id: 'orbital',
-    name: 'Orbital Example Apps',
+    name: 'Orbital Video Streaming Apps',
     description:
-      'Orbital is a sample app built on the VideoCoin Network. Its source code showcases just how easy it is for developers to start using the VideoCoin Network for a video streaming app/project. Pick your platform below to dive into the source code.',
+      'The source code for the Orbital streaming apps. Orbital is a sample app built on the VideoCoin Network. Developers can use this code to start building their own VideoCoin Network integrated streaming apps. Pick your platform below to dive into the source code.',
     versions: [
       {
         id: 1,
