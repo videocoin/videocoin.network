@@ -32,7 +32,7 @@ const Hero = () => {
             <IconLogo width={72} />
           </SLogo>
           <Title type="display2" theme="white" align="center">
-            {t('Innovate')} <br />
+            {t('Innovative')} <br />
             {t('Video Infrastructure')}
           </Title>
           <Typography type="subtitleThin">
