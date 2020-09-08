@@ -1,6 +1,6 @@
 FROM node:14.4-alpine3.11 as builder
 
-RUN apk add build-base git libc6-compat openssh-client python
+RUN apk add build-base git libc6-compat openssh-client python autoconf automake libtool nasm libpng-dev
 RUN apk upgrade libcurl
 
 ARG GA_TRACKING_ID
