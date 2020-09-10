@@ -3,13 +3,13 @@ const apps = [
     id: 'workerHub',
     name: 'Worker Hub',
     description:
-      'The VideoCoin Network worker app is an easy to run desktop application that makes setting up a worker node on the VideoCoin Network and directly staking VID to the worker a simple guided process.',
+      'The VideoCoin Network worker hub is an easy to run desktop application that makes setting up a worker node on the VideoCoin Network and directly staking VID to the worker a simple guided process. This app is an early alpha release for our community to try out and provide feedback. Please report any bugs on our forum.',
     versions: [
       {
         id: 1,
-        version: '1.0.0',
+        version: 'Alpha',
         description:
-          'The VideoCoin Network Worker Hub initial release is built to simplify worker setup on Windows and Mac platforms.',
+          'The VideoCoin Network Worker Hub initial alpha release is built to simplify worker setup on Windows and Mac platforms.',
         links: [
           {
             icon: 'windows',
