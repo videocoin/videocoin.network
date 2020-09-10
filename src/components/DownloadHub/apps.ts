@@ -1,35 +1,30 @@
 const apps = [
-  // {
-  //   id: 'workerApp',
-  //   name: 'Worker App',
-  //   description:
-  //     'The VideoCoin Network worker app is an easy to run desktop application that makes setting up a worker node on the VideoCoin Network and directly staking VID to the worker a simple guided process.',
-  //   versions: [
-  //     {
-  //       id: 1,
-  //       version: '1.0.0',
-  //       description:
-  //         'The VideoCoin Network Worker Hub initial release is built to simplify worker setup on Windows, Mac and Linux platforms.',
-  //       links: [
-  //         {
-  //           icon: 'windows',
-  //           name: 'Windows',
-  //           url: '',
-  //         },
-  //         {
-  //           icon: 'apple',
-  //           name: 'Mac',
-  //           url: '',
-  //         },
-  //         {
-  //           icon: 'linux',
-  //           name: 'Linux',
-  //           url: '',
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  {
+    id: 'workerHub',
+    name: 'Worker Hub',
+    description:
+      'The VideoCoin Network worker app is an easy to run desktop application that makes setting up a worker node on the VideoCoin Network and directly staking VID to the worker a simple guided process.',
+    versions: [
+      {
+        id: 1,
+        version: '1.0.0',
+        description:
+          'The VideoCoin Network Worker Hub initial release is built to simplify worker setup on Windows and Mac platforms.',
+        links: [
+          {
+            icon: 'windows',
+            name: 'Windows',
+            url: 'https://workerhub.videocoin.net/download/latest/windows_64',
+          },
+          {
+            icon: 'apple',
+            name: 'Mac',
+            url: 'https://workerhub.videocoin.net/download/latest/osx',
+          },
+        ],
+      },
+    ],
+  },
   {
     id: 'workerDockerTools',
     name: 'Worker Docker Tools',
