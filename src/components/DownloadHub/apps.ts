@@ -14,12 +14,13 @@ const apps = [
           {
             icon: 'windows',
             name: 'Windows',
-            url: 'https://workerhub.videocoin.net/download/latest/windows_64',
+            url:
+              'https://workerhub.videocoin.net/download/1.0.0-alpha/windows_64',
           },
           {
             icon: 'apple',
             name: 'Mac',
-            url: 'https://workerhub.videocoin.net/download/latest/osx',
+            url: 'https://workerhub.videocoin.net/download/1.0.0-alpha/osx',
           },
         ],
       },
