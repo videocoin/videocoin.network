@@ -15,12 +15,12 @@ const apps = [
             icon: 'windows',
             name: 'Windows',
             url:
-              'https://workerhub.videocoin.net/download/1.0.0-alpha/windows_64',
+              'https://workerhub.videocoin.net/download/1.0.1-alpha/windows_64',
           },
           {
             icon: 'apple',
             name: 'Mac',
-            url: 'https://workerhub.videocoin.net/download/1.0.0-alpha/osx',
+            url: 'https://workerhub.videocoin.net/download/1.0.1-alpha/osx',
           },
         ],
       },
