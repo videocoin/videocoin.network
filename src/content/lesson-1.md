@@ -5,4 +5,5 @@ description: Watch this explainer video to learn about how the VideoCoin Network
 googleLink: http://google.com
 path: /lesson-1
 videoUrl: https://www.youtube.com/embed/SKQo4cx202E
+thumbImage: ./images/lesson-1.png
 ---

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import * as S from './styles';
+import Img from 'gatsby-image';
 
 const LessonsList = () => {
   const { t } = useTranslation('lessons');
@@ -18,6 +19,14 @@ const LessonsList = () => {
               title
               number
               description
+              soon
+              thumbImage {
+                childImageSharp {
+                  fixed(width: 400) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
             }
           }
         }
@@ -27,11 +36,11 @@ const LessonsList = () => {
   const { allMarkdownRemark } = data;
   const renderLesson = ({ node }: any) => {
     const { frontmatter, id } = node;
-    const { title, number, description, path } = frontmatter;
+    const { title, number, soon, description, path, thumbImage } = frontmatter;
     return (
       <S.LessonCard key={id}>
         <div>
-          <img src="http://placehold.it/400x250" alt={title} />
+          <Img fixed={thumbImage.childImageSharp.fixed} />
         </div>
         <div>
           <Typography type="subtitle">
@@ -39,9 +48,11 @@ const LessonsList = () => {
           </Typography>
           <Typography type="smallTitle">{title}</Typography>
           <Typography>{description}</Typography>
-          <Link to={path}>
-            <Button>{t('Earn VID')}</Button>
-          </Link>
+          {!soon && (
+            <Link to={path}>
+              <Button>{t('Earn VID')}</Button>
+            </Link>
+          )}
         </div>
       </S.LessonCard>
     );
