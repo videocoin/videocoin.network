@@ -30,4 +30,4 @@ docker-push:
 release: docker-build docker-push
 
 deploy:
-	helm upgrade -i --wait --set image.tag="${VERSION}" -n console videocoin-network ./deploy/helm
+	helm upgrade -i --wait --set image.tag="${VERSION}" -n vcn videocoin-network ./deploy/helm
