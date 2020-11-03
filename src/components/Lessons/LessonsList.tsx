@@ -22,8 +22,8 @@ const LessonsList = () => {
               soon
               thumbImage {
                 childImageSharp {
-                  fixed(width: 400) {
-                    ...GatsbyImageSharpFixed
+                  fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -40,7 +40,7 @@ const LessonsList = () => {
     return (
       <S.LessonCard key={id}>
         <div>
-          <Img fixed={thumbImage.childImageSharp.fixed} />
+          <Img fluid={thumbImage.childImageSharp.fluid} />
         </div>
         <div>
           <Typography type="subtitle">

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../queries';
 
 export const Header = styled.div`
   display: flex;
@@ -11,6 +12,14 @@ export const Header = styled.div`
   a {
     display: inline-block;
     margin-top: 24px;
+  }
+  @media ${device.smTablet} {
+    flex-direction: column;
+    img {
+      max-width: 100%;
+      display: block;
+      margin-top: 24px;
+    }
   }
 `;
 
@@ -29,10 +38,26 @@ export const LessonCard = styled.div`
   & > div {
     &:first-child {
       margin-right: 48px;
+      @media ${device.smTablet} {
+        margin-right: 0;
+      }
     }
     &:last-child {
       display: flex;
       flex-direction: column;
+    }
+  }
+  .gatsby-image-wrapper {
+    width: 400px;
+  }
+  @media ${device.smTablet} {
+    flex-direction: column;
+    .gatsby-image-wrapper {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    a {
+      margin-top: 12px;
     }
   }
 `;
