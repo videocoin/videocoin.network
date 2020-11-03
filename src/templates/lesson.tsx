@@ -6,6 +6,7 @@ import { Typography, Button } from 'ui-kit';
 import Video from 'components/Video';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { device } from '../queries';
 
 const Wrapper = styled.div`
   padding: 100px 0;
@@ -22,6 +23,9 @@ const Title = styled(Typography)`
 `;
 const Inner = styled.div`
   max-width: 60%;
+  @media ${device.mobile} {
+    max-width: 100%;
+  }
 `;
 const ClaimButton = styled.div`
   text-align: center;

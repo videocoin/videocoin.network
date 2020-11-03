@@ -9,10 +9,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 
-exports.onCreateNode = ({ node }) => {
-  console.log(`Node created of type "${node.internal.type}"`);
-};
-
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
   const result = await graphql(`
