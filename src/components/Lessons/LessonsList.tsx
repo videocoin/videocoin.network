@@ -62,7 +62,7 @@ const LessonsList = () => {
       <Typography type="title">{t('VideoCoin Network Lessons')}</Typography>
       <Typography type="subtitleThin">
         {t(
-          'Watch Videos and read blogs to start learning about the VideoCoin Network'
+          'Watch videos and read blogs to start learning about the VideoCoin Network'
         )}
         {t('Each lesson takes just a few minutes to complete')}
       </Typography>
