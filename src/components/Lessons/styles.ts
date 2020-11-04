@@ -13,6 +13,15 @@ export const Header = styled.div`
     display: inline-block;
     margin-top: 24px;
   }
+  .gatsby-image-wrapper {
+    width: 400px;
+    @media ${device.smTablet} {
+      margin: 0 auto;
+    }
+    @media ${device.mobile} {
+      width: 100%;
+    }
+  }
   @media ${device.smTablet} {
     flex-direction: column;
     img {
