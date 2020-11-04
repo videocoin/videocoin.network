@@ -68,7 +68,7 @@ const Lesson = ({ data }: any) => {
           {externalUrl && (
             <a href={externalUrl} target="_blank" rel="noopener noreferrer">
               <Typography theme="sunkissed" type="title">
-                Read Article
+                Click Here to Read Article
               </Typography>
             </a>
           )}

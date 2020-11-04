@@ -1,6 +1,7 @@
 ---
 number: 1
-title: The VideoCoin Network - The Next Generation of Cloud Video Services
+title: >-
+    VIDEO: The VideoCoin Network - The Next Generation of Cloud Video Services
 description: Watch this explainer video to learn about how the VideoCoin Network works, and the three key functionalities of the network.
 googleLink: http://google.com
 path: /lesson-1
