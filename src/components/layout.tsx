@@ -16,10 +16,14 @@ export const queries: Record<BreakpointType, string> = {
   laptop: '(max-width: 1365px)',
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ $light?: boolean }>`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: ${({ $light }) =>
+    $light ? 'linear-gradient(180deg, #FFFFFF 0%, #EFEAF6 100%);' : '#1c0937'};
+  position: relative;
+  overflow: hidden;
 `;
 
 const MainContent = styled.div`
@@ -29,15 +33,17 @@ const MainContent = styled.div`
 const Layout = ({
   children,
   hideFooter = false,
+  light = false,
 }: {
   children: ReactNode;
   hideFooter?: boolean;
+  light: boolean;
 }) => {
   return (
     <BreakpointProvider queries={queries}>
-      <Wrapper>
+      <Wrapper $light={light}>
         <GlobalStyle />
-        <Header />
+        <Header light={light} />
         <MainContent>
           <main>{children}</main>
         </MainContent>

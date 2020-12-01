@@ -2,12 +2,15 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { device } from '../../queries';
 
-export const Root = styled.header`
+export const Root = styled.header<{ $light?: boolean }>`
   padding: 22px 64px;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: space-between;
   @media ${device.tablet} {
     padding: 15px 24px;
   }
@@ -21,44 +24,16 @@ export const Root = styled.header`
     width: 100%;
     position: absolute;
     pointer-events: none;
-    background: linear-gradient(180deg, #1a0c2d 0%, rgba(25, 12, 43, 0) 100%);
+    background: ${({ $light }) =>
+      $light
+        ? ''
+        : 'linear-gradient(180deg, #1a0c2d 0%, rgba(25, 12, 43, 0) 100%)'};
     @media ${device.tablet} {
       height: 120px;
     }
   }
 `;
 
-export const NavRoot = styled.nav<{ $open: boolean }>`
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  @media (max-width: 1510px) {
-    position: static;
-    margin-left: 36px;
-    transform: none;
-  }
-  @media ${device.tablet} {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    background-image: radial-gradient(circle at 100% 100%, #572577, #4b3aa6);
-    padding-top: 85px;
-    padding-left: 29px;
-    margin-left: 0;
-    z-index: 1001;
-    ${({ $open }) => $open && `visibility: visible; opacity: 1`};
-  }
-`;
 export const SubPopup = styled.ul`
   position: absolute;
   background-color: #eee3ff;
@@ -96,7 +71,7 @@ export const NavList = styled.ul`
   white-space: nowrap;
   & > li {
     position: relative;
-    margin: 0 16px;
+    margin: 0 14px;
     &:hover {
       opacity: 1;
       ${SubPopup} {
@@ -121,7 +96,7 @@ export const Logo = styled(Link)`
   z-index: 1002;
   img {
     @media ${device.tablet} {
-      width: 172px;
+      //width: 172px;
     }
     @media ${device.mobile} {
       width: 36px;
@@ -130,8 +105,9 @@ export const Logo = styled(Link)`
 `;
 
 export const NavLink = styled(Link)`
-  font-weight: 500;
+  font-weight: 600;
   opacity: 0.48;
+  font-size: 16px;
   line-height: 1.5;
   color: #fff;
   text-decoration: none;
@@ -165,11 +141,53 @@ export const NavLink = styled(Link)`
     font-weight: 300;
   }
 `;
-
+export const NavRoot = styled.nav<{ $open: boolean; $light?: boolean }>`
+  margin: 0 auto;
+  @media (max-width: 1510px) {
+    position: static;
+    margin-left: 36px;
+    transform: none;
+  }
+  @media ${device.tablet} {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    background-image: radial-gradient(circle at 100% 100%, #572577, #4b3aa6);
+    padding-top: 85px;
+    padding-left: 29px;
+    margin-left: 0;
+    z-index: 1001;
+    ${({ $open }) => $open && `visibility: visible; opacity: 1`};
+  }
+  ${({ $light }) =>
+    $light &&
+    `
+    a {
+      color: #0C0417db;
+      opacity: .48;
+      &::before {
+        background-color: #7234c8
+      }
+      @media(max-width: 1024px) {
+      color: #fff;
+      }
+    }
+  `}
+`;
 export const SignWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 35px;
+  margin-left: 32px;
   a {
     text-decoration: none;
     &:not(:last-child) {
@@ -181,11 +199,12 @@ export const SignWrapper = styled.div`
   }
 `;
 
-export const MenuBtn = styled.button<{ $active: boolean }>`
+export const MenuBtn = styled.button<{ $active: boolean; $light: boolean }>`
   width: 51px;
   height: 41px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: ${({ $light }) =>
+    $light ? '#1C0937' : 'rgba(255, 255, 255, 0.1)'};
   border: none;
   position: relative;
   z-index: 1001;

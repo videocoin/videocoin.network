@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1497px" height="1460px" viewBox="0 0 1497 1460" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Triangles</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Widescreen" transform="translate(-925.000000, -109.000000)">
+            <g id="Header" transform="translate(824.444444, 0.000000)">
+                <g id="Triangles" transform="translate(101.000000, 109.000000)">
+                    <path d="M1466,0 L29.7526749,803.107528 C23.96817,806.342054 21.9010037,813.653423 25.1355298,819.437928 C26.4625689,821.811155 28.556248,823.663347 31.073587,824.691084 L1496,1422.7666 L1496,1422.7666 L1466,0 Z" id="Path-Copy" fill="#7234C8"></path>
+                    <path d="M1458,37 L21.7526749,840.107528 C15.96817,843.342054 13.9010037,850.653423 17.1355298,856.437928 C18.4625689,858.811155 20.556248,860.663347 23.073587,861.691084 L1488,1459.7666 L1488,1459.7666 L1458,37 Z" id="Path" fill="#4E238E"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

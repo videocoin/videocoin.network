@@ -1,11 +1,12 @@
 import React from 'react';
 import { Button, Typography } from 'ui-kit';
+import VioletBtn from 'components/UI/Button';
 import { SignWrapper } from './styles';
 import { globalHistory as history } from '@reach/router';
 import { useBreakpoint } from 'components/BrealpointProvider';
 import { useTranslation } from 'react-i18next';
 
-const SignBlock = () => {
+const SignBlock = ({ light }: { light?: boolean }) => {
   const { t } = useTranslation();
   const { location } = history;
   const isStakingPage = [
@@ -22,7 +23,13 @@ const SignBlock = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Typography type="smallBodyThin">{t('Login')}</Typography>
+        <Typography
+          theme={light ? 'dark' : 'light'}
+          weight="600"
+          type="smallBodyThin"
+        >
+          {t('Login')}
+        </Typography>
       </a>
     );
   };
@@ -51,7 +58,11 @@ const SignBlock = () => {
         href="https://console.videocoin.network/sign-up?role=publisher"
         onClick={handleClick}
       >
-        <Button size={laptop ? 'sm' : 'md'}>{t('Create Account')}</Button>
+        {light ? (
+          <VioletBtn>{t('Create Account')}</VioletBtn>
+        ) : (
+          <Button size={laptop ? 'sm' : 'md'}>{t('Create Account')}</Button>
+        )}
       </a>
     );
   };

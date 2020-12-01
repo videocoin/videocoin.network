@@ -1,63 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 import 'typeface-rubik';
+import 'typeface-poppins';
 
-const GlobalStyle = createGlobalStyle`
-  @font-face {
-  font-family: 'icomoon';
-  src: url('/fonts/icomoon.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-discord:before {
-  content: "\\e900";
-}
-.icon-facebook:before {
-  content: "\\e901";
-}
-.icon-github:before {
-  content: "\\e902";
-}
-.icon-medium:before {
-  content: "\\e903";
-}
-.icon-reddit:before {
-  content: "\\e904";
-}
-.icon-telegram:before {
-  content: "\\e905";
-}
-.icon-twitter:before {
-  content: "\\e906";
-}
-.icon-youtube:before {
-  content: "\\e907";
-}
+const GlobalStyle = createGlobalStyle`        
   body {
     box-sizing: border-box;
     display: block;
     margin: 0;
     color: rgb(51, 51, 51);
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #1C0937;
   }
   * {
    box-sizing: border-box;
@@ -257,6 +211,7 @@ table {
 }
 .headroom--unfixed {
 position:fixed!important;
+  background: transparent!important;
 }
 .headroom-disable-animation {
 //transform: none!important;

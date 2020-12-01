@@ -8,7 +8,7 @@ import { useBreakpoint } from 'components/BrealpointProvider';
 import IconLogo from 'components/Logo/IconLogo';
 import LanguageSwitch from 'components/LanguageSwitch';
 
-const Header = () => {
+const Header = ({ light }: { light?: boolean }) => {
   const [isOpen, setOpen] = useState(false);
   const { laptop, tablet, mobile } = useBreakpoint();
   const toggleMenu = () => setOpen(!isOpen);
@@ -18,16 +18,21 @@ const Header = () => {
       style={{
         zIndex: 2,
         transform: isOpen ? 'none' : 'translate3d(0px, 0px, 0px)',
+        background: '#fff',
       }}
     >
-      <Root>
+      <Root $light={light}>
         <LogoLink to="/">
-          {(laptop && !tablet) || mobile ? <IconLogo width={36} /> : <Logo />}
+          {(laptop && !tablet) || mobile ? (
+            <IconLogo width={36} light={light} isOpen={isOpen} />
+          ) : (
+            <Logo light={light} isOpen={isOpen} />
+          )}
         </LogoLink>
-        <Navbar open={isOpen} />
+        <Navbar light={light} open={isOpen} />
         <LanguageSwitch />
-        <SignBlock />
-        <MenuBtn $active={isOpen} onClick={toggleMenu} />
+        <SignBlock light={light} />
+        <MenuBtn $light={light} $active={isOpen} onClick={toggleMenu} />
       </Root>
     </Headroom>
   );

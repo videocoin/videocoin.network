@@ -84,10 +84,10 @@ const renderLink = ({ name, path, subMenu, external }: LinkProps) => {
   );
 };
 
-const Navbar = ({ open }: { open: boolean }) => {
+const Navbar = ({ open, light }: { open: boolean; light?: boolean }) => {
   const { t } = useTranslation();
   return (
-    <NavRoot $open={open}>
+    <NavRoot $open={open} $light={light}>
       <NavList>
         {links.map(renderLink)}
         <li>
