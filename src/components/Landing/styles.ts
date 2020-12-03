@@ -13,7 +13,7 @@ export const H1 = styled.h1`
   line-height: 72px;
   letter-spacing: 0.96px;
   font-weight: 900;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
   @media (max-width: 1024px) {
     text-align: center;
   }
@@ -43,22 +43,22 @@ export const H2 = styled.h2`
 export const HeroRoot = styled.div`
   display: flex;
   margin-bottom: 125px;
-  margin-top: 98px;
+  margin-top: 92px;
   align-items: flex-start;
   height: 400px;
   color: #0c0417;
   @media (max-width: 1024px) {
     text-align: center;
-  }
-  @media (max-width: 768px) {
+    height: auto;
     margin-top: 30px;
+    margin-bottom: 60px;
   }
   & > div {
     &:first-child {
       min-width: 640px;
       flex: 1;
       flex-shrink: 0;
-      margin-left: 440px;
+      margin-left: 155px;
       @media (max-width: 1440px) {
         margin-left: 112px;
       }
@@ -71,7 +71,10 @@ export const HeroRoot = styled.div`
     }
     &:last-child {
       position: relative;
-      transform: translate(-14%, -28%);
+      transform: translate(2%, -28%);
+      @media (max-width: 1440px) {
+        transform: translate(-13%, -29%);
+      }
       @media (max-width: 1024px) {
         position: absolute;
         z-index: -1;
@@ -81,8 +84,12 @@ export const HeroRoot = styled.div`
         &:last-child {
           position: absolute;
           z-index: 1;
-          top: 25%;
-          left: 257px;
+          top: 26%;
+          left: 30px;
+          @media (max-width: 1440px) {
+            top: 27%;
+            left: 260px;
+          }
           @media (max-width: 1024px) {
             display: none;
           }

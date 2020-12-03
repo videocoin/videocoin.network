@@ -11,7 +11,7 @@ import { useBreakpoint } from 'components/BrealpointProvider';
 import { Link } from 'gatsby';
 
 const Hero = () => {
-  const { tablet } = useBreakpoint();
+  const { mobile, tablet } = useBreakpoint();
   return (
     <S.Container>
       <S.HeroRoot>
@@ -24,10 +24,10 @@ const Hero = () => {
             the Future of Media
           </S.H1>
           <S.HeroText>
-            The VideoCoin Network brings innovation to video streaming <br />
-            with a next-generation video ecosystem.
+            The VideoCoin Network brings innovation to video streaming with a
+            next-generation video ecosystem.
           </S.HeroText>
-          <View row centerH={tablet} marginT={68} marginB={20}>
+          <View row centerH={tablet} marginT={mobile ? 48 : 68} marginB={20}>
             <a
               href="https://console.videocoin.network/sign-up?role=publisher"
               target="_blank"
