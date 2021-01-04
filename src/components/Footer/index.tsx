@@ -43,7 +43,7 @@ const Footer = () => {
           </Links>
         </Menu>
       </Inner>
-      <Copyright>© 2020 Live Planet Inc.</Copyright>
+      <Copyright>© 2021 Live Planet Inc.</Copyright>
     </Root>
   );
 };
