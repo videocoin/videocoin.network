@@ -18,7 +18,7 @@ const Header = ({ light }: { light?: boolean }) => {
       style={{
         zIndex: 2,
         transform: isOpen ? 'none' : 'translate3d(0px, 0px, 0px)',
-        background: '#fff',
+        background: light ? '#fff' : 'transparent',
       }}
     >
       <Root $light={light}>

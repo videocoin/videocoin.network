@@ -17,7 +17,7 @@ const Footer = () => {
           <Links>
             <Link href="https://forum.videocoin.network/">Community Forum</Link>
             <Link href="mailto:support@videocoin.network">Contact Support</Link>
-            <RouteLink to="download-hub">Downloads</RouteLink>
+            <RouteLink to="/download-hub">Downloads</RouteLink>
             <Link href="https://github.com/videocoin">Githun</Link>
             <Link href="https://videocoin.io">Token</Link>
             <Link href="https://liveplanet.net">About Live Planet</Link>
