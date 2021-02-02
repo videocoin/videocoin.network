@@ -37,7 +37,7 @@ const Layout = ({
 }: {
   children: ReactNode;
   hideFooter?: boolean;
-  light: boolean;
+  light?: boolean;
 }) => {
   return (
     <BreakpointProvider queries={queries}>

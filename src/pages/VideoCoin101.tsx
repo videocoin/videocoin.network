@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   padding: 80px 0;
 `;
 
-const Lessons = () => (
+const VideoCoin101 = () => (
   <Layout>
     <Container>
       <Wrapper>
@@ -20,4 +20,4 @@ const Lessons = () => (
   </Layout>
 );
 
-export default Lessons;
+export default VideoCoin101;

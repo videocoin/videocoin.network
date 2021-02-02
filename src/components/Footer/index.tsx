@@ -40,6 +40,9 @@ const Footer = () => {
             <Link href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkDelegatorTermsofService.html">
               Delegator Terms of Service
             </Link>
+            <Link href="https://storage.googleapis.com/videocoin-network-policies/VideoCoin101TC.html">
+              VideoCoin101 Terms and Conditions
+            </Link>
           </Links>
         </Menu>
       </Inner>

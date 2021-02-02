@@ -54,6 +54,7 @@ const Lesson = ({ data }: any) => {
     videoUrl,
     externalUrl,
     thumbImage,
+    googleLink,
   } = frontmatter;
   return (
     <Layout>
@@ -78,7 +79,9 @@ const Lesson = ({ data }: any) => {
             <Typography>{description}</Typography>
           </Inner>
           <ClaimButton>
-            <Button>Claim VID Tokens</Button>
+            <a href={googleLink} target="_blank" rel="noopener noreferrer">
+              <Button>Claim 10 VID Token</Button>
+            </a>
           </ClaimButton>
         </Wrapper>
       </Container>
