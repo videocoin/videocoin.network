@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../queries';
+import { Typography } from 'ui-kit/*';
 
 export const Header = styled.div`
   display: flex;
@@ -30,6 +31,10 @@ export const Header = styled.div`
       margin-top: 24px;
     }
   }
+`;
+
+export const Description = styled(Typography)`
+  margin-bottom: 24px;
 `;
 
 export const LessonsList = styled.div`

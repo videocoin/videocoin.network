@@ -47,7 +47,7 @@ const LessonsList = () => {
             {t('Lesson')} #{number}
           </Typography>
           <Typography type="smallTitle">{title}</Typography>
-          <Typography>{description}</Typography>
+          <S.Description>{description}</S.Description>
           {!soon && (
             <Link to={path}>
               <Button>{t('Earn VID')}</Button>
@@ -63,7 +63,7 @@ const LessonsList = () => {
       <Typography type="subtitleThin">
         {t(
           'Watch videos and read blogs to start learning about the VideoCoin Network'
-        )}
+        )}{' '}
         {t('Each lesson takes just a few minutes to complete')}
       </Typography>
       <S.LessonsList>{allMarkdownRemark.edges.map(renderLesson)}</S.LessonsList>
