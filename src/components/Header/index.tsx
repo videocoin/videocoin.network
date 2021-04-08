@@ -30,7 +30,6 @@ const Header = ({ light }: { light?: boolean }) => {
           )}
         </LogoLink>
         <Navbar light={light} open={isOpen} />
-        <LanguageSwitch />
         <SignBlock light={light} />
         <MenuBtn $light={light} $active={isOpen} onClick={toggleMenu} />
       </Root>
