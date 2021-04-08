@@ -63,6 +63,7 @@ export const HeroRoot = styled.div`
       }
       @media (max-width: 1024px) {
         margin-left: 0;
+        min-width: 0;
       }
       @media (max-width: 768px) {
         min-width: auto;
@@ -78,6 +79,7 @@ export const HeroRoot = styled.div`
         position: absolute;
         z-index: -1;
         transform: translate(-14%, 22%);
+        display: none;
       }
       img {
         &:last-child {
@@ -107,37 +109,6 @@ export const HeroText = styled.div`
   @media (max-width: 768px) {
     font-size: 16px;
     letter-spacing: 0.32px;
-  }
-`;
-export const HeroSmallText = styled.div`
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 0.32px;
-  opacity: 0.72;
-  max-width: 304px;
-  strong {
-    font-weight: bold;
-  }
-  @media (max-width: 1024px) {
-    margin: 0 auto;
-  }
-  @media (max-width: 768px) {
-    font-size: 14px;
-    letter-spacing: 0.28px;
-  }
-`;
-
-export const AirbnbTitle = styled.div`
-  font-size: 32px;
-  line-height: 32px;
-  letter-spacing: 0.64px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 32px;
-  color: #351661;
-  @media (max-width: 768px) {
-    font-size: 24px;
-    letter-spacing: 0.48px;
   }
 `;
 
@@ -304,12 +275,21 @@ export const PoweredBy = styled.div`
   }
   & > div:last-child {
     display: flex;
+    @media (max-width: 1024px) {
+      justify-content: center;
+    }
     & > div:first-child {
       padding-right: 33px;
       border-right: 1px solid #c5c5c5;
+      @media (max-width: 768px) {
+        padding-right: 20px;
+      }
     }
     & > div:last-child {
       padding-left: 26px;
+      @media (max-width: 768px) {
+        padding-left: 20px;
+      }
     }
   }
 `;
@@ -319,6 +299,9 @@ export const News = styled.div`
   border-bottom: 1px solid #c5c5c5;
   max-width: 600px;
   margin-bottom: 40px;
+  @media (max-width: 1024px) {
+    margin: 0 auto 40px;
+  }
 `;
 
 export const NewsLabel = styled.div`
@@ -342,6 +325,9 @@ export const NewsLink = styled.a`
 export const Form = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -351,7 +337,6 @@ export const Form = styled.div`
   form {
     margin-left: 20px;
     display: flex;
-    width: 100%;
     @media (max-width: 768px) {
       margin-top: 12px;
       margin-left: 0;
@@ -359,8 +344,7 @@ export const Form = styled.div`
   }
   input {
     height: 60px;
-    max-width: 260px;
-    width: 100%;
+    width: 260px;
     background: #ffffff;
     border: 2px solid #c4c4c4;
     border-radius: 8px;
@@ -371,6 +355,7 @@ export const Form = styled.div`
       color: #858585;
     }
     @media (max-width: 768px) {
+      width: 100%;
       font-size: 16px;
       padding: 0 12px;
     }
