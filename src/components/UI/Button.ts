@@ -46,6 +46,7 @@ const Button = styled.button.attrs(() => ({
   border: 2px solid transparent;
   ${({ size = 'regular' }) => styles[size]};
   ${({ btnTheme = 'primary' }) => styles[btnTheme]};
+  white-space: nowrap;
 `;
 
 export default Button;

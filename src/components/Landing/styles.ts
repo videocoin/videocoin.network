@@ -45,7 +45,7 @@ export const HeroRoot = styled.div`
   margin-bottom: 125px;
   margin-top: 92px;
   align-items: flex-start;
-  height: 400px;
+  height: 500px;
   color: #0c0417;
   @media (max-width: 1024px) {
     text-align: center;
@@ -55,10 +55,9 @@ export const HeroRoot = styled.div`
   }
   & > div {
     &:first-child {
-      min-width: 640px;
+      min-width: 800px;
       flex: 1;
       flex-shrink: 0;
-      margin-left: 155px;
       @media (max-width: 1440px) {
         margin-left: 112px;
       }
@@ -293,4 +292,93 @@ export const HeroImage = styled.div`
       width: 428px;
     }
   }
+`;
+
+export const PoweredBy = styled.div`
+  margin: 40px 0;
+  & > div:first-child {
+    font-size: 19px;
+    font-weight: 600;
+    color: #858585;
+    margin-bottom: 30px;
+  }
+  & > div:last-child {
+    display: flex;
+    & > div:first-child {
+      padding-right: 33px;
+      border-right: 1px solid #c5c5c5;
+    }
+    & > div:last-child {
+      padding-left: 26px;
+    }
+  }
+`;
+
+export const News = styled.div`
+  padding-bottom: 40px;
+  border-bottom: 1px solid #c5c5c5;
+  max-width: 600px;
+  margin-bottom: 40px;
+`;
+
+export const NewsLabel = styled.div`
+  font-weight: 700;
+  color: #c6bfd2;
+  text-transform: uppercase;
+  border: 1px solid #c6bfd2;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 6px 5px 4px;
+  margin-bottom: 20px;
+`;
+
+export const NewsLink = styled.a`
+  color: #7233c8;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.5;
+`;
+
+export const Form = styled.div`
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  button {
+    height: 60px;
+  }
+  form {
+    margin-left: 20px;
+    display: flex;
+    width: 100%;
+    @media (max-width: 768px) {
+      margin-top: 12px;
+      margin-left: 0;
+    }
+  }
+  input {
+    height: 60px;
+    max-width: 260px;
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid #c4c4c4;
+    border-radius: 8px;
+    margin-right: 10px;
+    padding: 0 20px;
+    font-weight: 500;
+    &::placeholder {
+      color: #858585;
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding: 0 12px;
+    }
+  }
+`;
+
+export const SuccessForm = styled.div`
+  margin-left: 20px;
+  font-size: 22px;
+  font-weight: 500;
 `;
