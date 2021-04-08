@@ -9,7 +9,7 @@ export const Root = styled.div`
 `;
 
 export const H1 = styled.h1`
-  font-size: 48px;
+  font-size: 56px;
   line-height: 72px;
   letter-spacing: 0.96px;
   font-weight: 900;
@@ -18,9 +18,9 @@ export const H1 = styled.h1`
     text-align: center;
   }
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 36px;
     letter-spacing: 0.48px;
-    line-height: 33px;
+    line-height: 40px;
   }
 `;
 
