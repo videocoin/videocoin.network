@@ -35,9 +35,13 @@ const Form = () => {
   };
   return (
     <S.Form>
-      <Link to="/developers">
+      <a
+        href="https://medium.com/p/ba75c30010e3"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Button btnTheme="secondary">Learn More</Button>
-      </Link>
+      </a>
       {isSuccess ? (
         <S.SuccessForm>Success</S.SuccessForm>
       ) : (
