@@ -367,3 +367,6 @@ export const SuccessForm = styled.div`
   font-size: 22px;
   font-weight: 500;
 `;
+export const RightImages = styled.div`
+  pointer-events: none;
+`;

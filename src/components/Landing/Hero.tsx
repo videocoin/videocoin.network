@@ -38,12 +38,12 @@ const Hero = () => {
           <News />
           <Form />
         </div>
-        <div>
+        <S.RightImages>
           <div>
             <img src={triangles} alt="" />
             <img src={hero} srcSet={`${hero2x} 2x`} alt="" />
           </div>
-        </div>
+        </S.RightImages>
       </S.HeroRoot>
     </S.Container>
   );

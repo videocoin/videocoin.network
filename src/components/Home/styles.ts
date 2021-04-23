@@ -13,6 +13,7 @@ export const Bg = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
+  pointer-events: none;
   @media ${device.tablet} {
     margin-bottom: 0;
     padding-right: 0;
