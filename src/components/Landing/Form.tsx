@@ -1,5 +1,4 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
-import { Link } from 'gatsby';
 import Button from 'components/UI/Button';
 import * as S from './styles';
 
@@ -40,19 +39,20 @@ const Form = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button btnTheme="secondary">Learn More</Button>
+        <Button type='button' btnTheme="secondary">Learn More</Button>
       </a>
       {isSuccess ? (
         <S.SuccessForm>Success</S.SuccessForm>
       ) : (
-        <form noValidate onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input
             value={email}
             onChange={handleChange}
             placeholder="Email Address"
             type="email"
+            required
           />
-          <Button type="button" disabled={isLoading}>
+          <Button disabled={isLoading}>
             Stay Informed
           </Button>
         </form>
