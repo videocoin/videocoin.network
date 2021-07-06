@@ -2,17 +2,9 @@ import React from 'react';
 import logo from './iconLogo.svg';
 import logoDark from './iconLogo_dark.svg';
 
-const IconLogo = ({
-  width,
-  light,
-  isOpen,
-}: {
-  width: number;
-  light?: boolean;
-  isOpen: boolean;
-}) => (
+const IconLogo = ({ width, isOpen }: { width: number; isOpen: boolean }) => (
   <img
-    src={isOpen ? logo : light ? logoDark : logo}
+    src={isOpen ? logo : logoDark}
     alt="Videocoin"
     width={width}
     height={width}

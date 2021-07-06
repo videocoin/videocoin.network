@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button, Typography } from 'ui-kit';
 import VioletBtn from 'components/UI/Button';
 import { SignWrapper } from './styles';
 import { globalHistory as history } from '@reach/router';
 import { useBreakpoint } from 'components/BrealpointProvider';
 import { useTranslation } from 'react-i18next';
+import Text from 'components/UI/Text';
+import Button from 'components/UI/Button';
 
-const SignBlock = ({ light }: { light?: boolean }) => {
+const SignBlock = () => {
   const { t } = useTranslation();
   const { location } = history;
   const isStakingPage = [
@@ -23,18 +24,13 @@ const SignBlock = ({ light }: { light?: boolean }) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Typography
-          theme={light ? 'dark' : 'light'}
-          weight="600"
-          type="smallBodyThin"
-        >
-          {t('Login')}
-        </Typography>
+        <Text variant="smallBody">{t('Login')}</Text>
       </a>
     );
   };
   const handleClick = () => {
     typeof window !== 'undefined' &&
+      // @ts-ignore
       window.gtag('event', 'click', {
         send_to: 'AW-766963740/vD8-CLi05tUBEJzg2-0C',
       });
@@ -47,7 +43,7 @@ const SignBlock = ({ light }: { light?: boolean }) => {
           rel="noopener noreferrer"
           href="https://staking.videocoin.network"
         >
-          <Button size={laptop ? 'sm' : 'md'}>Connect wallet</Button>
+          <Button hideArrow>Connect wallet</Button>
         </a>
       );
     }
@@ -58,11 +54,7 @@ const SignBlock = ({ light }: { light?: boolean }) => {
         href="https://console.videocoin.network/sign-up?role=publisher"
         onClick={handleClick}
       >
-        {light ? (
-          <VioletBtn>{t('Create Account')}</VioletBtn>
-        ) : (
-          <Button size={laptop ? 'sm' : 'md'}>{t('Create Account')}</Button>
-        )}
+        <Button hideArrow>{t('Create Account')}</Button>
       </a>
     );
   };

@@ -1,46 +1,44 @@
 import React from 'react';
-import { Root, Inner, Left, Right, Subtitle, Title, Bg } from './styles';
-import { MarketingButton } from 'ui-kit';
+import { Root, Inner, Left, Right, Bg } from './styles';
 import Container from 'styles/Container';
 import bgImg from './assets/bg.svg';
-import bgMd from './assets/bg_md.svg';
-import bgSm from './assets/bg_md.svg';
-import { useTranslation, Trans } from 'react-i18next';
+import bgImgMd from './assets/bg_md.svg';
+import View from 'components/View';
+import developers from 'icons/developers.svg';
+import Text from 'components/UI/Text';
+import Button from 'components/UI/Button';
+import { useBreakpoint } from 'components/BrealpointProvider';
 
 const WorkersHero = () => {
-  const { t } = useTranslation('workers');
+  const { mobile } = useBreakpoint();
   return (
     <Root>
       <Bg>
-        <picture>
-          <source media="(max-width: 767px)" srcSet={bgSm} />
-          <source media="(max-width: 1024px)" srcSet={bgMd} />
-          <img src={bgImg} alt="" />
-        </picture>
+        <img src={bgImg} alt="" />
       </Bg>
       <Container>
         <Inner>
-          <Left />
+          <Left>
+            <img src={bgImgMd} alt="" />
+          </Left>
           <Right>
-            <Subtitle type="subtitleCaps">
-              <Trans t={t} i18nKey="Work on VideoCoin Network">
-                <span>Work</span> on VideoCoin Network
-              </Trans>
-            </Subtitle>
-            <Title type="display3" theme="white">
-              <Trans
-                t={t}
-                i18nKey="Dedicate your unused compute power and earn cash"
-              >
-                Dedicate your unused compute power and <span>earn cash</span>
-              </Trans>
-            </Title>
+            <View row column={mobile} centerV marginB={10}>
+              <View marginR={mobile ? 0 : 16}>
+                <img src={developers} width={36} height={36} alt="" />
+              </View>
+              <Text variant="subtitle" withGradient uppercase>
+                Develop on VideoCoin Network
+              </Text>
+            </View>
+            <Text variant="display2" marginB={36}>
+              Dedicate your unused compute power and earn cash
+            </Text>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://console.videocoin.network/sign-up?role=miner"
             >
-              <MarketingButton>{t('Get Started')}</MarketingButton>
+              <Button>Get Started</Button>
             </a>
           </Right>
         </Inner>

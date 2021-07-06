@@ -5,7 +5,7 @@ import Hero from 'components/Landing/Hero';
 
 const Index = () => {
   return (
-    <Layout light>
+    <Layout>
       <SEO title="Home" />
       <Hero />
     </Layout>

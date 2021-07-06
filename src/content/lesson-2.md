@@ -1,7 +1,7 @@
 ---
 number: 2
 title: >-
-    ARTICLE: VideoCoin Network’s Rewards Program
+  ARTICLE: VideoCoin Network’s Rewards Program
 description: The three key topics you need to know about the VideoCoin Network Rewards Program.
 googleLink: https://forms.gle/D4JoX87DFYmLyvdZ7
 path: /lesson-2

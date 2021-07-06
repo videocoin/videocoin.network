@@ -4,16 +4,36 @@ import { device } from '../../../queries';
 export const Root = styled.div`
   padding-top: 100px;
   padding-bottom: 95px;
+  background: linear-gradient(
+      180deg,
+      #ffffff 11.51%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      27.6% 43.78% at 86.81% 100%,
+      rgba(255, 74, 122, 0.15) 0%,
+      rgba(245, 53, 104, 0) 100%
+    ),
+    radial-gradient(
+      42.56% 79.71% at 56.94% 100%,
+      rgba(114, 52, 200, 0.15) 0%,
+      rgba(144, 86, 228, 0) 100%
+    ),
+    radial-gradient(
+      36.18% 61.44% at 100% 0%,
+      rgba(255, 138, 60, 0.05) 0%,
+      rgba(255, 138, 60, 0) 100%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f2f0f4 100%);
   @media ${device.mobile} {
-    padding-top: 136px;
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
 `;
 
 export const Inner = styled.div`
   display: flex;
   @media ${device.mobile} {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 
@@ -32,19 +52,6 @@ export const Right = styled.div`
     display: flex;
     @media ${device.tablet} {
       flex-direction: column;
-      & > *:last-child {
-        margin-top: 25px;
-        button {
-          padding-left: 0;
-          padding-right: 0;
-        }
-      }
-    }
-    @media ${device.mobile} {
-      align-items: center;
-      div:last-child {
-        margin-left: -9px;
-      }
     }
   }
 `;
@@ -58,26 +65,8 @@ export const Text = styled.div`
 `;
 
 export const PriceCard = styled.div`
-  background: #d6c4f1;
-  border-radius: 25px;
-  padding: 36px 36px 13px;
-  width: 304px;
-  border: solid 2px transparent;
-  background-clip: padding-box;
+  min-width: 324px;
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -2px;
-    border-radius: inherit;
-    background: linear-gradient(to bottom, #fff, #d6c4f1);
-  }
   @media ${device.tablet} {
     flex-shrink: 0;
   }

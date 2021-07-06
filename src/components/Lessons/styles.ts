@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { device } from '../../queries';
-import { Typography } from 'ui-kit/*';
 
 export const Header = styled.div`
   display: flex;
@@ -33,10 +32,6 @@ export const Header = styled.div`
   }
 `;
 
-export const Description = styled(Typography)`
-  margin-bottom: 24px;
-`;
-
 export const LessonsList = styled.div`
   margin-top: 32px;
   a {
@@ -52,6 +47,7 @@ export const LessonCard = styled.div`
   & > div {
     &:first-child {
       margin-right: 48px;
+      min-width: 400px;
       @media ${device.smTablet} {
         margin-right: 0;
       }
@@ -61,9 +57,7 @@ export const LessonCard = styled.div`
       flex-direction: column;
     }
   }
-  .gatsby-image-wrapper {
-    width: 400px;
-  }
+
   @media ${device.smTablet} {
     flex-direction: column;
     .gatsby-image-wrapper {

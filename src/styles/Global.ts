@@ -1,13 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
-import 'typeface-rubik';
-import 'typeface-poppins';
+
+import '@fontsource/poppins';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
+import '@fontsource/teko/700.css';
+import Colors from 'styles/Colors';
 
 const GlobalStyle = createGlobalStyle`        
   body {
     box-sizing: border-box;
     display: block;
     margin: 0;
-    color: rgb(51, 51, 51);
+    color: ${Colors.grey70_72};
     font-family: 'Poppins', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -211,7 +218,7 @@ table {
 }
 .headroom--unfixed {
 position:fixed!important;
-  background: transparent!important;
+  //background: transparent!important;
 }
 .headroom-disable-animation {
 //transform: none!important;

@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import logoDark from './logo_dark.svg';
+import logo from './logo.svg';
 
-const Logo = ({ light, isOpen }: { light?: boolean; isOpen: boolean }) => (
-  <img src={isOpen ? logo : light ? logoDark : logo} alt="Videocoin" />
+const Logo = ({ light }) => (
+  <img width={185} src={light ? logo : logoDark} alt="Videocoin" />
 );
 
 export default Logo;

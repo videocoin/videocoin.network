@@ -1,35 +1,38 @@
 import styled from 'styled-components';
-import { Typography } from 'ui-kit';
 import { device } from '../../../queries';
+import Colors from 'styles/Colors';
 
 export const Root = styled.div`
-  margin-top: 74px;
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 105px;
-`;
-
-export const Subtitle = styled(Typography).attrs(() => ({
-  type: 'subtitleCaps',
-  align: 'center',
-}))`
-  margin-bottom: 4px;
-  span {
-    color: #fa8d62;
-  }
-`;
-
-export const Title = styled(Typography).attrs(() => ({
-  type: 'display3',
-  align: 'center',
-}))`
-  margin-bottom: 20px;
+  padding-bottom: 104px;
+  padding-top: 36px;
+  background: linear-gradient(
+      180deg,
+      #ffffff 11.51%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      27.6% 43.78% at 86.81% 100%,
+      rgba(255, 74, 122, 0.15) 0%,
+      rgba(245, 53, 104, 0) 100%
+    ),
+    radial-gradient(
+      42.56% 79.71% at 56.94% 100%,
+      rgba(114, 52, 200, 0.15) 0%,
+      rgba(144, 86, 228, 0) 100%
+    ),
+    radial-gradient(
+      36.18% 61.44% at 100% 0%,
+      rgba(255, 138, 60, 0.05) 0%,
+      rgba(255, 138, 60, 0) 100%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f2f0f4 100%);
 `;
 
 export const Img = styled.div`
   position: relative;
-  width: 1080px;
+  width: 1040px;
   text-align: center;
+  margin: 0 auto;
   @media ${device.tablet} {
     width: 385px;
     flex-shrink: 0;
@@ -48,54 +51,57 @@ export const Img = styled.div`
 
 const Payment = styled.div`
   position: absolute;
-  font-weight: 500;
-  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  color: ${Colors.violet80};
   @media ${device.tablet} {
     display: none;
   }
 `;
 export const Payment1 = styled(Payment)`
-  left: 22%;
+  left: 21%;
 `;
 export const Payment2 = styled(Payment)`
   left: 47.6%;
 `;
 export const Payment3 = styled(Payment)`
-  left: 73%;
+  left: 74%;
 `;
 
 export const Features = styled.ul`
   text-align: left;
   display: flex;
-  margin-top: 93px;
-  padding-left: 20px;
+  width: 1040px;
+  margin: 36px auto 0;
   @media ${device.tablet} {
     padding-left: 0;
     width: 100%;
     margin-left: -20px;
-    margin-top: 22px;
+    margin-top: 80px;
     flex-direction: column;
   }
   @media ${device.mobile} {
     justify-content: center;
-    margin: 215px auto auto;
+    margin: 235px auto auto;
     max-width: 320px;
   }
   li {
-    max-width: 260px;
     margin-right: 21px;
     @media ${device.tablet} {
       max-width: 320px;
-      margin-right: 0;
+      margin-right: auto;
+      margin-left: auto;
     }
     &:first-child {
+      max-width: 340px;
       margin-right: auto;
       @media ${device.tablet} {
         margin-right: 0;
         margin-bottom: 116px;
       }
       @media ${device.mobile} {
-        margin-bottom: 340px;
+        margin-bottom: 255px;
         margin-left: 20px;
       }
     }
@@ -106,31 +112,31 @@ export const Features = styled.ul`
         display: block;
       }
       @media ${device.mobile} {
-        margin-bottom: 260px;
+        margin-bottom: 245px;
       }
     }
     &:nth-child(3) {
+      max-width: 270px;
       @media ${device.tablet} {
-        margin-bottom: 150px;
+        margin-bottom: 80px;
       }
       @media ${device.mobile} {
-        margin-bottom: 330px;
+        margin-bottom: 240px;
       }
+    }
+    &:nth-child(4) {
+      max-width: 270px;
     }
   }
   p {
-    font-size: 12px;
-    letter-spacing: 0.06px;
-    color: rgba(184, 168, 206, 0.72);
-    line-height: 20px;
     position: relative;
-    padding-left: 30px;
+    padding-left: 44px;
     margin-left: 24px;
     &::before {
       content: '';
       position: absolute;
       display: block;
-      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDE2IDEzIj4gIDxwYXRoIGZpbGw9IiMzN0NCOEQiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTAuNjk5MDE2NzIyLDEwLjMzNzE3NTkgTDQuNjQzMjk1NCwxMy41NzM1MDcyIEM1LjYzOTUyNzU0LDE0LjM5MDkyODQgNy4xMDk3ODQxMSwxNC4yNDU5NzM1IDcuOTI3MjA1MzYsMTMuMjQ5NzQxNCBDNy45NDQ4MjE5LDEzLjIyODA5NTggNy45NDQ4MjE5LDEzLjIyODA5NTggNy45NjIwOTEwMywxMy4yMDYxNzIxIEwxNS40NTQ2OTEsMy42MTU2NDQwNCBDMTUuNzk0NzAxOSwzLjE4MDQzMDIgMTUuNzE3NTI0NiwyLjU1MTk4NjQ0IDE1LjI4MjMxMDcsMi4yMTE5NzU2MyBDMTQuODQ3MDk2OSwxLjg3MTk2NDgxIDE0LjIxODY1MzEsMS45NDkxNDIxMSAxMy44Nzg2NDIzLDIuMzg0MzU1OTYgTDYuMzg2MDQyMjgsMTEuOTc0ODg0IEw2LjM4MTA1ODYxLDExLjk4MTEwODIgQzYuMjY0Mjg0MTUsMTIuMTIzNDI3IDYuMDU0MjQ3NSwxMi4xNDQxMzQ5IDUuOTExOTI4NjIsMTIuMDI3MzYwNCBMMS45Njc2NDk5NSw4Ljc5MTAyOTE5IEMxLjU0MDY5MzMxLDguNDQwNzA1OCAwLjkxMDU4MzM1NCw4LjUwMjgyOTMyIDAuNTYwMjU5OTYzLDguOTI5Nzg1OTUgQzAuMjA5OTM2NTcyLDkuMzU2NzQyNTkgMC4yNzIwNjAwODksOS45ODY4NTI1NCAwLjY5OTAxNjcyMiwxMC4zMzcxNzU5IFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTIpIi8+PC9zdmc+);
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.905 10.626a10 10 0 11-5.601-7.652' stroke='url(%23paint0_linear)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.5 10.5l5 4.5L22 4' stroke='url(%23paint1_linear)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='21.677' y1='24.035' x2='-5.606' y2='10.722' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237234C8'/%3E%3Cstop offset='.443' stop-color='%23F53568'/%3E%3Cstop offset='1' stop-color='%23FA6E37'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='21.128' y1='15.518' x2='5.38' y2='5.388' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237234C8'/%3E%3Cstop offset='.443' stop-color='%23F53568'/%3E%3Cstop offset='1' stop-color='%23FA6E37'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
       width: 24px;
       height: 24px;
       left: 0;
@@ -144,17 +150,9 @@ export const FeatureTitle = styled.div`
   min-height: 48px;
   display: flex;
   align-items: center;
-  font-weight: 500;
-  letter-spacing: 0.12px;
-  color: #b79cdd;
   margin-bottom: 24px;
-  span {
-    font-size: 14px;
-    line-height: 24px;
-  }
   @media ${device.tablet} {
-    min-height: 0;
-    color: #ccb1f2;
+    min-height: auto;
   }
   @media ${device.mobile} {
     font-size: 14px;
@@ -164,9 +162,10 @@ export const FeatureTitle = styled.div`
 `;
 
 export const FeatureTop = styled.div`
-  font-weight: 500;
-  letter-spacing: 0.12px;
-  color: rgba(255, 255, 255, 0.94);
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 700;
+  color: ${Colors.violet80};
   margin-bottom: 12px;
   display: none;
   align-items: center;
@@ -179,15 +178,14 @@ export const FeatureTop = styled.div`
 `;
 
 export const FeaturePayment = styled.div`
-  background-color: #eee3ff;
-  color: #0c0417;
+  background-color: ${Colors.grey70};
+  color: ${Colors.white0};
   display: flex;
   align-items: center;
   padding: 6px 0 6px 22px;
   border-radius: 6px;
   letter-spacing: 0.12px;
   margin-right: 9px;
-  box-shadow: 0 8px 20px rgba(12, 4, 23, 0.67);
   width: 100px;
   position: relative;
   img {
@@ -199,22 +197,24 @@ export const FeaturePayment = styled.div`
     border: none;
     background: transparent;
     padding-left: 1px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 24px;
     width: 100%;
+    color: ${Colors.white0};
   }
 `;
 
 export const Inner = styled.div`
-  margin: 93px auto 0;
+  margin: 64px auto 0;
+  position: relative;
   @media ${device.tablet} {
     max-width: 768px;
-    padding: 0 40px;
     display: flex;
     align-items: flex-start;
   }
   @media ${device.mobile} {
     padding: 0;
+    margin-top: 32px;
     margin-left: -6px;
     margin-right: -6px;
   }

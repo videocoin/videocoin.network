@@ -1,15 +1,14 @@
 import React from 'react';
-import { Typography, Button } from 'ui-kit';
-import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import * as S from './styles';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import Text from 'components/UI/Text';
+import Button from 'components/UI/Button';
 
 const LessonsList = () => {
-  const { t } = useTranslation('lessons');
   const data = useStaticQuery(graphql`
-    query {
+    {
       allMarkdownRemark(sort: { fields: [frontmatter___number] }) {
         edges {
           node {
@@ -22,9 +21,7 @@ const LessonsList = () => {
               soon
               thumbImage {
                 childImageSharp {
-                  fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(width: 400, layout: CONSTRAINED)
                 }
               }
             }
@@ -40,17 +37,22 @@ const LessonsList = () => {
     return (
       <S.LessonCard key={id}>
         <div>
-          <Img fluid={thumbImage.childImageSharp.fluid} />
+          <GatsbyImage
+            alt=""
+            image={thumbImage.childImageSharp.gatsbyImageData}
+          />
         </div>
         <div>
-          <Typography type="subtitle">
-            {t('Lesson')} #{number}
-          </Typography>
-          <Typography type="smallTitle">{title}</Typography>
-          <S.Description>{description}</S.Description>
+          <Text variant="subtitle" color="violet90">
+            Lesson #{number}
+          </Text>
+          <Text>{title}</Text>
+          <Text variant="smallBody" marginB={24}>
+            {description}
+          </Text>
           {!soon && (
             <Link to={path}>
-              <Button>{t('Earn VID')}</Button>
+              <Button>Earn VID</Button>
             </Link>
           )}
         </div>
@@ -59,13 +61,12 @@ const LessonsList = () => {
   };
   return (
     <Element name="lessons">
-      <Typography type="title">{t('VideoCoin Network Lessons')}</Typography>
-      <Typography type="subtitleThin">
-        {t(
-          'Watch videos and read blogs to start learning about the VideoCoin Network'
-        )}{' '}
-        {t('Each lesson takes just a few minutes to complete')}
-      </Typography>
+      <Text variant="title">VideoCoin Network Lessons</Text>
+      <Text>
+        Watch videos and read blogs to start learning about the VideoCoin
+        <br />
+        Network Each lesson takes just a few minutes to complete
+      </Text>
       <S.LessonsList>{allMarkdownRemark.edges.map(renderLesson)}</S.LessonsList>
     </Element>
   );
