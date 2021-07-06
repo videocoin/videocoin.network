@@ -7,15 +7,10 @@ import hero_md from './assets/hero_md.png';
 import hero_md2x from './assets/hero_md@2x.png';
 import videocoin from './assets/videocoin.svg';
 import filecoin from './assets/filecoin.svg';
-import View from 'components/View';
-import Button from 'components/UI/Button';
-import { useBreakpoint } from 'components/BrealpointProvider';
-import { Link } from 'gatsby';
 import News from 'components/Landing/News';
 import Form from 'components/Landing/Form';
 
 const Hero = () => {
-  const { mobile, tablet } = useBreakpoint();
   return (
     <S.Container>
       <S.HeroRoot>

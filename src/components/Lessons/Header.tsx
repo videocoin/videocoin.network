@@ -1,43 +1,42 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Typography, Button } from 'ui-kit';
 import { Link } from 'react-scroll';
-import * as S from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import MainBlock from 'components/MainBlock';
+import Text from 'components/UI/Text';
+import Button from 'components/UI/Button';
 
 const Header = () => {
-  const { t } = useTranslation('lessons');
   const data = useStaticQuery(graphql`
-    query {
+    {
       heroImg: file(relativePath: { eq: "lessons_hero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 400, quality: 100, layout: CONSTRAINED)
         }
       }
     }
   `);
   return (
-    <S.Header>
-      <div>
-        <Typography theme="white" type="display2">
-          {t('Welcome to VideoCoin 101')}.
-        </Typography>
-        <Typography type="subtitleThin">
-          {t(
-            'Learn about the VideoCoin Network become an advocate and earn VID'
-          )}
-        </Typography>
-        <Link to="lessons" smooth offset={-50}>
-          <Button>Get Started</Button>
-        </Link>
-      </div>
-      <div>
-        <Img fluid={data.heroImg.childImageSharp.fluid} />
-      </div>
-    </S.Header>
+    <MainBlock
+      reverse
+      left={
+        <GatsbyImage
+          alt=""
+          image={data.heroImg.childImageSharp.gatsbyImageData}
+        />
+      }
+      right={
+        <>
+          <Text variant="display1">Welcome to VideoCoin 101.</Text>
+          <Text marginB={24}>
+            Learn about the VideoCoin Network become an advocate and earn VID
+          </Text>
+          <Link to="lessons" smooth offset={-50}>
+            <Button>Get Started</Button>
+          </Link>
+        </>
+      }
+    />
   );
 };
 

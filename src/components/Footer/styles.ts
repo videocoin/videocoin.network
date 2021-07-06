@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { device } from '../../queries';
+import Colors from 'styles/Colors';
 
 export const Root = styled.footer`
-  background: #351661;
+  background: #1c0937;
 `;
 
 export const Inner = styled.div`
@@ -96,11 +97,10 @@ export const Link = styled.a.attrs(() => ({
 `;
 
 export const Title = styled.div<{ $isOpen: boolean }>`
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 0.4px;
-  line-height: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  color: ${Colors.violet10};
+  line-height: 40px;
   margin-bottom: 20px;
   position: relative;
   &::before {

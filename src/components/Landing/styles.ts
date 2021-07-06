@@ -47,11 +47,15 @@ export const HeroRoot = styled.div`
   align-items: flex-start;
   height: 500px;
   color: #0c0417;
+
   @media (max-width: 1024px) {
     text-align: center;
     height: auto;
     margin-top: 30px;
     margin-bottom: 60px;
+  }
+  @media (max-width: 768px) {
+    overflow: hidden;
   }
   & > div {
     &:first-child {
@@ -331,19 +335,18 @@ export const Form = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
-  button {
-    height: 60px;
-  }
+
   form {
     margin-left: 20px;
     display: flex;
     @media (max-width: 768px) {
       margin-top: 12px;
       margin-left: 0;
+      flex-direction: column;
     }
   }
   input {
-    height: 60px;
+    height: 72px;
     width: 260px;
     background: #ffffff;
     border: 2px solid #c4c4c4;

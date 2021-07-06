@@ -84,10 +84,9 @@ const renderLink = ({ name, path, subMenu, external }: LinkProps) => {
   );
 };
 
-const Navbar = ({ open, light }: { open: boolean; light?: boolean }) => {
-  const { t } = useTranslation();
+const Navbar = ({ open }: { open: boolean }) => {
   return (
-    <NavRoot $open={open} $light={light}>
+    <NavRoot $open={open}>
       <NavList>
         {links.map(renderLink)}
         <li>
@@ -97,7 +96,7 @@ const Navbar = ({ open, light }: { open: boolean; light?: boolean }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {t('Blog')}
+            Blog
           </NavLink>
         </li>
       </NavList>

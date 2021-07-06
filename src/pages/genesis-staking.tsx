@@ -2,17 +2,42 @@ import Layout from 'components/layout';
 import SEO from 'components/seo';
 import React, { useEffect, useRef } from 'react';
 import StakersHero from 'components/Stakers/GenesisStaking/Hero';
-import Section from 'components/Section';
-import { Typography } from 'ui-kit';
-import Community from 'components/Community';
 import FooterCards from 'components/FooterCards';
 import DevelopersCard from 'components/FooterCards/DevelopersCard';
 import WorkersCard from 'components/FooterCards/WorkersCard';
-import HowItWorks from 'components/Stakers/GenesisStaking/HowItWorks';
+import HowItWorks from 'components/HowItWorks';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import lottie from 'lottie-web';
 import { animationData } from 'components/Stakers/animationData.js';
+import Join from 'components/Join';
+import MainBlock from 'components/MainBlock';
+import Text from 'components/UI/Text';
+import styled from 'styled-components';
+import Card from 'components/Card';
+import Container from 'styles/Container';
+
+const howItWorks = [
+  {
+    id: 1,
+    title: 'Connect your wallet',
+    desc: 'Connect a new or existing VideoCoin Wallet using MetaMask to our staking app.',
+  },
+  {
+    id: 2,
+    title: 'Stake on a Worker',
+    desc: 'Once your wallet is connected, you’ll be able to choose one of our Genesis workers to stake your VID tokens.',
+  },
+  {
+    id: 3,
+    title: 'Earn VID',
+    desc: 'Once staked, you’ll earn consistent VID Token rewards based on the amount of VID tokens you have staked.',
+  },
+];
+
+const Animation = styled.div`
+  max-width: 460px;
+`;
 
 const GenesisStaking = () => {
   const animationEl = useRef<any>(null);
@@ -29,19 +54,15 @@ const GenesisStaking = () => {
     }
   }, [animationEl]);
   const data = useStaticQuery(graphql`
-    query {
+    {
       token: file(relativePath: { eq: "genesisTokenRewards.png" }) {
         childImageSharp {
-          fluid(maxWidth: 416, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 416, quality: 100, layout: CONSTRAINED)
         }
       }
       pool: file(relativePath: { eq: "stakingPool.png" }) {
         childImageSharp {
-          fluid(maxWidth: 416, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 416, quality: 100, layout: CONSTRAINED)
         }
       }
     }
@@ -50,52 +71,76 @@ const GenesisStaking = () => {
     <Layout>
       <SEO title="Stakers" />
       <StakersHero />
-      <Section light>
-        <Img fluid={data.token.childImageSharp.fluid} />
-        <div>
-          <Typography type="display4" theme="white">
-            VID Token Rewards
-          </Typography>
-          <Typography type="subtitleThin" opacity="drift">
-            The Genesis Staking Program is built to allow users to easily
-            delegate tokens into a VideoCoin Network pool to help enable certain
-            basic network functionalities and earn VID rewards in return.
-          </Typography>
-        </div>
-      </Section>
-      <Section reverse>
-        <Img fluid={data.pool.childImageSharp.fluid} />
-        <div>
-          <Typography type="display4" theme="white">
-            Introductory Staking Pool
-          </Typography>
-          <Typography type="subtitleThin" opacity="drift">
-            Other VideoCoin Network workers will take time to come online and we
-            want to kick start this by setting up a worker pool to enable
-            certain basic functionalities on the network. Our present plan is to
-            keep this pool running for a year.
-          </Typography>
-        </div>
-      </Section>
-      <Section light>
-        <div>
-          <div ref={animationEl} />
-        </div>
-        <div>
-          <Typography type="display4" theme="white">
-            No Inflation Means Real Rewards
-          </Typography>
-          <Typography type="subtitleThin" opacity="drift">
-            The Genesis pool rewards existing VID tokens rather than minting new
-            tokens to pay rewards.
-          </Typography>
-        </div>
-      </Section>
-      <HowItWorks />
-      <Community />
+      <MainBlock
+        reverse
+        background="white10"
+        left={
+          <GatsbyImage
+            alt=""
+            image={data.token.childImageSharp.gatsbyImageData}
+          />
+        }
+        right={
+          <>
+            <Text variant="title">VID Token Rewards</Text>
+            <Text>
+              The Genesis Staking Program is built to allow users to easily
+              delegate tokens into a VideoCoin Network pool to help enable
+              certain basic network functionalities and earn VID rewards in
+              return.
+            </Text>
+          </>
+        }
+      />
+      <MainBlock
+        background="white20"
+        left={
+          <GatsbyImage
+            alt=""
+            image={data.pool.childImageSharp.gatsbyImageData}
+          />
+        }
+        right={
+          <>
+            <Text variant="title">Introductory Staking Pool</Text>
+            <Text>
+              Other VideoCoin Network workers will take time to come online and
+              we want to kick start this by setting up a worker pool to enable
+              certain basic functionalities on the network. Our present plan is
+              to keep this pool running for a year.
+            </Text>
+          </>
+        }
+      />
+      <MainBlock
+        reverse
+        background="white10"
+        left={
+          <Animation>
+            <Card color="violet90">
+              <div ref={animationEl} />
+            </Card>
+          </Animation>
+        }
+        right={
+          <div>
+            <Text variant="title">No Inflation Means Real Rewards</Text>
+            <Text>
+              The Genesis pool rewards existing VID tokens rather than minting
+              new tokens to pay rewards.
+            </Text>
+          </div>
+        }
+      />
+      <HowItWorks color="white20" steps={howItWorks} />
+      <Join />
       <FooterCards>
-        <DevelopersCard />
-        <WorkersCard />
+        <Container>
+          <div>
+            <DevelopersCard />
+            <WorkersCard />
+          </div>
+        </Container>
       </FooterCards>
     </Layout>
   );

@@ -2,11 +2,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout';
 import Container from 'styles/Container';
-import { Typography, Button } from 'ui-kit';
 import Video from 'components/Video';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { device } from '../queries';
+import Button from 'components/UI/Button';
+import Text from 'components/UI/Text';
 
 const Wrapper = styled.div`
   padding: 100px 0;
@@ -18,9 +19,7 @@ const Wrapper = styled.div`
     margin-bottom: 24px;
   }
 `;
-const Title = styled(Typography)`
-  margin-bottom: 24px;
-`;
+
 const Inner = styled.div`
   max-width: 60%;
   @media ${device.mobile} {
@@ -65,18 +64,23 @@ const Lesson = ({ data }: any) => {
               <Video videoSrcURL={videoUrl} videoTitle={title} />
             </VideoContainer>
           )}
-          {!videoUrl && <Img fluid={thumbImage.childImageSharp.fluid} />}
+          {!videoUrl && (
+            <GatsbyImage
+              alt=""
+              image={thumbImage.childImageSharp.gatsbyImageData}
+            />
+          )}
           {externalUrl && (
             <a href={externalUrl} target="_blank" rel="noopener noreferrer">
-              <Typography theme="sunkissed" type="title">
-                Click Here to Read Article
-              </Typography>
+              <Button btnTheme="secondary">Click Here to Read Article</Button>
             </a>
           )}
           <Inner>
-            <Typography type="smallTitle">Lesson #{number}</Typography>
-            <Title type="title">{title}</Title>
-            <Typography>{description}</Typography>
+            <Text variant="subtitle">Lesson #{number}</Text>
+            <Text variant="title" marginB={24}>
+              {title}
+            </Text>
+            <Text variant="smallBody">{description}</Text>
           </Inner>
           <ClaimButton>
             <a href={googleLink} target="_blank" rel="noopener noreferrer">
@@ -90,7 +94,7 @@ const Lesson = ({ data }: any) => {
 };
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -103,9 +107,7 @@ export const pageQuery = graphql`
         externalUrl
         thumbImage {
           childImageSharp {
-            fluid(maxWidth: 1040) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }

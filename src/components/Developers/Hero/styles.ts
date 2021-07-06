@@ -1,41 +1,65 @@
 import styled from 'styled-components';
-import { Typography } from 'ui-kit';
 import { device } from '../../../queries';
 
 export const Root = styled.div`
-  display: flex;
-  padding-top: 150px;
-  padding-bottom: 140px;
-  justify-content: center;
-  align-items: center;
-  & > div {
-    &:first-child {
-      width: 100%;
-      max-width: 583px;
-    }
-    &:last-child {
-      margin-left: 50px;
-      max-width: 752px;
-      padding-right: 25px;
-      @media ${device.mobile} {
-        margin-left: 0;
-        padding-right: 0;
+  padding: 94px 0;
+  @media (max-width: 768px) {
+    padding-top: 75px;
+    padding-bottom: 22px;
+  }
+  & > div > div {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    & > div {
+      &:first-of-type {
+        flex-shrink: 0;
+      }
+      &:last-child {
+        margin-left: 36px;
+        @media (max-width: 1024px) {
+          margin-left: 0;
+          margin-bottom: 54px;
+        }
       }
     }
-  }
-  @media ${device.tablet} {
-    flex-direction: column;
-    text-align: center;
-    padding: 143px 24px 72px;
-    & > div:first-child {
-      margin-bottom: 56px;
+    @media ${device.tablet} {
+      flex-direction: column-reverse;
+      text-align: center;
     }
   }
+  background: linear-gradient(
+      180deg,
+      #ffffff 11.51%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      27.6% 43.78% at 86.81% 100%,
+      rgba(255, 74, 122, 0.15) 0%,
+      rgba(245, 53, 104, 0) 100%
+    ),
+    radial-gradient(
+      42.56% 79.71% at 56.94% 100%,
+      rgba(114, 52, 200, 0.15) 0%,
+      rgba(144, 86, 228, 0) 100%
+    ),
+    radial-gradient(
+      36.18% 61.44% at 100% 0%,
+      rgba(255, 138, 60, 0.05) 0%,
+      rgba(255, 138, 60, 0) 100%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f2f0f4 100%);
 `;
 
 export const Btns = styled.div`
-  margin-top: 64px;
+  margin-top: 36px;
   display: flex;
+  & > *:last-of-type {
+    margin-left: 20px;
+    @media (max-width: 767px) {
+      margin-left: 0;
+    }
+  }
   @media ${device.tablet} {
     justify-content: center;
   }
@@ -44,14 +68,7 @@ export const Btns = styled.div`
     flex-direction: column;
     align-items: center;
     & > a:not(:last-child) {
-      margin-bottom: 35px;
+      margin-bottom: 28px;
     }
-  }
-`;
-
-export const Subtitle = styled(Typography)`
-  margin-bottom: 12px;
-  span {
-    color: #fd9369;
   }
 `;

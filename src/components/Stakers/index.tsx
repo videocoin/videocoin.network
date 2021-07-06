@@ -1,13 +1,18 @@
 import React from 'react';
 import GenesisPool from './Genesis';
 import CashBased from './Cash';
-import { Wrapper } from './styles';
+import { Wrapper, Inner } from './styles';
+import Container from 'styles/Container';
 
 const Stakers = () => {
   return (
     <Wrapper>
-      <CashBased />
-      <GenesisPool />
+      <Container>
+        <Inner>
+          <CashBased />
+          <GenesisPool />
+        </Inner>
+      </Container>
     </Wrapper>
   );
 };

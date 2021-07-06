@@ -11,6 +11,7 @@ module.exports = {
     twitterUsername: '@VideoCoinHQ',
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-plugin-load-script',
