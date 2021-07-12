@@ -1,5 +1,25 @@
 const apps = [
   {
+    id: 'nft',
+    name: 'NFT Marketplace App Installer',
+    description:
+      'Create and launch your very own marketplace with the VideoCoin NFT Marketplace App installer. This is an open-sourced release application with VideoCoin and Filecoin integrations for mining, trading, and storing resilient video NFTs.',
+    versions: [
+      {
+        id: 1,
+        version: 'Alpha',
+        description: 'The VideoCoin NFT Marketplace App installer via React',
+        links: [
+          {
+            icon: 'github',
+            name: 'Github',
+            url: 'https://github.com/videocoin/videocoin-nft-devnet',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'workerHub',
     name: 'Worker Hub',
     description:
@@ -14,8 +34,7 @@ const apps = [
           {
             icon: 'windows',
             name: 'Windows',
-            url:
-              'https://workerhub.videocoin.net/download/1.0.2-alpha/windows_64',
+            url: 'https://workerhub.videocoin.net/download/1.0.2-alpha/windows_64',
           },
           {
             icon: 'apple',
@@ -59,13 +78,11 @@ const apps = [
         links: [
           {
             name: 'Raspberry Pi',
-            url:
-              'https://storage.googleapis.com/videocoin-releases/worker/v1.1.1-pe-1-6107bcc/worker-linux-arm',
+            url: 'https://storage.googleapis.com/videocoin-releases/worker/v1.1.1-pe-1-6107bcc/worker-linux-arm',
           },
           {
             name: 'Jetson Nano',
-            url:
-              'https://storage.googleapis.com/videocoin-releases/worker/v1.1.1-pe-1-6107bcc/worker-linux-arm64',
+            url: 'https://storage.googleapis.com/videocoin-releases/worker/v1.1.1-pe-1-6107bcc/worker-linux-arm64',
           },
         ],
       },
