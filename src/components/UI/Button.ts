@@ -33,9 +33,7 @@ const styles: Record<string, any> = {
   secondary,
 };
 
-const Button = styled.button.attrs(() => ({
-  type: 'button',
-}))<{ btnTheme?: string; size?: string }>`
+const Button = styled.button<{ btnTheme?: string; size?: string; disabled?: boolean }>`
   font-weight: bold;
   border-radius: 12px;
   font-family: inherit;
@@ -46,6 +44,7 @@ const Button = styled.button.attrs(() => ({
   border: 2px solid transparent;
   ${({ size = 'regular' }) => styles[size]};
   ${({ btnTheme = 'primary' }) => styles[btnTheme]};
+  opacity: ${({ disabled}) => disabled ? 0.5: 1};
   white-space: nowrap;
 `;
 
