@@ -8,6 +8,7 @@ import appleIcon from 'icons/apple.svg';
 import windowsIcon from 'icons/windows.svg';
 import linuxIcon from 'icons/linux.svg';
 import dockerIcon from 'icons/dockerHub.svg';
+import githubIcon from 'icons/github.svg';
 import webIcon from 'icons/web.svg';
 import androidIcon from 'icons/android.svg';
 import arrowUpIcon from 'icons/arrowUp.svg';
@@ -21,6 +22,7 @@ const icons: any = {
   dockerHub: dockerIcon,
   web: webIcon,
   android: androidIcon,
+  github: githubIcon,
 };
 
 const Version = ({ data }: any) => {

@@ -16,8 +16,8 @@ const CookiePopup = () => {
   };
   return isOpen ? (
     <Root>
-      <Text variant="caption">This website uses cookies.</Text>
-      <Text variant="smallBody">
+      <Text variant="smallBody">This website uses cookies.</Text>
+      <Text variant="caption">
         By continuing to browse, you are agreeing to our use of cookies as
         explained in our cookie policy.
       </Text>
