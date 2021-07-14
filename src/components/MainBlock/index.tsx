@@ -22,7 +22,7 @@ const MainBlock = ({
         <S.Inner reverse={reverse}>
           <div>{left}</div>
           <View paddingV={6} column left>
-            {right}
+            <div>{right}</div>
           </View>
           <S.Decoration>
             <img src={decoration} width={569} alt="" />

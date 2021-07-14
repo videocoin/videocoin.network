@@ -4,11 +4,8 @@ import { device } from '../../queries';
 
 export const Root = styled.div<{ background?: TColors }>`
   background: ${({ background }) => background && Colors[background]};
-  padding: 80px 0;
+  padding: 20px 0;
   overflow: hidden;
-  @media (max-width: 768px) {
-    padding: 40px 0;
-  }
 `;
 
 export const Decoration = styled.div`
@@ -26,18 +23,25 @@ export const Inner = styled.div<{ reverse: boolean }>`
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   & > div:first-of-type {
     flex-shrink: 0;
-    margin-right: ${({ reverse }) => (reverse ? '0px' : '56px')};
+    margin-right: ${({ reverse }) => (reverse ? '0px' : '38px')};
     @media (max-width: 1024px) {
       margin-bottom: 50px;
       margin-right: 0;
     }
   }
   & > div:nth-child(2) {
+    min-width: 519px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 630px;
-    margin-right: ${({ reverse }) => (reverse ? '56px' : '0px')};
+    margin-right: ${({ reverse }) => (reverse ? '38px' : '0px')};
     @media (max-width: 1024px) {
       margin-right: 0;
       align-items: center;
+    }
+    @media (max-width: 768px) {
+      min-width: auto;
     }
   }
   @media ${device.tablet} {

@@ -5,6 +5,7 @@ import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
 import styled from 'styled-components';
 import Card from 'components/Card';
+import { Section } from './styles';
 
 const Animation = styled.div`
   max-width: 460px;
@@ -35,7 +36,7 @@ const Inflation = () => {
         </Animation>
       }
       right={
-        <>
+        <Section>
           <Text marginB={16} variant="title">
             No Inflation Means Real Rewards
           </Text>
@@ -50,7 +51,7 @@ const Inflation = () => {
             same rate in order to keep the value of the token stable However if
             supply is added while demand remains static their token value falls
           </Text>
-        </>
+        </Section>
       }
     />
   );

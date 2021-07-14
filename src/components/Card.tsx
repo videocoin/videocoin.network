@@ -12,12 +12,14 @@ const Root = styled.div<{ color: TColors }>`
     background-color: ${({ color }) => color && Colors[color]};
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     position: relative;
     z-index: 1;
     height: 100%;
     border-radius: 14px;
     padding: 24px;
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
   }
   .top-border {
     border-radius: 24px;

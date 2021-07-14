@@ -3,7 +3,10 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
 import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
-
+import styled from 'styled-components';
+export const Section = styled.div`
+  padding: 24px 0;
+`;
 const LowPrice = () => {
   const data = useStaticQuery(graphql`
     {
@@ -18,7 +21,12 @@ const LowPrice = () => {
     <MainBlock
       background="white20"
       left={
-        <GatsbyImage alt="" image={data.file.childImageSharp.gatsbyImageData} />
+        <Section>
+          <GatsbyImage
+            alt=""
+            image={data.file.childImageSharp.gatsbyImageData}
+          />
+        </Section>
       }
       right={
         <>

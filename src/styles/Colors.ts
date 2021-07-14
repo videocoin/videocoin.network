@@ -7,6 +7,7 @@ export const Colors = {
   violet50: '#7234C8',
   violet70: '#351661',
   violet80: '#290F4D',
+  violet80_72: '#290F4Db8',
   violet60: '#4E238E',
   violet90: '#1C0937',
   violet10: '#EEE3FF',

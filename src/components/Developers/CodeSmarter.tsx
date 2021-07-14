@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Text from 'components/UI/Text';
 import MainBlock from 'components/MainBlock';
+import * as S from './styles';
 
 const CodeSmarter = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +27,7 @@ const CodeSmarter = () => {
         />
       }
       right={
-        <>
+        <S.Section>
           <Text variant="subtitle" withGradient>
             Code smarter.
           </Text>
@@ -42,7 +43,7 @@ const CodeSmarter = () => {
             to VR to livestreaming with a minimum of effort, and at huge cost
             savings.
           </Text>
-        </>
+        </S.Section>
       }
     />
   );

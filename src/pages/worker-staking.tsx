@@ -9,12 +9,16 @@ import WorkersCard from 'components/FooterCards/WorkersCard';
 import HowItWorks from 'components/HowItWorks';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { useTranslation } from 'react-i18next';
 import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
 import Button from 'components/UI/Button';
 import Join from 'components/Join';
 import Container from 'styles/Container';
+import styled from 'styled-components';
+
+export const Section = styled.div`
+  padding: 24px 0;
+`;
 
 const Sections = () => {
   const data = useStaticQuery(graphql`
@@ -31,27 +35,27 @@ const Sections = () => {
       }
     }
   `);
-  const { t } = useTranslation('staking');
   return (
     <>
       <MainBlock
         background="white10"
         left={
-          <GatsbyImage
-            alt=""
-            image={data.cash.childImageSharp.gatsbyImageData}
-          />
+          <Section>
+            <GatsbyImage
+              alt=""
+              image={data.cash.childImageSharp.gatsbyImageData}
+            />
+          </Section>
         }
         right={
           <>
-            <Text variant="title">{t('20% In Cash Rewards')}</Text>
+            <Text variant="title">20% In Cash Rewards</Text>
             <Text color="grey70_72" marginB={48}>
-              {t(
-                "Delegates receive a minimum 20% of worker's cash earned for a job completed"
-              )}
+              Delegates receive a minimum 20% of worker's cash earned for a job
+              completed
             </Text>
             <Link to="/rewards">
-              <Button>{t('See Reward Breakdown')}</Button>
+              <Button>See Reward Breakdown</Button>
             </Link>
           </>
         }
@@ -60,21 +64,22 @@ const Sections = () => {
         background="white20"
         reverse
         left={
-          <GatsbyImage
-            alt=""
-            image={data.real.childImageSharp.gatsbyImageData}
-          />
+          <Section>
+            <GatsbyImage
+              alt=""
+              image={data.real.childImageSharp.gatsbyImageData}
+            />
+          </Section>
         }
         right={
           <>
             <Text variant="title" marginB={16}>
-              {' '}
-              {t('No Inflation Means Real Rewards')}
+              No Inflation Means Real Rewards
             </Text>
             <Text color="grey70_72">
-              {t(
-                'VideoCoin Network rewards workers and delegators from the price paid by publishers in cash rather than from the minting of new tokens to pay rewards'
-              )}
+              VideoCoin Network rewards workers and delegators from the price
+              paid by publishers in cash rather than from the minting of new
+              tokens to pay rewards
             </Text>
           </>
         }

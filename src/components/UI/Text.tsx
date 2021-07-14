@@ -54,6 +54,19 @@ const display2 = css`
   }
 `;
 
+const display3 = css`
+  font-size: 56px;
+  line-height: 1.28;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'Teko', sans-serif;
+  color: ${Colors.violet80};
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 52px;
+  }
+`;
+
 const body = css`
   font-size: 20px;
   line-height: 1.8;
@@ -83,12 +96,19 @@ const smallBody = css`
   font-size: 16px;
   line-height: 2;
   font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const bodyAlt = css`
   font-size: 20px;
   line-height: 1.8;
   font-weight: bold;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 32px;
+  }
 `;
 
 const gradient = css`
@@ -105,6 +125,7 @@ const gradient = css`
 type Variant =
   | 'subtitle'
   | 'display2'
+  | 'display3'
   | 'body'
   | 'title'
   | 'smallBodyAlt'
@@ -125,6 +146,7 @@ const variants: Record<Variant, any> = {
   smallBody,
   title2,
   caption,
+  display3,
 };
 
 interface TextProps {

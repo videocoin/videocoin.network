@@ -1,5 +1,5 @@
 import React from 'react';
-import { List } from './styles';
+import { List, Section } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Disclaimer from 'components/Rewards/Disclaimer';
@@ -21,7 +21,12 @@ const WorkersRewards = () => {
     <MainBlock
       reverse
       left={
-        <GatsbyImage alt="" image={data.file.childImageSharp.gatsbyImageData} />
+        <Section>
+          <GatsbyImage
+            alt=""
+            image={data.file.childImageSharp.gatsbyImageData}
+          />
+        </Section>
       }
       right={
         <>

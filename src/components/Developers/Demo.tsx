@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Text from 'components/UI/Text';
 import Button from 'components/UI/Button';
 import MainBlock from 'components/MainBlock';
+import * as S from './styles';
 
 const DemoApplication = () => {
   const { t } = useTranslation('developers');
@@ -28,7 +29,7 @@ const DemoApplication = () => {
         />
       }
       right={
-        <>
+        <S.Section>
           <Text variant="subtitle" withGradient>
             Try us. You'll like us.
           </Text>
@@ -47,7 +48,7 @@ const DemoApplication = () => {
           >
             <Button>Download on Github</Button>
           </a>
-        </>
+        </S.Section>
       }
     />
   );

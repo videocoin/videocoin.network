@@ -4,6 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Text from 'components/UI/Text';
 import Button from 'components/UI/Button';
 import MainBlock from 'components/MainBlock';
+import * as S from './styles';
 
 const Pricing = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ const Pricing = () => {
         />
       }
       right={
-        <>
+        <S.Section>
           <Text variant="subtitle" withGradient>
             More video. Fewer bucks.
           </Text>
@@ -44,7 +45,7 @@ const Pricing = () => {
           <a href="" target="_blank" rel="noopener noreferrer">
             <Button>Join for free</Button>
           </a>
-        </>
+        </S.Section>
       }
     />
   );

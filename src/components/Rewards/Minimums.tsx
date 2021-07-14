@@ -1,5 +1,5 @@
 import React from 'react';
-import { MinimumsCard } from 'components/Rewards/styles';
+import { MinimumsCard, Section } from 'components/Rewards/styles';
 import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
 import Card from 'components/Card';
@@ -38,7 +38,11 @@ const Minimums = () => {
   return (
     <MainBlock
       reverse
-      left={<Right />}
+      left={
+        <Section>
+          <Right />
+        </Section>
+      }
       right={
         <>
           <Text variant="title" marginB={16}>

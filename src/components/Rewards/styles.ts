@@ -52,3 +52,7 @@ export const DisclaimerText = styled.div`
   transform: translateX(-50%);
   white-space: nowrap;
 `;
+
+export const Section = styled.div`
+  padding: 24px 0;
+`;

@@ -14,6 +14,11 @@ import Text from 'components/UI/Text';
 import Button from 'components/UI/Button';
 import Join from 'components/Join';
 import Container from 'styles/Container';
+import styled from 'styled-components';
+
+export const Section = styled.div`
+  padding: 24px 0;
+`;
 
 const Sections = () => {
   const data = useStaticQuery(graphql`
@@ -36,10 +41,12 @@ const Sections = () => {
         reverse
         background="white10"
         left={
-          <GatsbyImage
-            alt=""
-            image={data.setup.childImageSharp.gatsbyImageData}
-          />
+          <Section>
+            <GatsbyImage
+              alt=""
+              image={data.setup.childImageSharp.gatsbyImageData}
+            />
+          </Section>
         }
         right={
           <>
@@ -63,10 +70,12 @@ const Sections = () => {
       <MainBlock
         background="white20"
         left={
-          <GatsbyImage
-            alt=""
-            image={data.getPaid.childImageSharp.gatsbyImageData}
-          />
+          <Section>
+            <GatsbyImage
+              alt=""
+              image={data.getPaid.childImageSharp.gatsbyImageData}
+            />
+          </Section>
         }
         right={
           <>

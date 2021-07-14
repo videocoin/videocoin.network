@@ -4,6 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import Disclaimer from 'components/Rewards/Disclaimer';
 import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
+import { Section } from './styles';
 
 const CashRewards = () => {
   const data = useStaticQuery(graphql`
@@ -19,7 +20,12 @@ const CashRewards = () => {
     <MainBlock
       reverse
       left={
-        <GatsbyImage alt="" image={data.file.childImageSharp.gatsbyImageData} />
+        <Section>
+          <GatsbyImage
+            alt=""
+            image={data.file.childImageSharp.gatsbyImageData}
+          />
+        </Section>
       }
       right={
         <>

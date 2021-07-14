@@ -17,6 +17,10 @@ import styled from 'styled-components';
 import Card from 'components/Card';
 import Container from 'styles/Container';
 
+export const Section = styled.div`
+  padding: 24px 0;
+`;
+
 const howItWorks = [
   {
     id: 1,
@@ -75,10 +79,12 @@ const GenesisStaking = () => {
         reverse
         background="white10"
         left={
-          <GatsbyImage
-            alt=""
-            image={data.token.childImageSharp.gatsbyImageData}
-          />
+          <Section>
+            <GatsbyImage
+              alt=""
+              image={data.token.childImageSharp.gatsbyImageData}
+            />
+          </Section>
         }
         right={
           <>
@@ -95,10 +101,12 @@ const GenesisStaking = () => {
       <MainBlock
         background="white20"
         left={
-          <GatsbyImage
-            alt=""
-            image={data.pool.childImageSharp.gatsbyImageData}
-          />
+          <Section>
+            <GatsbyImage
+              alt=""
+              image={data.pool.childImageSharp.gatsbyImageData}
+            />
+          </Section>
         }
         right={
           <>
@@ -116,11 +124,13 @@ const GenesisStaking = () => {
         reverse
         background="white10"
         left={
-          <Animation>
-            <Card color="violet90">
-              <div ref={animationEl} />
-            </Card>
-          </Animation>
+          <Section>
+            <Animation>
+              <Card color="violet90">
+                <div ref={animationEl} />
+              </Card>
+            </Animation>
+          </Section>
         }
         right={
           <div>

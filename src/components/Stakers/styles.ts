@@ -63,3 +63,6 @@ export const Inner = styled.div`
     flex-direction: column;
   }
 `;
+export const Section = styled.div`
+  padding: 24px 0;
+`;
