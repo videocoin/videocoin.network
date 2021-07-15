@@ -3,7 +3,6 @@ import * as S from './styles';
 import Text from 'components/UI/Text';
 import { Link } from 'gatsby';
 import Button from 'components/UI/Button';
-import { useBreakpoint } from 'components/BrealpointProvider';
 
 const FooterCard = (props: {
   img: string;
@@ -12,7 +11,6 @@ const FooterCard = (props: {
   buttonText: string;
   path: string;
 }) => {
-  const { mobile } = useBreakpoint();
   const { img, title, desc, buttonText, path } = props;
   return (
     <S.Root>
@@ -22,7 +20,7 @@ const FooterCard = (props: {
       <Text marginB={4} variant="subtitle" color="grey70">
         {title}
       </Text>
-      <Text marginB={mobile ? 32 : 56} variant="body">
+      <Text marginB={32} paddingH={2} variant="body">
         {desc}
       </Text>
       <Link to={path}>

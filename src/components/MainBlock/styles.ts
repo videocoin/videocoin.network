@@ -23,7 +23,8 @@ export const Inner = styled.div<{ reverse: boolean }>`
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   & > div:first-of-type {
     flex-shrink: 0;
-    margin-right: ${({ reverse }) => (reverse ? '0px' : '38px')};
+    min-width: ${({ reverse }) => (reverse ? 0 : '519px')};
+    margin-right: ${({ reverse }) => (reverse ? '24px' : '38px')};
     @media (max-width: 1024px) {
       margin-bottom: 50px;
       margin-right: 0;
@@ -35,7 +36,7 @@ export const Inner = styled.div<{ reverse: boolean }>`
     flex-direction: column;
     align-items: center;
     max-width: 630px;
-    margin-right: ${({ reverse }) => (reverse ? '38px' : '0px')};
+    margin-right: ${({ reverse }) => (reverse ? '55px' : '0px')};
     @media (max-width: 1024px) {
       margin-right: 0;
       align-items: center;
@@ -49,6 +50,7 @@ export const Inner = styled.div<{ reverse: boolean }>`
     text-align: center;
   }
   ${Decoration} {
-    left: ${({ reverse }) => (reverse ? '77.8%' : '-21.5%')};
+    left: ${({ reverse }) => (reverse ? '77.9%' : '-21.5%')};
+    top: 16px;
   }
 `;

@@ -1,23 +1,17 @@
 import TutorialCard, { ICard } from './Card';
 import { List, Root } from './styles';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Container from 'styles/Container';
-import Text from 'components/UI/Text';
 
 const renderCards = (card: ICard, idx: number) => (
   <TutorialCard key={idx} card={card} />
 );
 
-const Tutorials = ({ cards }: { cards: any[] }) => {
+const Tutorials = ({ header, cards }: { cards: any[]; header: ReactNode }) => {
   return (
     <Root>
       <Container>
-        <Text variant="title2" align="center" color="violet50">
-          Tutorials
-        </Text>
-        <Text variant="display1" align="center">
-          Learn How Get Started
-        </Text>
+        {header}
         <List>{cards.map(renderCards)}</List>
       </Container>
     </Root>

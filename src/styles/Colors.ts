@@ -13,6 +13,7 @@ export const Colors = {
   violet10: '#EEE3FF',
   white10: '#F2F0F4',
   white20: '#E4E2E8',
+  white40: '#C7C3CD',
   white0: '#fff',
 };
 

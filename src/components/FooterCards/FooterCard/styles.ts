@@ -8,16 +8,19 @@ export const Root = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 36px 52px;
+  padding: 32px 56px;
   @media ${device.mobile} {
     padding: 0;
     &:not(:last-of-type) {
       margin-bottom: 94px;
     }
   }
+  &:not(:last-of-type) {
+    margin-right: 73px;
+  }
 `;
 export const Img = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 29px;
   img {
     object-fit: contain;
     max-width: 100%;

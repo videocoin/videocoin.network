@@ -21,10 +21,10 @@ const CashBased = () => {
         <GatsbyImage alt="" image={data.cash.childImageSharp.gatsbyImageData} />
       </View>
       <Text variant="title2" color="violet80" marginB={4}>
-        Cash Based Staking
+        Cash-Based Staking
       </Text>
       <Text color="grey70_72" marginB={20}>
-        Earn cash rewards by staking directly with workers on the VideoCoin
+        Earn cash rewards by staking directly with Workers on the VideoCoin
         Network.
       </Text>
       <div>

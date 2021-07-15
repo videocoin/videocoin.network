@@ -10,9 +10,9 @@ export const Root = styled.header`
   z-index: 2;
   max-width: 1376px;
   margin: 0 auto;
-  padding: 24px 40px;
+  padding: 23px 40px;
   @media ${device.tablet} {
-    padding: 24px 28px;
+    padding: 23px 28px;
   }
 `;
 
@@ -98,11 +98,10 @@ export const NavLink = styled(Link)`
   }
 `;
 export const NavRoot = styled.nav<{ $open: boolean }>`
-  margin-left: 36px;
+  margin-left: 23px;
   margin-right: auto;
   @media (max-width: 1510px) {
     position: static;
-    margin-left: 36px;
     transform: none;
   }
   @media ${device.tablet} {

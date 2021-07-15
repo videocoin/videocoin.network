@@ -3,13 +3,14 @@ import { device } from '../../queries';
 import Colors from 'styles/Colors';
 
 const FooterCards = styled.div`
-  padding: 24px 0;
+  padding: 16px 0 24px;
   background-color: ${Colors.white10};
   @media (max-width: 768px) {
     padding-bottom: 64px;
   }
   & > div > div {
     display: flex;
+    justify-content: center;
     @media (max-width: 768px) {
       flex-direction: column;
     }

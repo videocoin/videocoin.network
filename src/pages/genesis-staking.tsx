@@ -112,10 +112,9 @@ const GenesisStaking = () => {
           <>
             <Text variant="title">Introductory Staking Pool</Text>
             <Text>
-              Other VideoCoin Network workers will take time to come online and
-              we want to kick start this by setting up a worker pool to enable
-              certain basic functionalities on the network. Our present plan is
-              to keep this pool running for a year.
+              Other VideoCoin Network Workers will take time to come online, and
+              we want to kick-start this by setting up a Worker pool to enable
+              certain basic functionalities on the network.
             </Text>
           </>
         }

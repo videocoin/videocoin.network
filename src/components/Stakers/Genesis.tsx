@@ -24,7 +24,7 @@ const GenesisPool = () => {
         Genesis Pool Staking
       </Text>
       <Text color="grey70_72" marginB={20}>
-        Earn VID rewards by staking your VID into worker pools with our simple
+        Earn VID rewards by staking your VID into Worker pools with our simple
         to use staking app.
       </Text>
       <div>

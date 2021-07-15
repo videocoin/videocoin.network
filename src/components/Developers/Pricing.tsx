@@ -37,13 +37,19 @@ const Pricing = () => {
           </Text>
           <Text color="grey70_72" marginB={48}>
             The VideoCoin Network taps unused compute resources through the
-            blockchain to deliver dramatically lower costs. Then we pass those
-            savings on to you with one low price for all your video processing.
+            blockchain to deliver <strong>dramatically lower costs</strong>.
+            Then we pass those savings on to you with one low price for all your
+            video processing.
+            <br />
             <br />
             Ready to get started?
           </Text>
-          <a href="" target="_blank" rel="noopener noreferrer">
-            <Button>Join for free</Button>
+          <a
+            href="https://console.videocoin.network/sign-up?role=publisher"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button>Join for Free</Button>
           </a>
         </S.Section>
       }

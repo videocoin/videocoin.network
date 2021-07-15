@@ -4,14 +4,15 @@ import { Link as RouteLink } from 'gatsby';
 import Social from 'components/Social';
 import Logo from 'components/Logo';
 import Menu from 'components/Footer/Menu';
-import Join from 'components/Join';
+import Container from 'styles/Container';
+import Text from 'components/UI/Text';
 
 const Footer = () => {
   return (
-    <>
-      <Root>
+    <Root>
+      <Container>
         <Inner>
-          <Logo light isOpen={false} />
+          <Logo light width={248} />
           <Menu title="Connect">
             <Social />
           </Menu>
@@ -25,7 +26,6 @@ const Footer = () => {
               </Link>
               <RouteLink to="/download-hub">Downloads</RouteLink>
               <Link href="https://github.com/videocoin">Github</Link>
-              <Link href="https://videocoin.io">Token</Link>
               <Link href="https://liveplanet.net">About Live Planet</Link>
             </Links>
           </Menu>
@@ -46,15 +46,20 @@ const Footer = () => {
               <Link href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkDelegatorTermsofService.html">
                 Delegator Terms of Service
               </Link>
-              <Link href="https://storage.googleapis.com/videocoin-network-policies/VideoCoin_101_tc_v292021.html">
-                VideoCoin101 Terms and Conditions
-              </Link>
             </Links>
           </Menu>
         </Inner>
-        <Copyright>© 2021 Live Planet Inc.</Copyright>
-      </Root>
-    </>
+      </Container>
+      <Copyright>
+        <Text variant="body">
+          © 2021 Live Planet, Inc. All rights reserved.
+        </Text>
+        <Text variant="caption">
+          This site and its services are operated under agreement with the
+          VideoCoin Development Association Ltd., issuer of the VID token.
+        </Text>
+      </Copyright>
+    </Root>
   );
 };
 

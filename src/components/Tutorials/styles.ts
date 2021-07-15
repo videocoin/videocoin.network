@@ -3,7 +3,7 @@ import { device } from '../../queries';
 import Colors from 'styles/Colors';
 
 export const Root = styled.div`
-  padding: 36px 0 68px;
+  padding: 80px 0;
   background-color: ${Colors.white20};
 `;
 
@@ -25,10 +25,12 @@ export const Link = styled.a.attrs<{ light?: boolean }>(() => ({
   rel: 'noopener noreferrer',
   target: '_blank',
 }))`
-  margin-top: 24px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   text-decoration: none;
+  cursor: pointer;
+  height: 100%;
+  justify-content: flex-end;
   .arrow {
     margin-left: 8px;
     width: 24px;
@@ -42,9 +44,12 @@ export const Link = styled.a.attrs<{ light?: boolean }>(() => ({
 
 export const CardItem = styled.div`
   min-height: 320px;
-  display: flex;
-  flex-direction: column;
   @media (max-width: 768px) {
     min-height: auto;
+  }
+  & > div {
+    .content {
+      justify-content: flex-end;
+    }
   }
 `;

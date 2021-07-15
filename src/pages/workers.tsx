@@ -17,7 +17,7 @@ import Container from 'styles/Container';
 import styled from 'styled-components';
 
 export const Section = styled.div`
-  padding: 24px 0;
+  padding: 40px 0;
 `;
 
 const Sections = () => {
@@ -30,7 +30,7 @@ const Sections = () => {
       }
       getPaid: file(relativePath: { eq: "getPaid.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 416, quality: 100, layout: CONSTRAINED)
+          gatsbyImageData(width: 519, quality: 100, layout: CONSTRAINED)
         }
       }
     }
@@ -62,7 +62,7 @@ const Sections = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button>Learn how</Button>
+              <Button>Learn How</Button>
             </a>
           </>
         }
@@ -70,12 +70,10 @@ const Sections = () => {
       <MainBlock
         background="white20"
         left={
-          <Section>
-            <GatsbyImage
-              alt=""
-              image={data.getPaid.childImageSharp.gatsbyImageData}
-            />
-          </Section>
+          <GatsbyImage
+            alt=""
+            image={data.getPaid.childImageSharp.gatsbyImageData}
+          />
         }
         right={
           <>
@@ -83,8 +81,8 @@ const Sections = () => {
               Get Paid in Cash
             </Text>
             <Text color="grey70_72" marginB={48}>
-              Unlike other projects which deliver inflating tokens as reward we
-              pay our workers in cash
+              Unlike other projects that deliver inflating tokens as reward, we
+              pay our Workers in cash.
             </Text>
             <Link to="/rewards">
               <Button>See Reward Breakdown</Button>
@@ -107,30 +105,30 @@ const howItWorks = [
           target="_blank"
           rel="noopener noreferrer"
         >
-          quickstart guide
+          Quickstart Guide
         </a>{' '}
-        will get you setup and running our latest worker software in minutes
+        will get you set up and running our latest Worker software in minutes.
       </>
     ),
   },
   {
     id: 2,
     title: 'Begin Working',
-    desc: 'Once your worker node is set up it will receive portions of video files to transcode Once completed it will be submitted for review',
+    desc: 'Once transcoding is complete, it will be submitted for review.',
   },
   {
     id: 3,
     title: 'Get Paid',
     desc: (
       <>
-        Upon completion of work validation you will be paid for the work
-        completed in cash Cash payments will be handled via{' '}
+        Upon completion of work validation, you will be paid for the work
+        completed in cash.{' '}
         <a
           href="https://publicmint.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Public Mint
+          Public Mint.
         </a>
       </>
     ),
@@ -145,7 +143,7 @@ const tutorials = [
     light: false,
   },
   {
-    title: 'Setting up a Worker on RaspberryPi',
+    title: 'Setting up a Worker on Raspberry Pi',
     link: 'https://forum.videocoin.network/t/setting-up-a-videocoin-worker-on-raspberrypi',
     color: 'violet50',
     light: true,
@@ -164,7 +162,19 @@ const WorkersPage = () => {
       <WorkersHero />
       <Sections />
       <HowItWorks steps={howItWorks} />
-      <Tutorials cards={tutorials} />
+      <Tutorials
+        header={
+          <>
+            <Text variant="title2" align="center" color="violet50">
+              Tutorials
+            </Text>
+            <Text variant="display1" align="center">
+              Learn How To Get Started
+            </Text>
+          </>
+        }
+        cards={tutorials}
+      />
       <Join />
       <FooterCards>
         <Container>

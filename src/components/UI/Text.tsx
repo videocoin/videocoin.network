@@ -45,7 +45,7 @@ const display1 = css`
 const display2 = css`
   font-size: 64px;
   line-height: 1.25;
-  letter-spacing: 2px;
+  letter-spacing: 1.2px;
   font-weight: bold;
   font-family: 'Teko', sans-serif;
   color: ${Colors.violet80};

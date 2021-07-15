@@ -30,11 +30,6 @@ const socialList: SocialLinkProps[] = [
     link: 'https://medium.com/videocoin',
   },
   {
-    name: 'reddit',
-    icon: redditIcon,
-    link: 'https://www.reddit.com/r/VideoCoin/',
-  },
-  {
     name: 'youtube',
     icon: youtubeIcon,
     link: 'https://www.youtube.com/channel/UChyso79nMDhzDm0l0e7UuYQ',

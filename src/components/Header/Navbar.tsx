@@ -11,12 +11,8 @@ interface LinkProps {
 
 const links: LinkProps[] = [
   {
-    name: 'The Network',
-    path: '/',
-  },
-  {
-    name: 'Pricing',
-    path: '/pricing',
+    name: 'News',
+    path: '/news',
   },
   {
     name: 'Developers',
@@ -61,6 +57,10 @@ const links: LinkProps[] = [
     name: 'Rewards',
     path: '/rewards',
   },
+  {
+    name: 'Token',
+    path: '/token',
+  },
 ];
 const SubList = ({ links }: { links: LinkProps[] }) => {
   return <SubPopup>{links.map(renderLink)}</SubPopup>;
@@ -87,19 +87,7 @@ const renderLink = ({ name, path, subMenu, external }: LinkProps) => {
 const Navbar = ({ open }: { open: boolean }) => {
   return (
     <NavRoot $open={open}>
-      <NavList>
-        {links.map(renderLink)}
-        <li>
-          <NavLink
-            as="a"
-            href="https://medium.com/videocoin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Blog
-          </NavLink>
-        </li>
-      </NavList>
+      <NavList>{links.map(renderLink)}</NavList>
     </NavRoot>
   );
 };

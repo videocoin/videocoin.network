@@ -16,7 +16,7 @@ interface Step {
 const renderStep = (step: Step) => (
   <StepItem key={step.id}>
     <Card>
-      <View marginL={-4} marginT={-4} row centerV marginB={12}>
+      <View marginL={-4} row centerV marginT={7} marginB={12}>
         <StepN>
           <img src={numberIcon} width={40} height={40} alt="" />
           <Text variant="bodyAlt" color="violet60">
@@ -37,7 +37,7 @@ const HowItWorks = ({ color, steps }: { color?: TColors; steps: Step[] }) => {
     <Root color={color}>
       <Container>
         <Text align="center" variant="display1" marginB={24}>
-          How it works
+          How it Works
         </Text>
         <List>{steps.map(renderStep)}</List>
       </Container>

@@ -8,9 +8,8 @@ export const Root = styled.footer`
 
 export const Inner = styled.div`
   display: flex;
-  padding: 60px 64px 50px;
+  padding: 40px 105px 50px;
   align-items: flex-start;
-  justify-content: center;
   @media (max-width: 1024px) {
     padding-left: 40px;
     padding-right: 40px;
@@ -23,6 +22,7 @@ export const Inner = styled.div`
   }
   & > img {
     margin-right: 90px;
+    margin-top: -15px;
     @media (max-width: 1024px) {
       width: 148px;
       margin-right: 32px;
@@ -35,7 +35,7 @@ export const Inner = styled.div`
   }
   & > div {
     &:not(:last-child) {
-      margin-right: 90px;
+      margin-right: 100px;
       @media (max-width: 1024px) {
         min-width: 138px;
         margin-right: 45px;
@@ -45,10 +45,11 @@ export const Inner = styled.div`
 `;
 
 export const Copyright = styled.div`
-  color: #ffffff52;
+  color: ${Colors.white40};
+  opacity: 0.72;
   text-align: center;
   padding: 20px 0;
-  background: #290f4d;
+  background: ${Colors.violet80};
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.32px;
@@ -65,11 +66,10 @@ export const Links = styled.div`
   a {
     font-weight: 500;
     text-decoration: none;
-    color: #ffffffb8;
+    color: ${Colors.violet10};
     margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.28px;
+    font-size: 16px;
+    line-height: 2;
     transition: 0.15s ease-in-out;
     @media ${device.mobile} {
       font-size: 12px;

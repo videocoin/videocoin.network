@@ -17,10 +17,10 @@ export const Inner = styled.div`
   position: relative;
   padding: 20px;
   & > div {
-    padding: 20px 96px;
+    padding: 10px 20px;
     border-radius: 20px;
     background: ${Colors.grey90};
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
     align-items: center;
     width: 100%;
@@ -54,8 +54,14 @@ const Join = () => {
             <Text variant="subtitle" withGradient>
               Check our Community forum to chat with others if you need help
             </Text>
-            <View marginT={tablet ? 20 : 0} marginL={tablet ? 0 : 24}>
-              <Button simple>Join community</Button>
+            <View marginT={tablet ? 20 : 0} marginL={tablet ? 0 : 33}>
+              <a
+                href="https://forum.videocoin.network"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button simple>Join Community</Button>
+              </a>
             </View>
           </div>
           <span />

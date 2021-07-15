@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { device } from '../../../queries';
 
 export const Root = styled.div`
-  padding: 133px 0;
+  padding: 133px 0 131px;
   overflow: hidden;
   position: relative;
   background: linear-gradient(
@@ -61,6 +61,7 @@ export const Left = styled.div`
 `;
 export const Right = styled.div`
   max-width: 670px;
+  margin-right: 72px;
   @media ${device.tablet} {
     text-align: center;
     display: flex;
@@ -81,8 +82,7 @@ export const Bg = styled.div`
     display: none;
   }
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 2400px;
+    height: 785px;
   }
 `;

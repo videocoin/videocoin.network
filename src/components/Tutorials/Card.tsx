@@ -19,13 +19,13 @@ const TutorialCard = ({ card }: { card: ICard }) => {
   return (
     <CardItem>
       <Card color={color}>
-        <Text variant="subtitle" color={light ? 'violet10' : 'violet80'}>
-          {t(title)}
-        </Text>
         <Link href={link} light={light}>
-          <View row centerV>
+          <Text variant="subtitle" color={light ? 'violet10' : 'violet80'}>
+            {t(title)}
+          </Text>
+          <View row centerV marginT={16} marginB={12}>
             <Text variant="smallBodyAlt" color={light ? 'white0' : 'violet80'}>
-              Begin tutorial
+              Begin Tutorial
             </Text>
             <div className="arrow" />
           </View>

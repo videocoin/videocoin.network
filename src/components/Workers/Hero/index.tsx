@@ -4,7 +4,7 @@ import Container from 'styles/Container';
 import bgImg from './assets/bg.svg';
 import bgImgMd from './assets/bg_md.svg';
 import View from 'components/View';
-import developers from 'icons/developers.svg';
+import workers from 'icons/worker.svg';
 import Text from 'components/UI/Text';
 import Button from 'components/UI/Button';
 import { useBreakpoint } from 'components/BrealpointProvider';
@@ -22,15 +22,15 @@ const WorkersHero = () => {
             <img src={bgImgMd} alt="" />
           </Left>
           <Right>
-            <View row column={mobile} centerV marginB={10}>
-              <View marginR={mobile ? 0 : 16}>
-                <img src={developers} width={36} height={36} alt="" />
+            <View row column={mobile} centerV marginB={7}>
+              <View marginR={mobile ? 0 : 14}>
+                <img src={workers} width={36} height={36} alt="" />
               </View>
               <Text variant="subtitle" withGradient uppercase>
-                Develop on VideoCoin Network
+                WORK ON VIDEOCOIN NETWORK
               </Text>
             </View>
-            <Text variant="display2" marginB={36}>
+            <Text variant="display2" marginB={36} paddingR={mobile ? 0 : 28}>
               Dedicate your unused compute power and earn cash
             </Text>
             <a

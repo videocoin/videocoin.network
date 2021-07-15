@@ -12,6 +12,7 @@ import Join from 'components/Join';
 import Pricing from 'components/Developers/Pricing';
 import CodeSmarter from 'components/Developers/CodeSmarter';
 import NFT from 'components/Developers/NFT';
+import Text from 'components/UI/Text';
 
 const tutorials = [
   {
@@ -60,7 +61,19 @@ const DevelopersPage = () => (
     <NFT />
     <Pricing />
     <DemoApplication />
-    <Tutorials cards={tutorials} />
+    <Tutorials
+      cards={tutorials}
+      header={
+        <>
+          <Text marginB={12} variant="title" align="center">
+            Developer Tutorials
+          </Text>
+          <Text align="center">
+            Learn how to build applications on the VideoCoin Network.
+          </Text>
+        </>
+      }
+    />
     <Join />
     <FooterCards>
       <Container>
