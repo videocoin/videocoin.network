@@ -41,15 +41,16 @@ const Inflation = () => {
             No Inflation Means Real Rewards
           </Text>
           <Text>
-            VideoCoin Network rewards workers and delegators up to 80% of the
-            price paid by publishers in cash rather than from the minting of new
-            tokens to pay rewards
+            VideoCoin Network rewards Workers and Delegators up to 80% of the
+            price paid by publishers in cash, rather than from the minting of
+            new tokens to pay rewards.
             <br />
             <br />
-            Other projects inflation-based reward systems continually add supply
-            in to the market assuming demand will continuously increase at the
-            same rate in order to keep the value of the token stable However if
-            supply is added while demand remains static their token value falls
+            Other projects' inflation-based reward systems continually add
+            supply into the market assuming demand will continuously increase at
+            the same rate, in order to keep the value of the token stable.
+            However, if supply is added while demand remains static, their token
+            value falls.
           </Text>
         </Section>
       }

@@ -51,8 +51,8 @@ const Sections = () => {
           <>
             <Text variant="title">20% In Cash Rewards</Text>
             <Text color="grey70_72" marginB={48}>
-              Delegates receive a minimum 20% of worker's cash earned for a job
-              completed
+              Delegates receive a minimum 20% of Worker's cash earned for a job
+              completed.
             </Text>
             <Link to="/rewards">
               <Button>See Reward Breakdown</Button>
@@ -77,9 +77,9 @@ const Sections = () => {
               No Inflation Means Real Rewards
             </Text>
             <Text color="grey70_72">
-              VideoCoin Network rewards workers and delegators from the price
-              paid by publishers in cash rather than from the minting of new
-              tokens to pay rewards
+              VideoCoin Network rewards Workers and Delegators from the price
+              paid by publishers in cash, rather than from the minting of new
+              tokens to pay rewards.
             </Text>
           </>
         }
@@ -92,12 +92,12 @@ const howItWorks = [
   {
     id: 1,
     title: 'Connect your wallet',
-    desc: 'Connect a new or existing VideoCoin Wallet using MetaMask to our staking app',
+    desc: 'Connect a new or existing VideoCoin Wallet to our staking app using MetaMask.',
   },
   {
     id: 2,
     title: 'Stake on a Worker',
-    desc: 'Once your wallet is connected youll be able to choose a worker to stake your VID',
+    desc: "Once your wallet is connected, you'll be able to choose a Worker to stake your VID.",
   },
   {
     id: 3,
@@ -105,7 +105,7 @@ const howItWorks = [
     desc: (
       <>
         VideoCoin Network currently does NOT manage payment to delegated
-        stakers. It is up to worker nodes to setup staking pools with our open
+        Stakers. It is up to Worker nodes to set up staking pools with our open
         source smart contract to distribute payment via{' '}
         <a
           href="https://publicmint.com/"
@@ -122,21 +122,33 @@ const howItWorks = [
 
 const tutorials = [
   {
-    title: 'Stakers Quickstart Guide',
+    title: "Staker's Quickstart Guide",
     link: 'https://forum.videocoin.network/t/videocoin-network-staking-guide/72',
     color: 'white0',
     light: false,
   },
 ];
 
-const WorkerStaking = () => {
+const CashStaking = () => {
   return (
     <Layout>
       <SEO title="Stakers" />
       <StakersHero />
       <Sections />
       <HowItWorks steps={howItWorks} />
-      <Tutorials cards={tutorials} />
+      <Tutorials
+        header={
+          <>
+            <Text variant="title2" align="center" color="violet50">
+              Tutorials
+            </Text>
+            <Text variant="display1" align="center">
+              Learn How To Get Started
+            </Text>
+          </>
+        }
+        cards={tutorials}
+      />
       <Join />
       <FooterCards>
         <Container>
@@ -150,4 +162,4 @@ const WorkerStaking = () => {
   );
 };
 
-export default WorkerStaking;
+export default CashStaking;

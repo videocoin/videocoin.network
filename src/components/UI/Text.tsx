@@ -4,7 +4,7 @@ import Colors, { TColors } from 'styles/Colors';
 import View, { ViewProps } from 'components/View';
 
 const subtitle = css`
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.66;
   font-weight: 600;
   @media (max-width: 768px) {

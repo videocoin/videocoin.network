@@ -23,11 +23,14 @@ export const Inner = styled.div<{ reverse: boolean }>`
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   & > div:first-of-type {
     flex-shrink: 0;
-    min-width: ${({ reverse }) => (reverse ? 0 : '519px')};
+    min-width: 519px;
     margin-right: ${({ reverse }) => (reverse ? '24px' : '38px')};
+    display: flex;
+    justify-content: center;
     @media (max-width: 1024px) {
       margin-bottom: 50px;
       margin-right: 0;
+      min-width: 0;
     }
   }
   & > div:nth-child(2) {

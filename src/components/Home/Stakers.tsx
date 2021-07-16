@@ -31,7 +31,6 @@ const Stakers = () => {
         </View>
       </Container>
       <MainBlock
-        reverse
         left={
           <GatsbyImage
             alt=""

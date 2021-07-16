@@ -69,6 +69,11 @@ const Partners = () => {
           gatsbyImageData(width: 115, quality: 100, layout: CONSTRAINED)
         }
       }
+      grit: file(relativePath: { eq: "partners/grit.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 89, quality: 100, layout: CONSTRAINED)
+        }
+      }
       rengen: file(relativePath: { eq: "partners/rengen.png" }) {
         childImageSharp {
           gatsbyImageData(width: 108, quality: 100, layout: CONSTRAINED)

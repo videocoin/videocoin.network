@@ -8,6 +8,8 @@ const Root = styled.div<{ color: TColors }>`
   padding: 20px;
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   .content {
     background-color: ${({ color }) => color && Colors[color]};
     display: flex;
@@ -17,6 +19,9 @@ const Root = styled.div<{ color: TColors }>`
     height: 100%;
     border-radius: 14px;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     @media (max-width: 768px) {
       padding: 16px;
     }

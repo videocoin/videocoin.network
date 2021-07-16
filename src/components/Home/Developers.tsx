@@ -62,9 +62,9 @@ const Developers = () => {
             </Text>
             <Text color="grey70_72" marginB={48}>
               VideoCoin provides <strong>efficient</strong> and{' '}
-              <strong>cost-effective</strong>
-              video processing, whether you’re developing for on-demand or VR or
-              livestreaming — or something completely new.
+              <strong>cost-effective</strong> video processing, whether you’re
+              developing for on-demand or VR or livestreaming — or something
+              completely new.
             </Text>
           </>
         }
@@ -121,7 +121,7 @@ const Developers = () => {
               Leverage the only solution <strong>optimized</strong> for the
               unique demands of <strong>Video NFT applications</strong> — a
               complete suite of capabilities coming soon from VideoCoin +
-              FileCoin. Create your own fully functioning NFT marketplace right
+              Filecoin. Create your own fully functioning NFT marketplace right
               out of the box.
             </Text>
           </>

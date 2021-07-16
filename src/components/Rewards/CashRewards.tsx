@@ -30,13 +30,12 @@ const CashRewards = () => {
       right={
         <>
           <Text marginB={16} variant="title">
-            Rewards in cash or VID
+            Rewards in Cash or VID
           </Text>
           <Text>
-            VideoCoin is the first and only project to reward workers and
-            delegators with flexible options of cash rewards and VID*.
+            VideoCoin is the first and only project to reward Workers and
+            Delegators with flexible options of cash rewards and VID.
           </Text>
-          <Disclaimer />
         </>
       }
     />

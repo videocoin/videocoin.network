@@ -16,7 +16,7 @@ const CashBased = () => {
     }
   `);
   return (
-    <Link to="/worker-staking">
+    <Link to="/cash-staking">
       <View marginB={20}>
         <GatsbyImage alt="" image={data.cash.childImageSharp.gatsbyImageData} />
       </View>

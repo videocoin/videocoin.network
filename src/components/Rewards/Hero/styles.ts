@@ -3,7 +3,7 @@ import { device } from '../../../queries';
 import Colors from 'styles/Colors';
 
 export const Root = styled.div`
-  padding-bottom: 104px;
+  padding-bottom: 135px;
   padding-top: 36px;
   background: linear-gradient(
       180deg,
@@ -60,20 +60,20 @@ const Payment = styled.div`
   }
 `;
 export const Payment1 = styled(Payment)`
-  left: 21%;
+  left: 21.1%;
 `;
 export const Payment2 = styled(Payment)`
-  left: 47.6%;
+  left: 47.8%;
 `;
 export const Payment3 = styled(Payment)`
-  left: 74%;
+  left: 74.5%;
 `;
 
 export const Features = styled.ul`
   text-align: left;
   display: flex;
-  width: 1040px;
-  margin: 36px auto 0;
+  width: 1067px;
+  margin: 39px auto 0;
   @media ${device.tablet} {
     padding-left: 0;
     width: 100%;
@@ -116,7 +116,8 @@ export const Features = styled.ul`
       }
     }
     &:nth-child(3) {
-      max-width: 270px;
+      max-width: 255px;
+
       @media ${device.tablet} {
         margin-bottom: 80px;
       }
@@ -125,13 +126,13 @@ export const Features = styled.ul`
       }
     }
     &:nth-child(4) {
-      max-width: 270px;
+      max-width: 255px;
+      margin-right: 0;
     }
   }
   p {
     position: relative;
-    padding-left: 44px;
-    margin-left: 24px;
+    padding-left: 68px;
     &::before {
       content: '';
       position: absolute;
@@ -139,8 +140,8 @@ export const Features = styled.ul`
       background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.905 10.626a10 10 0 11-5.601-7.652' stroke='url(%23paint0_linear)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.5 10.5l5 4.5L22 4' stroke='url(%23paint1_linear)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='21.677' y1='24.035' x2='-5.606' y2='10.722' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237234C8'/%3E%3Cstop offset='.443' stop-color='%23F53568'/%3E%3Cstop offset='1' stop-color='%23FA6E37'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='21.128' y1='15.518' x2='5.38' y2='5.388' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%237234C8'/%3E%3Cstop offset='.443' stop-color='%23F53568'/%3E%3Cstop offset='1' stop-color='%23FA6E37'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
       width: 24px;
       height: 24px;
-      left: 0;
-      top: 3px;
+      left: 20px;
+      top: -1px;
       background-repeat: no-repeat;
     }
   }
@@ -150,7 +151,8 @@ export const FeatureTitle = styled.div`
   min-height: 48px;
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+  margin-top: -12px;
   @media ${device.tablet} {
     min-height: auto;
   }
@@ -185,7 +187,7 @@ export const FeaturePayment = styled.div`
   padding: 6px 0 6px 22px;
   border-radius: 6px;
   letter-spacing: 0.12px;
-  margin-right: 9px;
+  margin-right: 12px;
   width: 100px;
   position: relative;
   img {
@@ -205,7 +207,7 @@ export const FeaturePayment = styled.div`
 `;
 
 export const Inner = styled.div`
-  margin: 64px auto 0;
+  margin: 77px auto 0;
   position: relative;
   @media ${device.tablet} {
     max-width: 768px;

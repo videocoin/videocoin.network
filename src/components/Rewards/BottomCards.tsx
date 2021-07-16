@@ -10,6 +10,9 @@ import Container from 'styles/Container';
 const Disclaimer = styled(Text)`
   margin: 0 auto;
   padding: 0 24px;
+  a {
+    text-decoration: underline;
+  }
 `;
 
 const Root = styled.div`
@@ -37,11 +40,17 @@ const BottomCards = () => {
           </div>
         </FooterCards>
         <Disclaimer align="center">
-          The terms conditions and delivery dates of the VideoCoin Network
-          Staking Program Program are subject to change without notice and will
-          be detailed following the Everest roadmap release when commercial
-          operations of the Network are expected to commence Participation in
-          the Program will be subject to agreement of these terms and conditions
+          The terms, conditions, and delivery dates of the VideoCoin Network
+          Staking Program (“Program”) are subject to change without notice.
+          Participation in the Program is subject to agreement of the{' '}
+          <a
+            href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkDelegatorTermsofService.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Delegator Terms of Service
+          </a>
+          .
         </Disclaimer>
       </Container>
     </Root>

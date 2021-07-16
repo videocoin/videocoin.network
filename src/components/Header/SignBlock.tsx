@@ -13,7 +13,7 @@ const SignBlock = () => {
   const isStakingPage = [
     '/stakers',
     '/genesis-staking',
-    '/worker-staking',
+    '/cash-staking',
   ].includes(location.pathname);
   const { laptop } = useBreakpoint();
   const renderLoginBtn = () => {

@@ -63,12 +63,12 @@ const RewardsHero = () => {
                   <input type="number" value={value} onChange={onChange} />
                 </FeaturePayment>
                 <Text variant="smallBodyAlt" color="violet80">
-                  cash payment calculator
+                  Cash Payment Calculator
                 </Text>
               </FeatureTitle>
               <Text as="p" variant="caption">
                 First and only project to make customer payments easy by
-                directly taking credit card payments
+                directly taking credit card payments.
               </Text>
             </li>
             <li>
@@ -94,7 +94,7 @@ const RewardsHero = () => {
               </Text>
               <Text as="p" variant="caption">
                 First and only project to give workers the choice to receive
-                rewards in cash or VID
+                rewards in cash or VID.
               </Text>
             </li>
             <li>
@@ -104,15 +104,14 @@ const RewardsHero = () => {
                 <span>{(value * 0.8).toFixed()}</span>
               </FeatureTop>
               <Text variant="smallBodyAlt" color="violet90" marginB={16}>
-                Delegators Rewarded 20% min
+                Delegators Rewarded 20% min.
               </Text>
               <Text as="p" variant="caption">
                 First and only project to give delegators the choice to receive
-                rewards in cash or VID
+                rewards in cash or VID.
               </Text>
             </li>
           </Features>
-          <Disclaimer />
         </Inner>
       </Container>
     </Root>

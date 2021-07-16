@@ -32,18 +32,16 @@ const DelegatesRewards = () => {
           <Text variant="title">20% In Cash Rewards To Delegates</Text>
           <Text>
             Delegates receive a minimum 20% of workers cash earned for a job
-            completed
+            completed.
           </Text>
           <List>
             <li>
               <Text variant="bodyAlt" withGradient>
                 Industry First
               </Text>
-              <Text>Choose how you get rewarded: Cash or VID*.</Text>
+              <Text>Choose how you get rewarded: Cash or VID.</Text>
             </li>
           </List>
-
-          <Disclaimer />
         </>
       }
     />

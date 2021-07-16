@@ -14,7 +14,7 @@ const Right = () => {
               Worker Node
             </Text>
             <Text color="violet70" variant="smallBodyAlt">
-              50000 VID minimum stake
+              50,000 VID minimum stake
             </Text>
             <Text variant="caption" color="grey10">
               *minimum will be re-evaluated every month
@@ -49,8 +49,8 @@ const Minimums = () => {
             Secure but <br /> Attainable Minimums
           </Text>
           <Text>
-            Worker Node minimums are far lower than the $86M USD average minimum
-            stake on similar projects
+            Worker Node minimums are far lower than the $8.6M USD average
+            minimum stake on similar projects.
           </Text>
         </>
       }

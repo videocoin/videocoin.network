@@ -35,7 +35,7 @@ const NFT = () => {
             Video NFT Apps Effortlessly
           </Text>
           <Text color="grey70_72" marginB={48}>
-            Our integration with FileCoin takes this a step further to deliver
+            Our integration with Filecoin takes this a step further to deliver
             the only <strong>platform optimized</strong> for Video NFTs. Our
             pioneering “Proof of Ownership” solution creates a{' '}
             <strong>unique cryptographic signature</strong> for each asset,

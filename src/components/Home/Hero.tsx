@@ -26,11 +26,11 @@ const Hero = () => {
             alt=""
             image={data.file.childImageSharp.gatsbyImageData}
           />
-          <View column>
+          <View column left>
             <Text variant="display2" marginB={28}>
               Powering Next-Generation Video Apps Built By You
             </Text>
-            <Text variant="subtitle" withGradient marginB={12}>
+            <Text variant="subtitle" uppercase withGradient marginB={12}>
               VideoCoin: Igniting Innovation
             </Text>
             <Text>
