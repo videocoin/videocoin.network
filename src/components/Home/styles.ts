@@ -115,12 +115,11 @@ export const Decoration = styled.div`
 `;
 
 export const Hero = styled.div`
-  padding: 94px 0;
+  padding: 94px 0 0;
   @media (max-width: 768px) {
     padding-top: 75px;
-    padding-bottom: 22px;
   }
-  & > div > div {
+  & > div:first-of-type > div {
     justify-content: center;
     align-items: center;
     display: flex;

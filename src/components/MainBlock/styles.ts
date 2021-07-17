@@ -24,7 +24,7 @@ export const Inner = styled.div<{ reverse: boolean }>`
   & > div:first-of-type {
     flex-shrink: 0;
     min-width: 519px;
-    margin-right: ${({ reverse }) => (reverse ? '24px' : '38px')};
+    margin-right: ${({ reverse }) => (reverse ? '0' : '38px')};
     display: flex;
     justify-content: center;
     @media (max-width: 1024px) {
@@ -37,7 +37,7 @@ export const Inner = styled.div<{ reverse: boolean }>`
     min-width: 519px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     max-width: 630px;
     margin-right: ${({ reverse }) => (reverse ? '55px' : '0px')};
     @media (max-width: 1024px) {

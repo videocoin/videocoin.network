@@ -1,6 +1,7 @@
 export const Colors = {
   grey10: '#96929C',
   grey30: '#605C66',
+  grey20: '#78747E',
   grey70: '#1E1B22',
   grey70_72: '#1E1B22b8',
   grey90: '#0E0C10',
@@ -15,6 +16,9 @@ export const Colors = {
   white20: '#E4E2E8',
   white40: '#C7C3CD',
   white0: '#fff',
+  grey50: '#38343D',
+  orange60: '#F57B4B',
+  white30: '#D6D2DC',
 };
 
 export type TColors = keyof typeof Colors;

@@ -2,7 +2,6 @@ import React from 'react';
 import { Root, Btns } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { useTranslation } from 'react-i18next';
 import developers from 'icons/developers.svg';
 import View from 'components/View';
 import Text from 'components/UI/Text';
@@ -11,7 +10,6 @@ import Container from 'styles/Container';
 import { useBreakpoint } from 'components/BrealpointProvider';
 const DevelopersHero = () => {
   const { mobile, tablet } = useBreakpoint();
-  const { t } = useTranslation('developers');
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "developersHero.png" }) {
@@ -35,7 +33,7 @@ const DevelopersHero = () => {
                 <img src={developers} width={36} height={36} alt="" />
               </View>
               <Text variant="subtitle" withGradient uppercase>
-                {t('Develop on VideoCoin Network')}
+                Develop on VideoCoin Network
               </Text>
             </View>
             <Text variant="display2">
@@ -48,14 +46,14 @@ const DevelopersHero = () => {
                 rel="noopener noreferrer"
                 href="https://console.videocoin.network/sign-up?role=publisher"
               >
-                <Button>{t('Join for Free')}</Button>
+                <Button>Join for Free</Button>
               </a>
               <a
                 href="https://docs.videocoin.network"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button btnTheme="secondary">{t('Developers Docs')}</Button>
+                <Button btnTheme="secondary">Developers Docs</Button>
               </a>
             </Btns>
           </div>

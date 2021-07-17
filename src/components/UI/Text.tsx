@@ -2,12 +2,13 @@ import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 import Colors, { TColors } from 'styles/Colors';
 import View, { ViewProps } from 'components/View';
+import { device } from '../../queries';
 
 const subtitle = css`
   font-size: 22px;
   line-height: 1.66;
   font-weight: 600;
-  @media (max-width: 768px) {
+  @media ${device.tablet} {
     font-size: 20px;
   }
 `;
@@ -81,6 +82,9 @@ const caption = css`
   font-size: 12px;
   line-height: 2.333;
   font-weight: 600;
+  @media ${device.mobile} {
+    font-size: 10px;
+  }
 `;
 
 const smallBodyAlt = css`
@@ -158,7 +162,6 @@ interface TextProps {
 }
 
 const TextBase = styled(View)<TextProps>`
-  border-radius: 20px;
   ${({ variant = 'body' }) => variants[variant]};
   ${({ withGradient }) => withGradient && gradient};
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : 'none')};
@@ -166,6 +169,9 @@ const TextBase = styled(View)<TextProps>`
   color: ${({ color }) => color && Colors[color]};
   strong {
     font-weight: bold;
+  }
+  a {
+    color: ${Colors.violet50};
   }
 `;
 

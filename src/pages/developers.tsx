@@ -54,7 +54,7 @@ const tutorials = [
 ];
 
 const DevelopersPage = () => (
-  <Layout light>
+  <Layout>
     <SEO title="Developers" />
     <DevelopersHero />
     <CodeSmarter />

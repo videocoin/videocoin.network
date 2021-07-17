@@ -5,10 +5,11 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import View from 'components/View';
 import Text from 'components/UI/Text';
 import Container from 'styles/Container';
+import News from 'components/Home/News';
 import { useBreakpoint } from 'components/BrealpointProvider';
 
 const Hero = () => {
-  const { mobile, tablet } = useBreakpoint();
+  const { tablet } = useBreakpoint();
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "developersHero.png" }) {
@@ -26,7 +27,7 @@ const Hero = () => {
             alt=""
             image={data.file.childImageSharp.gatsbyImageData}
           />
-          <View column left>
+          <View column left={!tablet}>
             <Text variant="display2" marginB={28}>
               Powering Next-Generation Video Apps Built By You
             </Text>
@@ -40,6 +41,7 @@ const Hero = () => {
           </View>
         </div>
       </Container>
+      <News />
     </S.Hero>
   );
 };

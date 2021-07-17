@@ -16,8 +16,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-load-script',
       options: {
-        src:
-          'https://cdn.jsdelivr.net/npm/indigo-player@1/lib/indigo-player.js',
+        src: 'https://cdn.jsdelivr.net/npm/indigo-player@1/lib/indigo-player.js',
       },
     },
     `gatsby-plugin-react-helmet`,

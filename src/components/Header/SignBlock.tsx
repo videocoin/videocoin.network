@@ -1,30 +1,27 @@
 import React from 'react';
-import VioletBtn from 'components/UI/Button';
 import { SignWrapper } from './styles';
 import { globalHistory as history } from '@reach/router';
 import { useBreakpoint } from 'components/BrealpointProvider';
-import { useTranslation } from 'react-i18next';
 import Text from 'components/UI/Text';
 import Button from 'components/UI/Button';
 
 const SignBlock = () => {
-  const { t } = useTranslation();
   const { location } = history;
   const isStakingPage = [
     '/stakers',
     '/genesis-staking',
     '/cash-staking',
   ].includes(location.pathname);
-  const { laptop } = useBreakpoint();
+  const { tablet } = useBreakpoint();
   const renderLoginBtn = () => {
-    if (isStakingPage || laptop) return null;
+    if (isStakingPage || tablet) return null;
     return (
       <a
         href="https://console.videocoin.network/sign-in"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Text variant="smallBody">{t('Login')}</Text>
+        <Text variant="smallBody">Login</Text>
       </a>
     );
   };
@@ -54,7 +51,7 @@ const SignBlock = () => {
         href="https://console.videocoin.network/sign-up?role=publisher"
         onClick={handleClick}
       >
-        <Button hideArrow>{t('Create Account')}</Button>
+        <Button hideArrow>Create Account</Button>
       </a>
     );
   };

@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink, NavList, NavRoot, SubPopup } from './styles';
-import { useTranslation } from 'react-i18next';
 
 interface LinkProps {
   name: string;
@@ -67,16 +66,15 @@ const SubList = ({ links }: { links: LinkProps[] }) => {
 };
 
 const renderLink = ({ name, path, subMenu, external }: LinkProps) => {
-  const { t } = useTranslation();
   return (
     <li key={name}>
       {external ? (
         <a href={path} target="_blank" rel="noreferrer noopener">
-          {t(name)}
+          {name}
         </a>
       ) : (
         <NavLink to={path} activeClassName="active">
-          {t(name)}
+          {name}
         </NavLink>
       )}
       {subMenu && <SubList links={subMenu} />}
