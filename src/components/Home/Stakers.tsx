@@ -4,10 +4,11 @@ import Container from 'styles/Container';
 import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import View from 'components/View';
 import stakers from 'icons/staker.svg';
 import { useBreakpoint } from 'components/BrealpointProvider';
+import Button from 'components/UI/Button';
 
 const Stakers = () => {
   const { mobile } = useBreakpoint();
@@ -49,6 +50,9 @@ const Stakers = () => {
               Stake your unused VID to worker nodes on the VideoCoin network to
               earn cash rewards from the work they do.
             </Text>
+            <Link to="/stakers">
+              <Button>Learn More</Button>
+            </Link>
           </>
         }
       />

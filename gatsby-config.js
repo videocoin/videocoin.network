@@ -3,6 +3,11 @@ require('dotenv').config({
 });
 
 module.exports = {
+  flags: {
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
+    LMDB_STORE: true,
+  },
   siteMetadata: {
     title: `VideoCoin Network`,
     description: `The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money.`,

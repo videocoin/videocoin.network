@@ -5,9 +5,11 @@ import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import View from 'components/View';
 import workers from 'icons/worker.svg';
 import { useBreakpoint } from 'components/BrealpointProvider';
+import Button from 'components/UI/Button';
 
 const Workers = () => {
   const { mobile } = useBreakpoint();
@@ -51,6 +53,9 @@ const Workers = () => {
               <strong>provided by you</strong>. Whether you run a data center or
               an individual PC, convert your unused CPU cycles into revenue.
             </Text>
+            <Link to="/workers">
+              <Button>Learn More</Button>
+            </Link>
           </>
         }
       />

@@ -11,35 +11,35 @@ const members = [
     name: 'Devadutta Ghat',
     position: 'CTO, Live Planet',
     id: 'devadutta',
-    link: '',
+    link: 'https://linkedin.com/in/devadutta',
   },
   {
     name: 'Seth Shapiro',
     position: 'CEO, Artaku NFT',
     id: 'seth',
     advisor: true,
-    link: '',
+    link: 'https://www.linkedin.com/in/sethshapiro',
   },
   {
     name: 'Hanno Basse',
     position: 'Azure CTO, Media & Entertainment at Microsoft',
     id: 'hanno',
     advisor: true,
-    link: '',
+    link: 'https://www.linkedin.com/in/hannobasse',
   },
   {
     name: 'Ted Schilowitz',
     position: 'Futurist at Paramount Pictures',
     id: 'ted',
     advisor: true,
-    link: '',
+    link: 'https://www.linkedin.com/in/ted-schilowitz-a084233/',
   },
   {
     name: 'John Ward',
     position: 'CTO/EVP at iNDEMAND',
     id: 'john',
     advisor: true,
-    link: '',
+    link: 'https://www.linkedin.com/in/johnaward/',
   },
   {
     name: 'Jason King',
@@ -52,7 +52,7 @@ const members = [
     name: 'Kellam Ames',
     position: 'Director, Ecosystem Development',
     id: 'kellam',
-    link: '',
+    link: 'https://www.linkedin.com/in/kellam-ames-8328318/',
   },
 ];
 
@@ -69,7 +69,9 @@ const TeamCard = ({ member, portrait }) => {
         <Text marginR={10} color="violet80" variant="bodyAlt">
           {member.name}
         </Text>
-        <img src={linkedinIcon} width={20} height={20} alt="" />
+        <a href={member.link} target="_blank" rel="noopener noreferrer">
+          <img src={linkedinIcon} width={20} height={20} alt="" />
+        </a>
       </View>
       <Text paddingH={3} variant="smallBody">
         {member.position}

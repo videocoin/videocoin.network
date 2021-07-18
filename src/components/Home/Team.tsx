@@ -60,7 +60,15 @@ const Team = () => {
       </Container>
       <Join
         text="Meet the entire Live Planet team"
-        button={<Button simple>Learn More</Button>}
+        button={
+          <a
+            href="https://www.linkedin.com/company/videocoin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button simple>Learn More</Button>
+          </a>
+        }
       />
       <Container>
         <Text paddingH={mobile ? 0 : 112} align="center" marginB={72}>
