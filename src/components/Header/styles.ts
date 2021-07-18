@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { device } from '../../queries';
 import Colors from 'styles/Colors';
 
-export const Root = styled.header`
+export const Root = styled.header<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   position: relative;
@@ -74,6 +74,11 @@ export const NavList = styled.ul`
 export const Logo = styled(Link)`
   position: relative;
   z-index: 1002;
+  @media (max-width: 768px) {
+    img {
+      width: 170px;
+    }
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -113,9 +118,8 @@ export const NavRoot = styled.nav<{ $open: boolean }>`
     width: 100vw;
     height: 100vh;
     flex-direction: column;
-    z-index: 1000;
     backdrop-filter: blur(10px);
-    background-image: ${Colors.white20};
+    background: ${Colors.white20}cc;
     padding-top: 125px;
     padding-left: 29px;
     margin-left: 0;
@@ -143,7 +147,8 @@ export const SignWrapper = styled.div`
 
 export const MenuBtn = styled.button<{ $active: boolean }>`
   width: 51px;
-  height: 41px;
+  height: 51px;
+  padding-top: 10px;
   border: none;
   position: relative;
   z-index: 1001;

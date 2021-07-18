@@ -5,26 +5,25 @@ import SignBlock from 'components/Header/SignBlock';
 import Navbar from './Navbar';
 import { Root, Logo as LogoLink, MenuBtn } from './styles';
 import burgerIcon from 'icons/burger.svg';
-
+import { useLockBodyScroll, useToggle } from 'react-use';
 const Header = () => {
-  const [isOpen, setOpen] = useState(false);
-  const toggleMenu = () => setOpen(!isOpen);
+  const [isOpen, toggleOpen] = useToggle(false);
+  useLockBodyScroll(isOpen);
   return (
     <Headroom
-      disable={isOpen}
+      // disable={isOpen}
       style={{
         zIndex: 1000,
-        transform: isOpen ? 'none' : 'translate3d(0px, 0px, 0px)',
         background: '#fff',
       }}
     >
-      <Root>
+      <Root isOpen={isOpen}>
         <LogoLink to="/">
           <Logo />
         </LogoLink>
         <Navbar open={isOpen} />
         <SignBlock />
-        <MenuBtn $active={isOpen} onClick={toggleMenu}>
+        <MenuBtn $active={isOpen} onClick={toggleOpen}>
           <img src={burgerIcon} alt="" />
         </MenuBtn>
       </Root>

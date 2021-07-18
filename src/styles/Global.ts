@@ -220,8 +220,14 @@ table {
 position:fixed!important;
   //background: transparent!important;
 }
-.headroom-disable-animation {
-//transform: none!important;
+.headroom--scrolled,
+.headroom--pinned {
+  header {
+    padding: 10px 40px;
+    @media (max-width: 1024px) {
+      padding: 5px 28px;
+    }
+  }
 }
 a {
 text-decoration:none;
