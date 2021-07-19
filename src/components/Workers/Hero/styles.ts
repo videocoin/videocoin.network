@@ -67,6 +67,7 @@ export const Right = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 0;
   }
 `;
 

@@ -17,6 +17,9 @@ export const Root = styled.div`
   }
   &:not(:last-of-type) {
     margin-right: 73px;
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
   }
 `;
 export const Img = styled.div`

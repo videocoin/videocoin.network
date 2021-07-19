@@ -16,6 +16,9 @@ export const Features = styled.div`
   & > div {
     height: auto;
   }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Roadmap = styled.div`

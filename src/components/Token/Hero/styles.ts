@@ -92,6 +92,12 @@ export const Video = styled.div`
   background: rgba(206, 197, 218, 0.5);
   backdrop-filter: blur(4px);
   border-radius: 24px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    max-width: 412px;
+    max-height: 412px;
+  }
   video {
     border-radius: 24px;
     width: 100%;

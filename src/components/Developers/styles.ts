@@ -5,4 +5,7 @@ export const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media (max-width: 1024px) {
+    align-items: center;
+  }
 `;

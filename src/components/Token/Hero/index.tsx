@@ -1,7 +1,5 @@
 import React from 'react';
 import { Root, Disclaimer, Video } from './styles';
-import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import token from 'icons/token.svg';
 import View from 'components/View';
 import Text from 'components/UI/Text';
@@ -17,7 +15,7 @@ const TokenHero = () => {
         <div>
           <div>
             <Video>
-              <video src={coinSpinVideo} autoPlay muted loop />
+              <video src={coinSpinVideo} autoPlay muted loop playsInline />
             </Video>
           </div>
           <div>
