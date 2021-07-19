@@ -37,6 +37,7 @@ export const Wrapper = styled.div`
     overflow: hidden;
     @media ${device.mobile} {
       width: 100%;
+      padding: 0;
       min-height: auto;
     }
     &:first-of-type {

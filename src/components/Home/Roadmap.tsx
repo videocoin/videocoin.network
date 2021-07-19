@@ -17,6 +17,11 @@ const Roadmap = () => {
           gatsbyImageData(width: 739, quality: 100, layout: CONSTRAINED)
         }
       }
+      imageSm: file(relativePath: { eq: "timeline_sm.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 375, quality: 100, layout: CONSTRAINED)
+        }
+      }
     }
   `);
   return (
@@ -30,10 +35,16 @@ const Roadmap = () => {
       <MainBlock
         reverse
         left={
-          <GatsbyImage
-            alt=""
-            image={data.image.childImageSharp.gatsbyImageData}
-          />
+          <View marginH={mobile ? -28 : 0}>
+            <GatsbyImage
+              alt=""
+              image={
+                mobile
+                  ? data.imageSm.childImageSharp.gatsbyImageData
+                  : data.image.childImageSharp.gatsbyImageData
+              }
+            />
+          </View>
         }
         right={
           <View paddingL={tablet ? 0 : 102}>

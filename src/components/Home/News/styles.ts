@@ -7,14 +7,25 @@ export const NewsItem = styled.a`
     margin-right: 24px;
     width: 192px;
     flex-shrink: 0;
+    @media (max-width: 768px) {
+      width: 127px;
+    }
     img {
       object-fit: cover;
       border-radius: 6px;
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 63px;
+      }
     }
   }
   & > div:last-of-type {
     div:last-of-type {
       opacity: 0.8;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 `;

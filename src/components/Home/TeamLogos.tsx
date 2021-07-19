@@ -28,11 +28,18 @@ const List = styled.div`
   }
   & > div {
     @media (max-width: 768px) {
-      margin: 0 10px;
+      margin: 0 10px 16px;
       max-width: 25%;
       img {
         max-height: 23px;
       }
+    }
+  }
+  .gatsby-image-wrapper img {
+    @media (max-width: 768px) {
+      width: auto;
+      object-fit: contain !important;
+      max-width: 100%;
     }
   }
 `;

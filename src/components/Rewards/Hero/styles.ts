@@ -91,6 +91,9 @@ export const Features = styled.ul`
     @media ${device.tablet} {
       max-width: 320px;
       margin-right: auto;
+      margin-left: 32px;
+    }
+    @media ${device.mobile} {
       margin-left: auto;
     }
     &:first-child {
@@ -120,6 +123,7 @@ export const Features = styled.ul`
 
       @media ${device.tablet} {
         margin-bottom: 80px;
+        max-width: 263px;
       }
       @media ${device.mobile} {
         margin-bottom: 260px;
@@ -128,6 +132,13 @@ export const Features = styled.ul`
     &:nth-child(4) {
       max-width: 255px;
       margin-right: 0;
+      @media ${device.tablet} {
+        margin-right: auto;
+        max-width: 263px;
+      }
+      @media ${device.mobile} {
+        margin-left: auto;
+      }
     }
   }
   p {

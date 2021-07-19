@@ -24,6 +24,18 @@ export const Features = styled.div`
 export const Roadmap = styled.div`
   background-color: ${Colors.white0};
   padding: 58px 0 33px;
+  & > div:last-of-type {
+    & > div > div {
+      @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+      }
+      & > div:nth-child(2) {
+        @media (max-width: 1024px) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
 `;
 export const Team = styled.div`
   padding-top: 68px;
@@ -102,6 +114,9 @@ export const PartnersList = styled.div`
   align-items: center;
   padding-top: 10px;
   margin-bottom: -25px;
+  @media (max-width: 768px) {
+    margin-bottom: -20px;
+  }
   & > * {
     margin: 0 25px 35px;
     @media (max-width: 768px) {
@@ -181,6 +196,10 @@ export const PartnersCard = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    padding: 20px;
+    margin: 0 -18px;
+  }
   .content {
     background-color: ${Colors.grey90};
     display: flex;
