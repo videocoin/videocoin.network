@@ -26,7 +26,7 @@ const NFT = () => {
       }
       right={
         <>
-          <Text variant="subtitle" withGradient>
+          <Text variant="subtitle" withGradient uppercase>
             Video NFTs. Done right.
           </Text>
           <Text variant="title" marginB={16}>

@@ -8,7 +8,6 @@ export const Root = styled.div`
     padding-bottom: 22px;
   }
   & > div > div {
-    justify-content: center;
     align-items: center;
     display: flex;
     & > div {
@@ -76,5 +75,27 @@ export const Btns = styled.div`
     & > a:not(:last-child) {
       margin-bottom: 28px;
     }
+  }
+`;
+
+export const Disclaimer = styled.div`
+  span {
+    opacity: 0.5;
+  }
+`;
+
+export const Video = styled.div`
+  width: 412px;
+  height: 412px;
+  padding: 20px;
+  margin: 0 auto;
+  background: rgba(206, 197, 218, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 24px;
+  video {
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;

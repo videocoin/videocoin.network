@@ -28,7 +28,7 @@ const DemoApplication = () => {
       }
       right={
         <S.Section>
-          <Text variant="subtitle" withGradient>
+          <Text variant="subtitle" withGradient uppercase>
             Try us. You'll like us.
           </Text>
           <Text variant="title" marginB={16}>

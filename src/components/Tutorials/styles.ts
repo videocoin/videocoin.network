@@ -21,7 +21,7 @@ export const List = styled.div`
   }
 `;
 
-export const Link = styled.a.attrs<{ light?: boolean }>(() => ({
+export const Link = styled.a.attrs<{ color?: string; light?: boolean }>(() => ({
   rel: 'noopener noreferrer',
   target: '_blank',
 }))`

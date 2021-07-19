@@ -19,7 +19,7 @@ export const SocialLink = styled.a.attrs(() => ({
   font-weight: 500;
   transition: color 0.15s ease-in-out;
   img {
-    margin-right: 24px;
+    margin-right: 20px;
   }
   &:hover {
     color: #fff;

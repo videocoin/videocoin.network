@@ -44,11 +44,11 @@ const links: LinkProps[] = [
     subMenu: [
       {
         name: 'Cash Staking',
-        path: '/cash-staking',
+        path: '/stakers/cash-staking',
       },
       {
         name: 'Genesis Pool',
-        path: '/genesis-staking',
+        path: '/stakers/genesis-staking',
       },
     ],
   },
@@ -73,7 +73,7 @@ const renderLink = ({ name, path, subMenu, external }: LinkProps) => {
           {name}
         </a>
       ) : (
-        <NavLink to={path} activeClassName="active">
+        <NavLink to={path} partiallyActive activeClassName="active">
           {name}
         </NavLink>
       )}

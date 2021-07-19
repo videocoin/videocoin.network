@@ -28,7 +28,7 @@ const CodeSmarter = () => {
       }
       right={
         <S.Section>
-          <Text variant="subtitle" withGradient>
+          <Text variant="subtitle" withGradient uppercase>
             Code smarter.
           </Text>
           <Text variant="title" marginB={16}>

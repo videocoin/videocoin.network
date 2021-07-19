@@ -9,7 +9,7 @@ import * as S from './styles';
 import { useBreakpoint } from 'components/BrealpointProvider';
 
 const Roadmap = () => {
-  const { mobile } = useBreakpoint();
+  const { mobile, tablet } = useBreakpoint();
   const data = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "timeline.png" }) {
@@ -36,18 +36,22 @@ const Roadmap = () => {
           />
         }
         right={
-          <>
-            <Text variant="title" marginB={16} color="violet80">
+          <View paddingL={tablet ? 0 : 102}>
+            <Text variant="display3" marginB={6} color="violet80">
               Our Journey
             </Text>
-            <Text color="grey70_72" marginB={48}>
-              Where we’ve been.
-              <br />
-              Where we’re headed.
-              <br />
-              Join Us.
-            </Text>
-          </>
+            <S.Text>
+              <Text variant="subtitle" color="grey50" marginB={6}>
+                Where we’ve been.
+              </Text>
+              <Text variant="subtitle" color="grey50" marginB={6}>
+                Where we’re headed.
+              </Text>
+              <Text variant="subtitle" color="grey50">
+                Join Us.
+              </Text>
+            </S.Text>
+          </View>
         }
       />
     </S.Roadmap>

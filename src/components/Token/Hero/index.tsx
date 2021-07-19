@@ -1,33 +1,24 @@
 import React from 'react';
-import { Root, Btns } from './styles';
+import { Root, Disclaimer, Video } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import token from 'icons/token.svg';
 import View from 'components/View';
 import Text from 'components/UI/Text';
-import Button from 'components/UI/Button';
 import Container from 'styles/Container';
 import { useBreakpoint } from 'components/BrealpointProvider';
+import coinSpinVideo from '../assets/coinSpinVideo.mp4';
+
 const TokenHero = () => {
   const { mobile, tablet } = useBreakpoint();
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "tokenHero.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 412, quality: 100, layout: CONSTRAINED)
-        }
-      }
-    }
-  `);
   return (
     <Root>
       <Container>
         <div>
           <div>
-            <GatsbyImage
-              alt=""
-              image={data.file.childImageSharp.gatsbyImageData}
-            />
+            <Video>
+              <video src={coinSpinVideo} autoPlay muted loop />
+            </Video>
           </div>
           <div>
             <View row column={mobile} centerV centerH={tablet} marginB={10}>
@@ -41,24 +32,29 @@ const TokenHero = () => {
             <Text variant="display2">
               VideoCoin Network is powered by the VID token.
             </Text>
-            <Text variant="subtitle" color="violet80" marginB={36}>
+            <Text variant="subtitle" color="violet80" marginB={38}>
               VID tokens enable network functionality and ensure its stability
               and efficiency.
             </Text>
-            <Text variant="caption">
-              *Issued by the VideoCoin Development Association Ltd. (VDA), VID
-              tokens were initially offered to early project contributors in a
-              presale beginning in 2017. Contributors seeking the terms and
-              conditions of the VDA presale may access them{' '}
-              <a
-                href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkTermsofService.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                here
-              </a>
-              .
-            </Text>
+            <Disclaimer>
+              <Text variant="caption">
+                <span>
+                  *Issued by the VideoCoin Development Association Ltd. (VDA),
+                  VID tokens were initially offered to early project
+                  contributors in a presale beginning in 2017. Contributors
+                  seeking the terms and conditions of the VDA presale may access
+                  them{' '}
+                </span>
+                <a
+                  href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkTermsofService.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  here
+                </a>
+                .
+              </Text>
+            </Disclaimer>
           </div>
         </div>
       </Container>

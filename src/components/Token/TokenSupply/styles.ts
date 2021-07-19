@@ -14,7 +14,7 @@ export const Images = styled.div`
     display: block;
   }
   & > img:first-of-type {
-    margin-bottom: -280px;
+    margin-bottom: -250px;
     position: relative;
     z-index: 2;
 
@@ -46,7 +46,7 @@ export const Card = styled.div`
   padding: 20px;
   max-width: 404px;
   width: 100%;
-  margin: -170px auto 55px;
+  margin: -174px auto 55px;
   @media ${device.mobile} {
     width: 402px;
     left: 50%;

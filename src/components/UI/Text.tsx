@@ -171,7 +171,7 @@ const TextBase = styled(View)<TextProps>`
     font-weight: bold;
   }
   a {
-    color: ${Colors.violet50};
+    color: ${Colors.violet50}80;
   }
 `;
 

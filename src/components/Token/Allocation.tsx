@@ -11,7 +11,7 @@ import MainBlock from 'components/MainBlock';
 const Root = styled.div`
   background: ${Colors.white20};
   padding-top: 72px;
-  padding-bottom: 77px;
+  padding-bottom: 60px;
   margin-top: 24px;
 `;
 
@@ -63,14 +63,14 @@ const Allocation = () => {
             </Text>
             <Text color="grey70_72">
               This lockup though the end of 2021 impacts over 90 million tokens
-              held by the VDA and our service providers partners, and represents
+              held by the VDA and our service provider partners, and represents
               76% of the non-circulating VID token supply.
             </Text>
           </>
         }
       />
       <Container>
-        <View marginT={80}>
+        <View marginT={55}>
           <Text variant="title" align="center" marginB={12}>
             Efficient Use Of Supply
           </Text>

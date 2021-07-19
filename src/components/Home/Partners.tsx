@@ -120,20 +120,25 @@ const Partners = () => {
               We Thank Our World Class Partners
             </Text>
           </View>
-          <Card color="grey90">
-            <S.PartnersList>
-              {Object.entries(data).map(([key, val]) => {
-                return (
-                  <div key={key}>
-                    <GatsbyImage
-                      alt=""
-                      image={val.childImageSharp.gatsbyImageData}
-                    />
-                  </div>
-                );
-              })}
-            </S.PartnersList>
-          </Card>
+          <S.PartnersCard>
+            <span className="top-border" />
+            <span className="middle-border" />
+            <span className="inner-border" />
+            <div className="content">
+              <S.PartnersList>
+                {Object.entries(data).map(([key, val]) => {
+                  return (
+                    <div key={key}>
+                      <GatsbyImage
+                        alt=""
+                        image={val.childImageSharp.gatsbyImageData}
+                      />
+                    </div>
+                  );
+                })}
+              </S.PartnersList>
+            </div>
+          </S.PartnersCard>
         </div>
       </Container>
     </S.Partners>

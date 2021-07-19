@@ -36,7 +36,7 @@ const DelegatesRewards = () => {
           </Text>
           <List>
             <li>
-              <Text variant="bodyAlt" withGradient>
+              <Text as="span" variant="bodyAlt" withGradient>
                 Industry First
               </Text>
               <Text>Choose how you get rewarded: Cash or VID.</Text>

@@ -58,7 +58,7 @@ const Sections = () => {
               Docker to begin working in minutes.
             </Text>
             <a
-              href="https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-console"
+              href="https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-videocoin-network-console/38"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -114,7 +114,7 @@ const howItWorks = [
   {
     id: 2,
     title: 'Begin Working',
-    desc: 'Once transcoding is complete, it will be submitted for review.',
+    desc: 'Once your Worker node is set up, it will receive portions of video files to transcode. When transcoding is complete, it will be submitted for review.',
   },
   {
     id: 3,
@@ -122,7 +122,7 @@ const howItWorks = [
     desc: (
       <>
         Upon completion of work validation, you will be paid for the work
-        completed in cash.{' '}
+        completed in cash. Cash payments will be handled by
         <a
           href="https://publicmint.com/"
           target="_blank"
@@ -141,6 +141,7 @@ const tutorials = [
     link: 'https://forum.videocoin.network/t/quick-guide-setting-up-a-worker-on-videocoin-network-console/38',
     color: 'white0',
     light: false,
+    textColor: 'violet50',
   },
   {
     title: 'Setting up a Worker on Raspberry Pi',

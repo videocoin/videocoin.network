@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import Colors, { TColors } from 'styles/Colors';
 import styled from 'styled-components';
-import { device } from '../queries';
 
 const Root = styled.div<{ color: TColors }>`
   border-radius: 24px;
@@ -64,9 +63,6 @@ const Root = styled.div<{ color: TColors }>`
       rgba(113, 48, 204, 0.54) 0%,
       #7130cc 100%
     );
-  }
-  @media ${device.tablet} {
-    grid-column: span 6;
   }
 `;
 

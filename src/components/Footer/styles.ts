@@ -8,7 +8,7 @@ export const Root = styled.footer`
 
 export const Inner = styled.div`
   display: flex;
-  padding: 40px 105px 50px;
+  padding: 40px 105px 45px;
   align-items: flex-start;
   @media (max-width: 1024px) {
     padding-left: 40px;
@@ -21,8 +21,8 @@ export const Inner = styled.div`
     padding-right: 26px;
   }
   & > img {
-    margin-right: 90px;
-    margin-top: -15px;
+    margin-right: 86px;
+    margin-top: -8px;
     @media (max-width: 1024px) {
       width: 148px;
       margin-right: 32px;
@@ -35,11 +35,14 @@ export const Inner = styled.div`
   }
   & > div {
     &:not(:last-child) {
-      margin-right: 100px;
+      margin-right: 104px;
       @media (max-width: 1024px) {
         min-width: 138px;
         margin-right: 45px;
       }
+    }
+    &:nth-child(3) {
+      margin-right: 66px;
     }
   }
 `;
@@ -48,12 +51,12 @@ export const Copyright = styled.div`
   color: ${Colors.white40};
   opacity: 0.72;
   text-align: center;
-  padding: 20px 0;
+  padding: 16px 0 20px;
   background: ${Colors.violet80};
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.32px;
   line-height: 32px;
+  & > div:last-of-type {
+    opacity: 0.5;
+  }
 `;
 
 export const Links = styled.div`
@@ -67,7 +70,7 @@ export const Links = styled.div`
     font-weight: 500;
     text-decoration: none;
     color: ${Colors.violet10};
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-size: 16px;
     line-height: 2;
     transition: 0.15s ease-in-out;
@@ -101,7 +104,7 @@ export const Title = styled.div<{ $isOpen: boolean }>`
   font-weight: 600;
   color: ${Colors.violet10};
   line-height: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   position: relative;
   &::before {
     display: none;

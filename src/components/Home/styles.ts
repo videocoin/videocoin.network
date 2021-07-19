@@ -20,7 +20,7 @@ export const Features = styled.div`
 
 export const Roadmap = styled.div`
   background-color: ${Colors.white0};
-  padding: 48px 0;
+  padding: 58px 0 33px;
 `;
 export const Team = styled.div`
   padding-top: 68px;
@@ -97,9 +97,10 @@ export const PartnersList = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 35px;
+  padding-top: 10px;
+  margin-bottom: -25px;
   & > * {
-    margin: 0 25px 37px;
+    margin: 0 25px 35px;
     @media (max-width: 768px) {
       margin: 0 16px 22px;
       max-width: 35%;
@@ -164,4 +165,58 @@ export const Hero = styled.div`
       rgba(255, 138, 60, 0) 100%
     ),
     linear-gradient(180deg, #ffffff 0%, #f2f0f4 100%);
+`;
+
+export const Text = styled.div`
+  opacity: 0.8;
+`;
+
+export const PartnersCard = styled.div`
+  border-radius: 36px;
+  padding: 36px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .content {
+    background-color: ${Colors.grey90};
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    border-radius: 27px;
+    padding: 24px 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+  }
+  .top-border {
+    border-radius: 36px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.73) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .middle-border {
+    border-radius: 36px;
+    display: block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background: #cec5da80;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    z-index: 1;
+  }
 `;

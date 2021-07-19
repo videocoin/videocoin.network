@@ -39,7 +39,7 @@ export const Inner = styled.div<{ reverse: boolean }>`
     flex-direction: column;
     align-items: flex-start;
     max-width: 630px;
-    margin-right: ${({ reverse }) => (reverse ? '55px' : '0px')};
+    margin-right: ${({ reverse }) => (reverse ? '36px' : '0px')};
     @media (max-width: 1024px) {
       margin-right: 0;
       align-items: center;

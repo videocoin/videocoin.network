@@ -36,7 +36,7 @@ const WorkersHero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://console.videocoin.network/sign-up?role=miner"
+              href="https://console.videocoin.network/sign-up?role=worker"
             >
               <Button>Get Started</Button>
             </a>

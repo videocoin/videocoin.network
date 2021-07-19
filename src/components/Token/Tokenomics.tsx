@@ -11,7 +11,7 @@ import MainBlock from 'components/MainBlock';
 const Root = styled.div`
   background: ${Colors.white10};
   padding-top: 72px;
-  padding-bottom: 77px;
+  padding-bottom: 84px;
 `;
 
 const Allocation = () => {
@@ -35,7 +35,7 @@ const Allocation = () => {
         <Text variant="title2" color="violet50" align="center">
           March 2019
         </Text>
-        <Text variant="display1" align="center" marginB={100}>
+        <Text variant="display1" align="center" marginB={20}>
           Updated Tokenomics
         </Text>
       </Container>
@@ -55,15 +55,15 @@ const Allocation = () => {
               Rewards For <br /> Work Without Inflation
             </Text>
             <Text color="grey70_72">
-              Our new token model rewards workers/miners without creating new
-              tokens with VideoCoin (from fees) and Fiat.
+              Our new token model rewards Workers/Miners with VideoCoin (from
+              fees) and Fiat, without creating new tokens.
             </Text>
           </>
         }
       />
       <MainBlock
         left={
-          <View paddingV={48}>
+          <View paddingV={0}>
             <GatsbyImage
               alt=""
               image={data.burnedSupply.childImageSharp.gatsbyImageData}

@@ -6,14 +6,18 @@ const news = [
     date: 'July 14th, 2021',
     link: 'https://medium.com/videocoin/have-questions-about-nft-marketplace-alpha-weve-got-answers-852b757102f0',
     source: 'VideoCoin News',
+    description:
+      'The launch of our NFT Marketplace Alpha has been a great success: It is now easier than ever to create your own NFT marketplace! Earlier this month, we also released the Alpha source code for the app. While we have been getting a lot of interest and positive feedback, there have also been some questions from the community. We’d like to answer some of those questions here',
   },
   {
     id: 2,
     cover: 'https://miro.medium.com/max/1400/0*c1uJMuqHJPUdwloA',
     title: 'VideoCoin NFT Marketplace Alpha Now Live',
-    date: 'July 1th, 2021',
+    date: 'July 1st, 2021',
     link: 'https://medium.com/videocoin/videocoin-nft-marketplace-alpha-now-live-e3e344da407e',
     source: 'VideoCoin News',
+    description:
+      'We’re excited to announce the Alpha launch of the VideoCoin NFT Marketplace app. We encourage users to start creating and launching their very own marketplaces starting today, the repository can be found on the VideoCoin Github.',
   },
   {
     id: 3,
@@ -23,14 +27,18 @@ const news = [
     date: 'June 24th, 2021',
     link: 'https://cryptomode.com/mogul-productions-one-of-several-startups-bringing-nfts-to-film-industry/',
     source: 'VideoCoin News',
+    description:
+      'In April, film and comic book legend Frank Miller teamed up with gaming art maker Concept Art House and blockchain game company Gala Games to produce nonfungible token (NFT) collectibles based on his uber-popular Sin City series.',
   },
   {
     id: 4,
     cover: 'https://miro.medium.com/max/1400/1*PEOUx7gCpQnGv_K0xt_BYA.jpeg',
     title: 'Are Movies And Streaming The Next Frontier For NFTs?',
-    date: 'June 1th, 2021',
+    date: 'June 1st, 2021',
     link: 'https://www.forbes.com/sites/lawrencewintermeyer/2021/06/01/are-movies-and-streaming-the-next-frontier-for-nfts/?sh=67f878af2b13',
     source: 'VideoCoin News',
+    description:
+      'Few industries have had to adapt as dramatically to digital and transform as the film and entertainment sectors. Gen Xers witnessed VHS triumph over Betamax in the VCR wars, the first major format to bring movies into households.',
   },
   {
     id: 5,
@@ -40,6 +48,8 @@ const news = [
     date: 'April 29th, 2021',
     link: 'https://www.cryptoninjas.net/2021/04/29/built-on-filecoin-and-ipfs-nft-storage-offers-free-protection-for-nft-asset-data/',
     source: 'VideoCoin News',
+    description:
+      'NFT.Storage, a service specifically created for storing NFT data and backed by Protocol Labs and Pinat, has announced its launch. NFT.Storage allows developers to store non-fungible token (NFT) data on decentralized networks easily, securely, and for free.',
   },
   {
     id: 6,
@@ -49,6 +59,8 @@ const news = [
     date: 'April 10th, 2021',
     link: 'https://en.ethereumworldnews.com/filecoin-fil-to-power-video-nfts-through-integration-with-videocoin/',
     source: 'VideoCoin News',
+    description:
+      'The decentralized file storage project of Filecoin (FIL) will soon be the home of video NFTs thanks to an integration with VideoCoin (VID). The latter project is working on creating a solution for the reliable creation, storage and trading of video NFTs on the Ethereum network.',
   },
   {
     id: 7,
@@ -57,6 +69,8 @@ const news = [
     date: 'April 9th, 2021',
     link: 'https://www.coinspeaker.com/defi-world-video-nft-platform/',
     source: 'VideoCoin News',
+    description:
+      'If you’re a follower of the crypto/blockchain world, there’s a good chance that you might have heard of NTFs (non-fungible tokens) by now. Though once an ambiguous part of blockchain technology, NFTs are now taking on the digital art and gaming world by storm. ',
   },
 ];
 

@@ -19,6 +19,7 @@ const tutorials = [
     title: 'Setup a Livestream From the VideoCoin Console',
     link: 'https://docs.videocoin.network/getting-started-1',
     color: 'white0',
+    textColor: 'violet50',
     light: false,
   },
   {

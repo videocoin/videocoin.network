@@ -47,7 +47,7 @@ const Stakers = () => {
               Earn cash rewards
             </Text>
             <Text color="grey70_72" marginB={48}>
-              Stake your unused VID to worker nodes on the VideoCoin network to
+              Stake your unused VID to worker nodes on the VideoCoin Network to
               earn cash rewards from the work they do.
             </Text>
             <Link to="/stakers">

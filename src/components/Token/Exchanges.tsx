@@ -24,10 +24,12 @@ const Exchanges = () => {
   return (
     <MainBlock
       left={
-        <GatsbyImage
-          alt=""
-          image={data.orbital.childImageSharp.gatsbyImageData}
-        />
+        <View paddingV={20}>
+          <GatsbyImage
+            alt=""
+            image={data.orbital.childImageSharp.gatsbyImageData}
+          />
+        </View>
       }
       right={
         <>
@@ -35,7 +37,7 @@ const Exchanges = () => {
             Help Power the VideoCoin Network
           </Text>
           <Text variant="title" marginB={16}>
-            Aquire VID Token From <br /> These Exchanges
+            Acquire VID Token <br /> From These Exchanges
           </Text>
           <View row column={mobile} marginB={16}>
             <View marginB={mobile ? 12 : 0}>

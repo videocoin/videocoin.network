@@ -9,7 +9,7 @@ import Container from 'styles/Container';
 const TokenSupply = () => {
   return (
     <Container>
-      <Text variant="title2" color="violet50" align="center" marginT={60}>
+      <Text variant="title2" color="violet50" align="center" marginT={72}>
         VideoCoin
       </Text>
       <Text variant="display1" align="center">
@@ -25,36 +25,38 @@ const TokenSupply = () => {
               Token Supply
             </Text>
             <table>
-              <tr>
-                <td>
-                  <Text variant="smallBody">Current Circulation</Text>
-                </td>
-                <td>
-                  <Text variant="smallBodyAlt" color="violet50">
-                    152.64 Million
-                  </Text>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <Text variant="smallBody">Locked Up Through 2021</Text>
-                </td>
-                <td>
-                  <Text variant="smallBodyAlt" color="violet50">
-                    90.57 Million
-                  </Text>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <Text variant="smallBody">Lifetime Token Supply</Text>
-                </td>
-                <td>
-                  <Text variant="smallBodyAlt" color="violet50">
-                    265 Million
-                  </Text>
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>
+                    <Text variant="smallBody">Current Circulation</Text>
+                  </td>
+                  <td>
+                    <Text variant="smallBodyAlt" color="violet50">
+                      152.64 Million
+                    </Text>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <Text variant="smallBody">Locked Up Through 2021</Text>
+                  </td>
+                  <td>
+                    <Text variant="smallBodyAlt" color="violet50">
+                      90.57 Million
+                    </Text>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <Text variant="smallBody">Lifetime Token Supply</Text>
+                  </td>
+                  <td>
+                    <Text variant="smallBodyAlt" color="violet50">
+                      265 Million
+                    </Text>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </S.Card>

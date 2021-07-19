@@ -8,7 +8,7 @@ import { useBreakpoint } from 'components/BrealpointProvider';
 
 const MainNews = () => {
   const { mobile } = useBreakpoint();
-  const { cover, date, source, link, title } = news[0];
+  const { cover, date, source, link, title, description } = news[0];
   return (
     <Container>
       <S.MainNews>
@@ -29,6 +29,7 @@ const MainNews = () => {
           >
             {title}
           </Text>
+          <S.Description>{description}</S.Description>
           <a href={link} target="_blank" rel="noopener noreferrer">
             <Button>Read More</Button>
           </a>

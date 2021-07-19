@@ -16,7 +16,7 @@ const GenesisPool = () => {
     }
   `);
   return (
-    <Link to="/genesis-staking">
+    <Link to="genesis-staking">
       <View marginB={20}>
         <GatsbyImage alt="" image={data.real.childImageSharp.gatsbyImageData} />
       </View>

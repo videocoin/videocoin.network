@@ -10,15 +10,19 @@ export interface ICard {
   link: string;
   color: TColors;
   light: boolean;
+  textColor?: TColors;
 }
 
 const TutorialCard = ({ card }: { card: ICard }) => {
-  const { title, light, link, color } = card;
+  const { title, light, link, color, textColor } = card;
   return (
     <CardItem>
       <Card color={color}>
         <Link href={link} light={light}>
-          <Text variant="subtitle" color={light ? 'violet10' : 'violet80'}>
+          <Text
+            variant="subtitle"
+            color={textColor ? textColor : light ? 'violet10' : 'violet80'}
+          >
             {title}
           </Text>
           <View row centerV marginT={16} marginB={12}>

@@ -152,7 +152,7 @@ export const FeatureTitle = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 18px;
-  margin-top: -12px;
+  margin-top: -6px;
   @media ${device.tablet} {
     min-height: auto;
   }

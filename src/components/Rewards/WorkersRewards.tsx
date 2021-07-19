@@ -35,7 +35,7 @@ const WorkersRewards = () => {
           <Text>Worker Nodes earn up to 80% of fees from a completed job.</Text>
           <List>
             <li>
-              <Text variant="bodyAlt" withGradient>
+              <Text as="span" variant="bodyAlt" withGradient>
                 Industry First
               </Text>
               <Text>Choose how you get rewarded: Cash or VID.</Text>

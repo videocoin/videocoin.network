@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../queries';
+import Text from 'components/UI/Text';
 
 export const MainNews = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ export const MainNews = styled.div`
     flex-direction: column;
   }
   & > div:first-of-type {
+    flex-shrink: 0;
     max-width: 630px;
     border-radius: 28px;
     margin-right: 36px;
@@ -83,4 +85,12 @@ export const NewsList = styled.div`
   @media ${device.tablet} {
     display: block;
   }
+`;
+
+export const Description = styled(Text)`
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 16px;
 `;

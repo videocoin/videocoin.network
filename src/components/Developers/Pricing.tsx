@@ -29,7 +29,7 @@ const Pricing = () => {
       }
       right={
         <S.Section>
-          <Text variant="subtitle" withGradient>
+          <Text variant="subtitle" withGradient uppercase>
             More video. Fewer bucks.
           </Text>
           <Text variant="title" marginB={16}>

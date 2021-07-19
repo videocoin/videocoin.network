@@ -46,7 +46,7 @@ const members = [
     position: 'Managing Partner at CGS Group',
     id: 'jason',
     advisor: true,
-    link: '',
+    link: 'https://www.linkedin.com/in/flashking/',
   },
   {
     name: 'Kellam Ames',
