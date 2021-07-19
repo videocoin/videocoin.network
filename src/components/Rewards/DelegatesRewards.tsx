@@ -11,7 +11,7 @@ const DelegatesRewards = () => {
     {
       file(relativePath: { eq: "delegateRewards.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 292, quality: 100, layout: FIXED)
+          gatsbyImageData(width: 292, quality: 100, layout: CONSTRAINED)
         }
       }
     }

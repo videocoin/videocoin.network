@@ -112,7 +112,7 @@ export const Features = styled.ul`
         display: block;
       }
       @media ${device.mobile} {
-        margin-bottom: 245px;
+        margin-bottom: 270px;
       }
     }
     &:nth-child(3) {
@@ -122,7 +122,7 @@ export const Features = styled.ul`
         margin-bottom: 80px;
       }
       @media ${device.mobile} {
-        margin-bottom: 240px;
+        margin-bottom: 260px;
       }
     }
     &:nth-child(4) {

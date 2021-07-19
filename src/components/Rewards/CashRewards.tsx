@@ -11,7 +11,7 @@ const CashRewards = () => {
     {
       file(relativePath: { eq: "cashRewards.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 329, quality: 100, layout: FIXED)
+          gatsbyImageData(width: 329, quality: 100, layout: CONSTRAINED)
         }
       }
     }

@@ -10,7 +10,7 @@ const WorkersRewards = () => {
     {
       file(relativePath: { eq: "workersRewards.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 398, quality: 100, layout: FIXED)
+          gatsbyImageData(width: 398, quality: 100, layout: CONSTRAINED)
         }
       }
     }

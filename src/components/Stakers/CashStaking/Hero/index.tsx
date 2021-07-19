@@ -7,13 +7,15 @@ import Text from 'components/UI/Text';
 import View from 'components/View';
 import stakersIcon from 'icons/staker.svg';
 import Button from 'components/UI/Button';
+import { useBreakpoint } from 'components/BrealpointProvider';
 
 const StakersHero = () => {
+  const { mobile } = useBreakpoint();
   const data = useStaticQuery(graphql`
     {
       file: file(relativePath: { eq: "cashStakingHero.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 412, quality: 100, layout: FIXED)
+          gatsbyImageData(width: 412, quality: 100, layout: CONSTRAINED)
         }
       }
     }
@@ -23,7 +25,7 @@ const StakersHero = () => {
       <Container>
         <Inner>
           <Left>
-            <View row centerV marginB={8}>
+            <View row centerV column={mobile} centerH={mobile} marginB={8}>
               <img src={stakersIcon} width={36} height={36} alt="" />
               <Text variant="subtitle" withGradient uppercase marginL={12}>
                 DELEGATED STAKING ON VIDEOCOIN NETWORK
