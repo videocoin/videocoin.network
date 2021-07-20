@@ -4,34 +4,28 @@ import Logo from 'components/Logo';
 import SignBlock from 'components/Header/SignBlock';
 import Navbar from './Navbar';
 import { Root, Logo as LogoLink, MenuBtn } from './styles';
-import { useBreakpoint } from 'components/BrealpointProvider';
-import IconLogo from 'components/Logo/IconLogo';
-import LanguageSwitch from 'components/LanguageSwitch';
-
-const Header = ({ light }: { light?: boolean }) => {
-  const [isOpen, setOpen] = useState(false);
-  const { laptop, tablet, mobile } = useBreakpoint();
-  const toggleMenu = () => setOpen(!isOpen);
+import burgerIcon from 'icons/burger.svg';
+import { useLockBodyScroll, useToggle } from 'react-use';
+const Header = () => {
+  const [isOpen, toggleOpen] = useToggle(false);
+  useLockBodyScroll(isOpen);
   return (
     <Headroom
-      disable={isOpen}
+      // disable={isOpen}
       style={{
-        zIndex: 2,
-        transform: isOpen ? 'none' : 'translate3d(0px, 0px, 0px)',
-        background: light ? '#fff' : 'transparent',
+        zIndex: 1000,
+        background: '#fff',
       }}
     >
-      <Root $light={light}>
+      <Root isOpen={isOpen}>
         <LogoLink to="/">
-          {(laptop && !tablet) || mobile ? (
-            <IconLogo width={36} light={light} isOpen={isOpen} />
-          ) : (
-            <Logo light={light} isOpen={isOpen} />
-          )}
+          <Logo />
         </LogoLink>
-        <Navbar light={light} open={isOpen} />
-        <SignBlock light={light} />
-        <MenuBtn $light={light} $active={isOpen} onClick={toggleMenu} />
+        <Navbar open={isOpen} />
+        <SignBlock />
+        <MenuBtn $active={isOpen} onClick={toggleOpen}>
+          <img src={burgerIcon} alt="" />
+        </MenuBtn>
       </Root>
     </Headroom>
   );

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Typography } from 'ui-kit';
-import { Root, SLink, Img, Title } from './styles';
-import { useTranslation } from 'react-i18next';
+import * as S from './styles';
+import Text from 'components/UI/Text';
+import { Link } from 'gatsby';
+import Button from 'components/UI/Button';
 
 const FooterCard = (props: {
   img: string;
@@ -10,21 +11,22 @@ const FooterCard = (props: {
   buttonText: string;
   path: string;
 }) => {
-  const { t } = useTranslation();
   const { img, title, desc, buttonText, path } = props;
   return (
-    <Root>
-      <Img>
-        <img src={img} alt="" />
-      </Img>
-      <Title type="subtitle" theme="white">
-        {t(title)}
-      </Title>
-      <Typography type="smallBodyThin" opacity="drift" theme="white">
-        {t(desc)}
-      </Typography>
-      <SLink to={path}>{t(buttonText)}</SLink>
-    </Root>
+    <S.Root>
+      <S.Img>
+        <img width="56" height="56" src={img} alt="" />
+      </S.Img>
+      <Text marginB={4} variant="subtitle" color="grey70">
+        {title}
+      </Text>
+      <Text marginB={32} paddingH={2} variant="body">
+        {desc}
+      </Text>
+      <Link to={path}>
+        <Button>{buttonText}</Button>
+      </Link>
+    </S.Root>
   );
 };
 

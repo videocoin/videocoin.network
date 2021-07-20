@@ -1,36 +1,18 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { device } from '../../queries';
+import Colors from 'styles/Colors';
 
-export const Root = styled.header<{ $light?: boolean }>`
-  padding: 22px 64px;
+export const Root = styled.header<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   position: relative;
   z-index: 2;
-  max-width: 1440px;
+  max-width: 1376px;
   margin: 0 auto;
-  justify-content: space-between;
+  padding: 23px 40px;
   @media ${device.tablet} {
-    padding: 15px 24px;
-  }
-  &::before {
-    content: '';
-    display: block;
-    height: 152px;
-    left: 0;
-    z-index: -1;
-    top: 0;
-    width: 100%;
-    position: absolute;
-    pointer-events: none;
-    background: ${({ $light }) =>
-      $light
-        ? ''
-        : 'linear-gradient(180deg, #1a0c2d 0%, rgba(25, 12, 43, 0) 100%)'};
-    @media ${device.tablet} {
-      height: 120px;
-    }
+    padding: 23px 28px;
   }
 `;
 
@@ -54,15 +36,16 @@ export const SubPopup = styled.ul`
     }
   }
   a {
-    color: #0c0417;
-    opacity: 0.86;
-    font-weight: 500;
+    color: ${Colors.grey30};
     &::before {
       display: none !important;
     }
     &:hover {
       opacity: 1;
     }
+  }
+  @media (max-width: 1024px) {
+    display: none;
   }
 `;
 
@@ -71,7 +54,7 @@ export const NavList = styled.ul`
   white-space: nowrap;
   & > li {
     position: relative;
-    margin: 0 14px;
+    margin: 0 12px;
     &:hover {
       opacity: 1;
       ${SubPopup} {
@@ -94,44 +77,25 @@ export const NavList = styled.ul`
 export const Logo = styled(Link)`
   position: relative;
   z-index: 1002;
-  img {
-    @media ${device.tablet} {
-      //width: 172px;
-    }
-    @media ${device.mobile} {
-      width: 36px;
+  @media (max-width: 768px) {
+    img {
+      width: 170px;
     }
   }
 `;
 
 export const NavLink = styled(Link)`
-  font-weight: 600;
-  opacity: 0.48;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color: #fff;
   text-decoration: none;
   position: relative;
   transition: 0.15s ease-in-out;
 
   &.active {
-    opacity: 1;
+    color: ${Colors.violet50};
     &::before {
       display: block;
-    }
-  }
-  &::before {
-    content: '';
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: #d3b7fb;
-    border-radius: 2px;
-    top: -24px;
-    left: 0;
-    @media ${device.tablet} {
-      display: none !important;
     }
   }
   @media ${device.tablet} {
@@ -141,18 +105,15 @@ export const NavLink = styled(Link)`
     font-weight: 300;
   }
 `;
-export const NavRoot = styled.nav<{ $open: boolean; $light?: boolean }>`
-  margin: 0 auto;
+export const NavRoot = styled.nav<{ $open: boolean }>`
+  margin-left: 23px;
+  margin-right: auto;
   @media (max-width: 1510px) {
     position: static;
-    margin-left: 36px;
     transform: none;
   }
   @media ${device.tablet} {
     position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
     opacity: 0;
     visibility: hidden;
     left: 0;
@@ -160,29 +121,14 @@ export const NavRoot = styled.nav<{ $open: boolean; $light?: boolean }>`
     width: 100vw;
     height: 100vh;
     flex-direction: column;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    background-image: radial-gradient(circle at 100% 100%, #572577, #4b3aa6);
-    padding-top: 85px;
+    backdrop-filter: blur(10px);
+    background: ${Colors.white20}cc;
+    padding-top: 125px;
     padding-left: 29px;
     margin-left: 0;
     z-index: 1001;
     ${({ $open }) => $open && `visibility: visible; opacity: 1`};
   }
-  ${({ $light }) =>
-    $light &&
-    `
-    a {
-      color: #0C0417db;
-      opacity: .48;
-      &::before {
-        background-color: #7234c8
-      }
-      @media(max-width: 1024px) {
-      color: #fff;
-      }
-    }
-  `}
 `;
 export const SignWrapper = styled.div`
   display: flex;
@@ -195,36 +141,27 @@ export const SignWrapper = styled.div`
     }
   }
   @media ${device.tablet} {
+    margin-left: auto;
+  }
+  @media ${device.mobile} {
     display: none;
   }
 `;
 
-export const MenuBtn = styled.button<{ $active: boolean; $light: boolean }>`
+export const MenuBtn = styled.button<{ $active: boolean }>`
   width: 51px;
-  height: 41px;
-  border-radius: 6px;
-  background: ${({ $light }) =>
-    $light ? '#1C0937' : 'rgba(255, 255, 255, 0.1)'};
+  height: 51px;
+  padding-top: 10px;
   border: none;
   position: relative;
   z-index: 1001;
-  margin-left: auto;
+  margin-left: 24px;
   display: none;
-  &:before {
-    content: '';
-    width: 23px;
-    height: 23px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.15s ease-in-out;
-    background: ${({ $active }) => $active && '#fff'};
-  }
+  background: transparent;
   @media ${device.tablet} {
     display: block;
-    margin-left: 24px;
+  }
+  @media ${device.mobile} {
+    margin-left: auto;
   }
 `;

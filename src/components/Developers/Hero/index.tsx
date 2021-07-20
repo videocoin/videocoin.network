@@ -1,54 +1,64 @@
 import React from 'react';
-import { MarketingButton, Typography } from 'ui-kit';
-import { Root, Btns, Subtitle } from './styles';
+import { Root, Btns } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import { useTranslation, Trans } from 'react-i18next';
-
+import { GatsbyImage } from 'gatsby-plugin-image';
+import developers from 'icons/developers.svg';
+import View from 'components/View';
+import Text from 'components/UI/Text';
+import Button from 'components/UI/Button';
+import Container from 'styles/Container';
+import { useBreakpoint } from 'components/BrealpointProvider';
 const DevelopersHero = () => {
-  const { t } = useTranslation('developers');
+  const { mobile, tablet } = useBreakpoint();
   const data = useStaticQuery(graphql`
-    query {
+    {
       file(relativePath: { eq: "developersHero.png" }) {
         childImageSharp {
-          fluid(maxWidth: 583, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 531, quality: 100, layout: CONSTRAINED)
         }
       }
     }
   `);
   return (
     <Root>
-      <Img fluid={data.file.childImageSharp.fluid} />
-      <div>
-        <Subtitle type="subtitleCaps">
-          <Trans t={t} i18nKey="Develop on VideoCoin Network">
-            <span>Develop</span> on VideoCoin Network
-          </Trans>
-        </Subtitle>
-        <Typography type="display3" theme="white">
-          {t('Robust video infrastructure with just a few lines of code')}
-        </Typography>
-        <Btns>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://console.videocoin.network/sign-up?role=publisher"
-          >
-            <MarketingButton>{t('Join for Free')}</MarketingButton>
-          </a>
-          <a
-            href="https://docs.videocoin.network"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MarketingButton theme="link-secondary">
-              {t('Developers Docs')}
-            </MarketingButton>
-          </a>
-        </Btns>
-      </div>
+      <Container>
+        <div>
+          <GatsbyImage
+            alt=""
+            image={data.file.childImageSharp.gatsbyImageData}
+          />
+          <div>
+            <View row column={mobile} centerV centerH={tablet} marginB={10}>
+              <View marginR={mobile ? 0 : 16}>
+                <img src={developers} width={36} height={36} alt="" />
+              </View>
+              <Text variant="subtitle" withGradient uppercase>
+                Develop on VideoCoin Network
+              </Text>
+            </View>
+            <Text variant="display2">
+              Realize your creative vision with VideoCoin’s robust video
+              infrastructure.
+            </Text>
+            <Btns>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://console.videocoin.network/sign-up?role=publisher"
+              >
+                <Button>Join for Free</Button>
+              </a>
+              <a
+                href="https://docs.videocoin.network"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button btnTheme="secondary">Developers Docs</Button>
+              </a>
+            </Btns>
+          </div>
+        </div>
+      </Container>
     </Root>
   );
 };

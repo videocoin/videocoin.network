@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink, NavList, NavRoot, SubPopup } from './styles';
-import { useTranslation } from 'react-i18next';
 
 interface LinkProps {
   name: string;
@@ -11,12 +10,8 @@ interface LinkProps {
 
 const links: LinkProps[] = [
   {
-    name: 'The Network',
-    path: '/',
-  },
-  {
-    name: 'Pricing',
-    path: '/pricing',
+    name: 'News',
+    path: '/news',
   },
   {
     name: 'Developers',
@@ -49,11 +44,11 @@ const links: LinkProps[] = [
     subMenu: [
       {
         name: 'Cash Staking',
-        path: '/worker-staking',
+        path: '/stakers/cash-staking',
       },
       {
         name: 'Genesis Pool',
-        path: '/genesis-staking',
+        path: '/stakers/genesis-staking',
       },
     ],
   },
@@ -61,22 +56,25 @@ const links: LinkProps[] = [
     name: 'Rewards',
     path: '/rewards',
   },
+  {
+    name: 'Token',
+    path: '/token',
+  },
 ];
 const SubList = ({ links }: { links: LinkProps[] }) => {
   return <SubPopup>{links.map(renderLink)}</SubPopup>;
 };
 
 const renderLink = ({ name, path, subMenu, external }: LinkProps) => {
-  const { t } = useTranslation();
   return (
     <li key={name}>
       {external ? (
         <a href={path} target="_blank" rel="noreferrer noopener">
-          {t(name)}
+          {name}
         </a>
       ) : (
-        <NavLink to={path} activeClassName="active">
-          {t(name)}
+        <NavLink to={path} partiallyActive activeClassName="active">
+          {name}
         </NavLink>
       )}
       {subMenu && <SubList links={subMenu} />}
@@ -84,23 +82,10 @@ const renderLink = ({ name, path, subMenu, external }: LinkProps) => {
   );
 };
 
-const Navbar = ({ open, light }: { open: boolean; light?: boolean }) => {
-  const { t } = useTranslation();
+const Navbar = ({ open }: { open: boolean }) => {
   return (
-    <NavRoot $open={open} $light={light}>
-      <NavList>
-        {links.map(renderLink)}
-        <li>
-          <NavLink
-            as="a"
-            href="https://medium.com/videocoin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t('Blog')}
-          </NavLink>
-        </li>
-      </NavList>
+    <NavRoot $open={open}>
+      <NavList>{links.map(renderLink)}</NavList>
     </NavRoot>
   );
 };

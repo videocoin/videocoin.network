@@ -1,18 +1,21 @@
 import React from 'react';
-import { Root, Inner, Left, Right, Subtitle, Title } from './styles';
-import { MarketingButton } from 'ui-kit/*';
+import { Root, Inner, Left, Right } from './styles';
 import Container from 'styles/Container';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import Text from 'components/UI/Text';
+import View from 'components/View';
+import stakersIcon from 'icons/staker.svg';
+import Button from 'components/UI/Button';
+import { useBreakpoint } from 'components/BrealpointProvider';
 
 const StakersHero = () => {
+  const { mobile } = useBreakpoint();
   const data = useStaticQuery(graphql`
-    query {
-      file: file(relativePath: { eq: "genesisPool.png" }) {
+    {
+      file: file(relativePath: { eq: "genesisPoolHero.png" }) {
         childImageSharp {
-          fixed(width: 680, quality: 100) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 460, quality: 100, layout: CONSTRAINED)
         }
       }
     }
@@ -22,22 +25,28 @@ const StakersHero = () => {
       <Container>
         <Inner>
           <Left>
-            <Subtitle type="subtitleCaps">
-              <span>Genesis staking</span> on videocoin network
-            </Subtitle>
-            <Title type="display3" theme="white">
+            <View row centerV column={mobile} centerH={mobile} marginB={8}>
+              <img src={stakersIcon} width={36} height={36} alt="" />
+              <Text variant="subtitle" withGradient uppercase marginL={12}>
+                GENESIS STAKING ON VIDEOCOIN NETWORK
+              </Text>
+            </View>
+            <Text variant="display2" marginB={36}>
               Genesis staking lets you stake your VideoCoin for VID rewards.
-            </Title>
+            </Text>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://staking.videocoin.network"
             >
-              <MarketingButton>Get Started</MarketingButton>
+              <Button>Get Started</Button>
             </a>
           </Left>
           <Right>
-            <Img fixed={data.file.childImageSharp.fixed} />
+            <GatsbyImage
+              alt=""
+              image={data.file.childImageSharp.gatsbyImageData}
+            />
           </Right>
         </Inner>
       </Container>

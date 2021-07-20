@@ -1,41 +1,44 @@
 import React from 'react';
-import Section from 'components/Section';
-import { Typography } from 'ui-kit';
-import { Title } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Disclaimer from 'components/Rewards/Disclaimer';
-import { useTranslation } from 'react-i18next';
+import MainBlock from 'components/MainBlock';
+import Text from 'components/UI/Text';
+import { Section } from './styles';
 
 const CashRewards = () => {
-  const { t } = useTranslation('rewards');
   const data = useStaticQuery(graphql`
-    query {
+    {
       file(relativePath: { eq: "cashRewards.png" }) {
         childImageSharp {
-          fixed(width: 329, quality: 100) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 329, quality: 100, layout: CONSTRAINED)
         }
       }
     }
   `);
   return (
-    <Section light reverse>
-      <div>
-        <Img fixed={data.file.childImageSharp.fixed} />
-      </div>
-      <div>
-        <Title>{t('Rewards in cash or VID')}</Title>
-        <Typography type="bodyThin">
-          {t(
-            'VideoCoin is the first and only project to reward workers and delegators with flexible options of cash rewards and VID'
-          )}
-          *.
-        </Typography>
-      </div>
-      <Disclaimer />
-    </Section>
+    <MainBlock
+      reverse
+      left={
+        <Section>
+          <GatsbyImage
+            alt=""
+            image={data.file.childImageSharp.gatsbyImageData}
+          />
+        </Section>
+      }
+      right={
+        <>
+          <Text marginB={16} variant="title">
+            Rewards in Cash or VID
+          </Text>
+          <Text>
+            VideoCoin is the first and only project to reward Workers and
+            Delegators with flexible options of cash rewards and VID.
+          </Text>
+        </>
+      }
+    />
   );
 };
 

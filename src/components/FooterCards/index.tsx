@@ -1,17 +1,22 @@
 import styled from 'styled-components';
 import { device } from '../../queries';
+import Colors from 'styles/Colors';
 
 const FooterCards = styled.div`
-  display: flex;
-  margin: 0 auto;
-  padding: 170px 64px 101px;
-  justify-content: center;
-  background-color: #281741;
-  @media ${device.tablet} {
-    flex-direction: column;
+  padding: 16px 0 24px;
+  background-color: ${Colors.white10};
+  @media (max-width: 768px) {
+    padding-bottom: 64px;
   }
-  @media ${device.mobile} {
-    padding: 170px 12px 100px;
+  & > div > div {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    & > * {
+      flex: 1;
+    }
   }
   & > div {
     flex: 1;

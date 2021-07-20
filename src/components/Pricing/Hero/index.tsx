@@ -6,14 +6,16 @@ import {
   PriceCardValue,
   PriceCardFeatures,
   Right,
-  Text,
 } from './styles';
-import { MarketingButton, Typography } from 'ui-kit';
 import Container from 'styles/Container';
-import { useTranslation } from 'react-i18next';
+import Text from 'components/UI/Text';
+import Button from 'components/UI/Button';
+import View from 'components/View';
+import Card from 'components/Card';
+import { useBreakpoint } from 'components/BrealpointProvider';
 
 const PricingHero = () => {
-  const { t } = useTranslation('pricing');
+  const { tablet } = useBreakpoint();
   const handleClick = () => {
     typeof window !== 'undefined' &&
       window.gtag('event', 'click', {
@@ -25,49 +27,43 @@ const PricingHero = () => {
       <Container>
         <Inner>
           <PriceCard>
-            <PriceCardValue>
-              <Typography type="display4" theme="dark">
-                $0.025
-              </Typography>
-              <Typography type="smallTitle" theme="dark" opacity="medium">
-                {t('per minute')}
-              </Typography>
-            </PriceCardValue>
-            <PriceCardFeatures>
-              <li>{t('Video Transcoding')}</li>
-              <li>{t('Livestreaming')}</li>
-              <li>{t('per profile')}</li>
-            </PriceCardFeatures>
-            <Typography type="caption" align="center">
-              * {t('Pricing subject to change')}
-            </Typography>
+            <Card>
+              <PriceCardValue>
+                <Text variant="title">$0.025</Text>
+                <Text variant="subtitle">per minute</Text>
+              </PriceCardValue>
+              <PriceCardFeatures>
+                <li>Video Transcoding</li>
+                <li>Livestreaming</li>
+                <li>per profile</li>
+              </PriceCardFeatures>
+              <Text variant="caption" align="center">
+                * Pricing subject to change
+              </Text>
+            </Card>
           </PriceCard>
           <Right>
-            <Text>
-              <Typography type="display2" theme="white">
-                {t('Start Today')}
-              </Typography>
-              <Typography type="subtitleThin" opacity="drift">
-                {t(
-                  'Pay one low price whether you are transcoding video or streaming live video'
-                )}
-              </Typography>
+            <Text variant="display2">Start Today</Text>
+            <Text marginB={24}>
+              Pay one low price whether you are transcoding video or streaming
+              live video
             </Text>
-            <div>
+
+            <View row>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://console.videocoin.network/sign-up?role=publisher"
                 onClick={handleClick}
               >
-                <MarketingButton>{t('Sign up for free')}</MarketingButton>
+                <Button>Sign up for free</Button>
               </a>
-              <a href="mailto:support@videocoin.network">
-                <MarketingButton theme="link-secondary">
-                  {t('Have Custom Requirements')}
-                </MarketingButton>
-              </a>
-            </div>
+              <View marginL={tablet ? 0 : 24} marginV={tablet ? 12 : 0}>
+                <a href="mailto:support@videocoin.network">
+                  <Button btnTheme="secondary">Have Custom Requirements</Button>
+                </a>
+              </View>
+            </View>
           </Right>
         </Inner>
       </Container>

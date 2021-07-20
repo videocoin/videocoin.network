@@ -39,7 +39,9 @@ const Form = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Button type='button' btnTheme="secondary">Learn More</Button>
+        <Button type="button" btnTheme="secondary">
+          Learn More
+        </Button>
       </a>
       {isSuccess ? (
         <S.SuccessForm>Success</S.SuccessForm>
@@ -52,9 +54,7 @@ const Form = () => {
             type="email"
             required
           />
-          <Button disabled={isLoading}>
-            Stay Informed
-          </Button>
+          <Button disabled={isLoading}>Stay Informed</Button>
         </form>
       )}
     </S.Form>

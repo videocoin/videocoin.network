@@ -1,7 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
 import {
-  Subtitle,
-  Title,
   Root,
   Img,
   Payment1,
@@ -13,7 +11,6 @@ import {
   Inner,
   FeatureTop,
 } from './styles';
-import { Typography } from 'ui-kit';
 import hero from '../assets/hero.png';
 import hero2x from '../assets/hero@2x.png';
 import heroMd from '../assets/hero_md.png';
@@ -24,27 +21,22 @@ import creditCard from '../assets/creditCard.svg';
 import dollar from '../assets/dollar.svg';
 import Container from 'styles/Container';
 import Disclaimer from 'components/Rewards/Disclaimer';
-import { useTranslation, Trans } from 'react-i18next';
+import Text from 'components/UI/Text';
 
 const RewardsHero = () => {
-  const { t } = useTranslation('rewards');
   const [value, setValue] = useState(1000);
   const onChange = (e: ChangeEvent<HTMLInputElement>) =>
     setValue(+e.target.value);
   return (
     <Root>
       <Container>
-        <Subtitle>
-          <div>
-            <Trans t={t} i18nKey="Videoсoin network rewards">
-              VideoCoin Network <span>Rewards</span>
-            </Trans>
-          </div>
-        </Subtitle>
-        <Title>{t('The Future Of Blockchain Staking')}</Title>
-        <Typography type="display4" theme="white" align="center">
-          {t('Earn Rewards in Cash')}
-        </Typography>
+        <Text uppercase variant="title2" color="violet50" align="center">
+          VideoCoin Network
+        </Text>
+        <Text variant="display1" align="center">
+          The Future Of Blockchain Staking
+        </Text>
+
         <Inner>
           <Img>
             <Payment1>${value}</Payment1>
@@ -70,13 +62,14 @@ const RewardsHero = () => {
                   <div>$</div>
                   <input type="number" value={value} onChange={onChange} />
                 </FeaturePayment>
-                <span>{t('cash payment calculator')}</span>
+                <Text variant="smallBodyAlt" color="violet80">
+                  Cash Payment Calculator
+                </Text>
               </FeatureTitle>
-              <p>
-                {t(
-                  'First and only project to make customer payments easy by directly taking credit card payments'
-                )}
-              </p>
+              <Text as="p" variant="caption">
+                First and only project to make customer payments easy by
+                directly taking credit card payments.
+              </Text>
             </li>
             <li>
               <FeatureTop>
@@ -85,7 +78,9 @@ const RewardsHero = () => {
                 <span>{value}</span>
               </FeatureTop>
               <FeatureTitle>
-                {t('Passes through the VideoCoin Network')}
+                <Text variant="smallBodyAlt" color="violet80">
+                  Passes through the VideoCoin Network
+                </Text>
               </FeatureTitle>
             </li>
             <li>
@@ -94,12 +89,13 @@ const RewardsHero = () => {
                 <div>$</div>
                 <span>{(value * 0.16).toFixed()}</span>
               </FeatureTop>
-              <FeatureTitle>{t('Workers Rewarded 80%')}</FeatureTitle>
-              <p>
-                {t(
-                  'First and only project to give workers the choice to receive rewards in cash or VID'
-                )}
-              </p>
+              <Text variant="smallBodyAlt" color="violet90" marginB={16}>
+                Workers Rewarded 80%
+              </Text>
+              <Text as="p" variant="caption">
+                First and only project to give workers the choice to receive
+                rewards in cash or VID.
+              </Text>
             </li>
             <li>
               <FeatureTop>
@@ -107,17 +103,17 @@ const RewardsHero = () => {
                 <div>$</div>
                 <span>{(value * 0.8).toFixed()}</span>
               </FeatureTop>
-              <FeatureTitle>{t('Delegators Rewarded 20% min')}</FeatureTitle>
-              <p>
-                {t(
-                  'First and only project to give delegators the choice to receive rewards in cash or VID'
-                )}
-              </p>
+              <Text variant="smallBodyAlt" color="violet90" marginB={16}>
+                Delegators Rewarded 20% min.
+              </Text>
+              <Text as="p" variant="caption">
+                First and only project to give delegators the choice to receive
+                rewards in cash or VID.
+              </Text>
             </li>
           </Features>
         </Inner>
       </Container>
-      <Disclaimer />
     </Root>
   );
 };

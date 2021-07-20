@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import { device } from '../../queries';
+import Colors from 'styles/Colors';
 
 export const Root = styled.footer`
-  background: #351661;
+  background: #1c0937;
 `;
 
 export const Inner = styled.div`
   display: flex;
-  padding: 60px 64px 50px;
+  padding: 40px 105px 45px;
   align-items: flex-start;
-  justify-content: center;
   @media (max-width: 1024px) {
     padding-left: 40px;
     padding-right: 40px;
@@ -21,7 +21,8 @@ export const Inner = styled.div`
     padding-right: 26px;
   }
   & > img {
-    margin-right: 90px;
+    margin-right: 86px;
+    margin-top: -8px;
     @media (max-width: 1024px) {
       width: 148px;
       margin-right: 32px;
@@ -34,24 +35,28 @@ export const Inner = styled.div`
   }
   & > div {
     &:not(:last-child) {
-      margin-right: 90px;
+      margin-right: 104px;
       @media (max-width: 1024px) {
         min-width: 138px;
         margin-right: 45px;
       }
     }
+    &:nth-child(3) {
+      margin-right: 66px;
+    }
   }
 `;
 
 export const Copyright = styled.div`
-  color: #ffffff52;
+  color: ${Colors.white40};
+  opacity: 0.72;
   text-align: center;
-  padding: 20px 0;
-  background: #290f4d;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.32px;
+  padding: 16px 0 20px;
+  background: ${Colors.violet80};
   line-height: 32px;
+  & > div:last-of-type {
+    opacity: 0.5;
+  }
 `;
 
 export const Links = styled.div`
@@ -64,11 +69,10 @@ export const Links = styled.div`
   a {
     font-weight: 500;
     text-decoration: none;
-    color: #ffffffb8;
-    margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.28px;
+    color: ${Colors.violet10};
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 2;
     transition: 0.15s ease-in-out;
     @media ${device.mobile} {
       font-size: 12px;
@@ -96,12 +100,11 @@ export const Link = styled.a.attrs(() => ({
 `;
 
 export const Title = styled.div<{ $isOpen: boolean }>`
-  font-size: 20px;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: 0.4px;
-  line-height: 32px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: ${Colors.violet10};
+  line-height: 40px;
+  margin-bottom: 17px;
   position: relative;
   &::before {
     display: none;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Typography } from 'ui-kit';
 import { Root, Btns } from './styles';
+import Text from 'components/UI/Text';
 
 const CookiePopup = () => {
   const [isOpen, setOpen] = useState(false);
@@ -16,11 +16,11 @@ const CookiePopup = () => {
   };
   return isOpen ? (
     <Root>
-      <Typography type="caption">This website uses cookies.</Typography>
-      <Typography type="tiny">
+      <Text variant="smallBody">This website uses cookies.</Text>
+      <Text variant="caption">
         By continuing to browse, you are agreeing to our use of cookies as
         explained in our cookie policy.
-      </Typography>
+      </Text>
       <Btns>
         <button type="submit" onClick={onOk}>
           Okay

@@ -1,13 +1,17 @@
 import React, { useEffect, useRef } from 'react';
-import Section from 'components/Section';
-import { Title } from './styles';
-import { Typography } from 'ui-kit';
 import lottie from 'lottie-web';
 import { animationData } from './animationData';
-import { useTranslation } from 'react-i18next';
+import MainBlock from 'components/MainBlock';
+import Text from 'components/UI/Text';
+import styled from 'styled-components';
+import Card from 'components/Card';
+import { Section } from './styles';
+
+const Animation = styled.div`
+  max-width: 460px;
+`;
 
 const Inflation = () => {
-  const { t } = useTranslation('rewards');
   const animationEl = useRef(null);
   const animation = useRef(null);
   useEffect(() => {
@@ -22,27 +26,35 @@ const Inflation = () => {
     }
   }, [animationEl]);
   return (
-    <Section>
-      <div>
-        <div ref={animationEl} />
-      </div>
-      <div>
-        <Title>{t('No Inflation Means Real Rewards')}</Title>
-        <Typography type="bodyThin">
-          {t(
-            'VideoCoin Network rewards workers and delegators up to 80% of the price paid by publishers in cash rather than from the minting of new tokens to pay rewards'
-          )}
-          <br />
-          <br />
-          {t(
-            'Other projects inflation-based reward systems continually add supply in to the market assuming demand will continuously increase at the same rate in order to keep the value of the token stable'
-          )}
-          {t(
-            'However if supply is added while demand remains static their token value falls'
-          )}
-        </Typography>
-      </div>
-    </Section>
+    <MainBlock
+      background="white20"
+      left={
+        <Animation>
+          <Card color="violet90">
+            <div ref={animationEl} />
+          </Card>
+        </Animation>
+      }
+      right={
+        <Section>
+          <Text marginB={16} variant="title">
+            No Inflation Means Real Rewards
+          </Text>
+          <Text>
+            VideoCoin Network rewards Workers and Delegators up to 80% of the
+            price paid by publishers in cash, rather than from the minting of
+            new tokens to pay rewards.
+            <br />
+            <br />
+            Other projects' inflation-based reward systems continually add
+            supply into the market assuming demand will continuously increase at
+            the same rate, in order to keep the value of the token stable.
+            However, if supply is added while demand remains static, their token
+            value falls.
+          </Text>
+        </Section>
+      }
+    />
   );
 };
 

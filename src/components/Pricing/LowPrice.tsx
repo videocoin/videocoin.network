@@ -1,37 +1,44 @@
 import React from 'react';
-import Img from 'gatsby-image';
-import { Typography } from 'ui-kit/*';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
-import Section from 'components/Section';
-import { useTranslation } from 'react-i18next';
-
+import MainBlock from 'components/MainBlock';
+import Text from 'components/UI/Text';
+import styled from 'styled-components';
+export const Section = styled.div`
+  padding: 24px 0;
+`;
 const LowPrice = () => {
-  const { t } = useTranslation('pricing');
   const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "price.png" }) {
+    {
+      file: file(relativePath: { eq: "developersPricing.png" }) {
         childImageSharp {
-          fluid(maxWidth: 324, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(width: 467, quality: 100, layout: CONSTRAINED)
         }
       }
     }
   `);
   return (
-    <Section mobileReverse reverse light>
-      <Img fluid={data.file.childImageSharp.fluid} />
-      <div>
-        <Typography theme="white" type="smallTitle">
-          {t('How is our price so low')}
-        </Typography>
-        <Typography type="subtitleThin" opacity="drift">
-          {t(
-            'By tapping into resources that would otherwise have gone unused we are able to keep costs as low as possible We pass those savings on to you'
-          )}
-        </Typography>
-      </div>
-    </Section>
+    <MainBlock
+      background="white20"
+      left={
+        <Section>
+          <GatsbyImage
+            alt=""
+            image={data.file.childImageSharp.gatsbyImageData}
+          />
+        </Section>
+      }
+      right={
+        <>
+          <Text variant="title">How is our price so low</Text>
+          <Text>
+            By tapping into resources that would otherwise have gone unused we
+            are able to keep costs as low as possible We pass those savings on
+            to you
+          </Text>
+        </>
+      }
+    />
   );
 };
 

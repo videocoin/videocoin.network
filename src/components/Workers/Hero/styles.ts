@@ -1,34 +1,37 @@
 import styled from 'styled-components';
-import { Typography } from 'ui-kit';
 import { device } from '../../../queries';
 
 export const Root = styled.div`
-  padding: 250px 0 230px;
+  padding: 133px 0 131px;
   overflow: hidden;
   position: relative;
-  margin-top: -92px;
-  &::after {
-    content: '';
-    position: absolute;
-    display: block;
-    left: 0;
-    bottom: 0;
-    height: 190px;
-    width: 100%;
-    background-image: linear-gradient(
+  background: linear-gradient(
       180deg,
-      rgba(28, 9, 55, 0) 0%,
-      #1c0937 100%
-    );
-    @media ${device.tablet} {
-      display: none;
-    }
-  }
+      #ffffff 11.51%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      27.6% 43.78% at 86.81% 100%,
+      rgba(255, 74, 122, 0.15) 0%,
+      rgba(245, 53, 104, 0) 100%
+    ),
+    radial-gradient(
+      42.56% 79.71% at 56.94% 100%,
+      rgba(114, 52, 200, 0.15) 0%,
+      rgba(144, 86, 228, 0) 100%
+    ),
+    radial-gradient(
+      36.18% 61.44% at 100% 0%,
+      rgba(255, 138, 60, 0.05) 0%,
+      rgba(255, 138, 60, 0) 100%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #f2f0f4 100%);
   @media ${device.tablet} {
-    padding-top: 0;
+    padding-top: 92px;
     padding-bottom: 92px;
   }
   @media ${device.mobile} {
+    padding-top: 52px;
     padding-bottom: 72px;
   }
 `;
@@ -37,32 +40,34 @@ export const Inner = styled.div`
   justify-content: flex-end;
   position: relative;
   @media ${device.tablet} {
+    align-items: center;
+    flex-direction: column-reverse;
     justify-content: center;
   }
 `;
-export const Left = styled.div``;
+export const Left = styled.div`
+  display: none;
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 87px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 53px;
+    img {
+      max-width: 300px;
+    }
+  }
+`;
 export const Right = styled.div`
   max-width: 670px;
+  margin-right: 72px;
   @media ${device.tablet} {
-    max-width: 640px;
-    margin: -40px auto 0;
     text-align: center;
-  }
-  @media ${device.mobile} {
-    margin-top: -20px;
-  }
-`;
-
-export const Subtitle = styled(Typography)`
-  margin-bottom: 12px;
-  span {
-    color: #fd9369;
-  }
-`;
-export const Title = styled(Typography)`
-  margin-bottom: 64px;
-  span {
-    color: #53eaaa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
   }
 `;
 
@@ -75,37 +80,10 @@ export const Bg = styled.div`
   display: flex;
   justify-content: center;
   @media ${device.tablet} {
-    position: relative;
-    min-height: 540px;
-  }
-
-  img {
-    width: 2300px;
-    height: 100%;
-    @media ${device.tablet} {
-      width: 930px;
-      margin-left: -150px;
-    }
-    @media ${device.mobile} {
-      width: 710px;
-      margin-left: -94px;
-      margin-top: 20px;
-    }
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 190px;
-    background: linear-gradient(180deg, rgba(28, 9, 55, 0) 0%, #1c0937 100%);
     display: none;
-    @media ${device.tablet} {
-      display: block;
-    }
-    @media ${device.mobile} {
-      bottom: -10px;
-    }
+  }
+  img {
+    width: 2400px;
+    height: 785px;
   }
 `;

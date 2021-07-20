@@ -1,46 +1,60 @@
 import React from 'react';
-import Section from 'components/Section';
-import { Title, MinimumsCard } from 'components/Rewards/styles';
-import { Typography } from 'ui-kit/*';
-import { useTranslation } from 'react-i18next';
+import { MinimumsCard, Section } from 'components/Rewards/styles';
+import MainBlock from 'components/MainBlock';
+import Text from 'components/UI/Text';
+import Card from 'components/Card';
 
-const Card = () => {
-  const { t } = useTranslation('rewards');
+const Right = () => {
   return (
-    <MinimumsCard>
-      <ul>
-        <li>
-          <div>{t('Worker Node')}</div>
-          <div>{t('50000 VID minimum stake')}</div>
-          <div>*{t('minimum will be re-evaluated every month')}</div>
-        </li>
-        <li>
-          <div>{t('Delegate')}</div>
-          <div>{t('1 VID token minimum to stake')}</div>
-        </li>
-      </ul>
-    </MinimumsCard>
+    <Card>
+      <MinimumsCard>
+        <ul>
+          <li>
+            <Text variant="smallBody" withGradient>
+              Worker Node
+            </Text>
+            <Text color="violet70" variant="smallBodyAlt">
+              50,000 VID minimum stake
+            </Text>
+            <Text variant="caption" color="grey10">
+              *minimum will be re-evaluated every month
+            </Text>
+          </li>
+          <li>
+            <Text variant="smallBody" withGradient>
+              Delegate
+            </Text>
+            <Text color="violet70" variant="smallBodyAlt">
+              1 VID token minimum to stake
+            </Text>
+          </li>
+        </ul>
+      </MinimumsCard>
+    </Card>
   );
 };
 
 const Minimums = () => {
-  const { t } = useTranslation('rewards');
   return (
-    <Section light reverse>
-      <div>
-        <div>
-          <Card />
-        </div>
-      </div>
-      <div>
-        <Title>{t('Secure but Attainable Minimums')}</Title>
-        <Typography type="bodyThin">
-          {t(
-            'Worker Node minimums are far lower than the $86M USD average minimum stake on similar projects'
-          )}
-        </Typography>
-      </div>
-    </Section>
+    <MainBlock
+      reverse
+      left={
+        <Section>
+          <Right />
+        </Section>
+      }
+      right={
+        <>
+          <Text variant="title" marginB={16}>
+            Secure but <br /> Attainable Minimums
+          </Text>
+          <Text>
+            Worker Node minimums are far lower than the $8.6M USD average
+            minimum stake on similar projects.
+          </Text>
+        </>
+      }
+    />
   );
 };
 

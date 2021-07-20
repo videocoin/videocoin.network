@@ -1,35 +1,35 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import Img from 'gatsby-image';
-import { MarketingButton, Typography } from 'ui-kit';
-import { Descr, ImgWrapper } from './styles';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import Text from 'components/UI/Text';
+import Button from 'components/UI/Button';
+import View from 'components/View';
 
 const CashBased = () => {
   const data = useStaticQuery(graphql`
-    query {
+    {
       cash: file(relativePath: { eq: "cashStaking.png" }) {
         childImageSharp {
-          fluid(maxWidth: 642, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
+          gatsbyImageData(width: 307, quality: 100, layout: CONSTRAINED)
         }
       }
     }
   `);
   return (
-    <Link to="/worker-staking">
-      <ImgWrapper>
-        <Img fluid={data.cash.childImageSharp.fluid} />
-      </ImgWrapper>
-      <Descr>
-        <Typography type="display4">Cash Based Staking</Typography>
-        <Typography type="subtitleThin">
-          Earn cash rewards by staking directly with workers on the VideoCoin
-          Network.
-        </Typography>
-      </Descr>
-      <MarketingButton>Learn More</MarketingButton>
+    <Link to="cash-staking">
+      <View marginB={20}>
+        <GatsbyImage alt="" image={data.cash.childImageSharp.gatsbyImageData} />
+      </View>
+      <Text variant="title2" color="violet80" marginB={4}>
+        Cash-Based Staking
+      </Text>
+      <Text color="grey70_72" marginB={20}>
+        Earn cash rewards by staking directly with Workers on the VideoCoin
+        Network.
+      </Text>
+      <div>
+        <Button>Cash-Based Staking</Button>
+      </div>
     </Link>
   );
 };

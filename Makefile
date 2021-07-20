@@ -19,7 +19,6 @@ build:
 
 deps:
 	yarn --ignore-optional
-	cd ./ui-kit && yarn && cd -
 
 docker-build:
 	docker build --build-arg GA_TRACKING_ID=${GA_TRACKING_ID} --build-arg AW_TRACKING_ID=${AW_TRACKING_ID} -t ${REGISTRY_SERVER}/${REGISTRY_PROJECT}/${NAME}:${VERSION} -f Dockerfile .

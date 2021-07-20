@@ -3,6 +3,11 @@ require('dotenv').config({
 });
 
 module.exports = {
+  flags: {
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
+    LMDB_STORE: true,
+  },
   siteMetadata: {
     title: `VideoCoin Network`,
     description: `The VideoCoin Network is a powerful API-first, decentralized video platform that utilizes untapped computing resources to save you money.`,
@@ -11,12 +16,12 @@ module.exports = {
     twitterUsername: '@VideoCoinHQ',
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-plugin-load-script',
       options: {
-        src:
-          'https://cdn.jsdelivr.net/npm/indigo-player@1/lib/indigo-player.js',
+        src: 'https://cdn.jsdelivr.net/npm/indigo-player@1/lib/indigo-player.js',
       },
     },
     `gatsby-plugin-react-helmet`,
