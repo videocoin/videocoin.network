@@ -22,6 +22,9 @@ const Arrow = () => {
 
 SwiperCore.use([Controller, Pagination]);
 
+const sort = [4, 1, 3, 2, 5, 6, 7];
+const sortedNews = sort.map((id) => news[id]);
+
 const News = () => {
   const [swiper, setControlledSwiper] = useState<SwiperCore | null>(null);
 
@@ -75,7 +78,7 @@ const News = () => {
           slidesPerView={1}
           pagination={{ clickable: true }}
         >
-          {news.map(renderItem)}
+          {sortedNews.map(renderItem)}
         </Swiper>
       </S.Inner>
     </S.Root>
