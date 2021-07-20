@@ -25,11 +25,17 @@ resources:
 
 ingress:
   enabled: true
-  host: dev.videocoin.network
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-dns-prod
     kubernetes.io/ingress.class: nginx
-  secret: tls-cert-videocoin-network
+  hosts:
+    - host: dev.videocoin.network
+      paths:
+        - /
+  tls:
+    - secretName: tls-cert-dev-videocoin-network
+      hosts:
+        - dev.videocoin.network
 
 config:
   nginx.conf: |
