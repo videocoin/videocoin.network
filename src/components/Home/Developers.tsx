@@ -4,7 +4,7 @@ import Container from 'styles/Container';
 import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import Card from 'components/Card';
 import encodingIcon from './assets/encoding.svg';
 import ecosystemIcon from './assets/ecosystem.svg';
@@ -46,63 +46,6 @@ const Developers = () => {
       </Container>
       <MainBlock
         reverse
-        left={
-          <GatsbyImage
-            alt=""
-            image={data.image.childImageSharp.gatsbyImageData}
-          />
-        }
-        right={
-          <>
-            <Text variant="subtitle" withGradient>
-              Video Processing
-            </Text>
-            <Text variant="title" marginB={16} color="violet80">
-              Unleash robust video infrastructure with just a few lines of code
-            </Text>
-            <Text color="grey70_72" marginB={48}>
-              VideoCoin provides <strong>efficient</strong> and{' '}
-              <strong>cost-effective</strong> video processing, whether you’re
-              developing for on-demand or VR or livestreaming — or something
-              completely new.
-            </Text>
-          </>
-        }
-      />
-      <Container>
-        <Text align="center" variant="subtitle" color="violet90" marginB={12}>
-          Use VideoCoin’s decentralized network <br /> of compute power to
-          realize your creative vision.
-        </Text>
-        <S.Features>
-          <Card>
-            <View row>
-              <img src={ecosystemIcon} width={32} height={32} alt="" />
-              <Text variant="bodyAlt" color="violet70" marginL={20}>
-                Open source, API-first ecosystem
-              </Text>
-            </View>
-          </Card>
-          <Card>
-            <View row>
-              <img src={encodingIcon} width={32} height={32} alt="" />
-              <Text variant="bodyAlt" color="violet70" marginL={20}>
-                Encoding, bit rate packaging, rights management
-              </Text>
-            </View>
-          </Card>
-          <Card>
-            <View row>
-              <img src={costIcon} width={32} height={32} alt="" />
-              <Text variant="bodyAlt" color="violet70" marginL={20}>
-                A fraction of the cost of others
-              </Text>
-            </View>
-          </Card>
-        </S.Features>
-      </Container>
-
-      <MainBlock
         left={
           <GatsbyImage
             alt=""
@@ -161,8 +104,69 @@ const Developers = () => {
           </Card>
         </S.Features>
       </Container>
+      <MainBlock
+        left={
+          <GatsbyImage
+            alt=""
+            image={data.image.childImageSharp.gatsbyImageData}
+          />
+        }
+        right={
+          <>
+            <Text variant="subtitle" withGradient>
+              Video Processing
+            </Text>
+            <Text variant="title" marginB={16} color="violet80">
+              Unleash robust video infrastructure with just a few lines of code
+            </Text>
+            <Text color="grey70_72" marginB={48}>
+              VideoCoin provides <strong>efficient</strong> and{' '}
+              <strong>cost-effective</strong> video processing, whether you’re
+              developing for on-demand or VR or livestreaming — or something
+              completely new.
+            </Text>
+          </>
+        }
+      />
+      <Container>
+        <Text align="center" variant="subtitle" color="violet90" marginB={12}>
+          Use VideoCoin’s decentralized network <br /> of compute power to
+          realize your creative vision.
+        </Text>
+        <S.Features>
+          <Card>
+            <View row>
+              <img src={ecosystemIcon} width={32} height={32} alt="" />
+              <Text variant="bodyAlt" color="violet70" marginL={20}>
+                Open source, API-first ecosystem
+              </Text>
+            </View>
+          </Card>
+          <Card>
+            <View row>
+              <img src={encodingIcon} width={32} height={32} alt="" />
+              <Text variant="bodyAlt" color="violet70" marginL={20}>
+                Encoding, bit rate packaging, rights management
+              </Text>
+            </View>
+          </Card>
+          <Card>
+            <View row>
+              <img src={costIcon} width={32} height={32} alt="" />
+              <Text variant="bodyAlt" color="violet70" marginL={20}>
+                A fraction of the cost of others
+              </Text>
+            </View>
+          </Card>
+        </S.Features>
+      </Container>
+
       <Join
-        button={<Button simple>Learn More</Button>}
+        button={
+          <Link to="/developers">
+            <Button simple>Learn More</Button>
+          </Link>
+        }
         text={'Ignite your innovations with VideoCoin'}
       />
     </S.Root>

@@ -58,8 +58,8 @@ const DevelopersPage = () => (
   <Layout>
     <SEO title="Developers" />
     <DevelopersHero />
-    <CodeSmarter />
     <NFT />
+    <CodeSmarter />
     <Pricing />
     <DemoApplication />
     <Tutorials

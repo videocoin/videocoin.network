@@ -17,6 +17,7 @@ const NFT = () => {
 
   return (
     <MainBlock
+      reverse
       background="white10"
       left={
         <GatsbyImage

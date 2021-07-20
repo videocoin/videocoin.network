@@ -18,7 +18,6 @@ const CodeSmarter = () => {
 
   return (
     <MainBlock
-      reverse
       background="white10"
       left={
         <GatsbyImage

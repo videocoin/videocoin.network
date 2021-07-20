@@ -38,6 +38,11 @@ const Hero = () => {
               The VideoCoin ecosystem delivers innovative services on the
               blockchain that reimagine the future of video.
             </Text>
+            <br />
+            <Text>
+              Our current focus is bringing Video NFTs to everyone through our
+              integration with Filecoin.
+            </Text>
           </View>
         </div>
       </Container>
