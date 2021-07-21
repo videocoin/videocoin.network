@@ -2,12 +2,14 @@ import React from 'react';
 import * as S from './styles';
 import Text from 'components/UI/Text';
 import Button from 'components/UI/Button';
+import { GatsbyImage } from 'gatsby-plugin-image';
+
 const NewsCard = ({ item }) => {
   const { cover, link, source, title, date, description } = item;
   return (
     <S.NewsCard>
       <div>
-        <img src={cover} alt="" />
+        <GatsbyImage image={cover} alt="" />
       </div>
       <div>
         <Text variant="caption" color="orange60">

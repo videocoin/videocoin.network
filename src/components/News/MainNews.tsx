@@ -5,16 +5,34 @@ import Button from 'components/UI/Button';
 import Text from 'components/UI/Text';
 import news from '../../news';
 import { useBreakpoint } from 'components/BrealpointProvider';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const MainNews = () => {
   const { mobile } = useBreakpoint();
   const { cover, date, source, link, title, description } = news['1'];
+  const { allFile } = useStaticQuery(graphql`
+    {
+      allFile(filter: { relativeDirectory: { eq: "news" } }) {
+        edges {
+          node {
+            name
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height: 295, width: 590)
+            }
+          }
+        }
+      }
+    }
+  `);
+  const { node: coverNode } = allFile.edges.find(
+    ({ node }) => node.name === cover
+  );
+  const image = getImage(coverNode);
   return (
     <Container>
       <S.MainNews>
-        <div>
-          <img src={cover} alt="" />
-        </div>
+        <div>{image && <GatsbyImage image={image} alt="" />}</div>
         <div>
           <Text variant="caption" color="orange60">
             {date}

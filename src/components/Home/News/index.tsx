@@ -6,6 +6,8 @@ import * as S from './styles';
 import Text from 'components/UI/Text';
 import Colors from 'styles/Colors';
 import news from '../../../news';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Arrow = () => {
   return (
@@ -13,8 +15,8 @@ const Arrow = () => {
       <path
         d="M8 4l9 8.296L8 20"
         stroke={Colors.grey90}
-        stroke-width="2"
-        stroke-linejoin="bevel"
+        strokeWidth="2"
+        strokeLinejoin="bevel"
       />
     </svg>
   );
@@ -23,20 +25,38 @@ const Arrow = () => {
 SwiperCore.use([Controller, Pagination]);
 
 const sort = [4, 1, 3, 2, 5, 6, 7];
-const sortedNews = sort.map((id) => news[id]);
 
 const News = () => {
   const [swiper, setControlledSwiper] = useState<SwiperCore | null>(null);
+  const { allFile } = useStaticQuery(graphql`
+    {
+      allFile(filter: { relativeDirectory: { eq: "news" } }) {
+        edges {
+          node {
+            name
+            childImageSharp {
+              gatsbyImageData(layout: FIXED, height: 96, width: 192)
+            }
+          }
+        }
+      }
+    }
+  `);
+  const sortedNews = sort.map((id) => {
+    const { node } = allFile.edges.find(
+      ({ node }) => node.name === news[id].cover
+    );
+    return { ...news[id], cover: node.childImageSharp.gatsbyImageData };
+  });
 
   const handleNext = () => swiper?.slideNext();
   const handlePrev = () => swiper?.slidePrev();
-
   const renderItem = ({ id, link, cover, date, title }) => {
     return (
       <SwiperSlide key={id}>
         <S.NewsItem href={link} target="_blank" rel="noopener noreferrer">
           <div>
-            <img src={cover} alt="" width={192} height={96} />
+            <GatsbyImage alt="" image={cover} />
           </div>
           <div>
             <Text variant="caption" color="violet60">

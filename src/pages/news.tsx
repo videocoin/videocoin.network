@@ -6,8 +6,23 @@ import MainNews from 'components/News/MainNews';
 import NewsList from 'components/News/NewsList';
 import Join from 'components/Home/Join';
 import Button from 'components/UI/Button';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const News = () => {
+  const { allFile } = useStaticQuery(graphql`
+    {
+      allFile(filter: { relativeDirectory: { eq: "news" } }) {
+        edges {
+          node {
+            name
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, height: 184, width: 368)
+            }
+          }
+        }
+      }
+    }
+  `);
   return (
     <Layout>
       <SEO title="News" />
@@ -17,8 +32,8 @@ const News = () => {
       <Text variant="display1" align="center">
         Newsroom
       </Text>
-      <MainNews />
-      <NewsList />
+      <MainNews covers={allFile} />
+      <NewsList covers={allFile} />
       <Join
         text="Read all of our news on Medium"
         button={
