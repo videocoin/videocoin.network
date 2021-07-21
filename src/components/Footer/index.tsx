@@ -12,7 +12,7 @@ const Footer = () => {
     <Root>
       <Container>
         <Inner>
-          <Logo light width={248} />
+          <Logo light width={248} height={75} />
           <Menu title="Connect">
             <Social />
           </Menu>

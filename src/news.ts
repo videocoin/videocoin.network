@@ -1,7 +1,7 @@
 const news = {
   1: {
     id: 1,
-    cover: 'https://miro.medium.com/max/1400/1*Ixxo_V5ZbercPnVt4tSWFw.png',
+    cover: '/images/news/1.jpeg',
     title: 'Have Questions About NFT Marketplace Alpha? We’ve Got Answers!',
     date: 'July 14th, 2021',
     link: 'https://medium.com/videocoin/have-questions-about-nft-marketplace-alpha-weve-got-answers-852b757102f0',
@@ -11,7 +11,7 @@ const news = {
   },
   2: {
     id: 2,
-    cover: 'https://miro.medium.com/max/1400/0*c1uJMuqHJPUdwloA',
+    cover: '/images/news/2.jpeg',
     title: 'VideoCoin NFT Marketplace Alpha Now Live',
     date: 'July 1st, 2021',
     link: 'https://medium.com/videocoin/videocoin-nft-marketplace-alpha-now-live-e3e344da407e',
@@ -21,7 +21,7 @@ const news = {
   },
   3: {
     id: 3,
-    cover: '/images/news/cryptomodethumb.png',
+    cover: '/images/news/cryptomodethumb.jpeg',
     title:
       'Mogul Productions One of Several Startups Bringing NFTs to Film Industry',
     date: 'June 24th, 2021',
@@ -32,7 +32,7 @@ const news = {
   },
   4: {
     id: 4,
-    cover: '/images/news/forbesthumb.png',
+    cover: '/images/news/forbesthumb.jpeg',
     title: 'Are Movies And Streaming The Next Frontier For NFTs?',
     date: 'June 1st, 2021',
     link: 'https://www.forbes.com/sites/lawrencewintermeyer/2021/06/01/are-movies-and-streaming-the-next-frontier-for-nfts/?sh=67f878af2b13',
@@ -42,7 +42,7 @@ const news = {
   },
   5: {
     id: 5,
-    cover: '/images/news/crytponingthumb.png',
+    cover: '/images/news/crytponingthumb.jpeg',
     title:
       'Built on Filecoin and IPFS, NFT.Storage offers free protection for NFT asset data',
     date: 'April 29th, 2021',
@@ -53,7 +53,7 @@ const news = {
   },
   6: {
     id: 6,
-    cover: 'https://miro.medium.com/max/1400/0*vRREWK3ypT2QR5Ev',
+    cover: '/images/news/6.jpeg',
     title:
       'Filecoin (FIL) to Power Video NFTs Through Integration with VideoCoin',
     date: 'April 10th, 2021',
@@ -64,7 +64,7 @@ const news = {
   },
   7: {
     id: 7,
-    cover: '/images/news/coinspeakethumb.png',
+    cover: '/images/news/coinspeakethumb.jpeg',
     title: 'DeFi World Is About to Get Its First Video NFT Platform',
     date: 'April 9th, 2021',
     link: 'https://www.coinspeaker.com/defi-world-video-nft-platform/',

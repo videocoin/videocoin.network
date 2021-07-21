@@ -25,7 +25,7 @@ const MainBlock = ({
             {right}
           </View>
           <S.Decoration>
-            <img src={decoration} width={569} alt="" />
+            <img src={decoration} width={569} height={364} alt="" />
           </S.Decoration>
         </S.Inner>
       </Container>
