@@ -40,7 +40,7 @@ const Stakers = () => {
         }
         right={
           <>
-            <Text variant="subtitle" withGradient>
+            <Text variant="subtitle" withGradient uppercase>
               Put your VID to work
             </Text>
             <Text variant="title" marginB={16} color="violet80">

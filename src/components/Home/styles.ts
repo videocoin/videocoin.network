@@ -48,10 +48,8 @@ export const Portrait = styled.div`
   border: 2px solid ${Colors.grey70};
   border-radius: 24px;
   flex-shrink: 0;
-  @media (max-width: 768px) {
-    img {
-      border-radius: 16px;
-    }
+  img {
+    border-radius: 16px;
   }
 `;
 

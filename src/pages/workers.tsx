@@ -122,7 +122,7 @@ const howItWorks = [
     desc: (
       <>
         Upon completion of work validation, you will be paid for the work
-        completed in cash. Cash payments will be handled by
+        completed in cash. Cash payments will be handled by{' '}
         <a
           href="https://publicmint.com/"
           target="_blank"

@@ -107,7 +107,7 @@ const Partners = () => {
       <Container>
         <div>
           <S.Decoration>
-            <img src={decoration} width={569} alt="" />
+            <img src={decoration} width={569} height={364} alt="" />
           </S.Decoration>
           <View centerV row centerH marginB={43} column={mobile}>
             <img src={partners} width={56} height={56} alt="" />

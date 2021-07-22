@@ -5,7 +5,7 @@ import View, { ViewProps } from 'components/View';
 import { device } from '../../queries';
 
 const subtitle = css`
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.66;
   font-weight: 600;
   @media ${device.tablet} {

@@ -54,7 +54,7 @@ const Developers = () => {
         }
         right={
           <>
-            <Text variant="subtitle" withGradient>
+            <Text variant="subtitle" withGradient uppercase>
               Video NFTs
             </Text>
             <Text variant="title" marginB={16} color="violet80">
@@ -113,7 +113,7 @@ const Developers = () => {
         }
         right={
           <>
-            <Text variant="subtitle" withGradient>
+            <Text variant="subtitle" withGradient uppercase>
               Video Processing
             </Text>
             <Text variant="title" marginB={16} color="violet80">

@@ -42,7 +42,7 @@ const Workers = () => {
         }
         right={
           <>
-            <Text variant="subtitle" withGradient>
+            <Text variant="subtitle" withGradient uppercase>
               Tap our Network
             </Text>
             <Text variant="title" marginB={16} color="violet80">
