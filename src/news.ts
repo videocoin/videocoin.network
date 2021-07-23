@@ -72,6 +72,16 @@ const news = {
     description:
       'If you’re a follower of the crypto/blockchain world, there’s a good chance that you might have heard of NTFs (non-fungible tokens) by now. Though once an ambiguous part of blockchain technology, NFTs are now taking on the digital art and gaming world by storm. ',
   },
+  8: {
+    id: 8,
+    cover: '8',
+    date: 'July 22th, 2021',
+    title: 'Everybody Wants to Get Into the NFT Act!',
+    link: 'https://medium.com/videocoin/everybody-wants-to-get-into-the-nft-act-813b29bc024b',
+    source: 'VideoCoin News',
+    description:
+      'Technology and content go hand-in-hand. Content creators and creatives must also be technologists with expertise over the tech that powers their mediums.',
+  },
 };
 
 export default news;
