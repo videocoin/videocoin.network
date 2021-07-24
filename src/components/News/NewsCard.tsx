@@ -18,9 +18,11 @@ const NewsCard = ({ item }) => {
         <Text variant="smallBodyAlt" color="violet60">
           {source}
         </Text>
-        <Text variant="subtitle" marginB={16} color="violet80">
-          {title}
-        </Text>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <Text variant="subtitle" marginB={16} color="violet80">
+            {title}
+          </Text>
+        </a>
         <S.Description variant="smallBody">{description}</S.Description>
         <a href={link} target="_blank" rel="noopener noreferrer">
           <Button>Read more</Button>

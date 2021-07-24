@@ -40,13 +40,15 @@ const MainNews = () => {
           <Text variant="smallBodyAlt" color="violet60">
             {source}
           </Text>
-          <Text
-            variant={mobile ? 'subtitle' : 'title'}
-            marginB={16}
-            color="violet80"
-          >
-            {title}
-          </Text>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <Text
+              variant={mobile ? 'subtitle' : 'title'}
+              marginB={16}
+              color="violet80"
+            >
+              {title}
+            </Text>
+          </a>
           <S.Description>{description}</S.Description>
           <a href={link} target="_blank" rel="noopener noreferrer">
             <Button>Read More</Button>
