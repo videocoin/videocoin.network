@@ -1,9 +1,15 @@
+import { format, parseISO } from 'date-fns';
+
+const formatDate = (date: string) => {
+  return format(parseISO(date), 'LLLL do, yyyy');
+};
+
 const news = {
   1: {
     id: 1,
     cover: '1',
     title: 'Have Questions About NFT Marketplace Alpha? We’ve Got Answers!',
-    date: 'July 14th, 2021',
+    date: formatDate('2021-07-14'),
     link: 'https://medium.com/videocoin/have-questions-about-nft-marketplace-alpha-weve-got-answers-852b757102f0',
     source: 'VideoCoin News',
     description:
@@ -13,7 +19,7 @@ const news = {
     id: 2,
     cover: '2',
     title: 'VideoCoin NFT Marketplace Alpha Now Live',
-    date: 'July 1st, 2021',
+    date: formatDate('2021-07-01'),
     link: 'https://medium.com/videocoin/videocoin-nft-marketplace-alpha-now-live-e3e344da407e',
     source: 'VideoCoin News',
     description:
@@ -24,7 +30,7 @@ const news = {
     cover: 'cryptomodethumb',
     title:
       'Mogul Productions One of Several Startups Bringing NFTs to Film Industry',
-    date: 'June 24th, 2021',
+    date: formatDate('2021-06-24'),
     link: 'https://cryptomode.com/mogul-productions-one-of-several-startups-bringing-nfts-to-film-industry/',
     source: 'Crypto Mode',
     description:
@@ -34,7 +40,7 @@ const news = {
     id: 4,
     cover: 'forbesthumb',
     title: 'Are Movies And Streaming The Next Frontier For NFTs?',
-    date: 'June 1st, 2021',
+    date: formatDate('2021-06-01'),
     link: 'https://www.forbes.com/sites/lawrencewintermeyer/2021/06/01/are-movies-and-streaming-the-next-frontier-for-nfts/?sh=67f878af2b13',
     source: 'Forbes',
     description:
@@ -45,7 +51,7 @@ const news = {
     cover: 'crytponingthumb',
     title:
       'Built on Filecoin and IPFS, NFT.Storage offers free protection for NFT asset data',
-    date: 'April 29th, 2021',
+    date: formatDate('2021-04-29'),
     link: 'https://www.cryptoninjas.net/2021/04/29/built-on-filecoin-and-ipfs-nft-storage-offers-free-protection-for-nft-asset-data/',
     source: 'CryptoNinjas',
     description:
@@ -56,7 +62,7 @@ const news = {
     cover: '6',
     title:
       'Filecoin (FIL) to Power Video NFTs Through Integration with VideoCoin',
-    date: 'April 10th, 2021',
+    date: formatDate('2021-04-10'),
     link: 'https://en.ethereumworldnews.com/filecoin-fil-to-power-video-nfts-through-integration-with-videocoin/',
     source: 'Ethereum World News',
     description:
@@ -66,7 +72,7 @@ const news = {
     id: 7,
     cover: 'coinspeakethumb',
     title: 'DeFi World Is About to Get Its First Video NFT Platform',
-    date: 'April 9th, 2021',
+    date: formatDate('2021-04-09'),
     link: 'https://www.coinspeaker.com/defi-world-video-nft-platform/',
     source: 'Coinspeaker',
     description:
@@ -75,7 +81,7 @@ const news = {
   8: {
     id: 8,
     cover: '8',
-    date: 'July 22th, 2021',
+    date: formatDate('2021-07-22'),
     title: 'Everybody Wants to Get Into the NFT Act!',
     link: 'https://medium.com/videocoin/everybody-wants-to-get-into-the-nft-act-813b29bc024b',
     source: 'VideoCoin News',
