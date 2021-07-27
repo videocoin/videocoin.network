@@ -44,7 +44,7 @@ const TokenHero = () => {
                   them{' '}
                 </span>
                 <a
-                  href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinNetworkTermsofService.html"
+                  href="https://storage.googleapis.com/videocoin-network-policies/VideoCoinTCupdated103018.html"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
