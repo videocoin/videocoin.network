@@ -84,7 +84,7 @@ const Lesson = ({ data }: any) => {
           </Inner>
           <ClaimButton>
             <a href={googleLink} target="_blank" rel="noopener noreferrer">
-              <Button>Claim 10 VID Token</Button>
+              <Button>Claim VID Token</Button>
             </a>
           </ClaimButton>
         </Wrapper>
