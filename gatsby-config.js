@@ -6,7 +6,7 @@ module.exports = {
   flags: {
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
-    LMDB_STORE: true,
+    LMDB_STORE: false,
   },
   siteMetadata: {
     title: `VideoCoin Network`,
