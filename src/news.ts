@@ -88,6 +88,17 @@ const news = {
     description:
       'Technology and content go hand-in-hand. Content creators and creatives must also be technologists with expertise over the tech that powers their mediums.',
   },
+  9: {
+    id: 9,
+    cover: '9',
+    date: formatDate('2021-08-13'),
+    title:
+      'This Week in NFTs: As the NFT Boom Roars Back, Musicians, Influencers, and Athletes Take Notice',
+    link: 'https://medium.com/videocoin/this-week-in-nfts-as-the-nft-boom-roars-back-musicians-influencers-and-athletes-take-notice-685e7f50bd09',
+    source: 'VideoCoin News',
+    description:
+      'Musicians, Influencers, and Athletes are taking NFTs more seriously as they come back into the spotlight. Following high-profile NFT drops in the first quarter of the year, other public figures have since quietly spent their time developing their NFT strategies.',
+  },
 };
 
 export default news;

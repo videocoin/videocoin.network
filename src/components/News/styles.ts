@@ -6,7 +6,7 @@ export const MainNews = styled.div`
   display: flex;
   margin-top: 48px;
   margin-bottom: 24px;
-  align-items: center;
+  align-items: flex-start;
   @media ${device.tablet} {
     flex-direction: column;
   }
