@@ -28,6 +28,12 @@ export const NewsItem = styled.a`
       overflow: hidden;
     }
   }
+  .gatsby-image-wrapper {
+    @media (max-width: 768px) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
 `;
 export const Root = styled.div`
   max-width: 1376px;

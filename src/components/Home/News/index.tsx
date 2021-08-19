@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import SwiperCore, { Controller, Pagination } from 'swiper';
+import React, { useEffect, useRef, useState } from 'react';
+import SwiperCore, { Controller, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.min.css';
 import * as S from './styles';
 import Text from 'components/UI/Text';
 import Colors from 'styles/Colors';
 import news from '../../../news';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
-import { graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 
 const Arrow = () => {
   return (
@@ -22,12 +22,11 @@ const Arrow = () => {
   );
 };
 
-SwiperCore.use([Controller, Pagination]);
+SwiperCore.use([Controller, Pagination, Navigation]);
 
 const sort = [9, 4, 8, 1, 3, 2, 5, 6, 7];
 
 const News = () => {
-  const [swiper, setControlledSwiper] = useState<SwiperCore | null>(null);
   const { allFile } = useStaticQuery(graphql`
     {
       allFile(filter: { relativeDirectory: { eq: "news" } }) {
@@ -48,9 +47,6 @@ const News = () => {
     );
     return { ...news[id], cover: node.childImageSharp.gatsbyImageData };
   });
-
-  const handleNext = () => swiper?.slideNext();
-  const handlePrev = () => swiper?.slidePrev();
   const renderItem = ({ id, link, cover, date, title }) => {
     return (
       <SwiperSlide key={id}>
@@ -73,13 +69,15 @@ const News = () => {
   return (
     <S.Root>
       <S.Controls>
-        <Text marginR={36} variant="subtitle" color="grey90">
-          News
-        </Text>
-        <button onClick={handlePrev} type="button">
+        <Link to="/news">
+          <Text marginR={36} variant="subtitle" color="grey90">
+            Featured News
+          </Text>
+        </Link>
+        <button className="prev-btn" type="button">
           <Arrow />
         </button>
-        <button onClick={handleNext} type="button">
+        <button className="next-btn" type="button">
           <Arrow />
         </button>
       </S.Controls>
@@ -93,9 +91,12 @@ const News = () => {
               slidesPerView: 2,
             },
           }}
-          onSwiper={setControlledSwiper}
           spaceBetween={36}
           slidesPerView={1}
+          navigation={{
+            prevEl: '.prev-btn',
+            nextEl: '.next-btn',
+          }}
           pagination={{ clickable: true }}
         >
           {sortedNews.map(renderItem)}

@@ -45,7 +45,7 @@ const Pricing = () => {
             Ready to get started?
           </Text>
           <a
-            href="https://console.videocoin.network/sign-up?role=publisher"
+            href="https://console.videocoin.network/sign-up?role=worker"
             target="_blank"
             rel="noopener noreferrer"
           >

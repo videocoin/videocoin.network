@@ -44,7 +44,7 @@ const DevelopersHero = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://console.videocoin.network/sign-up?role=publisher"
+                href="https://console.videocoin.network/sign-up?role=worker"
               >
                 <Button>Join for Free</Button>
               </a>

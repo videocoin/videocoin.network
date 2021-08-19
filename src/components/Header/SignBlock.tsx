@@ -12,6 +12,7 @@ const SignBlock = () => {
     '/genesis-staking',
     '/cash-staking',
   ].includes(location.pathname);
+  const isDevelopersPage = location.pathname === '/developers';
   const { tablet } = useBreakpoint();
   const renderLoginBtn = () => {
     if (isStakingPage || tablet) return null;
@@ -25,6 +26,9 @@ const SignBlock = () => {
       </a>
     );
   };
+  const href = `https://console.videocoin.network/sign-up?role=${
+    isDevelopersPage ? 'worker' : 'publisher'
+  }`;
   const handleClick = () => {
     typeof window !== 'undefined' &&
       // @ts-ignore
@@ -48,7 +52,7 @@ const SignBlock = () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://console.videocoin.network/sign-up?role=publisher"
+        href={href}
         onClick={handleClick}
       >
         <Button hideArrow>Create Account</Button>

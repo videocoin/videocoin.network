@@ -31,7 +31,7 @@ const Hero = () => {
             <Text variant="display2" marginB={28}>
               Powering Next-Generation Video Apps Built By You
             </Text>
-            <Text withGradient variant="subtitle" uppercase marginB={12}>
+            <Text variant="subtitle" color="violet50" uppercase marginB={12}>
               VideoCoin: Igniting Innovation
             </Text>
             <Text>

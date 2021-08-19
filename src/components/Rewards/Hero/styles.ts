@@ -130,8 +130,8 @@ export const Features = styled.ul`
       }
     }
     &:nth-child(4) {
-      max-width: 255px;
-      margin-right: 0;
+      max-width: 265px;
+      margin-right: -11px;
       @media ${device.tablet} {
         margin-right: auto;
         max-width: 263px;
@@ -163,7 +163,7 @@ export const FeatureTitle = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 18px;
-  margin-top: -6px;
+  margin-top: -11px;
   @media ${device.tablet} {
     min-height: auto;
   }
@@ -198,7 +198,7 @@ export const FeaturePayment = styled.div`
   padding: 6px 0 6px 22px;
   border-radius: 6px;
   letter-spacing: 0.12px;
-  margin-right: 12px;
+  margin-right: 17px;
   width: 100px;
   position: relative;
   img {

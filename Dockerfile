@@ -11,6 +11,7 @@ COPY . /ui
 WORKDIR /ui
 
 RUN npm install ink
+RUN npm install msgpackr
 RUN make deps
 RUN make build
 

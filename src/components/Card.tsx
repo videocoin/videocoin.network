@@ -35,16 +35,17 @@ const Root = styled.div<{ color: TColors }>`
     position: absolute;
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.73) 0%,
-      rgba(255, 255, 255, 0) 100%
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.22) 100%
     );
   }
+
   .middle-border {
     border-radius: 24px;
     display: block;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
-    background: #cec5da80;
+    background: #d9d3e1;
     position: absolute;
     left: 1px;
     top: 1px;

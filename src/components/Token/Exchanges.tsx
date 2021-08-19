@@ -63,7 +63,7 @@ const Exchanges = () => {
                 <Button btnTheme="secondary" hideArrow>
                   <View row centerV>
                     <img src={kucoin} width={24} height={24} alt="" />
-                    <View marginL={8}>Kucoin</View>
+                    <View marginL={8}>KuCoin</View>
                   </View>
                 </Button>
               </a>

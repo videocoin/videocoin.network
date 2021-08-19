@@ -3,16 +3,23 @@ import { Link } from 'gatsby';
 import { device } from '../../queries';
 import Colors from 'styles/Colors';
 
-export const Root = styled.header<{ isOpen: boolean }>`
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  max-width: 1376px;
-  margin: 0 auto;
-  padding: 23px 40px;
+export const Root = styled.header<{ isCollapsed: boolean }>`
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  width: 100%;
+  transition: padding 0.3s ease-in-out;
+  padding: ${({ isCollapsed }) => (isCollapsed ? '8px 40px' : '23px 40px')};
+  & > div {
+    margin: 0 auto;
+    max-width: 1376px;
+    display: flex;
+    align-items: center;
+  }
   @media ${device.tablet} {
     padding: 23px 28px;
+    padding: ${({ isCollapsed }) => (isCollapsed ? '2px 28px' : '23px 28px')};
   }
 `;
 
