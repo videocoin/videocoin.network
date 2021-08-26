@@ -17,7 +17,10 @@ import Container from 'styles/Container';
 import styled from 'styled-components';
 
 export const Section = styled.div`
-  padding: 24px 0;
+  padding: 65px 0;
+  @media (max-width: 768px) {
+    padding: 24px 0;
+  }
 `;
 
 const Sections = () => {
@@ -49,7 +52,9 @@ const Sections = () => {
         }
         right={
           <>
-            <Text variant="title">20% In Cash Rewards</Text>
+            <Text variant="title" marginB={15}>
+              20% In Cash Rewards
+            </Text>
             <Text color="grey70_72" marginB={48}>
               Delegates receive a minimum 20% of Worker's cash earned for a job
               completed.

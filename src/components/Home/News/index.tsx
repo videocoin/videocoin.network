@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import SwiperCore, { Controller, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
+import 'swiper/css';
 import * as S from './styles';
 import Text from 'components/UI/Text';
 import Colors from 'styles/Colors';

@@ -5,7 +5,10 @@ import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
 import styled from 'styled-components';
 export const Section = styled.div`
-  padding: 24px 0;
+  padding: 65px 0;
+  @media (max-width: 768px) {
+    padding: 24px 0;
+  }
 `;
 const LowPrice = () => {
   const data = useStaticQuery(graphql`

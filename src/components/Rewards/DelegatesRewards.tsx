@@ -2,7 +2,6 @@ import React from 'react';
 import { List, Section } from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import Disclaimer from 'components/Rewards/Disclaimer';
 import MainBlock from 'components/MainBlock';
 import Text from 'components/UI/Text';
 
