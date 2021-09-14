@@ -2,6 +2,8 @@ import React from 'react';
 import { Controller, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import * as S from './styles';
 import Text from 'components/UI/Text';
 import Colors from 'styles/Colors';
@@ -55,10 +57,15 @@ const News = () => {
           </div>
           <div>
             <View row centerV>
-              <Text variant="caption" color="violet60">
+              <Text className="no-wrap" variant="caption" color="violet60">
                 {source}
               </Text>
-              <Text variant="xxs" color="orange60" marginL={8}>
+              <Text
+                className="no-wrap"
+                variant="xxs"
+                color="orange60"
+                marginL={8}
+              >
                 {date}
               </Text>
             </View>
@@ -77,8 +84,8 @@ const News = () => {
                 <path
                   d="m5.333 2.667 6 5.53-6 5.136"
                   stroke="#4E238E"
-                  stroke-width="1.333"
-                  stroke-linejoin="bevel"
+                  strokeWidth="1.333"
+                  strokeLinejoin="bevel"
                 />
               </svg>
             </Text>
@@ -105,12 +112,14 @@ const News = () => {
       <S.Inner>
         <Swiper
           modules={[Controller, Pagination, Navigation]}
+          simulateTouch={false}
           breakpoints={{
             1024: {
               slidesPerView: 3,
             },
             768: {
               slidesPerView: 2,
+              simulateTouch: true,
             },
           }}
           spaceBetween={36}

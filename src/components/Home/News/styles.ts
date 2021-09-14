@@ -46,7 +46,7 @@ export const Inner = styled.div`
   background-color: #ffffff80;
   padding: 20px 20px 0;
 
-  .swiper-container {
+  .swiper {
     padding: 20px 20px 40px;
     border-radius: 28px 28px 0 0;
     background-color: #fff;
@@ -67,6 +67,9 @@ export const Inner = styled.div`
     &:not(:last-of-type) {
       margin-right: 12px;
     }
+  }
+  .no-wrap {
+    white-space: nowrap;
   }
 `;
 
