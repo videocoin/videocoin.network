@@ -77,8 +77,8 @@ const News = () => {
                 <path
                   d="m5.333 2.667 6 5.53-6 5.136"
                   stroke="#4E238E"
-                  stroke-width="1.333"
-                  stroke-linejoin="bevel"
+                  strokeWidth="1.333"
+                  strokeLinejoin="bevel"
                 />
               </svg>
             </Text>
