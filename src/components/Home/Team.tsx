@@ -66,7 +66,7 @@ const Team = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button simple>Learn More</Button>
+            <Button simple>LinkedIn</Button>
           </a>
         }
       />

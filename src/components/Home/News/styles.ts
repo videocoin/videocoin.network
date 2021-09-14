@@ -3,6 +3,7 @@ import Colors from 'styles/Colors';
 
 export const NewsItem = styled.a`
   display: flex;
+  align-items: center;
   & > div:first-of-type {
     margin-right: 24px;
     width: 192px;
@@ -20,10 +21,10 @@ export const NewsItem = styled.a`
     }
   }
   & > div:last-of-type {
-    div:last-of-type {
+    div:nth-of-type(2) {
       opacity: 0.8;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }

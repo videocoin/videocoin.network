@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
-import SwiperCore, { Controller, Pagination, Navigation } from 'swiper';
+import React from 'react';
+import { Controller, Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
+import 'swiper/css';
 import * as S from './styles';
 import Text from 'components/UI/Text';
 import Colors from 'styles/Colors';
 import news from '../../../news';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql, Link, useStaticQuery } from 'gatsby';
+import View from 'components/View';
 
 const Arrow = () => {
   return (
@@ -21,8 +22,6 @@ const Arrow = () => {
     </svg>
   );
 };
-
-SwiperCore.use([Controller, Pagination, Navigation]);
 
 const sort = [9, 4, 8, 1, 3, 2, 5, 6, 7];
 
@@ -47,7 +46,7 @@ const News = () => {
     );
     return { ...news[id], cover: node.childImageSharp.gatsbyImageData };
   });
-  const renderItem = ({ id, link, cover, date, title }) => {
+  const renderItem = ({ id, link, cover, date, title, source }) => {
     return (
       <SwiperSlide key={id}>
         <S.NewsItem href={link} target="_blank" rel="noopener noreferrer">
@@ -55,11 +54,33 @@ const News = () => {
             <GatsbyImage alt="" image={cover} />
           </div>
           <div>
-            <Text variant="caption" color="violet60">
-              {date}
-            </Text>
+            <View row centerV>
+              <Text variant="caption" color="violet60">
+                {source}
+              </Text>
+              <Text variant="xxs" color="orange60" marginL={8}>
+                {date}
+              </Text>
+            </View>
             <Text variant="caption" color="grey50">
               {title}
+            </Text>
+            <Text variant="caption" color="violet60" row centerV>
+              Read More{' '}
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m5.333 2.667 6 5.53-6 5.136"
+                  stroke="#4E238E"
+                  stroke-width="1.333"
+                  stroke-linejoin="bevel"
+                />
+              </svg>
             </Text>
           </div>
         </S.NewsItem>
@@ -83,6 +104,7 @@ const News = () => {
       </S.Controls>
       <S.Inner>
         <Swiper
+          modules={[Controller, Pagination, Navigation]}
           breakpoints={{
             1024: {
               slidesPerView: 3,

@@ -115,6 +115,12 @@ const bodyAlt = css`
   }
 `;
 
+const xxs = css`
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 2.333;
+`;
+
 const gradient = css`
   background: linear-gradient(
     296.01deg,
@@ -137,7 +143,8 @@ type Variant =
   | 'bodyAlt'
   | 'smallBody'
   | 'title2'
-  | 'caption';
+  | 'caption'
+  | 'xxs';
 
 const variants: Record<Variant, any> = {
   subtitle,
@@ -151,6 +158,7 @@ const variants: Record<Variant, any> = {
   title2,
   caption,
   display3,
+  xxs,
 };
 
 interface TextProps {
