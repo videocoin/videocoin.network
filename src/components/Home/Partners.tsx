@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import Card from 'components/Card';
 import * as S from './styles';
 import View from 'components/View';
 import Text from 'components/UI/Text';
@@ -95,6 +94,11 @@ const Partners = () => {
         }
       }
       polybius: file(relativePath: { eq: "partners/polybius.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 124, quality: 100, layout: CONSTRAINED)
+        }
+      }
+      lcv: file(relativePath: { eq: "partners/lcv.png" }) {
         childImageSharp {
           gatsbyImageData(width: 124, quality: 100, layout: CONSTRAINED)
         }
