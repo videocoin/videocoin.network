@@ -47,7 +47,7 @@ export const NewsCard = styled.div`
     align-items: flex-start;
   }
   & > div:first-of-type {
-    height: 224px;
+    max-height: 224px;
     border-radius: 28px;
     border: 20px solid #e6e1ec;
     background-color: #e6e1ec;

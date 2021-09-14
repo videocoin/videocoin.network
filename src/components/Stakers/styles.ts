@@ -65,5 +65,8 @@ export const Inner = styled.div`
   }
 `;
 export const Section = styled.div`
-  padding: 24px 0;
+  padding: 65px 0;
+  @media (max-width: 768px) {
+    padding: 24px 0;
+  }
 `;

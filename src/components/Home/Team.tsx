@@ -62,7 +62,7 @@ const Team = () => {
         text="Meet the entire Live Planet team"
         button={
           <a
-            href="https://www.linkedin.com/company/videocoin/"
+            href="https://www.linkedin.com/company/live-planet-inc./people/"
             target="_blank"
             rel="noopener noreferrer"
           >
