@@ -54,6 +54,13 @@ const members = [
     id: 'kellam',
     link: 'https://www.linkedin.com/in/kellam-ames-8328318/',
   },
+  {
+    name: 'Jeremy Drane',
+    position: 'Crypto Entrepreneur -\nNifty’s Inc.\nBlockchainOZ.fund',
+    id: 'jeremy',
+    advisor: true,
+    link: 'https://www.linkedin.com/in/kellam-ames-8328318/',
+  },
 ];
 
 const TeamCard = ({ member, portrait }) => {
@@ -73,9 +80,9 @@ const TeamCard = ({ member, portrait }) => {
           <img src={linkedinIcon} width={20} height={20} alt="" />
         </a>
       </View>
-      <Text paddingH={3} variant="smallBody">
+      <S.Position paddingH={3} variant="smallBody">
         {member.position}
-      </Text>
+      </S.Position>
       {member.advisor && (
         <Text color="violet80_72" variant="caption">
           Advisor
@@ -121,6 +128,11 @@ const TeamMembers = () => {
       kellam: file(relativePath: { eq: "team/kellam.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 257, quality: 100, layout: CONSTRAINED)
+        }
+      }
+      jeremy: file(relativePath: { eq: "team/jeremy.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(height: 257, quality: 100, layout: CONSTRAINED)
         }
       }
     }

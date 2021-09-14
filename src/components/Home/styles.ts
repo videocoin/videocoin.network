@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Colors, { TColors } from 'styles/Colors';
 import { device } from '../../queries';
+import BaseText from 'components/UI/Text';
 
 export const Root = styled.div<{ background?: TColors }>`
   background-color: ${({ background = 'white0' }) => Colors[background]};
@@ -239,4 +240,8 @@ export const PartnersCard = styled.div`
     top: 1px;
     z-index: 1;
   }
+`;
+
+export const Position = styled(BaseText)`
+  white-space: pre-wrap;
 `;
