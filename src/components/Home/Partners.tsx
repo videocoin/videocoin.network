@@ -98,11 +98,6 @@ const Partners = () => {
           gatsbyImageData(width: 124, quality: 100, layout: CONSTRAINED)
         }
       }
-      lcv: file(relativePath: { eq: "partners/lcv.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 124, quality: 100, layout: CONSTRAINED)
-        }
-      }
     }
   `);
 
