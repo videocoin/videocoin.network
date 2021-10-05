@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from 'components/layout';
 import SEO from 'components/seo';
 import Developers from 'components/Home/Developers';
+import NFT from 'components/Home/NFT';
 import Workers from 'components/Home/Workers';
 import Stakers from 'components/Home/Stakers';
 import Roadmap from 'components/Home/Roadmap';
@@ -14,6 +15,7 @@ const Index = () => {
     <Layout>
       <SEO title="Home" />
       <Hero />
+      <NFT />
       <Developers />
       <Workers />
       <Stakers />

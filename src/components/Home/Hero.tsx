@@ -6,15 +6,13 @@ import View from 'components/View';
 import Text from 'components/UI/Text';
 import Container from 'styles/Container';
 import News from 'components/Home/News';
-import { useBreakpoint } from 'components/BrealpointProvider';
 
 const Hero = () => {
-  const { tablet } = useBreakpoint();
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "developersHero.png" }) {
+      file(relativePath: { eq: "hero_image.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 531, quality: 100, layout: CONSTRAINED)
+          gatsbyImageData(width: 835, quality: 100, layout: CONSTRAINED)
         }
       }
     }
@@ -27,21 +25,20 @@ const Hero = () => {
             alt=""
             image={data.file.childImageSharp.gatsbyImageData}
           />
-          <View column left>
-            <Text variant="display2" marginB={28}>
-              Powering Next-Generation Video Apps Built By You
-            </Text>
-            <Text variant="subtitle" withGradient uppercase marginB={12}>
-              VideoCoin: Igniting Innovation
-            </Text>
+          <View column left flex={1}>
+            <S.Title variant="display2" marginB={28}>
+              Powering NFTs for everyone
+            </S.Title>
             <Text>
-              The VideoCoin ecosystem delivers innovative services on the
-              blockchain that reimagine the future of video.
+              VideoCoin creates NFTs that are complete media experiences. It’s
+              the next-gen solution for entirely new content and brand
+              engagement.
             </Text>
             <br />
             <Text>
-              Our current focus is bringing Video NFTs to everyone through our
-              integration with Filecoin.
+              We enable any content creator, brand, retailer, or content
+              platform to mint and sell expansive NFTs through our
+              blockchain-enabled, decentralized network.
             </Text>
           </View>
         </div>
