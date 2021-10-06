@@ -77,9 +77,13 @@ const NFT = () => {
               Build complete media experiences
             </Text>
             <Text color="grey70_72" marginB={48}>
-              VideoCoin’s enhanced <strong>NFT+</strong> format transforms NFTs
-              from mere single asset digital collectibles to dynamic containers
-              holding any number of media elements, of any type.
+              VideoCoin’s enhanced{' '}
+              <S.InlinePlus>
+                NFT<sup>+</sup>
+              </S.InlinePlus>{' '}
+              format transforms NFTs from mere single asset digital collectibles
+              to dynamic containers holding any number of media elements, of any
+              type.
             </Text>
           </>
         }
@@ -130,9 +134,12 @@ const NFT = () => {
               If it’s media, we can make it an NFT
             </Text>
             <Text color="grey70_72" marginB={48}>
-              Our expansive <strong>NFT+</strong> format has unique
-              capabilities, and supports any media type: video, JPEG, PNG, VR,
-              3D Blender, MP3, PDF, you name it…
+              Our expansive{' '}
+              <S.InlinePlus>
+                NFT<sup>+</sup>
+              </S.InlinePlus>{' '}
+              format has unique capabilities, and supports any media type:
+              video, JPEG, PNG, VR, 3D Blender, MP3, PDF, you name it…
             </Text>
           </>
         }
@@ -154,8 +161,10 @@ const NFT = () => {
             </Text>
             <Text variant="smallBody">
               No longer are NFTs limited to a single piece of media. VideoCoin’s{' '}
-              <strong>NFT+</strong> containers can hold multiple media assets -
-              all at once.
+              <S.InlinePlus>
+                NFT<sup>+</sup>
+              </S.InlinePlus>{' '}
+              containers can hold multiple media assets - all at once.
             </Text>
           </Card>
           <Card>
@@ -164,9 +173,12 @@ const NFT = () => {
               Flexible Rights Management
             </Text>
             <Text variant="smallBody">
-              Each media asset in an <strong>NFT+</strong> can have its own
-              permissions, giving you granular control over how and when the
-              media unlocks.
+              Each media asset in an{' '}
+              <S.InlinePlus>
+                NFT<sup>+</sup>
+              </S.InlinePlus>{' '}
+              can have its own permissions, giving you granular control over how
+              and when the media unlocks.
             </Text>
           </Card>
           <Card>
@@ -176,7 +188,10 @@ const NFT = () => {
             </Text>
             <Text variant="smallBody">
               Easily and continuously add more media to any{' '}
-              <strong>NFT+</strong> after it’s been minted, or even sold.
+              <S.InlinePlus>
+                NFT<sup>+</sup>
+              </S.InlinePlus>{' '}
+              after it’s been minted, or even sold.
             </Text>
           </Card>
           <Card>
@@ -196,9 +211,12 @@ const NFT = () => {
               Resilience & Longevity
             </Text>
             <Text variant="smallBody">
-              Each <strong>NFT+</strong> is encrypted with a private key
-              immutably linking NFT data and each asset to its location on
-              Filecoin, for long-term durability.
+              Each{' '}
+              <S.InlinePlus>
+                NFT<sup>+</sup>
+              </S.InlinePlus>{' '}
+              is encrypted with a private key immutably linking NFT data and
+              each asset to its location on Filecoin, for long-term durability.
             </Text>
           </Card>
         </S.Features>
@@ -214,7 +232,7 @@ const NFT = () => {
             <Text variant="title" marginB={16} color="violet80">
               No crypto.
             </Text>
-            <Text variant="smallBody">
+            <Text>
               Our solution is integrated with Public Mint to enable payment in
               credit card, wire, and ACH. No need to own crypto or understand
               the world of crypto.
@@ -224,7 +242,7 @@ const NFT = () => {
             <Text variant="title" marginB={16} color="violet80">
               Ecofriendly.
             </Text>
-            <Text variant="smallBody">
+            <Text>
               VideoCoin Network’s Proof-of-Stake system ensures our Workers are
               up to 1000x more efficient than Bitcoin miners, dramatically
               lowering environmental impact.
@@ -234,7 +252,7 @@ const NFT = () => {
             <Text variant="title" marginB={16} color="violet80">
               Compatible.
             </Text>
-            <Text variant="smallBody">
+            <Text>
               No walled gardens here. Our NFTs can work on any ETH-compatible
               chain.
             </Text>

@@ -22,6 +22,7 @@ export const Features = styled.div`
   grid-gap: 36px;
   padding: 32px 0;
   & > div {
+    max-width: 406px;
     grid-column: span 2;
     height: auto;
     &:last-child:nth-child(3n - 1) {
@@ -286,4 +287,19 @@ export const Plus = styled.div`
   display: inline-block;
   transform: translateY(-5px);
   color: #5d2bb6;
+`;
+
+export const InlinePlus = styled.strong`
+  sup {
+    position: relative;
+    top: 6px;
+    color: #5d2bb6;
+  }
+`;
+
+export const HeroText = styled(BaseText)`
+  max-width: 89%;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
