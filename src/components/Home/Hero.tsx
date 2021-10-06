@@ -29,17 +29,17 @@ const Hero = () => {
             <S.Title variant="display2" marginB={28}>
               Powering NFTs for everyone
             </S.Title>
-            <Text>
+            <S.HeroText>
               VideoCoin creates NFTs that are complete media experiences. It’s
               the next-gen solution for entirely new content and brand
               engagement.
-            </Text>
+            </S.HeroText>
             <br />
-            <Text>
+            <S.HeroText>
               We enable any content creator, brand, retailer, or content
               platform to mint and sell expansive NFTs through our
               blockchain-enabled, decentralized network.
-            </Text>
+            </S.HeroText>
           </View>
         </div>
       </Container>
