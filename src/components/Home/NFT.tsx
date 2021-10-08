@@ -227,7 +227,7 @@ const NFT = () => {
             More UNIQUE features
           </Text>
         </View>
-        <S.Features>
+        <S.UniqueFeatures>
           <div>
             <Text variant="title" marginB={16} color="violet80">
               No crypto.
@@ -257,7 +257,7 @@ const NFT = () => {
               chain.
             </Text>
           </div>
-        </S.Features>
+        </S.UniqueFeatures>
       </Container>
     </S.NftRoot>
   );
