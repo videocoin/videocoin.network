@@ -55,17 +55,24 @@ const Developers = () => {
         right={
           <>
             <Text variant="subtitle" withGradient uppercase>
-              Video NFTs
+              Supercharge your apps
             </Text>
             <Text variant="title" marginB={16} color="violet80">
-              Build NFTs into your app effortlessly
+              Build NFT<S.Plus>+</S.Plus> capabilities into your app
+              effortlessly
             </Text>
             <Text color="grey70_72" marginB={48}>
-              Leverage the only solution <strong>optimized</strong> for the
-              unique demands of <strong>Video NFT applications</strong> — a
-              complete suite of capabilities coming soon from VideoCoin +
-              Filecoin. Create your own fully functioning NFT marketplace right
-              out of the box.
+              Leverage the only solution made for{' '}
+              <S.InlinePlus>
+                NFT<sup>+</sup>
+              </S.InlinePlus>{' '}
+              , and optimized for the unique demands of{' '}
+              <strong>video NFTs</strong> — a complete suite of tools to create
+              your own fully functioning enhanced{' '}
+              <S.InlinePlus>
+                NFT<sup>+</sup>
+              </S.InlinePlus>{' '}
+              marketplace right out of the box.
             </Text>
           </>
         }

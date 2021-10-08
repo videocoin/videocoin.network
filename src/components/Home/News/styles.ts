@@ -39,7 +39,6 @@ export const NewsItem = styled.a`
 export const Root = styled.div`
   max-width: 1376px;
   margin: 0 auto;
-  margin-top: 65px;
 `;
 export const Inner = styled.div`
   border-radius: 28px 28px 0 0;

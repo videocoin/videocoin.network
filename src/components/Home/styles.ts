@@ -7,18 +7,62 @@ export const Root = styled.div<{ background?: TColors }>`
   background-color: ${({ background = 'white0' }) => Colors[background]};
   padding-top: 48px;
 `;
+export const NftRoot = styled.div<{ background?: TColors }>`
+  background: linear-gradient(
+    90deg,
+    rgb(228, 226, 231) 0%,
+    rgb(205, 200, 214) 50%
+  );
+  padding-top: 48px;
+`;
 
 export const Features = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 36px;
-  align-items: flex-start;
   padding: 32px 0;
   & > div {
+    max-width: 406px;
+    grid-column: span 2;
     height: auto;
+    &:last-child:nth-child(3n - 1) {
+      grid-column-end: -2;
+      @media (max-width: 768px) {
+        grid-column-end: auto;
+      }
+    }
+    &:nth-last-child(2):nth-child(3n + 1) {
+      grid-column-end: 4;
+      @media (max-width: 768px) {
+        grid-column-end: auto;
+      }
+    }
+    &:last-child:nth-child(3n - 2) {
+      grid-column-end: 5;
+      @media (max-width: 768px) {
+        grid-column-end: auto;
+      }
+    }
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+  }
+`;
+
+export const UniqueFeatures = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
+  padding: 32px 0;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-gap: 36px;
+  }
+  & > div {
+    padding-right: 25px;
+    @media (max-width: 768px) {
+      padding-right: 0;
+    }
   }
 `;
 
@@ -132,15 +176,22 @@ export const Decoration = styled.div`
   z-index: -1;
 `;
 
+export const Title = styled(BaseText)`
+  font-size: 62px;
+  letter-spacing: -0.5px;
+`;
+
 export const Hero = styled.div`
-  padding: 94px 0 0;
   @media (max-width: 768px) {
     padding-top: 75px;
   }
   & > div:first-of-type > div {
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     display: flex;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
     & > div {
       &:first-of-type {
         flex-shrink: 0;
@@ -150,9 +201,12 @@ export const Hero = styled.div`
       }
       &:last-child {
         margin-left: 36px;
+        min-width: 694px;
         @media (max-width: 1024px) {
           margin-left: 0;
           margin-bottom: 48px;
+          min-width: auto;
+          align-items: center;
         }
       }
     }
@@ -244,4 +298,25 @@ export const PartnersCard = styled.div`
 
 export const Position = styled(BaseText)`
   white-space: pre-wrap;
+`;
+
+export const Plus = styled.div`
+  display: inline-block;
+  transform: translateY(-5px);
+  color: #5d2bb6;
+`;
+
+export const InlinePlus = styled.strong`
+  sup {
+    position: relative;
+    top: 6px;
+    color: #5d2bb6;
+  }
+`;
+
+export const HeroText = styled(BaseText)`
+  max-width: 89%;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
