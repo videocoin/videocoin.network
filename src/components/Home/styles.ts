@@ -49,6 +49,23 @@ export const Features = styled.div`
   }
 `;
 
+export const UniqueFeatures = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
+  padding: 32px 0;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-gap: 36px;
+  }
+  & > div {
+    padding-right: 25px;
+    @media (max-width: 768px) {
+      padding-right: 0;
+    }
+  }
+`;
+
 export const Roadmap = styled.div`
   background-color: ${Colors.white0};
   padding: 58px 0 33px;
