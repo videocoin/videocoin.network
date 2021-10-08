@@ -99,6 +99,39 @@ const news = {
     description:
       'Musicians, Influencers, and Athletes are taking NFTs more seriously as they come back into the spotlight. Following high-profile NFT drops in the first quarter of the year, other public figures have since quietly spent their time developing their NFT strategies.',
   },
+
+  10: {
+    id: 10,
+    cover: '10',
+    date: formatDate('2021-09-21'),
+    title:
+      'Live Planet Receives Strategic Investment from Liberty City Ventures',
+    link: 'https://medium.com/videocoin/live-planet-receives-strategic-investment-from-liberty-city-ventures-6c577aff4820',
+    source: 'VideoCoin News',
+    description:
+      'Live Planet joins LCV’s select ecosystem of blockchain-focused portfolio companies; Jeremy Drane joins as an external advisor\n',
+  },
+  11: {
+    id: 11,
+    cover: '11',
+    date: formatDate('2021-10-08'),
+    title:
+      'VideoCoin NFT Marketplace Beta Milestone: Mixed Media NFTs, On-chain DRM for NFTs, Auctions, and more',
+    link: 'https://medium.com/videocoin/videocoin-nft-marketplace-beta-milestone-mixed-media-nfts-on-chain-drm-for-nfts-auctions-and-872ee2632fcc',
+    source: 'VideoCoin News',
+    description:
+      'We are excited to announce the launch of VideoCoin’s NFT Marketplace Beta has gone live on October 7, 2021.',
+  },
+  12: {
+    id: 12,
+    cover: '12',
+    date: formatDate('2021-10-08'),
+    title: 'Robert Powers - Head of strategy at VideoCoin',
+    link: 'https://www.blockhashpodcast.com/podcast/robert-powers-head-of-strategy-at-videocoin',
+    source: 'Blockhash',
+    description:
+      'Today on the podcast, Robert Powers joins Brandon Zemp to discuss his role at VideoCoin as Head of Strategy. Leverage the only solution optimized for the unique demands of Video NFT applications, a complete suite of capabilities coming soon from both VideoCoin and Filecoin.',
+  },
 };
 
 export default news;
