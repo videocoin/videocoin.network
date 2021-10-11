@@ -57,17 +57,12 @@ const News = () => {
           </div>
           <div>
             <View row centerV>
-              <Text className="no-wrap" variant="caption" color="violet60">
+              <S.SourceTitle variant="caption" color="violet60">
                 {source}
-              </Text>
-              <Text
-                className="no-wrap"
-                variant="xxs"
-                color="orange60"
-                marginL={8}
-              >
+              </S.SourceTitle>
+              <S.Date variant="xxs" color="orange60" marginL={8}>
                 {date}
-              </Text>
+              </S.Date>
             </View>
             <Text variant="caption" color="grey50">
               {title}

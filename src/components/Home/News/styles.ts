@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Colors from 'styles/Colors';
+import Text from 'components/UI/Text';
 
 export const NewsItem = styled.a`
   display: flex;
@@ -21,6 +22,7 @@ export const NewsItem = styled.a`
     }
   }
   & > div:last-of-type {
+    overflow: hidden;
     div:nth-of-type(2) {
       opacity: 0.8;
       display: -webkit-box;
@@ -96,4 +98,16 @@ export const Controls = styled.div`
       }
     }
   }
+`;
+
+export const SourceTitle = styled(Text)`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 1;
+`;
+
+export const Date = styled(Text)`
+  white-space: nowrap;
+  flex-shrink: 0;
 `;
