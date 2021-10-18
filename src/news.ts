@@ -132,6 +132,17 @@ const news = {
     description:
       'Today on the podcast, Robert Powers joins Brandon Zemp to discuss his role at VideoCoin as Head of Strategy. Leverage the only solution optimized for the unique demands of Video NFT applications, a complete suite of capabilities coming soon from both VideoCoin and Filecoin.',
   },
+  13: {
+    id: 13,
+    cover: '8',
+    date: formatDate('2021-10-15'),
+    title:
+      'Live Planet Announces Strategic Partnership with Mint Werx to Offer Full Service NFT Solutions',
+    link: 'https://medium.com/videocoin/live-planet-announces-strategic-partnership-with-mint-werx-to-offer-full-service-nft-solutions-9c50c8a14a44',
+    source: 'VideoCoin News',
+    description:
+      'Partnership Makes Full Service Dynamic NFT Solutions Simple for Brands and Creators',
+  },
 };
 
 export default news;
