@@ -56,10 +56,10 @@ const members = [
   },
   {
     name: 'Jeremy Drane',
-    position: 'Crypto Entrepreneur -\nNifty’s Inc.\nBlockchainOZ.fund',
+    position: 'Crypto Entrepreneur',
     id: 'jeremy',
     advisor: true,
-    link: 'https://www.linkedin.com/in/kellam-ames-8328318/',
+    link: 'https://www.linkedin.com/in/nftjd/',
   },
 ];
 
