@@ -182,9 +182,6 @@ export const Title = styled(BaseText)`
 `;
 
 export const Hero = styled.div`
-  @media (max-width: 768px) {
-    padding-top: 75px;
-  }
   & > div:first-of-type > div {
     justify-content: flex-end;
     align-items: center;
@@ -211,7 +208,7 @@ export const Hero = styled.div`
       }
     }
     @media ${device.tablet} {
-      flex-direction: column;
+      flex-direction: column-reverse;
       text-align: center;
     }
   }

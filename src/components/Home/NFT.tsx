@@ -233,9 +233,16 @@ const NFT = () => {
               No crypto.
             </Text>
             <Text>
-              Our solution is integrated with Public Mint to enable payment in
-              credit card, wire, and ACH. No need to own crypto or understand
-              the world of crypto.
+              Our solution is integrated with{' '}
+              <a
+                href="https://publicmint.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Public Mint
+              </a>{' '}
+              to enable payment in credit card, wire, and ACH. No need to own
+              crypto or understand the world of crypto.
             </Text>
           </div>
           <div>

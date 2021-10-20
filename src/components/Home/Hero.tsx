@@ -3,7 +3,6 @@ import * as S from './styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import View from 'components/View';
-import Text from 'components/UI/Text';
 import Container from 'styles/Container';
 import News from 'components/Home/News';
 
