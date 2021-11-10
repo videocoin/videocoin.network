@@ -143,6 +143,38 @@ const news = {
     description:
       'Partnership Makes Full Service Dynamic NFT Solutions Simple for Brands and Creators',
   },
+  14: {
+    id: 14,
+    cover: '14',
+    date: formatDate('2021-11-04'),
+    title:
+      'Tarantino To Auction NFTs Featuring Seven Never-Before-Told ‘Pulp Fiction’ Secrets',
+    link: 'https://finance.yahoo.com/news/tarantino-auction-nfts-featuring-seven-151627796.html',
+    source: 'Yahoo',
+    description:
+      'Quentin Tarantino is jumping on the NFT bandwagon, announcing he will auction off seven uncut “Pulp Fiction” scenes as “Secret NFTs,” on NFT marketplace OpenSea.',
+  },
+  15: {
+    id: 15,
+    cover: '15',
+    date: formatDate('2021-11-02'),
+    title: 'VideoCoin Bringing the NFT+ Conversation to NFTNYC',
+    link: 'https://medium.com/videocoin/videocoin-bringing-the-nft-conversation-to-nftnyc-cb2689aa7035',
+    source: 'VideoCoin News',
+    description:
+      'VideoCoin is hitting Times Square for this year’s NFT NYC, the leading Non-Fungible Token conference. Join us as we bring VideoCoin to the forefront of the largest NFT conversation going on right now.',
+  },
+  16: {
+    id: 16,
+    cover: '16',
+    date: formatDate('2021-10-31'),
+    title:
+      'What is the worst nightmare that could happen to crypto? Experts answer',
+    link: 'https://cointelegraph.com/explained/what-is-the-worst-nightmare-that-could-happen-to-crypto-experts-answer',
+    source: 'Cointelegraph',
+    description:
+      'Back on Oct. 31, 2008, a person — or a group of people — who called themself Satoshi Nakamoto published a nine-page paper describing a “purely peer-to-peer version of electronic cash” th',
+  },
 };
 
 export default news;

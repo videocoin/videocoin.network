@@ -29,7 +29,6 @@ const Header = () => {
   useMount(() => {
     window.addEventListener('scroll', onScroll);
   });
-  console.log(isCollapsed);
   return (
     <Root isCollapsed={isCollapsed}>
       <div>

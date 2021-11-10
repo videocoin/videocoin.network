@@ -10,7 +10,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const MainNews = () => {
   const { mobile } = useBreakpoint();
-  const { cover, date, source, link, title, description } = news['11'];
+  const { cover, date, source, link, title, description } = news['14'];
   const { allFile } = useStaticQuery(graphql`
     {
       allFile(filter: { relativeDirectory: { eq: "news" } }) {
