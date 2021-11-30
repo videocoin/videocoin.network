@@ -32,9 +32,6 @@ export const Root = styled.div`
     border-radius: 18px;
     position: relative;
     z-index: 1;
-    @media (max-width: 620px) {
-      display: none;
-    }
     img {
       position: absolute;
       left: 83%;
@@ -47,11 +44,10 @@ export const Root = styled.div`
     }
   }
   & > img:first-of-type {
-    margin-left: 77px;
-    margin-right: 60px;
+    margin: 0 50px;
     @media (max-width: 768px) {
       max-width: 162px;
-      margin-left: 40px;
+      margin: 0 40px;
     }
     @media (max-width: 620px) {
       max-width: 162px;
@@ -80,6 +76,14 @@ export const Root = styled.div`
         padding: 7px 20px;
         margin-top: 9px;
       }
+    }
+  }
+  & > div:last-of-type {
+    min-width: 220px;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 620px) {
+      display: none;
     }
   }
 `;

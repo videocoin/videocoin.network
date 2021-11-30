@@ -13,10 +13,12 @@ const VividBanner = () => {
         <a href="https://www.vividlabs.com/">Join the evolution</a>
       </div>
       <img src={logo} alt="Vivid" />
-      <a href="https://www.vividlabs.com/">
-        Join the evolution
-        <img src={jellyfish} srcSet={`${jellyfish2x} 2x`} alt="jellyfish" />
-      </a>
+      <div>
+        <a href="https://www.vividlabs.com/">
+          Join the evolution
+          <img src={jellyfish} srcSet={`${jellyfish2x} 2x`} alt="jellyfish" />
+        </a>
+      </div>
     </Root>
   );
 };
