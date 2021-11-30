@@ -4,7 +4,7 @@ import { device } from '../../queries';
 import Colors from 'styles/Colors';
 
 export const Root = styled.header<{ isCollapsed: boolean }>`
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1000;
   background: #fff;
