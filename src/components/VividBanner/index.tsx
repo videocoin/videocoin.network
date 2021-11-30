@@ -9,7 +9,7 @@ const VividBanner = () => {
   return (
     <Root>
       <div>
-        VideoCoin is now Vivid Labs
+        VideoCoin Network is now Vivid Labs
         <a href="https://www.vividlabs.com/">Join the evolution</a>
       </div>
       <img src={logo} alt="Vivid" />

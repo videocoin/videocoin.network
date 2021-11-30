@@ -19,6 +19,7 @@ export const Root = styled.div`
   font-size: 16px;
   position: relative;
   overflow: hidden;
+  padding: 0 12px;
   @media (max-width: 620px) {
     padding: 0 20px;
   }
@@ -76,6 +77,9 @@ export const Root = styled.div`
         padding: 7px 20px;
         margin-top: 9px;
       }
+    }
+    @media (max-width: 400px) {
+      max-width: 130px;
     }
   }
   & > div:last-of-type {
