@@ -8,6 +8,7 @@ import {
 } from 'components/BrealpointProvider';
 import CookiePopup from 'components/CookiePopup';
 import styled from 'styled-components';
+import VividBanner from 'components/VividBanner';
 
 export const queries: Record<BreakpointType, string> = {
   mobile: '(max-width: 768px)',
@@ -37,9 +38,10 @@ const Layout = ({
 }) => {
   return (
     <BreakpointProvider queries={queries}>
+      <VividBanner />
+      <Header />
       <Wrapper>
         <GlobalStyle />
-        <Header />
         <MainContent>
           <main>{children}</main>
         </MainContent>
