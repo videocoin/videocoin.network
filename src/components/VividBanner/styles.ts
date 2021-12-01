@@ -10,6 +10,7 @@ export const Button = styled.div`
   border-radius: 18px;
   position: relative;
   z-index: 1;
+  white-space: nowrap;
   img {
     position: absolute;
     left: 83%;
@@ -21,7 +22,7 @@ export const Button = styled.div`
     }
   }
   @media (max-width: 620px) {
-    display: inline-block;
+    display: inline-block !important;
     font-size: 8px;
     border-radius: 11px;
     padding: 7px 20px;
@@ -49,9 +50,6 @@ export const Root = styled.a`
   position: relative;
   overflow: hidden;
   padding: 0 12px;
-  @media (max-width: 620px) {
-    padding: 0 20px;
-  }
   & > img:first-of-type {
     margin: 0 50px;
     @media (max-width: 768px) {
