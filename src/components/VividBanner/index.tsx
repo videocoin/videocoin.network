@@ -1,5 +1,5 @@
 import React from 'react';
-import { Root } from './styles';
+import { Root, Button } from './styles';
 
 import logo from './assets/logo.svg';
 import jellyfish from './assets/jellyfish.png';
@@ -7,17 +7,17 @@ import jellyfish2x from './assets/jellyfish@2x.png';
 
 const VividBanner = () => {
   return (
-    <Root>
+    <Root href="https://www.vividlabs.com/">
       <div>
         VideoCoin Network is now Vivid Labs
-        <a href="https://www.vividlabs.com/">Join the evolution</a>
+        <Button>Join the evolution</Button>
       </div>
       <img src={logo} alt="Vivid" />
       <div>
-        <a href="https://www.vividlabs.com/">
+        <Button>
           Join the evolution
           <img src={jellyfish} srcSet={`${jellyfish2x} 2x`} alt="jellyfish" />
-        </a>
+        </Button>
       </div>
     </Root>
   );

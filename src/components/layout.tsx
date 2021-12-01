@@ -18,7 +18,6 @@ export const queries: Record<BreakpointType, string> = {
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  padding-top: 120px;
   display: flex;
   flex-direction: column;
   background: linear-gradient(180deg, #ffffff 0%, #efeaf6 100%);

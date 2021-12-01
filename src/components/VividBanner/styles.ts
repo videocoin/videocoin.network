@@ -1,6 +1,35 @@
 import styled from 'styled-components';
 
-export const Root = styled.div`
+export const Button = styled.div`
+  padding: 10px 24px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  border-radius: 18px;
+  position: relative;
+  z-index: 1;
+  img {
+    position: absolute;
+    left: 83%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  @media (max-width: 620px) {
+    display: inline-block;
+    font-size: 8px;
+    border-radius: 11px;
+    padding: 7px 20px;
+    margin-top: 9px;
+  }
+`;
+
+export const Root = styled.a`
   height: 75px;
   background: transparent
     linear-gradient(
@@ -23,27 +52,6 @@ export const Root = styled.div`
   @media (max-width: 620px) {
     padding: 0 20px;
   }
-  a {
-    padding: 10px 24px;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.2);
-    font-size: 14px;
-    border-radius: 18px;
-    position: relative;
-    z-index: 1;
-    img {
-      position: absolute;
-      left: 83%;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: -1;
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-  }
   & > img:first-of-type {
     margin: 0 50px;
     @media (max-width: 768px) {
@@ -57,7 +65,7 @@ export const Root = styled.div`
     }
   }
   & > div:first-of-type {
-    a {
+    ${Button} {
       display: none;
     }
     @media (max-width: 768px) {
@@ -70,13 +78,6 @@ export const Root = styled.div`
       justify-content: center;
       align-items: center;
       text-align: center;
-      a {
-        display: inline-block;
-        font-size: 8px;
-        border-radius: 11px;
-        padding: 7px 20px;
-        margin-top: 9px;
-      }
     }
     @media (max-width: 400px) {
       max-width: 130px;
