@@ -7,6 +7,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import View from 'components/View';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import MainBlock from 'components/MainBlock';
+import Button from 'components/UI/Button';
+import { useBreakpoint } from 'components/BrealpointProvider';
 
 const Root = styled.div`
   background: ${Colors.white20};
@@ -16,6 +18,7 @@ const Root = styled.div`
 `;
 
 const Allocation = () => {
+  const { tablet } = useBreakpoint()
   const data = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "allocation.png" }) {
@@ -25,7 +28,7 @@ const Allocation = () => {
       }
       percenter: file(relativePath: { eq: "percenter.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 336, quality: 100, layout: CONSTRAINED)
+          gatsbyImageData(width: 296, quality: 100, layout: CONSTRAINED)
         }
       }
     }
@@ -33,23 +36,14 @@ const Allocation = () => {
   return (
     <Root>
       <Container>
-        <Text variant="title2" color="violet50" align="center">
-          December 2020
+        <Text variant="title2" color="violet50" align="center" marginB={50}>
+          2022 VID Lockups
         </Text>
-        <Text variant="display1" align="center" marginB={100}>
-          Extended Company Token Lockups
-        </Text>
-        <View row centerH marginB={48}>
-          <GatsbyImage
-            alt=""
-            image={data.image.childImageSharp.gatsbyImageData}
-          />
-        </View>
       </Container>
       <MainBlock
         reverse
         left={
-          <View paddingV={48}>
+          <View paddingV={48} marginL={ tablet ? 0 : 80}>
             <GatsbyImage
               alt=""
               image={data.percenter.childImageSharp.gatsbyImageData}
@@ -59,25 +53,21 @@ const Allocation = () => {
         right={
           <>
             <Text variant="title" marginB={16}>
-              76% of uncirculated <br /> supply locked up
+              80 million uncirculating VID tokens are locked for 2022.
             </Text>
             <Text color="grey70_72">
-              This lockup though the end of 2021 impacts over 90 million tokens
-              held by the VDA and our service provider partners, and represents
-              76% of the non-circulating VID token supply.
+               The circulating supply of VID tokens is anticipated to increase by 15% over the course of 2022 to support business development, a continuation of staking rewards programs, and advisory commitments.
             </Text>
           </>
         }
       />
       <Container>
-        <View marginT={55}>
-          <Text variant="title" align="center" marginB={12}>
-            Efficient Use Of Supply
+        <View marginT={55} column centerV centerH>
+          <Text align="center" marginB={14}>
+            Read our November 14, 2021 post for details on the 2022 lockup and token allocations.
+            <br/>
           </Text>
-          <Text align="center">
-            Remaining supply supports utilization, demand, and growth
-            initiatives during the lockup period.
-          </Text>
+          <Button as="a" target="_blank" rel="noopener noreferrer" href="https://medium.com/videocoin/videocoin-token-lock-extended-for-2022-as-multimedia-nft-project-accelerates-into-transformative-95c291b4fd1b">Read Now</Button>
         </View>
       </Container>
     </Root>

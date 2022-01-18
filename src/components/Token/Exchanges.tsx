@@ -34,7 +34,7 @@ const Exchanges = () => {
       right={
         <>
           <Text variant="subtitle" withGradient>
-            Help Power the VideoCoin Network
+            Help Power the VIVID Platform
           </Text>
           <Text variant="title" marginB={16}>
             Acquire VID Token <br /> From These Exchanges
@@ -84,8 +84,7 @@ const Exchanges = () => {
             </View>
           </View>
           <Text color="grey70_72">
-            VideoCoin is currently available as an ERC20 token. You can explore
-            activity on{' '}
+            The VID token is currently available as an ERC20 token. You can explore activities on{' '}
             <a
               href="https://etherscan.io"
               target="_blank"

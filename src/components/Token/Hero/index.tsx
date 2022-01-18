@@ -24,11 +24,11 @@ const TokenHero = () => {
                 <img src={token} width={36} height={36} alt="" />
               </View>
               <Text variant="subtitle" withGradient uppercase>
-                VideoCoin Tokenomics
+                Vivid Labs Tokenomics
               </Text>
             </View>
             <Text variant="display2">
-              VideoCoin Network is powered by the VID token.
+              The VIVID platform is powered by the VID token.
             </Text>
             <Text variant="subtitle" color="violet80" marginB={38}>
               VID tokens enable network functionality and ensure its stability
