@@ -8,6 +8,7 @@ import View from 'components/View';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import MainBlock from 'components/MainBlock';
 import Button from 'components/UI/Button';
+import { useBreakpoint } from 'components/BrealpointProvider';
 
 const Root = styled.div`
   background: ${Colors.white20};
@@ -17,6 +18,7 @@ const Root = styled.div`
 `;
 
 const Allocation = () => {
+  const { tablet } = useBreakpoint()
   const data = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "allocation.png" }) {
@@ -26,7 +28,7 @@ const Allocation = () => {
       }
       percenter: file(relativePath: { eq: "percenter.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 336, quality: 100, layout: CONSTRAINED)
+          gatsbyImageData(width: 296, quality: 100, layout: CONSTRAINED)
         }
       }
     }
@@ -41,7 +43,7 @@ const Allocation = () => {
       <MainBlock
         reverse
         left={
-          <View paddingV={48}>
+          <View paddingV={48} marginL={ tablet ? 0 : 80}>
             <GatsbyImage
               alt=""
               image={data.percenter.childImageSharp.gatsbyImageData}
