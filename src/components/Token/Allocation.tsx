@@ -7,6 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import View from 'components/View';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import MainBlock from 'components/MainBlock';
+import Button from 'components/UI/Button';
 
 const Root = styled.div`
   background: ${Colors.white20};
@@ -59,14 +60,12 @@ const Allocation = () => {
         }
       />
       <Container>
-        <View marginT={55}>
-          <Text variant="title" align="center" marginB={12}>
-            Efficient Use Of Supply
+        <View marginT={55} column centerV centerH>
+          <Text align="center" marginB={14}>
+            Read our November 14, 2021 post for details on the 2022 lockup and token allocations.
+            <br/>
           </Text>
-          <Text align="center">
-            Remaining supply supports utilization, demand, and growth
-            initiatives during the lockup period.
-          </Text>
+          <Button as="a" target="_blank" rel="noopener noreferrer" href="https://medium.com/videocoin/videocoin-token-lock-extended-for-2022-as-multimedia-nft-project-accelerates-into-transformative-95c291b4fd1b">Read Now</Button>
         </View>
       </Container>
     </Root>
