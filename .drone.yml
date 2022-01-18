@@ -52,7 +52,7 @@ steps:
       registry: registry.videocoin.net
       repo: registry.videocoin.net/cloud/videocoin-network
       build_args:
-        - GA_TRACKING_ID=UA-170965280-1
+        - GA_TRACKING_ID=UA-170965280-2
         - AW_TRACKING_ID=AW-766963740
       tags:
         - ${DRONE_TAG}
