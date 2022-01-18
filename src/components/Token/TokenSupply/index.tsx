@@ -23,6 +23,9 @@ const TokenSupply = () => {
           <div>
             <Text variant="subtitle" align="center" color="grey90" marginB={12}>
               Token Supply
+              <Text align='center' variant="caption" color="grey20" marginT={-4}>
+                as of 01/12/2022
+              </Text>
             </Text>
             <table>
               <tbody>
