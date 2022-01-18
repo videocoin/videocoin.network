@@ -10,7 +10,7 @@ const TokenSupply = () => {
   return (
     <Container>
       <Text variant="title2" color="violet50" align="center" marginT={72}>
-        VideoCoin
+        Vivid Labs
       </Text>
       <Text variant="display1" align="center">
         Token Supply
@@ -32,17 +32,17 @@ const TokenSupply = () => {
                   </td>
                   <td>
                     <Text variant="smallBodyAlt" color="violet50">
-                      152.64 Million
+                      159.05 Million
                     </Text>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <Text variant="smallBody">Locked Up Through 2021</Text>
+                    <Text variant="smallBody">2022 Lock Up</Text>
                   </td>
                   <td>
                     <Text variant="smallBodyAlt" color="violet50">
-                      90.57 Million
+                      80 Million
                     </Text>
                   </td>
                 </tr>

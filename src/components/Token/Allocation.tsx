@@ -33,18 +33,9 @@ const Allocation = () => {
   return (
     <Root>
       <Container>
-        <Text variant="title2" color="violet50" align="center">
-          December 2020
+        <Text variant="title2" color="violet50" align="center" marginB={50}>
+          2022 VID Lockups
         </Text>
-        <Text variant="display1" align="center" marginB={100}>
-          Extended Company Token Lockups
-        </Text>
-        <View row centerH marginB={48}>
-          <GatsbyImage
-            alt=""
-            image={data.image.childImageSharp.gatsbyImageData}
-          />
-        </View>
       </Container>
       <MainBlock
         reverse
@@ -59,12 +50,10 @@ const Allocation = () => {
         right={
           <>
             <Text variant="title" marginB={16}>
-              76% of uncirculated <br /> supply locked up
+              80 million uncirculating VID tokens are locked for 2022.
             </Text>
             <Text color="grey70_72">
-              This lockup though the end of 2021 impacts over 90 million tokens
-              held by the VDA and our service provider partners, and represents
-              76% of the non-circulating VID token supply.
+               The circulating supply of VID tokens is anticipated to increase by 15% over the course of 2022 to support business development, a continuation of staking rewards programs, and advisory commitments.
             </Text>
           </>
         }
