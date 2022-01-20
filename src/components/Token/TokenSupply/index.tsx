@@ -10,7 +10,7 @@ const TokenSupply = () => {
   return (
     <Container>
       <Text variant="title2" color="violet50" align="center" marginT={72}>
-        Vivid Labs
+        VID
       </Text>
       <Text variant="display1" align="center">
         Token Supply

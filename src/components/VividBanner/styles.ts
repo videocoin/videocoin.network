@@ -21,27 +21,21 @@ export const Button = styled.div`
       display: none;
     }
   }
-  @media (max-width: 620px) {
-    display: inline-block !important;
-    font-size: 8px;
-    border-radius: 11px;
-    padding: 7px 20px;
-    margin-top: 9px;
-  }
 `;
 
 export const Root = styled.a`
-  height: 75px;
+  min-height: 75px;
+  padding: 24px 12px;
   background: transparent
-    linear-gradient(
-      270deg,
-      #823dff 0%,
-      #823dff 12%,
-      #3ea8dd 46%,
-      #12ed9e 100%,
-      #12ed9e 100%
-    )
-    0 0 no-repeat padding-box;
+  linear-gradient(
+          270deg,
+          #823dff 0%,
+          #823dff 12%,
+          #3ea8dd 46%,
+          #12ed9e 100%,
+          #12ed9e 100%
+  )
+  0 0 no-repeat padding-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,7 +43,13 @@ export const Root = styled.a`
   font-size: 16px;
   position: relative;
   overflow: hidden;
-  padding: 0 12px;
+    @media(max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 18px
+    }
   & > img:first-of-type {
     margin: 0 50px;
     @media (max-width: 768px) {
@@ -63,9 +63,9 @@ export const Root = styled.a`
     }
   }
   & > div:first-of-type {
-    ${Button} {
-      display: none;
-    }
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
     @media (max-width: 768px) {
       font-size: 14px;
     }
@@ -80,13 +80,20 @@ export const Root = styled.a`
     @media (max-width: 400px) {
       max-width: 130px;
     }
+    img {
+      margin-top: 5px;
+    }
+  }
+  & > div:nth-child(2) {
+    color: #ede202;
+    margin: 0 48px;
+      line-height: 1.4;
+      font-weight: 500;
+    max-width: 330px;
   }
   & > div:last-of-type {
     min-width: 220px;
     display: flex;
     justify-content: center;
-    @media (max-width: 620px) {
-      display: none;
-    }
   }
 `;

@@ -24,7 +24,7 @@ const TokenHero = () => {
                 <img src={token} width={36} height={36} alt="" />
               </View>
               <Text variant="subtitle" withGradient uppercase>
-                Vivid Labs Tokenomics
+                VID Tokenomics
               </Text>
             </View>
             <Text variant="display2">

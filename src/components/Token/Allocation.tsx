@@ -55,21 +55,13 @@ const Allocation = () => {
             <Text variant="title" marginB={16}>
               80 million uncirculating VID tokens are locked for 2022.
             </Text>
-            <Text color="grey70_72">
-               The circulating supply of VID tokens is anticipated to increase by 15% over the course of 2022 to support business development, a continuation of staking rewards programs, and advisory commitments.
+            <Text color="grey70_72" marginB={12}>
+              Read our November 14, 2021 post for details on the 2022 lockup and token allocations.
             </Text>
+            <Button as="a" target="_blank" rel="noopener noreferrer" href="https://medium.com/videocoin/videocoin-token-lock-extended-for-2022-as-multimedia-nft-project-accelerates-into-transformative-95c291b4fd1b">Read Now</Button>
           </>
         }
       />
-      <Container>
-        <View marginT={55} column centerV centerH>
-          <Text align="center" marginB={14}>
-            Read our November 14, 2021 post for details on the 2022 lockup and token allocations.
-            <br/>
-          </Text>
-          <Button as="a" target="_blank" rel="noopener noreferrer" href="https://medium.com/videocoin/videocoin-token-lock-extended-for-2022-as-multimedia-nft-project-accelerates-into-transformative-95c291b4fd1b">Read Now</Button>
-        </View>
-      </Container>
     </Root>
   );
 };
