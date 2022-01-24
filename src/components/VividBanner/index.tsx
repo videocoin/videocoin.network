@@ -14,7 +14,7 @@ const VividBanner = () => {
       </div>
       <div>
         Visit our new website and learn about
-        our next-gen FT publishing and
+        our next-gen NFT publishing and
         management platform
       </div>
 
