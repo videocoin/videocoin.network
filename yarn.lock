@@ -2060,10 +2060,10 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
-"@types/styled-components@^5.1.20":
-  version "5.1.20"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.20.tgz#83c545d1b793b846c231ff18e93019ccd2867972"
-  integrity sha512-TvpQceFwnxJJsAzR1aHsYpL5DxWMHRzM2/0EA6sGtRjV6DtJubmNxeoPMPiIPQzKEGNHccwObXO7Hug/iwm1Xw==
+"@types/styled-components@^5.1.21":
+  version "5.1.21"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.21.tgz#39f6bdc4103254d899531ef099dae5619b039cdb"
+  integrity sha512-lQzA0T6CaLXoeiOkSe2US2JfFgJV2/yJ8W1BaJubQQh2wdq7H+qScQQfbjURyLkgI1Ig+S/jRHCrWikfMHC6zA==
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
@@ -5498,10 +5498,10 @@ gatsby-worker@^1.5.0:
     "@babel/core" "^7.15.5"
     "@babel/runtime" "^7.15.4"
 
-gatsby@^4.5.4:
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-4.5.4.tgz#53404b798da0c86057675d03011f072faf85b27c"
-  integrity sha512-uXyYl9nq52xdvP/9lwWFp7eGtjFFgdAjG2xNBvpgNgd1AtH/4kU76khm1mmpXea98mnJrcwKmsSZkIbQO9YWCg==
+gatsby@^4.5.5:
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-4.5.5.tgz#5e9b24e32e842810b1ce88de6f6f576a3455c33b"
+  integrity sha512-WAT5FLiA6kziWQu1eplqrfBYH1FUeDMfuHPulh2QV0IVmE/AirTCNNIK1RhvY96UjR6qn6xJ1rSgiMqwr6y1sw==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/core" "^7.15.5"

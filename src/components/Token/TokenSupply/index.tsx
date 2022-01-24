@@ -9,11 +9,8 @@ import Container from 'styles/Container';
 const TokenSupply = () => {
   return (
     <Container>
-      <Text variant="title2" color="violet50" align="center" marginT={72}>
-        VID
-      </Text>
-      <Text variant="display1" align="center">
-        Token Supply
+      <Text variant="display1" align="center"  marginT={72}>
+        VID Token Supply
       </Text>
       <S.Images>
         <img src={v2} width={439} height={366} alt="" />

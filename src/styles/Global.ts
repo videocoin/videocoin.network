@@ -9,7 +9,11 @@ import '@fontsource/poppins/900.css';
 import '@fontsource/teko/700.css';
 import Colors from 'styles/Colors';
 
-const GlobalStyle = createGlobalStyle`        
+const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "UniviaPro";
+    src: url("fonts/UniviaPro-Medium.woff2");
+  }
   body {
     box-sizing: border-box;
     display: block;

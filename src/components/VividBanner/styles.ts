@@ -24,6 +24,7 @@ export const Button = styled.div`
 `;
 
 export const Root = styled.a`
+  font-family: UniviaPro;
   min-height: 75px;
   padding: 24px 12px;
   background: transparent
