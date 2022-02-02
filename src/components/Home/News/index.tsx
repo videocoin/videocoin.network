@@ -25,7 +25,7 @@ const Arrow = () => {
   );
 };
 
-const sort = [14, 15, 16, 13, 11, 10, 9, 4, 8, 1, 3, 2, 5, 6, 7];
+const sort = [18, 19, 17, 14, 15, 16, 13, 11, 10, 9, 4, 8, 1, 3, 2, 5, 6, 7];
 
 const News = () => {
   const { allFile } = useStaticQuery(graphql`

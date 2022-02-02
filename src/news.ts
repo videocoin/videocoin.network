@@ -175,6 +175,33 @@ const news = {
     description:
       'Back on Oct. 31, 2008, a person — or a group of people — who called themself Satoshi Nakamoto published a nine-page paper describing a “purely peer-to-peer version of electronic cash” th',
   },
+  17: {
+    id: 17,
+    cover: '17',
+    date: formatDate('2021-01-27'),
+    link: 'https://medium.com/vivid-labs/stableduel-and-vivid-labs-announce-horse-racings-first-nft-marketplace-319030762a9a',
+    title: 'StableDuel and Vivid Labs Announce Horse Racing’s First NFT Marketplace',
+    source: 'Vivid Labs News',
+    description: 'First of its kind partnership will debut certified breeder and horse racing moment NFTs'
+  },
+  19: {
+    id: 19,
+    cover: '19',
+    date: formatDate('2021-01-27'),
+    link: 'https://medium.com/vivid-labs/nft-its-video-and-beyond-26bd69506c2f',
+    title: 'NFT+ :: It’s Video … and Beyond!\n',
+    source: 'Vivid Labs News',
+    description: 'With the rush of NFTs into the mainstream, we at Vivid Labs wonder if something is being left behind. If NFTs really are the revolutionary new media container that they are said to be, shouldn’t they have the technical capability to do more?'
+  },
+  18: {
+    id: 18,
+    cover: '18',
+    date: formatDate('2021-02-01'),
+    link: 'https://news.yahoo.com/nft-marketplace-opensea-refunds-users-185745493.html',
+    title: 'NFT Marketplace OpenSea Refunds Users $1.8 Million After Buyers Exploit Loophole for Massive Profit',
+    source: 'Yahoo',
+    description: 'OpenSea, one of the leading NFT marketplaces, has suffered a so-called exploit — the described exploit enabling users to purchase NFTs from users at well below market value.'
+  }
 };
 
 export default news;

@@ -4,7 +4,7 @@ import news from '../../news';
 import * as S from './styles';
 import Container from 'styles/Container';
 
-const sort = [14, 15, 16, 13, 12, 11, 10, 8, 1, 2, 3, 4, 5, 6, 7];
+const sort = [18, 19, 17, 14, 15, 16, 13, 12, 11, 10, 8, 1, 2, 3, 4, 5, 6, 7];
 
 const NewsList = ({ covers }) => {
   const sortedNews = sort.map((id) => {
